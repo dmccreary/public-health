@@ -1,0 +1,501 @@
+ConceptID,ConceptLabel,Dependencies,TaxonomyID
+1,Public Health Definition,,FOUND
+2,Population Health,1,FOUND
+3,Health vs. Disease,1,FOUND
+4,Determinants of Health,1,FOUND
+5,Public Health History,1,FOUND
+6,Germ Theory of Disease,3|5,FOUND
+7,Epidemiological Triad,6,FOUND
+8,Natural History of Disease,3|7,FOUND
+9,Public Health Functions,1,FOUND
+10,Essential Public Health Services,9,FOUND
+11,Public Health Infrastructure,9,FOUND
+12,Health Indicators,2|4,FOUND
+13,Burden of Disease,12,FOUND
+14,Primary Prevention,8,FOUND
+15,Secondary Prevention,8|14,FOUND
+16,Tertiary Prevention,8|15,FOUND
+17,Primordial Prevention,8,FOUND
+18,Public Health Workforce,9|11,FOUND
+19,CEPH Accreditation Standards,1|9,FOUND
+20,One Health Framework,1|2,FOUND
+21,Incidence Rate,2|12,EPID
+22,Prevalence Proportion,21,EPID
+23,Cumulative Incidence,21,EPID
+24,Mortality Rate,21,EPID
+25,Case Fatality Ratio,24,EPID
+26,Infection Fatality Ratio,25,EPID
+27,Morbidity Rate,21|22,EPID
+28,Attack Rate,21,EPID
+29,Secondary Attack Rate,28,EPID
+30,Age-Standardized Rates,24,EPID
+31,Relative Risk,21|22,EPID
+32,Odds Ratio,31,EPID
+33,Hazard Ratio,31,EPID
+34,Attributable Risk,31,EPID
+35,Population Attrib Fraction,34,EPID
+36,Number Needed to Treat,31,EPID
+37,Cross-Sectional Study Design,21|22,EPID
+38,Case-Control Study Design,32|37,EPID
+39,Cohort Study Design,31|37,EPID
+40,Randomized Controlled Trial,39,EPID
+41,Ecological Study Design,21|37,EPID
+42,Natural Experiment Design,37,EPID
+43,Bradford Hill Criteria,31|39,EPID
+44,Directed Acyclic Graph,43,EPID
+45,Counterfactual Model,43,EPID
+46,Confounding Variable,31|43,EPID
+47,Selection Bias,38|46,EPID
+48,Information Bias,46,EPID
+49,Effect Modification,31|46,EPID
+50,Surveillance System Design,21|2,EPID
+51,Passive Surveillance,50,EPID
+52,Active Surveillance,50,EPID
+53,Sentinel Surveillance,50,EPID
+54,Syndromic Surveillance,50|53,EPID
+55,Reportable Conditions,50|51,EPID
+56,Outbreak Investigation,50|28,EPID
+57,Case Definition,56,EPID
+58,Epidemic Curve,21|56,EPID
+59,Index Case Identification,57,EPID
+60,Source Hypothesis Testing,56|38,EPID
+61,R0 Basic Reproduction Number,28,EPID
+62,Effective Reproduction Rt,61,EPID
+63,Serial Interval,61,EPID
+64,Generation Time,63,EPID
+65,Herd Immunity Threshold,61,EPID
+66,Screening Sensitivity,22|37,EPID
+67,Screening Specificity,66,EPID
+68,Positive Predictive Value,66|67,EPID
+69,Negative Predictive Value,66|67,EPID
+70,Descriptive Statistics,,BSTAT
+71,Measures of Central Tendency,70,BSTAT
+72,Measures of Dispersion,70,BSTAT
+73,Normal Distribution,72,BSTAT
+74,Binomial Distribution,77,BSTAT
+75,Poisson Distribution,77|74,BSTAT
+76,Negative Binomial Distribution,75,BSTAT
+77,Probability Fundamentals,,BSTAT
+78,Conditional Probability,77,BSTAT
+79,Bayes' Theorem,78,BSTAT
+80,Sampling Methods,70,BSTAT
+81,Sample Size Estimation,80,BSTAT
+82,Statistical Power,81|83,BSTAT
+83,Null Hypothesis Testing,70|77,BSTAT
+84,Type I Error Alpha,83,BSTAT
+85,Type II Error Beta,83,BSTAT
+86,P-Value Interpretation,83|84,BSTAT
+87,Confidence Interval,73|86,BSTAT
+88,Chi-Square Test,83|74,BSTAT
+89,Fisher's Exact Test,88,BSTAT
+90,Student T-Test,83|73,BSTAT
+91,Mann-Whitney U Test,90,BSTAT
+92,Analysis of Variance ANOVA,90,BSTAT
+93,Kruskal-Wallis Test,92,BSTAT
+94,Linear Regression,87|73,BSTAT
+95,Logistic Regression,94|77,BSTAT
+96,Poisson Regression for Rates,95|75,BSTAT
+97,Cox Proportional Hazards,94|33,BSTAT
+98,Kaplan-Meier Survival Curve,97,BSTAT
+99,Meta-Analysis Methods,40|87,BSTAT
+100,Forest Plot Interpretation,99|87,BSTAT
+101,Heterogeneity in Meta-Analysis,99,BSTAT
+102,Multiple Comparisons Problem,86,BSTAT
+103,Standardization Methods,30|70,BSTAT
+104,Missing Data Mechanisms,70|80,BSTAT
+105,Multiple Imputation Methods,104,BSTAT
+106,Interrupted Time-Series Analysis,94,BSTAT
+107,Excess Mortality Estimation,24|106,BSTAT
+108,Sensitivity Analysis Stats,87,BSTAT
+109,Systematic Review Protocol,99|307,BSTAT
+110,Environmental Risk Assessment,4|1,ENVH
+111,Hazard Identification,110,ENVH
+112,Dose-Response Assessment,111,ENVH
+113,Exposure Assessment,111,ENVH
+114,Risk Characterization,112|113,ENVH
+115,Air Quality Index,110,ENVH
+116,Criteria Air Pollutants,115,ENVH
+117,Particulate Matter PM2.5,116,ENVH
+118,Ozone Health Effects,116,ENVH
+119,Indoor Air Quality,116,ENVH
+120,Water Safety Standards,110,ENVH
+121,Drinking Water Treatment,120,ENVH
+122,Waterborne Disease Pathogens,120|6,ENVH
+123,Safe Drinking Water Act,120|121,ENVH
+124,Toxicology Dose-Response,112,ENVH
+125,Bioaccumulation,124,ENVH
+126,Endocrine Disruption,124,ENVH
+127,Built Environment Health,4|2,ENVH
+128,Urban Heat Island Effect,127,ENVH
+129,Food Desert Definition,127|4,ENVH
+130,Climate Change Health Impacts,110|4,ENVH
+131,Vector-Borne Disease Expansion,130,ENVH
+132,Wildfire and Air Quality,130|115,ENVH
+133,Environmental Justice,110|4,ENVH
+134,Cumulative Exposure Burden,133|113,ENVH
+135,EJScreen Tool,133,ENVH
+136,Legacy Contamination,110|133,ENVH
+137,Green Space Health Benefits,127,ENVH
+138,Health Belief Model,4|1,SOCBEH
+139,Perceived Susceptibility,138,SOCBEH
+140,Perceived Severity,138,SOCBEH
+141,Perceived Benefits and Barriers,138,SOCBEH
+142,Self-Efficacy Construct,138,SOCBEH
+143,Transtheoretical Model,138,SOCBEH
+144,Stages of Change,143,SOCBEH
+145,Social Cognitive Theory,138,SOCBEH
+146,Reciprocal Determinism,145,SOCBEH
+147,Theory of Planned Behavior,138,SOCBEH
+148,Social Norms in Health,147,SOCBEH
+149,Social-Ecological Model,138|4,SOCBEH
+150,Multilevel Interventions,149,SOCBEH
+151,Social Capital,149,SOCBEH
+152,Bonding vs Bridging Capital,151,SOCBEH
+153,Behavioral Economics Health,138,SOCBEH
+154,Nudge Theory,153,SOCBEH
+155,Default Effects,154,SOCBEH
+156,Loss Aversion in Health,153,SOCBEH
+157,Health Literacy Definition,1|4,SOCBEH
+158,Functional Health Literacy,157,SOCBEH
+159,Communicative Health Literacy,157,SOCBEH
+160,Critical Health Literacy,157,SOCBEH
+161,Low-Literacy Communication,158,SOCBEH
+162,Cultural Humility,4|1,SOCBEH
+163,CLAS Standards,162,SOCBEH
+164,Community Health Workers,162|150,SOCBEH
+165,Promotoras Model,164,SOCBEH
+166,Structural Racism Mechanisms,4|149,SOCBEH
+167,Weathering Hypothesis,166,SOCBEH
+168,Behavioral Intervention Design,149|150,SOCBEH
+169,Fidelity vs Adaptation,168,SOCBEH
+170,Motivational Interviewing,143|168,SOCBEH
+171,Pandemic Fatigue,138|149,SOCBEH
+172,Vaccine Hesitancy Dynamics,138|149,SOCBEH
+173,US Health System Structure,1|9,POLMGT
+174,Federal Health Agencies,173,POLMGT
+175,State Health Departments,173,POLMGT
+176,Local Health Departments,173,POLMGT
+177,Safety Net Providers,173,POLMGT
+178,Federally Qualified Centers,177,POLMGT
+179,Kingdon's Streams Model,1,POLMGT
+180,Policy Development Cycle,179,POLMGT
+181,Health Policy Agenda Setting,179|180,POLMGT
+182,Employer-Sponsored Insurance,173,POLMGT
+183,Medicaid Program,173,POLMGT
+184,Medicare Program,173,POLMGT
+185,ACA Coverage Provisions,182|183|184,POLMGT
+186,Uninsurance and Underinsurance,182,POLMGT
+187,Public Health Law,173|1,POLMGT
+188,Police Powers in Public Health,187,POLMGT
+189,Quarantine Authority,188,POLMGT
+190,Mandatory Reporting Laws,187|55,POLMGT
+191,Emergency Use Authorization,187,POLMGT
+192,PHAB Accreditation,173|19,POLMGT
+193,Logic Model Development,180,POLMGT
+194,PRECEDE-PROCEED Model,193|149,POLMGT
+195,MAPP Framework,193|173,POLMGT
+196,Cost-Effectiveness Analysis,180,POLMGT
+197,Cost-Benefit Analysis,196,POLMGT
+198,QALY Concept,196,POLMGT
+199,Return on Investment Prevention,197|14,POLMGT
+200,PDSA Quality Cycle,180,POLMGT
+201,Lean in Public Health,200,POLMGT
+202,Performance Management,200|193,POLMGT
+203,Global Burden of Disease,13|2,GLOB
+204,DALYs Concept,203,GLOB
+205,Years of Life Lost,204,GLOB
+206,Years Lived with Disability,204,GLOB
+207,Epidemiological Transition,13|2,GLOB
+208,Demographic Transition,207,GLOB
+209,Double Burden of Disease,207,GLOB
+210,Universal Health Coverage,173|203,GLOB
+211,Financial Protection Index,210,GLOB
+212,Service Coverage Index,210,GLOB
+213,Abuja Declaration,210,GLOB
+214,Catastrophic Health Expenditure,210,GLOB
+215,SDG 3 Health Targets,203|2,GLOB
+216,International Health Regulations,1|215,GLOB
+217,PHEIC Declaration,216,GLOB
+218,Global Health Security Index,216,GLOB
+219,Neglected Tropical Diseases,203|13,GLOB
+220,Preventive Chemotherapy,219,GLOB
+221,Global Health Governance,216|215,GLOB
+222,WHO Structure and Mandate,221,GLOB
+223,World Bank Health Financing,210|221,GLOB
+224,GAVI Vaccine Alliance,221|65,GLOB
+225,Global Fund HIV TB Malaria,221,GLOB
+226,PEPFAR Program,221,GLOB
+227,Sphere Humanitarian Standards,216|221,GLOB
+228,Health Equity Definition,1|2,EQUITY
+229,Health Disparities Definition,228,EQUITY
+230,Social Determinants of Health,4|228,EQUITY
+231,Dahlgren-Whitehead Model,230,EQUITY
+232,WHO CSDH Commission Findings,230,EQUITY
+233,Income Gradient Health,230,EQUITY
+234,Education as Health Determinant,230,EQUITY
+235,Housing Quality and Health,230,EQUITY
+236,Food Security and Health,230,EQUITY
+237,Employment and Health,230,EQUITY
+238,Transportation Access Health,230|127,EQUITY
+239,Neighborhood Effects Health,235|236,EQUITY
+240,Racial Health Disparities,229|230,EQUITY
+241,Maternal Mortality Disparities,240|24,EQUITY
+242,Infant Mortality Disparities,240|24,EQUITY
+243,Life Expectancy Gaps,240|24,EQUITY
+244,Historical Trauma,240,EQUITY
+245,Intergenerational Poverty,244|233,EQUITY
+246,Intersectionality Framework,228|229,EQUITY
+247,Place-Based Interventions,239|230,EQUITY
+248,Moving to Opportunity Study,247,EQUITY
+249,Community Development Finance,247,EQUITY
+250,Upstream Policy Levers,180|230,EQUITY
+251,Healthy People 2030 Goals,228|2,EQUITY
+252,Root Cause Analysis PH,230,EQUITY
+253,Health in All Policies,180|250,EQUITY
+254,Structural Competency,162|166,EQUITY
+255,Redlining Health Effects,239|240,EQUITY
+256,Criminal Justice Health Impact,240,EQUITY
+257,Long COVID Equity Burden,229|240,EQUITY
+258,Bioethics Principles,,ETHICS
+259,Autonomy in Public Health,258,ETHICS
+260,Beneficence and Maleficence,258,ETHICS
+261,Justice in Public Health,258,ETHICS
+262,Stewardship Model Ethics,258,ETHICS
+263,Nuffield Ladder of Intervention,262,ETHICS
+264,Utilitarian Ethics in PH,258,ETHICS
+265,Egalitarian Health Ethics,264,ETHICS
+266,Communitarian Health Ethics,264,ETHICS
+267,Research Ethics Belmont Report,258,ETHICS
+268,Informed Consent,267|259,ETHICS
+269,Vulnerable Populations Research,267|268,ETHICS
+270,Mandatory Vaccination Ethics,259|262,ETHICS
+271,Fluoridation Ethics Debate,270,ETHICS
+272,Data Ethics in Public Health,258,ETHICS
+273,Algorithmic Bias Ethics,272,ETHICS
+274,Distributive Justice,261,ETHICS
+275,Procedural Justice,261,ETHICS
+276,Restorative Justice Health,261|244,ETHICS
+277,Global Health Ethics,258|221,ETHICS
+278,Plain Language Principles,157,COMM
+279,Teach-Back Method,278,COMM
+280,Risk Communication Principles,1|157,COMM
+281,Mental Models Approach,280,COMM
+282,Numeracy and Health Decisions,280|70,COMM
+283,Uncertainty Communication,280|86,COMM
+284,CERC Framework,280,COMM
+285,CERC Six Principles,284,COMM
+286,CERC Five Stages,284,COMM
+287,Audience Segmentation,280,COMM
+288,Message Tailoring,287,COMM
+289,Social Media in Public Health,280,COMM
+290,Infoveillance Methods,289|50,COMM
+291,Twitter Epidemiology,290,COMM
+292,Health Misinformation,280,COMM
+293,Prebunking Strategy,292,COMM
+294,Inoculation Theory,293,COMM
+295,SIFT Fact-Checking Method,292,COMM
+296,Cultural Tailoring,287|162,COMM
+297,Back-Translation Method,296,COMM
+298,Campaign Evaluation Methods,280|287,COMM
+299,EPPM Framework,280|138,COMM
+300,Influencer Partnerships,289,COMM
+301,Infodemic Management,292|284,COMM
+302,Crisis Communication Failure,284|292,COMM
+303,IOM Prevention Spectrum,14|15,PREV
+304,Universal Prevention,303,PREV
+305,Selective Prevention,303,PREV
+306,Indicated Prevention,303,PREV
+307,Evidence-Based Practice,1|70,PREV
+308,Hierarchy of Evidence,307|40,PREV
+309,Community Guide Evidence Base,308,PREV
+310,USPSTF Evidence Grading,308,PREV
+311,GRADE Framework,308,PREV
+312,Herd Immunity Calculation,65,PREV
+313,Immunization Schedule,312,PREV
+314,Vaccine Breakthrough Infection,313,PREV
+315,Cold Chain Requirements,313,PREV
+316,Vaccine Hesitancy Measurement,172,PREV
+317,Tobacco Cessation Interventions,14|168,PREV
+318,Physical Inactivity Interventions,168|14,PREV
+319,Dietary Intervention Evidence,311|14,PREV
+320,Alcohol Use Interventions,168,PREV
+321,Obesity Prevention Strategies,14|319,PREV
+322,Haddon Matrix,1|14,PREV
+323,Injury Prevention Frameworks,322,PREV
+324,Violence Prevention PH,323,PREV
+325,Harm Reduction Philosophy,14|306,PREV
+326,Naloxone Distribution,325,PREV
+327,Syringe Service Programs,325,PREV
+328,Implementation Science EPIS,168|307,PREV
+329,De-Implementation,307|328,PREV
+330,Scale-Up Strategies,328,PREV
+331,Brief Motivational Interviewing,170|306,PREV
+332,Screening Program Design,66|67|310,PREV
+333,Systems Thinking Concepts,,SYS
+334,System Stocks,333,SYS
+335,System Flows,334,SYS
+336,Feedback Loops,334|335,SYS
+337,Reinforcing Feedback Loop,336,SYS
+338,Balancing Feedback Loop,336,SYS
+339,Time Delays in Systems,336,SYS
+340,Nonlinearity in Systems,336,SYS
+341,Emergence in Systems,333|336,SYS
+342,Path Dependence,333|336,SYS
+343,Causal Loop Diagram,333|336,SYS
+344,CLD Variable Identification,343,SYS
+345,CLD Link Polarity,344,SYS
+346,CLD Loop Polarity,345|337|338,SYS
+347,CLD Loop Naming,346,SYS
+348,System Archetypes,343,SYS
+349,Limits to Growth Archetype,348|338,SYS
+350,Shifting the Burden Archetype,348|337,SYS
+351,Tragedy of Commons Archetype,348,SYS
+352,Fixes that Fail Archetype,348|349,SYS
+353,Escalation Archetype,337|348,SYS
+354,Eroding Goals Archetype,338|348,SYS
+355,Success to Successful Arch,337|348,SYS
+356,Addiction Archetype,350|348,SYS
+357,Stock-and-Flow Diagram,334|335|343,SYS
+358,Level Equations,357,SYS
+359,Rate Equations,357|358,SYS
+360,Auxiliary Variables,359,SYS
+361,Initial Conditions Setting,357,SYS
+362,InsightMaker Tool,357,SYS
+363,Vensim PLE Tool,357,SYS
+364,Stella Architect Tool,357,SYS
+365,AnyLogic Multi-Method,357,SYS
+366,NetLogo Agent-Based Tool,333,SYS
+367,SIR Compartmental Model,334|335|61,SYS
+368,SEIR Compartmental Model,367,SYS
+369,SEIRD Model Extension,368,SYS
+370,SEIRV Vaccination Model,368|65,SYS
+371,Transmission Rate Beta,367|61,SYS
+372,Recovery Rate Gamma,367,SYS
+373,R0 in SIR Model,371|372,SYS
+374,SIR Model Equations,367|358|359,SYS
+375,Epidemic Overshoot,367|337,SYS
+376,Agent-Based Model,333|341,SYS
+377,Agent Rules Design,376,SYS
+378,Spatial Grid Models,376,SYS
+379,Network Topology ABM,376,SYS
+380,Super-Spreader Dynamics,376|392,SYS
+381,Group Model Building,343,SYS
+382,Mental Model Elicitation,381,SYS
+383,Stakeholder CLD Workshop,381|382,SYS
+384,Model Face Validity,357|343,SYS
+385,Parameter Sensitivity,384|359,SYS
+386,Historical Reproduction Test,384,SYS
+387,Policy Lever Identification,343,SYS
+388,Meadows Leverage Points,387,SYS
+389,Unintended Consequences,388|333,SYS
+390,Policy Resistance,389|336,SYS
+391,Wicked Problems PH,333|336,SYS
+392,Network Analysis PH,333|2,SYS
+393,Network Nodes and Edges,392,SYS
+394,Betweenness Centrality,393,SYS
+395,Degree Distribution,393,SYS
+396,Clustering Coefficient,393,SYS
+397,Network Interventions,392|393,SYS
+398,R Statistical Computing,70,DATSCI
+399,tidyverse R Suite,398,DATSCI
+400,ggplot2 Visualization,399,DATSCI
+401,dplyr Data Manipulation,399,DATSCI
+402,Python for Public Health,,DATSCI
+403,pandas Data Analysis,402,DATSCI
+404,NumPy Scientific Computing,402,DATSCI
+405,scikit-learn Machine Learning,402,DATSCI
+406,Reproducible Research,398|402,DATSCI
+407,R Markdown Documents,406|398,DATSCI
+408,Jupyter Notebooks,406|402,DATSCI
+409,Git Version Control,406,DATSCI
+410,GitHub for Public Health,409,DATSCI
+411,CDC WONDER Database,50|70,DATSCI
+412,BRFSS Survey Data,80|50,DATSCI
+413,NHANES Survey Data,80,DATSCI
+414,SEER Cancer Registry,50|70,DATSCI
+415,HCUP Hospital Data,70,DATSCI
+416,Vital Statistics Data,50|24,DATSCI
+417,American Community Survey,70|80,DATSCI
+418,Data Cleaning Methods,70|104,DATSCI
+419,Missing Data Handling,104|418,DATSCI
+420,Record Linkage Methods,418,DATSCI
+421,GIS Spatial Analysis,70|2,DATSCI
+422,Choropleth Map Design,421,DATSCI
+423,Kernel Density Estimation,421,DATSCI
+424,Spatial Autocorrelation,421,DATSCI
+425,Moran's I Statistic,424,DATSCI
+426,SaTScan Cluster Detection,424|425,DATSCI
+427,QGIS for Public Health,421,DATSCI
+428,R Leaflet Mapping,421|398,DATSCI
+429,R Shiny Dashboards,428|398,DATSCI
+430,Time-Series Analysis PH,94|70,DATSCI
+431,Machine Learning Basics,94|402,DATSCI
+432,Supervised Learning,431,DATSCI
+433,Random Forest Model,432,DATSCI
+434,Gradient Boosting Model,432,DATSCI
+435,Cross-Validation Methods,431|82,DATSCI
+436,AUC ROC Performance,435|432,DATSCI
+437,Unsupervised Learning,431,DATSCI
+438,K-Means Clustering,437,DATSCI
+439,NLP for Surveillance,431|289,DATSCI
+440,Sentiment Analysis PH,439,DATSCI
+441,Wastewater Epidemiology,50|421,DATSCI
+442,Social Media Data Mining,289|431,DATSCI
+443,MicroSim Design Principles,333|1,SIM
+444,p5.js for Health Sims,443,SIM
+445,Chart.js Visualization,443,SIM
+446,Plotly Interactive Charts,443,SIM
+447,vis-network Library,443|392,SIM
+448,Interactive SEIR Simulator,367|443|444,SIM
+449,SIR Parameter Sliders,367|443,SIM
+450,Epidemic Curve Animation,58|443|444,SIM
+451,CLD Interactive Simulation,343|443|447,SIM
+452,Health Equity Simulation,230|443,SIM
+453,ICU Surge Capacity Model,357|362|443,SIM
+454,Behavioral Intervention Sim,168|443,SIM
+455,Network Spread Simulation,392|443|447,SIM
+456,Herd Immunity Visualization,312|443,SIM
+457,Dose-Response Explorer,112|443,SIM
+458,Policy Lever Simulation,387|443,SIM
+459,Demographic Pyramid Sim,208|443,SIM
+460,Vaccination Coverage Sim,313|443,SIM
+461,Contact Tracing Sim,56|443|447,SIM
+462,Health Disparities Viz,229|443,SIM
+463,Supply Chain Surge Sim,357|443,SIM
+464,Environmental Exposure Sim,113|443,SIM
+465,COVID-19 Origins Detection,50|6,COVID
+466,COVID-19 Genomic Surveillance,465|50,COVID
+467,COVID-19 Variant Emergence,466|62,COVID
+468,COVID-19 R0 Estimation,61|62,COVID
+469,COVID-19 IFR vs CFR,25|26,COVID
+470,COVID-19 Excess Mortality,107|24,COVID
+471,COVID-19 Data Infrastructure,50|173,COVID
+472,COVID-19 NPI Evidence,308|40,COVID
+473,COVID-19 Mask Compliance,472|148,COVID
+474,COVID-19 Vaccine Development,40|191,COVID
+475,COVID-19 Vaccine Distribution,474|313,COVID
+476,COVID-19 Equity Failures,229|475,COVID
+477,COVID-19 Communication Failure,284|292,COVID
+478,COVID-19 Misinformation,292|289,COVID
+479,Long COVID Burden,22|203,COVID
+480,COVID-19 Healthcare Surge,357|367,COVID
+481,COVID-19 Systems Analysis,343|367|480,COVID
+482,COVID Wastewater Surveillance,441|465,COVID
+483,COVID-19 Modeling Failures,367|468|384,COVID
+484,Pandemic Preparedness Lessons,216|471|481,COVID
+485,DSHEA 1994 Regulation,187,FRAUD
+486,Supplement Industry Scale,485,FRAUD
+487,FDA vs FTC Jurisdiction,485|187,FRAUD
+488,Miracle Cure Fraud Claims,486,FRAUD
+489,MLM Health Products,486,FRAUD
+490,Digital Health Fraud Marketing,289|489,FRAUD
+491,Supplement Science Evidence,307|308,FRAUD
+492,Vulnerable Population Targeting,489|486,FRAUD
+493,COVID Supplement Fraud,488|478,FRAUD
+494,Consumer Protection Tools,487|485,FRAUD
+495,QuackWatch Methods,494,FRAUD
+496,NSF USP Certification,494,FRAUD
+497,SIFT for Health Claims,295|488,FRAUD
+498,Health Fraud Policy Reform,485|487,FRAUD
+499,MLM Network Dynamics,343|489,FRAUD
+500,DSHEA Reform Proposals,485|498,FRAUD

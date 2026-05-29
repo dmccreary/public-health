@@ -1,0 +1,21 @@
+{
+  "title": "R₀ and Herd Immunity Explorer",
+  "description": "Apply (L3) the relationship between R₀ and the herd immunity threshold by adjusting R₀ values for different pathogens and calculating the required vaccination coverage.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "r0-herd-immunity-explorer",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 3,
+  "chapter_title": "\"Epidemiology: Study Design and Causal Inference\"",
+  "chapter_dir": "03-epidemiology-study-design"
+}

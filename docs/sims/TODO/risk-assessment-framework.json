@@ -1,0 +1,14 @@
+{
+  "sim_id": "risk-assessment-framework",
+  "diagram_name": "Four-Step Risk Assessment Framework",
+  "chapter_number": 6,
+  "chapter_title": "\"Environmental Health\"",
+  "chapter_dir": "06-environmental-health",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** risk-assessment-framework<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nInteractive directed graph showing the four steps of environmental risk assessment as nodes connected by directional edges. Each node is clickable and expands a side panel with: (1) a brief definition of the step, (2) the key question the step answers, (3) an example output metric (e.g., IARC classification for Hazard Identification, RfD/CSF for Dose-Response, CDI for Exposure, HQ/excess cancer risk for Risk Characterization). Nodes are color-coded by step number (blue gradient from light to dark). A \"Reset\" button returns all panels to collapsed state. Hovering a node highlights its outgoing edge in orange. The layout is left-to-right, emphasizing the sequential flow."
+}

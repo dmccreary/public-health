@@ -1,0 +1,14 @@
+{
+  "sim_id": "epis-stages",
+  "diagram_name": "EPIS Implementation Stages",
+  "chapter_number": 13,
+  "chapter_title": "\"Prevention Science\"",
+  "chapter_dir": "13-prevention-science",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** epis-stages<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive horizontal workflow diagram showing the four EPIS stages (Exploration, Preparation, Implementation, Sustainment) as connected stages with outer context above and inner context below. Clicking each stage expands a panel below the diagram showing: key activities, common barriers, implementation strategies, and a real-world public health example. An outer/inner context toggle highlights which contextual factors are most influential at each stage. A small progress indicator shows how far along a hypothetical opioid treatment program is through the EPIS stages, illustrating that sustainment is the most commonly neglected phase."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "feedback-loops-compare",
+  "diagram_name": "Reinforcing vs. Balancing Feedback Loops",
+  "chapter_number": 14,
+  "chapter_title": "\"Systems Thinking: Foundations and Causal Diagrams\"",
+  "chapter_dir": "14-systems-thinking-foundations",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** feedback-loops-compare<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nSide-by-side interactive comparison of a reinforcing loop (epidemic growth) and a balancing loop (population immunity). Left panel shows epidemic spread: a reinforcing loop with variables \"Infected Individuals,\" \"Transmission Events,\" and \"New Cases.\" Right panel shows population immunity: a balancing loop with variables \"Susceptible Population,\" \"Vaccination Rate,\" \"Immune Population,\" and \"Transmission Rate.\" Each arrow can be clicked to reveal its polarity (+/−) and a plain-English explanation. A \"run simulation\" button animates both loops simultaneously, showing exponential growth on the left and S-shaped stabilization on the right, illustrating why epidemic curves flatten. Labels show R-loop and B-loop notation clearly."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "record-linkage-process",
+  "diagram_name": "Record Linkage Process",
+  "chapter_number": 16,
+  "chapter_title": "\"Data Science Foundations for Public Health\"",
+  "chapter_dir": "16-data-science-foundations",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** record-linkage-process<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nDraw an interactive flowchart with two parallel swim lanes (Dataset A on the left, Dataset B on the right) flowing down into a central matching engine. Stages (clickable boxes):\n\nLeft lane: Dataset A (birth certificates) → Standardization (name, address, date normalization)\nRight lane: Dataset B (death certificates) → Standardization\n\nBoth standardized flows → Blocking (reduce candidate pairs by restricting to same state + birth year) → Comparison Vector Generation (per-field agreement scores) → Branch: Deterministic Path (exact SSN match → Accept) | Probabilistic Path (Fellegi-Sunter weight → Accept / Clerical Review / Reject) → Linked Dataset\n\nClicking each stage opens a sidebar panel with:\n- Stage name and description\n- Example field transformations (for standardization)\n- Example match weight calculation (for probabilistic stage)\n- Python code snippet (2-4 lines showing the recordlinkage call)\n- Key parameter to tune\n\nColor code: blue = data, orange = transformation, green = decision/output. Animate flow lines to show data moving through the pipeline."
+}

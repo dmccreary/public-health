@@ -1,0 +1,21 @@
+{
+  "title": "Social-Ecological Model — Interactive Concentric Levels",
+  "description": "Social-Ecological Model — Interactive Concentric Levels",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "social-ecological-model",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 7,
+  "chapter_title": "\"Social and Behavioral Health\"",
+  "chapter_dir": "07-social-behavioral-health"
+}

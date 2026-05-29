@@ -1,0 +1,21 @@
+{
+  "title": "Interrupted Time-Series Analysis Workflow",
+  "description": "Students can describe each step of an interrupted time-series analysis, identify the four regression coefficients and their interpretations, and recognize threats to validity such as co-interventions and autocorrelation.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "its-analysis-workflow",
+  "library": "p5.js",
+  "bloomLevel": "Apply (L3)",
+  "bloomVerb": "apply",
+  "completion_status": "scaffold",
+  "chapter_number": 5,
+  "chapter_title": "\"Biostatistics: Regression and Advanced Methods\"",
+  "chapter_dir": "05-biostatistics-regression"
+}

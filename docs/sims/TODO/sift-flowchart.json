@@ -1,0 +1,14 @@
+{
+  "sim_id": "sift-flowchart",
+  "diagram_name": "SIFT Method Decision Flowchart",
+  "chapter_number": 12,
+  "chapter_title": "\"Public Health Communication\"",
+  "chapter_dir": "12-public-health-communication",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** sift-flowchart<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nDraw a vertical flowchart with four colored step boxes: S (Stop – red), I (Investigate the Source – orange), F (Find Better Coverage – yellow), T (Trace Claims – green). Each box is clickable. On click, a right-side panel shows: (1) step name and acronym, (2) a definition (2 sentences), (3) how-to guidance (3 bullet points), and (4) a worked COVID-19 misinformation example for that step. Between steps, brief connector arrows labeled with decision questions (\"Is the source familiar and trusted?\", etc.) guide users through the logic. A top input box labeled \"You encounter a health claim online\" triggers the flowchart. A \"Start Over\" button resets. Color coding consistent throughout."
+}

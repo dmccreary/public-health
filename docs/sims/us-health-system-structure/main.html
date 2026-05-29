@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>US Health System Structure</title>
+    <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #212529; }
+        main { padding: 8px 12px; }
+        h1 { font-size: 16px; color: #1a3a6c; text-align: center; margin-bottom: 4px; }
+        #ctl { text-align: center; margin-bottom: 4px; font-size: 12.5px; }
+        #ctl select { font-size: 12.5px; padding: 2px 4px; }
+        #row { display: flex; gap: 10px; }
+        #net { flex: 0 0 62%; height: 440px; border: 1px solid #dee2e6; border-radius: 4px; }
+        #panel { flex: 1; padding: 10px; font-size: 12.5px; line-height: 1.45;
+                 background: #f4f7fb; border-radius: 4px; border-left: 4px solid #1a3a6c;
+                 max-height: 440px; overflow-y: auto; }
+        #panel h3 { font-size: 13.5px; color: #1a3a6c; margin-bottom: 4px; }
+        #panel b { color: #1a3a6c; }
+        #legend { display: flex; flex-wrap: wrap; gap: 10px; font-size: 11px; margin-top: 4px; color: #444; }
+        #legend .item span.sw { display: inline-block; width: 10px; height: 10px; border-radius: 2px; vertical-align: middle; margin-right: 2px; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>US Health System Structure</h1>
+    <div id="ctl">
+        Filter:
+        <select id="filter">
+            <option value="all" selected>All tiers</option>
+            <option value="gov">Governmental</option>
+            <option value="ins">Insurance</option>
+            <option value="net">Safety Net</option>
+        </select>
+    </div>
+    <div id="row">
+        <div id="net"></div>
+        <div id="panel">
+            <h3>Click any node.</h3>
+            <p>The US system is a patchwork of federal, state, local, private,
+            and safety-net actors. Click any node to see its mandate, funding,
+            and an example program.</p>
+        </div>
+    </div>
+    <div id="legend">
+        <span class="item"><span class="sw" style="background:#0d47a1"></span>Federal</span>
+        <span class="item"><span class="sw" style="background:#00838f"></span>State</span>
+        <span class="item"><span class="sw" style="background:#388e3c"></span>Local</span>
+        <span class="item"><span class="sw" style="background:#6a1b9a"></span>Private insurance</span>
+        <span class="item"><span class="sw" style="background:#ef6c00"></span>Safety net</span>
+        <span class="item"><span class="sw" style="background:#fbc02d"></span>FQHC</span>
+        <span class="item">— funding</span>
+        <span class="item">┄ regulatory</span>
+    </div>
+</main>
+<script src="us-health-system-structure.js"></script>
+</body>
+</html>

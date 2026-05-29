@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Four-Step Risk Assessment Framework</title>
+    <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #212529; }
+        main { padding: 8px 12px; }
+        h1 { font-size: 16px; color: #1a3a6c; text-align: center; margin-bottom: 4px; }
+        #row { display: flex; gap: 10px; }
+        #net { flex: 0 0 60%; height: 440px; border: 1px solid #dee2e6; border-radius: 4px; }
+        #panel { flex: 1; padding: 10px; font-size: 12.5px; line-height: 1.45;
+                 background: #f4f7fb; border-radius: 4px; border-left: 4px solid #1a3a6c;
+                 max-height: 440px; overflow-y: auto; }
+        #panel h3 { font-size: 13.5px; color: #1a3a6c; margin-bottom: 4px; }
+        #panel b { color: #1a3a6c; }
+        #panel .q { background: #fff; padding: 5px 7px; margin-top: 6px;
+                    border-left: 3px solid #1a3a6c; }
+        #panel .metric { background: #fff8dc; padding: 5px 7px; margin-top: 6px;
+                         border-left: 3px solid #ce9c00; }
+        #reset {
+            margin-top: 8px; padding: 4px 10px; font-size: 12px;
+            background: #1a3a6c; color: #fff; border: none; border-radius: 3px; cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Four-Step Environmental Risk Assessment</h1>
+    <div id="row">
+        <div id="net"></div>
+        <div id="panel">
+            <h3>Click any step to expand.</h3>
+            <p>The 1983 NRC "Red Book" framework structures environmental
+            risk assessment into four sequential steps.</p>
+            <button id="reset">Reset (collapse all)</button>
+        </div>
+    </div>
+</main>
+<script src="risk-assessment-framework.js"></script>
+</body>
+</html>

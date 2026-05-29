@@ -1,0 +1,21 @@
+{
+  "title": "Study Design Evidence Hierarchy",
+  "description": "Identify (L1) and compare (L4) epidemiological study designs by their position in the evidence hierarchy, their key strengths, and their primary limitations.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "study-design-hierarchy",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "\"Epidemiology: Disease Measurement\"",
+  "chapter_dir": "02-epidemiology-disease-measurement"
+}

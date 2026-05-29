@@ -2,16 +2,22 @@
     margin: 0;
     padding: 0;
 }
+
+
 .md-header__button.md-logo img, .md-header__button.md-logo svg {
     height: 55px;
-    width: 55px;
-     /* background-color: #ffffff; */
-    background-color: #aaaaaa;
+    width: 28px;
+}
+    /* uncomment this block to add a circular background behind the logo image, 
+which can help it stand out against light backgrounds. Adjust colors as needed.
+    background-color: #ffffff; 
+    background-color: #aaaaaa; 
     border-radius: 50%;
     padding: 4px;
     box-sizing: border-box;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.25);
 }
+    */
 
 /* Container to control the iframe size and scaling */
 .iframe-container {

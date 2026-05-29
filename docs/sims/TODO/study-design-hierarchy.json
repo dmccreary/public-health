@@ -1,0 +1,14 @@
+{
+  "sim_id": "study-design-hierarchy",
+  "diagram_name": "Study Design Evidence Hierarchy",
+  "chapter_number": 2,
+  "chapter_title": "\"Epidemiology: Disease Measurement\"",
+  "chapter_dir": "02-epidemiology-disease-measurement",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "Identify (L1) and compare (L4) epidemiological study designs by their position in the evidence hierarchy, their key strengths, and their primary limitations.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: diagram\n**sim-id:** study-design-hierarchy<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning objective: Identify (L1) and compare (L4) epidemiological study designs by their position in the evidence hierarchy, their key strengths, and their primary limitations.\n\nCanvas layout:\n- Main drawing area showing a triangular pyramid divided into 6 horizontal layers\n- Right side panel (250px): infobox that updates when a layer is clicked or hovered\n\nPyramid layers (bottom to top, increasing evidence strength):\n1. Ecological Studies (bottom, widest) — gray\n2. Cross-Sectional Studies — light blue\n3. Case-Control Studies — blue\n4. Cohort Studies (Prospective & Retrospective) — teal\n5. RCTs and Quasi-Experimental (Natural Experiments) — green\n6. Systematic Reviews & Meta-Analyses (top, narrowest) — gold\n\nEach layer is a clickable trapezoid labeled with the design name.\n\nOn hover: layer brightens, cursor becomes pointer\nOn click: infobox updates with:\n- Design name and definition\n- Can calculate RR directly? (Yes/No)\n- Randomized? (Yes/No)\n- Primary bias vulnerability\n- Classic public health example (e.g., \"Snow's cholera maps\" for ecological)\n- Typical use case\n\nLabels on pyramid left side: \"↑ Internal Validity\", \"↑ Evidence Strength\"\nLabels on pyramid right side: \"↑ Cost & Time\", \"↓ Feasibility\"\n\nResponsive design: Canvas resizes on window resize; pyramid scales to container width."
+}

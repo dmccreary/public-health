@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>DAG Variable Structures Explorer</title>
+    <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #212529; }
+        main { padding: 8px 12px; }
+        h1 { font-size: 16px; color: #1a3a6c; text-align: center; margin-bottom: 4px; }
+        #row { display: flex; gap: 10px; }
+        #net { flex: 0 0 60%; height: 460px; border: 1px solid #dee2e6; border-radius: 4px; background: #fafbfc; }
+        #panel { flex: 1; padding: 10px; font-size: 12.5px; line-height: 1.45;
+                 background: #f4f7fb; border-radius: 4px; border-left: 4px solid #1a3a6c; }
+        #panel h3 { font-size: 13.5px; color: #1a3a6c; margin-bottom: 4px; }
+        #panel b { color: #1a3a6c; }
+        #panel .adjust-row { margin-top: 8px; padding-top: 6px; border-top: 1px dashed #c0d0e0; }
+        #panel label { cursor: pointer; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>DAG Variable Structures: Confounder, Mediator, Collider</h1>
+    <div id="row">
+        <div id="net"></div>
+        <div id="panel">
+            <h3>Click a node or edge to explore.</h3>
+            <p>Three DAG structures are shown. Each behaves differently
+            when you decide whether to adjust for the intermediate variable.</p>
+            <div class="adjust-row">
+                <label><input type="checkbox" id="adjusted"> Show adjusted version</label>
+            </div>
+        </div>
+    </div>
+</main>
+<script src="dag-variable-structures.js"></script>
+</body>
+</html>

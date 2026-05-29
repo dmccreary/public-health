@@ -1,0 +1,21 @@
+{
+  "title": "Pharmaceutical vs. Supplement Pre-Market Requirements",
+  "description": "Pharmaceutical vs. Supplement Pre-Market Requirements",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "dshea-regulatory-gap",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 20,
+  "chapter_title": "\"Health Fraud, Nutritional Misinformation, and the Supplement Industry\"",
+  "chapter_dir": "20-health-fraud-misinformation"
+}

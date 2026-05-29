@@ -1,0 +1,14 @@
+{
+  "sim_id": "system-archetypes",
+  "diagram_name": "Eight Archetypes Reference Card",
+  "chapter_number": 14,
+  "chapter_title": "\"Systems Thinking: Foundations and Causal Diagrams\"",
+  "chapter_dir": "14-systems-thinking-foundations",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** system-archetypes<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive 2×4 grid of clickable archetype cards. Each card shows the archetype name and a small schematic loop diagram. Clicking a card expands a detail panel below the grid showing: the canonical loop structure (R and B loop diagram), the characteristic behavior over time (growth, oscillation, decline), a generic template description, and a specific public health example with the intervention leverage point highlighted. A \"search by behavior\" toggle allows students to start from the behavior pattern (growing, oscillating, drifting) and identify which archetype produces it, reversing the usual teaching direction for assessment purposes."
+}

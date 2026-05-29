@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Health Belief Model — Interactive Concept Map</title>
+    <script src="https://unpkg.com/vis-network@9.1.9/standalone/umd/vis-network.min.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #212529; }
+        main { padding: 8px 12px; }
+        h1 { font-size: 16px; color: #1a3a6c; text-align: center; margin-bottom: 4px; }
+        #row { display: flex; gap: 10px; }
+        #net { flex: 0 0 62%; height: 470px; border: 1px solid #dee2e6; border-radius: 4px; }
+        #panel { flex: 1; padding: 10px; font-size: 12.5px; line-height: 1.45;
+                 background: #f4f7fb; border-radius: 4px; border-left: 4px solid #1a3a6c; max-height: 470px; overflow-y: auto; }
+        #panel h3 { font-size: 13.5px; color: #1a3a6c; margin-bottom: 4px; }
+        #panel b { color: #1a3a6c; }
+        #panel .ex { margin-top: 6px; padding: 5px 7px; background: #fff; border-left: 3px solid #ccc; border-radius: 2px; }
+        #reset { margin-top: 6px; padding: 4px 10px; font-size: 12px; background: #1a3a6c; color: #fff; border: none; border-radius: 3px; cursor: pointer; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Health Belief Model — Interactive Concept Map</h1>
+    <div id="row">
+        <div id="net"></div>
+        <div id="panel">
+            <h3>Click any construct.</h3>
+            <p>The Health Belief Model explains why people do (or don't) adopt
+            health-protective behaviors. Click a node to see its definition
+            and how it shows up in two real-world contexts.</p>
+            <button id="reset">Reset view</button>
+        </div>
+    </div>
+</main>
+<script src="health-belief-model.js"></script>
+</body>
+</html>

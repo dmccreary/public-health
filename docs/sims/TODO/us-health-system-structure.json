@@ -1,0 +1,14 @@
+{
+  "sim_id": "us-health-system-structure",
+  "diagram_name": "US Health System Structure",
+  "chapter_number": 8,
+  "chapter_title": "\"Health Policy and Management\"",
+  "chapter_dir": "08-health-policy-management",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** us-health-system-structure<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nInteractive layered network diagram of the US health system. Nodes are color-coded by tier: federal agencies (deep blue), state health departments (teal), local health departments (green), private insurance sector (purple), safety net providers (orange), FQHCs (amber). Clicking any node opens an info panel describing the agency's mandate, funding source, and example program. Edges show funding flows (solid lines) and regulatory authority (dashed lines). A legend panel at the bottom explains node colors and edge types. Default view shows all tiers; a dropdown filter allows the user to isolate \"Governmental,\" \"Insurance,\" or \"Safety Net\" layers."
+}

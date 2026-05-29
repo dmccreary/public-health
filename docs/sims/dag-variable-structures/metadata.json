@@ -1,0 +1,21 @@
+{
+  "title": "DAG Variable Structures Explorer",
+  "description": "Differentiate (L4) the three causal structures in a DAG — confounder, mediator, and collider — and explain the consequences of adjusting (or not adjusting) for each.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "dag-variable-structures",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "\"Epidemiology: Disease Measurement\"",
+  "chapter_dir": "02-epidemiology-disease-measurement"
+}

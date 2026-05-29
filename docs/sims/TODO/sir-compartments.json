@@ -1,0 +1,14 @@
+{
+  "sim_id": "sir-compartments",
+  "diagram_name": "SIR Model Compartment Flow",
+  "chapter_number": 15,
+  "chapter_title": "\"Systems Thinking: Modeling and Policy\"",
+  "chapter_dir": "15-systems-thinking-modeling",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** sir-compartments<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive compartment flow diagram showing the SIR model as three connected boxes (S → I → R). Each box displays the current stock value (initialized to S=9990, I=10, R=0). Clicking each arrow between compartments reveals the rate equation (infection rate = β·S·I/N; recovery rate = γ·I) with current parameter values substituted. Clicking each compartment box shows the level equation and a mini time-series of that compartment's trajectory. A toggle switches between SIR and SEIR (adding an E box between S and I with the σ progression rate). The diagram updates in real time as β and γ sliders are adjusted, showing how stock levels shift before running the full simulation."
+}

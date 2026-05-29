@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Epidemic Curve Shape Explorer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #212529; }
+        main { padding: 8px 12px; }
+        h1 { font-size: 16px; color: #1a3a6c; text-align: center; margin-bottom: 6px; }
+        #modes { display: flex; justify-content: center; gap: 14px; margin-bottom: 6px; font-size: 13px; }
+        #modes label { cursor: pointer; }
+        #chart-wrap { position: relative; width: 100%; height: 340px; }
+        #infobox {
+            margin-top: 6px; padding: 8px 10px; background: #f4f7fb;
+            border-left: 4px solid #1a3a6c; font-size: 12.5px; line-height: 1.45;
+        }
+        #infobox b { color: #1a3a6c; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Epidemic Curve Shape Explorer</h1>
+    <div id="modes">
+        <label><input type="radio" name="mode" value="point" checked> Point Source</label>
+        <label><input type="radio" name="mode" value="prop"> Propagated</label>
+        <label><input type="radio" name="mode" value="mixed"> Mixed</label>
+    </div>
+    <div id="chart-wrap"><canvas id="epiChart"></canvas></div>
+    <div id="infobox"></div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="epidemic-curve-explorer.js"></script>
+</body>
+</html>

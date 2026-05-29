@@ -1,0 +1,21 @@
+{
+  "title": "Reproducible Research Workflow",
+  "description": "Reproducible Research Workflow",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "reproducible-research-workflow",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 16,
+  "chapter_title": "\"Data Science Foundations for Public Health\"",
+  "chapter_dir": "16-data-science-foundations"
+}

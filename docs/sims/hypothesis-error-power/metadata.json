@@ -1,0 +1,21 @@
+{
+  "title": "Type I/II Error and Power Visualizer",
+  "description": "Students can explain the trade-off between Type I and Type II errors and describe how changing alpha, effect size, and sample size affect statistical power.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "hypothesis-error-power",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "explain",
+  "completion_status": "scaffold",
+  "chapter_number": 4,
+  "chapter_title": "\"Biostatistics: Statistical Foundations\"",
+  "chapter_dir": "04-biostatistics-foundations"
+}

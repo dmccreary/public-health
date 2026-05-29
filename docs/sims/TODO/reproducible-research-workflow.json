@@ -1,0 +1,14 @@
+{
+  "sim_id": "reproducible-research-workflow",
+  "diagram_name": "Reproducible Research Workflow",
+  "chapter_number": 16,
+  "chapter_title": "\"Data Science Foundations for Public Health\"",
+  "chapter_dir": "16-data-science-foundations",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** reproducible-research-workflow<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nShow a directed graph of a Git-based reproducible research pipeline. Nodes (clickable, styled as rounded boxes):\n1. Raw Data (gray) — CDC download, survey CSV, vital records extract\n2. Data Dictionary (gray) — variable codebook, README\n3. Cleaning Script (blue) — Python/pandas or R/dplyr transformations\n4. Clean Data (blue) — versioned intermediate file\n5. Analysis Notebook (blue) — Jupyter .ipynb or R Markdown .Rmd\n6. Figures & Tables (green) — generated outputs (never manually edited)\n7. Report / Paper (green) — synthesizes outputs\n8. Git Commit (orange) — each arrow that crosses a stage boundary represents a commit\n9. GitHub Repository (orange) — remote origin with DOI via Zenodo\n\nEdges: Raw Data → Cleaning Script → Clean Data → Analysis Notebook → Figures & Tables → Report / Paper. Data Dictionary → Cleaning Script (dashed). Each node click opens a tooltip explaining the stage and its reproducibility role. Nodes are color-coded by stage: input (gray), processing (blue), output (green), version control (orange)."
+}

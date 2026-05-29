@@ -1,0 +1,14 @@
+{
+  "sim_id": "dag-variable-structures",
+  "diagram_name": "DAG Variable Structures Explorer",
+  "chapter_number": 2,
+  "chapter_title": "\"Epidemiology: Disease Measurement\"",
+  "chapter_dir": "02-epidemiology-disease-measurement",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "Differentiate (L4) the three causal structures in a DAG — confounder, mediator, and collider — and explain the consequences of adjusting (or not adjusting) for each.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: diagram\n**sim-id:** dag-variable-structures<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nLearning objective: Differentiate (L4) the three causal structures in a DAG — confounder, mediator, and collider — and explain the consequences of adjusting (or not adjusting) for each.\n\nCanvas layout:\n- Main vis-network graph (60% width): shows three separate DAG structures arranged vertically\n- Right panel (40%): explains the currently selected structure\n\nThree structures displayed simultaneously with labeled groups:\nGroup 1 — Confounder: C → E, C → O, E → O. Nodes: E (Exposure, blue circle), O (Outcome, orange circle), C (Confounder, red circle).\nGroup 2 — Mediator: E → M → O. Nodes: E (blue), M (Mediator, green), O (orange).\nGroup 3 — Collider: E → L ← O. Nodes: E (blue), L (Collider, purple), O (orange).\n\nInteractive behavior:\n- Click any node: right panel shows the variable type (confounder/mediator/collider), its definition, whether to adjust for it, and the consequence of wrong choice.\n- Click any edge: shows what the arrow represents (direct causal effect from source to target).\n- Hover node: node highlights, tooltip shows variable label and type.\n- Checkbox in right panel: \"Show adjusted version\" — when checked, adjusted variables are shown with a box (conditioning symbol) and the path status (open/closed) updates.\n\nNode styling: Circles, radius 30px; E = #2196F3 (blue), O = #FF9800 (orange), C = #F44336 (red), M = #4CAF50 (green), L = #9C27B0 (purple). Edges: black arrows, width 2.\nLayout: Static positions (not physics-based) to keep three groups legible.\n\nResponsive: vis-network container fills 60% of the parent width; panel updates dynamically."
+}

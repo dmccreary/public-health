@@ -1,0 +1,14 @@
+{
+  "sim_id": "prevention-spectrum",
+  "diagram_name": "IOM Prevention Spectrum",
+  "chapter_number": 13,
+  "chapter_title": "\"Prevention Science\"",
+  "chapter_dir": "13-prevention-science",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** prevention-spectrum<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive nested diagram showing the IOM prevention spectrum (universal, selective, indicated) embedded within the classical prevention tiers (primordial, primary, secondary, tertiary). Clicking each level reveals a definition, target population, public health example, and cost-effectiveness profile. Color coding distinguishes IOM levels (blue gradient from universal to indicated) from traditional tiers (green gradient from primordial to tertiary). A toggle button allows switching between the two classification systems so students see how they relate."
+}

@@ -1,0 +1,21 @@
+{
+  "title": "COVID-19 Key Events Timeline 2019–2023",
+  "description": "COVID-19 Key Events Timeline 2019–2023",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "covid-timeline",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 19,
+  "chapter_title": "\"COVID-19 as a Public Health Master Case Study\"",
+  "chapter_dir": "19-covid-case-study"
+}

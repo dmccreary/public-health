@@ -1,0 +1,21 @@
+{
+  "title": "Four-Step Risk Assessment Framework",
+  "description": "Four-Step Risk Assessment Framework",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "risk-assessment-framework",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 6,
+  "chapter_title": "\"Environmental Health\"",
+  "chapter_dir": "06-environmental-health"
+}

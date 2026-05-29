@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Kaplan-Meier Survival Curve Explorer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #212529; }
+        main { padding: 6px 12px 10px 12px; }
+        h1 { font-size: 15px; color: #1a3a6c; text-align: center; margin-bottom: 4px; }
+        #chart-wrap { position: relative; width: 100%; height: 360px; }
+        #controls { display: flex; flex-wrap: wrap; gap: 12px 18px; padding: 8px 0 4px 0; font-size: 12.5px; align-items: center; }
+        #controls label { font-weight: 600; color: #495057; }
+        #controls input[type=range] { vertical-align: middle; width: 110px; }
+        #controls .val { display: inline-block; min-width: 36px; color: #1a3a6c; }
+        #controls button {
+            background: #1a3a6c; color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 12.5px;
+        }
+        #outputs { display: flex; gap: 10px; margin-top: 6px; font-size: 12.5px; }
+        .out {
+            flex: 1; padding: 6px 8px; border-left: 3px solid #1a3a6c;
+            background: #f4f7fb; line-height: 1.35;
+        }
+        .out.lr { border-left-color: #6a1b9a; background: #f7eef9; }
+        .out b { color: #1a3a6c; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Kaplan-Meier Survival Curve Explorer</h1>
+    <div id="chart-wrap"><canvas id="kmChart"></canvas></div>
+    <div id="controls">
+        <label>A median (mo): <input id="medA" type="range" min="6" max="60" step="1" value="24"><span class="val" id="vMedA">24</span></label>
+        <label>B median (mo): <input id="medB" type="range" min="6" max="60" step="1" value="36"><span class="val" id="vMedB">36</span></label>
+        <label>Censoring: <input id="cens" type="range" min="0" max="50" step="5" value="20"><span class="val" id="vCens">20%</span></label>
+        <label>n per group:
+            <select id="nSize">
+                <option>20</option><option>50</option><option selected>100</option><option>200</option>
+            </select>
+        </label>
+        <label><input id="showCI" type="checkbox" checked> 95% CI band</label>
+        <button id="redraw">Draw New Simulation</button>
+    </div>
+    <div id="outputs">
+        <div class="out"><b>Group A</b> median: <span id="oMedA">—</span> mo [<span id="oMedACI">—</span>]</div>
+        <div class="out"><b>Group B</b> median: <span id="oMedB">—</span> mo [<span id="oMedBCI">—</span>]</div>
+        <div class="out lr"><b>Log-rank</b>: χ² = <span id="oChi">—</span>, p = <span id="oP">—</span>. <span id="oInterp"></span></div>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="kaplan-meier-explorer.js"></script>
+</body>
+</html>

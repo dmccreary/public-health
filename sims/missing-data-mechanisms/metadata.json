@@ -1,0 +1,26 @@
+{
+  "title": "Missing Data Mechanisms Visualizer",
+  "description": "Distinguish MCAR, MAR, and MNAR missingness mechanisms by inspecting where missing cells fall in a 10x20 dataset grid, with click-to-explain explanations of why each cell is missing and the recommended handling strategy.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "public-health",
+    "data-science",
+    "missing-data",
+    "MCAR",
+    "MAR",
+    "MNAR"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "missing-data-mechanisms",
+  "library": "p5.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Analyze",
+  "completion_status": "implemented",
+  "chapter_number": 16,
+  "chapter_title": "Data Science Foundations",
+  "chapter_dir": "16-data-science-foundations"
+}

@@ -1,0 +1,27 @@
+{
+  "title": "Logic Model Builder",
+  "description": "Interactive five-column logic model builder for public health programs. Users add Inputs, Activities, Outputs, Short-term Outcomes, and Long-term Impact cards, then connect them with directed arrows to express the program's theory of change.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "program planning",
+    "logic model",
+    "theory of change",
+    "health policy and management"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "logic-model-builder",
+  "library": "p5.js",
+  "bloomLevel": "Create",
+  "bloomVerb": "construct",
+  "learning_objective": "Students will construct a logic model for a public health program by populating the five standard columns (Inputs, Activities, Outputs, Short-term Outcomes, Long-term Impact) and drawing the causal connections that express the program's theory of change.",
+  "completion_status": "implemented",
+  "status": "implemented",
+  "chapter_number": 8,
+  "chapter_title": "Health Policy and Management",
+  "chapter_dir": "08-health-policy-management"
+}

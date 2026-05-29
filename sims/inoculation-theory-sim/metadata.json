@@ -1,0 +1,28 @@
+{
+  "title": "Inoculation Theory Visualizer",
+  "description": "Side-by-side population simulation comparing misinformation spread in a population with no prebunking against a population where ~65% have been prebunked (psychologically inoculated). Demonstrates the protective effect of prebunking and contrasts it with the limited reach of corrections deployed after misinformation has spread.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "health communication",
+    "misinformation",
+    "inoculation theory"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "inoculation-theory-sim",
+  "sim_id": "inoculation-theory-sim",
+  "library": "p5.js",
+  "bloom_level": "Analyze",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Compare",
+  "learning_objective": "Analyze how psychological inoculation (prebunking) reduces the spread of misinformation across a population, and compare its effectiveness to debunking after misinformation has spread.",
+  "status": "implemented",
+  "completion_status": "implemented",
+  "chapter_number": 12,
+  "chapter_title": "Public Health Communication and Health Literacy",
+  "chapter_dir": "12-public-health-communication"
+}

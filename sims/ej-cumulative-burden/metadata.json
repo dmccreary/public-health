@@ -1,0 +1,55 @@
+{
+  "title": "Environmental Justice Cumulative Burden Explorer",
+  "description": "Interactive concept map showing six archetypal U.S. environmental-justice hotspots with clickable detail panels and a configurable EJScreen-style burden threshold.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "environmental health",
+    "environmental justice",
+    "EJScreen",
+    "cumulative burden"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "ej-cumulative-burden",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "describe",
+  "learningObjective": "Students can describe how cumulative exposure burden combines environmental hazards with demographic vulnerability and explain how the choice of percentile threshold shapes which communities qualify for intervention.",
+  "completion_status": "implemented",
+  "status": "implemented",
+  "chapter_number": 6,
+  "chapter_title": "Environmental Health",
+  "chapter_dir": "06-environmental-health",
+  "canvasHeight": 530,
+  "iframeHeight": 532,
+  "controls": [
+    {
+      "type": "slider",
+      "label": "Cumulative Burden Threshold",
+      "min": 0,
+      "max": 100,
+      "default": 0,
+      "purpose": "Filters which hotspots are highlighted as 'burdened' based on illustrative EJScreen percentile."
+    },
+    {
+      "type": "button",
+      "label": "Reset",
+      "purpose": "Clears the selected hotspot detail panel and returns the threshold to 0."
+    }
+  ],
+  "modelType": "conceptual concept map (illustrative, not data-driven)",
+  "assumptions": [
+    "The six hotspots are archetypal representations of well-documented EJ communities; positions on the simplified U.S. outline are illustrative.",
+    "EJScreen percentiles shown are plausible illustrative values, not live EPA EJScreen pulls.",
+    "Demographic and exposure descriptors are simplified summaries of published characterizations."
+  ],
+  "limitations": [
+    "Not a substitute for live EJScreen analysis at a specific census tract.",
+    "Six hotspots are not exhaustive; many other EJ communities exist across the U.S.",
+    "Stylized polygon does not represent actual state borders or geography."
+  ]
+}

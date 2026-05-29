@@ -1,0 +1,27 @@
+{
+  "title": "Global Burden of Disease by Cause and Income Group",
+  "description": "Interactive stacked horizontal bar chart of DALY burden by cause category across World Bank income groups and WHO regions, with toggles for absolute DALYs vs age-standardized rates and a global-average reference line.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "global health",
+    "epidemiology",
+    "burden of disease",
+    "DALY",
+    "epidemiological transition"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "gbd-burden-chart",
+  "library": "Chart.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "compare",
+  "completion_status": "implemented",
+  "status": "implemented",
+  "chapter_number": 9,
+  "chapter_title": "Global Health",
+  "chapter_dir": "09-global-health"
+}

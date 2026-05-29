@@ -1,0 +1,37 @@
+{
+  "title": "ICU Surge Capacity Model",
+  "description": "Interactive stock-and-flow simulation of ICU bed occupancy that lets students adjust admission rate, length of stay, baseline ICU beds, and surge-capacity expansions to discover the threshold at which the system breaches capacity.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "public-health",
+    "systems-thinking",
+    "healthcare-capacity",
+    "covid-19",
+    "stock-and-flow"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "icu-surge-capacity",
+  "library": "p5.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "completion_status": "implemented",
+  "status": "implemented",
+  "chapter_number": 18,
+  "chapter_title": "Simulation Design",
+  "chapter_dir": "18-simulation-design",
+  "learning_objective": "Analyze how admission rate, mean length of stay, and surge capacity decisions interact to determine whether an ICU breaches capacity during a respiratory pandemic, and identify the threshold at which the system tips from manageable to overwhelmed.",
+  "controls": [
+    "Slider: Admission Rate (0-50 patients/day)",
+    "Slider: Mean ICU Length of Stay (3-21 days)",
+    "Slider: Baseline ICU Beds (50-500)",
+    "Checkbox: Convert step-down units (+40 beds)",
+    "Checkbox: Regional overflow site (+60 beds)",
+    "Checkbox: Field hospital (+100 beds)",
+    "Button: Pause / Resume",
+    "Button: Reset / Restart"
+  ]
+}

@@ -1,0 +1,64 @@
+{
+  "title": "Neglected Tropical Disease Geographic Distribution",
+  "description": "Stylized world map of neglected tropical disease (NTD) endemic regions with per-region DALY burden, top NTDs, and preventive-chemotherapy program status. Includes filters for individual NTDs and a per-capita metric toggle.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "global health",
+    "neglected tropical diseases",
+    "DALYs",
+    "preventive chemotherapy",
+    "WHO",
+    "IHME GBD"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "ntd-geographic-map",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "identify",
+  "learningObjective": "Students can identify the geographic regions where neglected tropical diseases concentrate and describe how specific NTDs (soil-transmitted helminths, schistosomiasis, lymphatic filariasis, trachoma, onchocerciasis) cluster in different parts of the tropical world.",
+  "completion_status": "implemented",
+  "status": "implemented",
+  "chapter_number": 9,
+  "chapter_title": "Global Health",
+  "chapter_dir": "09-global-health",
+  "canvasHeight": 560,
+  "iframeHeight": 562,
+  "controls": [
+    {
+      "type": "select",
+      "label": "NTD",
+      "options": ["All NTDs", "Soil-transmitted helminths", "Schistosomiasis", "Lymphatic filariasis", "Trachoma", "Onchocerciasis"],
+      "default": "All NTDs",
+      "purpose": "Filters the map to show the geographic distribution of a single NTD; the color ramp rescales to the selected disease."
+    },
+    {
+      "type": "select",
+      "label": "Metric",
+      "options": ["Total DALY burden (thousands)", "DALYs per 100,000 population"],
+      "default": "Total DALY burden (thousands)",
+      "purpose": "Toggles between absolute disease burden and per-capita burden, revealing where NTD impact is most intense relative to population size."
+    },
+    {
+      "type": "button",
+      "label": "Reset",
+      "purpose": "Clears the selected region and returns both dropdowns to default."
+    }
+  ],
+  "modelType": "conceptual geographic concept map (illustrative, not data-driven)",
+  "assumptions": [
+    "Region polygons are stylized representations of major NTD endemic zones, not accurate national borders.",
+    "DALY values and per-100k rates are plausible illustrative figures based on the IHME Global Burden of Disease 2021 study; they are not live data pulls.",
+    "Per-NTD transmission intensity multipliers reflect published WHO endemicity patterns for each disease."
+  ],
+  "limitations": [
+    "Not a substitute for official WHO or IHME GBD geographic data.",
+    "Sub-national heterogeneity within each region is not represented.",
+    "Stylized world outline does not represent accurate national borders or coastlines.",
+    "Only nine endemic regions are modeled; many countries with NTD burden are aggregated or omitted."
+  ]
+}

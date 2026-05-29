@@ -1,0 +1,29 @@
+{
+  "title": "Stock-and-Flow Bathtub Model",
+  "description": "Interactive bathtub analogy illustrating stock-and-flow dynamics with an epidemic context — the stock of infected individuals is the water level, β controls the inflow faucet, and γ controls the outflow drain.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "systems thinking",
+    "stock and flow",
+    "system dynamics",
+    "epidemic modeling"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "bathtub-model",
+  "sim_id": "bathtub-model",
+  "library": "p5.js",
+  "bloom_level": "Understand",
+  "bloomLevel": "Understand",
+  "bloomVerb": "explain",
+  "learning_objective": "Students will be able to explain the integral relationship between flows (β-driven new infections, γ-driven recoveries) and the stock of infected individuals, and identify how a 5-day reporting delay causes the stock to continue rising after true inflow has peaked.",
+  "status": "implemented",
+  "completion_status": "implemented",
+  "chapter_number": 14,
+  "chapter_title": "Systems Thinking Foundations",
+  "chapter_dir": "14-systems-thinking-foundations"
+}

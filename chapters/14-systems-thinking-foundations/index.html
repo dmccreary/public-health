@@ -1,0 +1,1800 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Core systems concepts including stocks, flows, feedback loops, archetypes, causal loop diagram construction, stock-and-flow modeling, and systems modeling software tools applied to public health problems.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/public-health/chapters/14-systems-thinking-foundations/">
+      
+      
+        <link rel="prev" href="../13-prevention-science/">
+      
+      
+        <link rel="next" href="../15-systems-thinking-modeling/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Systems Thinking: Foundations and Causal Diagrams - Introduction to Public Health</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Systems Thinking: Foundations and Causal Diagrams - Introduction to Public Health">
+      
+        <meta property="og:description" content="Core systems concepts including stocks, flows, feedback loops, archetypes, causal loop diagram construction, stock-and-flow modeling, and systems modeling software tools applied to public health problems.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/14-systems-thinking-foundations/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/public-health/chapters/14-systems-thinking-foundations/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Systems Thinking: Foundations and Causal Diagrams - Introduction to Public Health">
+      
+        <meta name="twitter:description" content="Core systems concepts including stocks, flows, feedback loops, archetypes, causal loop diagram construction, stock-and-flow modeling, and systems modeling software tools applied to public health problems.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/14-systems-thinking-foundations/index.png">
+      
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#systems-thinking-foundations-and-causal-diagrams" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Public Health" class="md-header__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Public Health
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Systems Thinking: Foundations and Causal Diagrams
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Public Health" class="md-nav__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Introduction to Public Health
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-epidemiology-disease-measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Epi - Disease Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epidemiology-study-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epi - Study Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-biostatistics-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Biostatistics - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-biostatistics-regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Biostatistics - Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-environmental-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Environmental Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-social-behavioral-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Social and Behavioral Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-health-policy-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Health Policy and Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-global-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Global Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-health-equity-sdoh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Health Equity and SDOH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-public-health-ethics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Public Health Ethics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-public-health-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Public Health Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-prevention-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Prevention Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    14. Systems Thinking - Foundations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    14. Systems Thinking - Foundations
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-systems-lens-why-linear-thinking-fails-in-public-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Systems Lens: Why Linear Thinking Fails in Public Health
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stocks-flows-and-feedback-the-core-vocabulary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stocks, Flows, and Feedback: The Core Vocabulary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stocks, Flows, and Feedback: The Core Vocabulary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reinforcing-vs-balancing-feedback-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Reinforcing vs. Balancing Feedback Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#causal-loop-diagrams-construction-and-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Causal Loop Diagrams: Construction and Interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-eight-system-archetypes-in-public-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Eight System Archetypes in Public Health
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Eight System Archetypes in Public Health">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-eight-archetypes-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Eight Archetypes Reference Card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-causal-loops-to-stock-and-flow-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Causal Loops to Stock-and-Flow Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Causal Loops to Stock-and-Flow Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsim-stock-and-flow-bathtub-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Stock-and-Flow Bathtub Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-modeling-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems Modeling Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Systems Modeling Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-systems-modeling-tools-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Systems Modeling Tools Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-systems-thinking-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Systems Thinking - Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-science-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Science - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-science-advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Science - Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-simulation-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Simulation Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-covid-case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. COVID-19 Case Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fraud-misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Health Fraud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-systems-lens-why-linear-thinking-fails-in-public-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Systems Lens: Why Linear Thinking Fails in Public Health
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#stocks-flows-and-feedback-the-core-vocabulary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stocks, Flows, and Feedback: The Core Vocabulary
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Stocks, Flows, and Feedback: The Core Vocabulary">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-reinforcing-vs-balancing-feedback-loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Reinforcing vs. Balancing Feedback Loops
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#causal-loop-diagrams-construction-and-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Causal Loop Diagrams: Construction and Interpretation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-eight-system-archetypes-in-public-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Eight System Archetypes in Public Health
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Eight System Archetypes in Public Health">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-eight-archetypes-reference-card" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Eight Archetypes Reference Card
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-causal-loops-to-stock-and-flow-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Causal Loops to Stock-and-Flow Models
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Causal Loops to Stock-and-Flow Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsim-stock-and-flow-bathtub-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Stock-and-Flow Bathtub Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#systems-modeling-tools" class="md-nav__link">
+    <span class="md-ellipsis">
+      Systems Modeling Tools
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Systems Modeling Tools">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#table-systems-modeling-tools-comparison" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table: Systems Modeling Tools Comparison
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/public-health/blob/main/docs/chapters/14-systems-thinking-foundations/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="systems-thinking-foundations-and-causal-diagrams">Systems Thinking: Foundations and Causal Diagrams<a class="headerlink" href="#systems-thinking-foundations-and-causal-diagrams" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<p>Systems thinking offers a fundamentally different lens for understanding public health problems — one that focuses on structure, feedback, and dynamics rather than linear cause-and-effect. This chapter introduces the core vocabulary of systems thinking (stocks, flows, feedback loops, time delays, nonlinearity, emergence, path dependence), the construction and interpretation of causal loop diagrams, the eight system archetypes and their public health manifestations, and the translation of causal loops into quantitative stock-and-flow models. The major simulation tools — InsightMaker, Vensim, Stella, AnyLogic, and NetLogo — are surveyed with their appropriate use cases.</p>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations/">Chapter 1: Public Health Foundations</a></li>
+<li><a href="../02-epidemiology-disease-measurement/">Chapter 2: Epidemiology: Disease Measurement</a></li>
+</ul>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
+<p>This chapter covers the following 34 concepts from the learning graph:</p>
+<ol>
+<li>Systems Thinking Concepts</li>
+<li>System Stocks</li>
+<li>System Flows</li>
+<li>Feedback Loops</li>
+<li>Reinforcing Feedback Loop</li>
+<li>Balancing Feedback Loop</li>
+<li>Time Delays in Systems</li>
+<li>Nonlinearity in Systems</li>
+<li>Emergence in Systems</li>
+<li>Path Dependence</li>
+<li>Causal Loop Diagram</li>
+<li>CLD Variable Identification</li>
+<li>CLD Link Polarity</li>
+<li>CLD Loop Polarity</li>
+<li>CLD Loop Naming</li>
+<li>System Archetypes</li>
+<li>Limits to Growth Archetype</li>
+<li>Shifting the Burden Archetype</li>
+<li>Tragedy of Commons Archetype</li>
+<li>Fixes that Fail Archetype</li>
+<li>Escalation Archetype</li>
+<li>Eroding Goals Archetype</li>
+<li>Success to Successful Arch</li>
+<li>Addiction Archetype</li>
+<li>Stock-and-Flow Diagram</li>
+<li>Level Equations</li>
+<li>Rate Equations</li>
+<li>Auxiliary Variables</li>
+<li>Initial Conditions Setting</li>
+<li>InsightMaker Tool</li>
+<li>Vensim PLE Tool</li>
+<li>Stella Architect Tool</li>
+<li>AnyLogic Multi-Method</li>
+<li>NetLogo Agent-Based Tool</li>
+</ol>
+<hr>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Thinking in Circles — On Purpose</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Sage waves welcome">
+Most of us were trained to think in straight lines: A causes B, B causes C, therefore fix A to fix C. Systems thinking asks us to think in loops instead — because in the real world, B feeds back on A, and C creates new conditions for A. Public health's most stubborn problems live in those loops. Let's learn to see them.</p>
+</div>
+<h2 id="the-systems-lens-why-linear-thinking-fails-in-public-health">The Systems Lens: Why Linear Thinking Fails in Public Health<a class="headerlink" href="#the-systems-lens-why-linear-thinking-fails-in-public-health" title="Permanent link">¶</a></h2>
+<p>Public health operates in a world of extraordinary complexity. Obesity rates rise despite decades of public education campaigns. Opioid prescribing restrictions reduce legal supply but drive users toward fentanyl, increasing overdose mortality. Vaccine hesitancy persists — and sometimes intensifies — in the face of safety information. Teen smoking rates respond to cigarette taxes but then migrate to e-cigarettes. Each of these failures shares a common feature: interventions targeted a single variable in a complex system, ignoring the feedback structures that generate the problem.</p>
+<p><strong>Systems thinking</strong> is a discipline for understanding and working with complex, dynamic, interdependent systems. Its intellectual roots draw from cybernetics (Norbert Wiener), general systems theory (Ludwig von Bertalanffy), industrial dynamics (Jay Forrester), and organizational learning (Peter Senge). In public health, Jay Forrester's student Dennis Meadows (of <em>Limits to Growth</em> fame) and John Sterman at MIT brought systems dynamics to broad attention; more recently, the CDC, WHO, and leading schools of public health have endorsed systems thinking as essential for understanding health determinants that are "upstream," structural, and characterized by feedback.</p>
+<p>The <strong>systems thinking concepts</strong> that distinguish this approach from conventional epidemiological analysis include: attention to feedback rather than one-way causation; concern with stocks (what accumulates) and flows (rates of change) rather than point-in-time measurements; recognition of time delays as a source of oscillation and counterintuitive behavior; awareness of nonlinearity as the source of threshold effects and tipping points; appreciation of emergence as a property of interaction rather than of components; and understanding of path dependence as the mechanism by which history constrains future options.</p>
+<p>A critical insight for public health practitioners is that <strong>structure drives behavior</strong>. The same individual, transplanted into a different systemic structure, will behave differently. This reframes prevention and intervention: rather than attributing poor health outcomes to individual failures of will or knowledge, systems thinking asks what structural features of the system are generating the behavior we observe. This is consistent with the social determinants of health framework — but adds a dynamic, quantitative modeling dimension.</p>
+<h2 id="stocks-flows-and-feedback-the-core-vocabulary">Stocks, Flows, and Feedback: The Core Vocabulary<a class="headerlink" href="#stocks-flows-and-feedback-the-core-vocabulary" title="Permanent link">¶</a></h2>
+<p>The most fundamental building blocks of any system dynamic model are stocks and flows. A <strong>system stock</strong> (also called a level or state variable) is any quantity that accumulates or depletes over time. Examples from public health include: the number of susceptible individuals in a population; the prevalence of diagnosed hypertension in a community; the blood-lead level in an exposed child; the opioid pills in a household medicine cabinet; the community's trust in public health institutions. Stocks are the memory of a system — they capture the history of all past flows.</p>
+<p>A <strong>system flow</strong> is a rate of change — the quantity entering or leaving a stock per unit time. Flows are like faucets (inflows) and drains (outflows) on a bathtub. Births and immigration are inflows to a population stock; deaths and emigration are outflows. New diagnoses of hypertension are an inflow to the diagnosed stock; deaths and remissions are outflows. The crucial mathematical relationship is:</p>
+<div class="arithmatex">\[ \text{Stock}(t) = \text{Stock}(t_0) + \int_{t_0}^{t} [\text{Inflows} - \text{Outflows}]\, dt \]</div>
+<p>This equation expresses the fundamental law of accumulation: a stock at any time equals its initial value plus the net integral of all flows. This seemingly simple relationship generates much of the counterintuitive behavior seen in public health systems.</p>
+<p>A <strong>feedback loop</strong> is a closed sequence of causes and effects in which a change in one variable propagates through the system and eventually returns to affect that same variable. Feedback loops — not linear chains of causation — are the structural source of most system dynamics. There are exactly two types of feedback loop, and every loop in every system is one or the other.</p>
+<p>A <strong>reinforcing feedback loop</strong> (also called a positive feedback loop, or R-loop) amplifies change: an increase in variable A leads to an increase in B, which leads to an increase in A. The result is exponential growth or exponential decay, depending on the initial direction of change. Public health examples abound: epidemic spread (more infected people → more transmission → more infected people); HIV risk network growth (larger network → more exposure → more infections → larger network); the snowball effect of misinformation (more believers → more sharing → more believers).</p>
+<p>A <strong>balancing feedback loop</strong> (also called a negative feedback loop, or B-loop) resists change and drives the system toward a goal or equilibrium. When variable A increases, B decreases in response, which brings A back down. Examples: the immune response (rising pathogen load → immune activation → pathogen clearance); population regulation (rising prevalence of obesity → increased social norm pressure + health system response → modest plateau); vaccination coverage (rising disease incidence → rising demand for vaccines → rising coverage → falling incidence).</p>
+<h4 id="diagram-reinforcing-vs-balancing-feedback-loops">Diagram: Reinforcing vs. Balancing Feedback Loops<a class="headerlink" href="#diagram-reinforcing-vs-balancing-feedback-loops" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/feedback-loops-compare/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Reinforcing vs. Balancing Feedback Loop Interactive Diagram Details</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> feedback-loops-compare<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Side-by-side interactive comparison of a reinforcing loop (epidemic growth) and a balancing loop (population immunity). Left panel shows epidemic spread: a reinforcing loop with variables "Infected Individuals," "Transmission Events," and "New Cases." Right panel shows population immunity: a balancing loop with variables "Susceptible Population," "Vaccination Rate," "Immune Population," and "Transmission Rate." Each arrow can be clicked to reveal its polarity (+/−) and a plain-English explanation. A "run simulation" button animates both loops simultaneously, showing exponential growth on the left and S-shaped stabilization on the right, illustrating why epidemic curves flatten. Labels show R-loop and B-loop notation clearly.</p>
+</details>
+<p><strong>Time delays</strong> occur when a cause and its effect are separated in time. Delays are ubiquitous in public health systems and are a primary source of counterintuitive behavior, including oscillation and overshoot. The policy implementation delay (a law passes, but its effect on behavior takes years); the disease latency period (exposure precedes illness by days to decades); the infrastructure investment delay (funding a community health center today produces health outcomes years later); the workforce training pipeline (deciding to train more public health nurses today produces deployable nurses in two to four years) — all introduce delays that can cause decision-makers to under- or over-respond to problems. The classic illustration is the "shower problem": adjusting hot water in a system with a long pipe delay causes oscillation between scalding and freezing because the feedback signal arrives long after the adjustment was made.</p>
+<p><strong>Nonlinearity</strong> means that the relationship between a cause and its effect is not proportional — the same unit change in a driver produces different-sized responses depending on the current state of the system. Nonlinearities generate threshold effects (small changes below a threshold have little effect; changes above the threshold produce dramatic shifts), tipping points, and S-curves of adoption. In public health: low levels of a pollutant may cause negligible harm, but above a threshold, small additional exposures produce rapid increases in disease; herd immunity exhibits a threshold below which epidemics still occur and above which they cannot be sustained.</p>
+<p><strong>Emergence</strong> refers to properties or behaviors of a system that arise from the interactions among components but cannot be predicted from the properties of the components alone. Ant colonies exhibit sophisticated foraging behavior with no central controller; financial markets exhibit boom-bust cycles that no individual trader intends; community resilience in the face of disaster emerges from the density of social connections, not from any individual property. In public health, the geographic clustering of disease is an emergent property of social networks and environmental exposures that interact in space.</p>
+<p><strong>Path dependence</strong> means that the history of a system constrains its future options: where you are depends on where you have been. Infrastructure investments, institutional arrangements, trained workforces, and established norms are all path-dependent. The U.S. employer-based health insurance system is a classic case of path dependence — it emerged from World War II wage controls and persists despite its inefficiencies because each deviation from the existing path requires overcoming accumulated institutional momentum.</p>
+<h2 id="causal-loop-diagrams-construction-and-interpretation">Causal Loop Diagrams: Construction and Interpretation<a class="headerlink" href="#causal-loop-diagrams-construction-and-interpretation" title="Permanent link">¶</a></h2>
+<p>A <strong>causal loop diagram (CLD)</strong> is a qualitative map of a system's feedback structure — a visual representation of the causal hypotheses that the modeler believes govern system behavior. CLDs are not data visualizations or statistical models; they are structured hypotheses about mechanism. They are used to communicate complex ideas, identify leverage points, discover unintended consequences, and build a foundation for quantitative simulation.</p>
+<p><strong>CLD variable identification</strong> is the first step in diagram construction. Variables are noun phrases representing quantities that can, in principle, increase or decrease: "Obesity Prevalence," "Social Norm Pressure to Exercise," "Fast Food Outlet Density," "Disposable Income." Good variables are specific, measurable in principle, and directly causally related to at least one other variable. Common mistakes include using event language ("Introduction of Sugar Tax") rather than variable language ("Sugar Tax Level"), and including processes rather than states.</p>
+<p><strong>CLD link polarity</strong> specifies the direction of causal influence between two variables. A <strong>positive polarity</strong> link (+) means that if the cause increases (decreases), the effect increases (decreases) above (below) what it would otherwise have been. A <strong>negative polarity</strong> link (−) means that if the cause increases, the effect decreases below what it would otherwise have been. Note carefully: polarity describes direction, not desirability. A positive link from "Tobacco Use" to "Lung Cancer Incidence" is still positive because they move in the same direction.</p>
+<p><strong>CLD loop polarity</strong> (also called loop dominance) classifies the entire loop as reinforcing or balancing. The convention: count the number of negative links in the loop. If the count is even (including zero), the loop is reinforcing (R). If the count is odd, the loop is balancing (B). This rule works because each negative link flips the direction of change, and an even number of flips returns the system to amplifying its own change.</p>
+<p><strong>CLD loop naming</strong> is the practice of giving each loop a short, memorable name that captures its dominant dynamic. Naming loops helps communication and analysis — rather than tracing long causal chains, analysts can refer to "the Transmission Amplifier loop" or "the Workforce Bottleneck loop." Loop names typically combine a verbal description of what the loop does with its designation (R1, B1, R2, etc.).</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">CLDs Are Hypotheses, Not Facts</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Sage thinks carefully">
+A causal loop diagram encodes a team's best current understanding of system structure — it is not a statistical model and cannot be validated by significance tests. Two different groups modeling the same health problem may draw substantially different CLDs, both of which can be "correct" given different theoretical starting points. The power of CLDs lies in making assumptions explicit, testable, and discussable, not in producing a single authoritative answer.</p>
+</div>
+<h2 id="the-eight-system-archetypes-in-public-health">The Eight System Archetypes in Public Health<a class="headerlink" href="#the-eight-system-archetypes-in-public-health" title="Permanent link">¶</a></h2>
+<p><strong>System archetypes</strong> are recurring structural patterns — combinations of reinforcing and balancing loops — that generate characteristic patterns of behavior across many different domains. Identified and named by Peter Senge and colleagues at MIT, the archetypes are powerful because they allow practitioners to recognize familiar dynamic structures in novel settings and apply known intervention principles. All eight archetypes have direct public health applications.</p>
+<p>The <strong>Limits to Growth archetype</strong> describes a reinforcing loop (growth engine) and a balancing loop (constraint) that slow and eventually stop growth as a limiting resource or factor is depleted or engaged. Public health example: epidemic spread (R-loop) eventually slows as the susceptible population is depleted and immune individuals accumulate (B-loop). Healthcare service expansion (R-loop of demand → investment → capacity) hits workforce, space, or budget limits (B-loop). The leverage point is removing or delaying the constraint — not pushing harder on the growth engine.</p>
+<p>The <strong>Shifting the Burden archetype</strong> describes a problem symptom that can be addressed by either a fundamental solution (slow, difficult) or a symptomatic fix (fast, easy). The symptomatic fix relieves pressure to apply the fundamental solution, and may create addiction to the fix, eroding the system's capacity for the fundamental solution. Public health example: chronic pain managed with opioids (symptomatic fix) rather than physical therapy, psychological support, and addressing root causes (fundamental solution). Opioid dependence then erodes the patient's capacity and motivation for the fundamental solution.</p>
+<p>The <strong>Tragedy of the Commons archetype</strong> describes a shared resource depleted by multiple users, each acting in their individual interest despite collective harm. Public health examples: antibiotic overuse (individual benefit from each prescription; collective harm of resistance); groundwater depletion contributing to arsenic exposure; overuse of emergency departments as primary care access point.</p>
+<p>The <strong>Fixes that Fail archetype</strong> describes a fix that solves a problem in the short run but creates unintended side effects that bring the problem back — often worse — in the long run. Public health examples: banning flavored tobacco products while vaping products remain available; restricting prescription opioids without investing in pain management alternatives and addiction treatment; aggressive syringe criminalization that reduces safe injection but increases needle-sharing and HIV transmission.</p>
+<p>The <strong>Escalation archetype</strong> describes two actors, each of whom feels threatened by the other's actions and responds in ways that increase the perceived threat to the other, creating a reinforcing spiral. Public health examples: adversarial relationships between public health authorities and vaccine-hesitant communities (authority increases mandates → community increases resistance → authority increases enforcement → community trust further erodes); escalating legislative battles over reproductive health services.</p>
+<p>The <strong>Eroding Goals archetype</strong> (also called "drift to low performance") describes a situation where, under performance pressure, the response is to lower the goal rather than improve performance, allowing a gradual ratcheting down of standards. Public health examples: erosion of surveillance sensitivity during austerity (shortfalls are normalized rather than fixed); progressive relaxation of food safety inspection standards under industry pressure.</p>
+<p>The <strong>Success to the Successful archetype</strong> (also called "the rich get richer") describes two activities competing for a limited resource, where early success provides an advantage that generates more success, while the other activity is progressively starved of resources. Public health examples: well-resourced health systems attracting the best clinicians, widening quality gaps between wealthy and underserved communities; prevention programs consistently defunded in favor of treatment when budgets are cut, because prevention's benefits are invisible and diffuse while treatment benefits are visible and immediate.</p>
+<p>The <strong>Addiction archetype</strong> is a variant of Shifting the Burden in which the symptomatic fix creates dependence, and withdrawal from the fix worsens the original problem above its original level. The fix undermines the fundamental solution. Public health examples beyond individual substance dependence: organizational dependence on emergency federal grant funding (each grant cycle relieves operational pressure but prevents development of sustainable local revenue); healthcare system reliance on crisis-driven media attention to fund prevention programs.</p>
+<h4 id="diagram-eight-archetypes-reference-card">Diagram: Eight Archetypes Reference Card<a class="headerlink" href="#diagram-eight-archetypes-reference-card" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/system-archetypes/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Eight System Archetypes Interactive Reference Card Details</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> system-archetypes<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Interactive 2×4 grid of clickable archetype cards. Each card shows the archetype name and a small schematic loop diagram. Clicking a card expands a detail panel below the grid showing: the canonical loop structure (R and B loop diagram), the characteristic behavior over time (growth, oscillation, decline), a generic template description, and a specific public health example with the intervention leverage point highlighted. A "search by behavior" toggle allows students to start from the behavior pattern (growing, oscillating, drifting) and identify which archetype produces it, reversing the usual teaching direction for assessment purposes.</p>
+</details>
+<h2 id="from-causal-loops-to-stock-and-flow-models">From Causal Loops to Stock-and-Flow Models<a class="headerlink" href="#from-causal-loops-to-stock-and-flow-models" title="Permanent link">¶</a></h2>
+<p>Causal loop diagrams identify structure but cannot generate quantitative projections. To ask "how many," "how fast," or "what if vaccination coverage reaches 80%?", the qualitative CLD must be translated into a quantitative <strong>stock-and-flow diagram</strong> using explicit mathematical equations.</p>
+<p>In a <strong>stock-and-flow diagram</strong>, every stock is represented as a rectangle (bathtub), every flow as an arrow with a valve symbol (faucet or drain), and all variables that influence flow rates are represented as auxiliary variables connected by arrows. The diagram closely mirrors the CLD, but with added precision about which relationships are accumulations and which are rates.</p>
+<p><strong>Level equations</strong> (also called stock equations) describe how each stock changes over time. The general form is:</p>
+<div class="arithmatex">\[ \text{Stock}(t + dt) = \text{Stock}(t) + dt \cdot [\text{Sum of Inflows} - \text{Sum of Outflows}] \]</div>
+<p>This is the Euler integration approximation; more sophisticated models use Runge-Kutta 4th-order integration. The initial value of each stock must be specified as an <strong>initial condition</strong> — this is not a trivial requirement; many models are highly sensitive to initial stock values, and historical data are needed to calibrate them.</p>
+<p><strong>Rate equations</strong> (flow equations) specify the inflow and outflow rates as functions of stocks, auxiliary variables, and time. For example, in a simple epidemic model, the infection flow rate might be specified as:</p>
+<div class="arithmatex">\[ \text{Infection Rate} = \beta \cdot \text{Susceptible} \cdot \frac{\text{Infected}}{\text{Population}} \]</div>
+<p>where β is the transmission coefficient (contact rate × probability of infection per contact). This equation captures the nonlinear, multiplicative nature of epidemic spread — the infection rate depends on the product of susceptible and infected populations, which is what produces the characteristic S-shaped epidemic curve.</p>
+<p><strong>Auxiliary variables</strong> are intermediate calculations that simplify rate equations or make model structure clearer. They are computed from stocks and other auxiliaries but do not themselves accumulate. Examples: "effective contact rate" (computed from total contact rate × transmission probability per contact); "perceived risk" (a function of incidence and media coverage); "vaccine confidence" (a function of historical safety events and social network composition). Well-designed models keep rate equations simple by using auxiliaries to represent sub-processes.</p>
+<p><strong>Initial conditions setting</strong> requires careful empirical grounding. For an epidemic model representing a real outbreak, initial conditions should reflect the estimated state of each compartment (Susceptible, Exposed, Infected, Recovered) at the simulation start time, derived from surveillance data, serological surveys, or outbreak investigations. Sensitivity analysis on initial conditions is standard practice — models that produce qualitatively different results across the plausible range of initial values are poorly constrained and require additional data.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">The Math Can Look Intimidating — Stick With It</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Sage offers encouragement">
+Stock-and-flow equations involve integration and differential equations — concepts that can feel like a steep climb if your quantitative background is limited. The good news: modern simulation software (InsightMaker, Vensim, Stella) handles all the numerical integration automatically. Your job is to understand what stocks, flows, and rate equations mean conceptually, specify them correctly, and interpret the output critically. You don't need to solve differential equations by hand.</p>
+</div>
+<h4 id="microsim-stock-and-flow-bathtub-model">MicroSim: Stock-and-Flow Bathtub Model<a class="headerlink" href="#microsim-stock-and-flow-bathtub-model" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/bathtub-model/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Stock-and-Flow Bathtub Model MicroSim Details</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> bathtub-model<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Interactive bathtub analogy model illustrating stock-and-flow dynamics with an epidemic context. The simulation shows a rectangular bathtub (the stock of "Infected Individuals") with two flow arrows: an inflow faucet ("New Infections") controlled by a β slider (0.1–0.5) and an outflow drain ("Recoveries") controlled by a γ slider (0.05–0.3). A third panel shows a time-series graph of the stock level over 100 days. Controls include: a "Reset" button to return to initial conditions; an "Add Delay" toggle that inserts a 5-day reporting delay into the inflow signal, showing how the stock continues rising even after the true inflow has peaked; and a slider for initial infected population. The model clearly labels Level (stock), Rate (flow), and shows the integral relationship as the graph draws in real time. A displayed equation box shows the stock equation updating with current parameter values.</p>
+</details>
+<h2 id="systems-modeling-tools">Systems Modeling Tools<a class="headerlink" href="#systems-modeling-tools" title="Permanent link">¶</a></h2>
+<p>Several software platforms support stock-and-flow and agent-based modeling in public health contexts. The choice of tool depends on modeling objectives, technical expertise, collaboration needs, budget, and whether web-based accessibility is required.</p>
+<p><strong>InsightMaker</strong> is a free, web-based platform developed by Scott Fortmann-Roe that supports both stock-and-flow and agent-based modeling in the same environment. Its primary strength is accessibility: models run in any web browser, can be shared via URL, and can be embedded in websites. InsightMaker uses a drag-and-drop interface and supports Insight scripting (a JavaScript-based language) for advanced modeling. It is well-suited for education, participatory modeling with community stakeholders, and prototype models that will later be moved to more powerful platforms. The built-in model library contains dozens of public health and ecological examples.</p>
+<p><strong>Vensim PLE</strong> (Personal Learning Edition) is a free, Windows-based system dynamics software developed by Ventana Systems. Vensim is the professional standard for rigorous stock-and-flow modeling in policy analysis. Features include: causal tracing (which variables influence a given variable, and how?); reality checks (model behavior tests); sensitivity analysis; optimization; and Monte Carlo simulation. Vensim models are text-based (.mdl files), enabling version control. The free PLE version is sufficient for most educational uses; the professional version adds policy optimization and advanced calibration. A steep learning curve relative to InsightMaker is offset by substantially more analytical power.</p>
+<p><strong>Stella Architect</strong> (formerly STELLA, developed by isee systems) pioneered graphical stock-and-flow modeling in the 1980s and has evolved into a full authoring environment for interactive simulation-based learning. Stella supports story-mode presentations, in which a model is embedded in a narrative with interactive sliders and questions — making it particularly well-suited for health education. The built-in causal loop diagram tool links directly to the quantitative model. Stella is commercial software with educational licensing; a free web-based version (Stella Online) allows running but not editing models.</p>
+<p><strong>AnyLogic</strong> is a multi-method simulation platform that uniquely supports agent-based, discrete event, and system dynamics modeling in a single environment — including hybrid models that combine methods. This flexibility makes AnyLogic appropriate for complex problems where population heterogeneity (best captured by ABM), process flow (best captured by discrete event simulation), and aggregate dynamics (best captured by system dynamics) all matter. Healthcare systems, supply chain resilience, and pandemic response planning have all been modeled in AnyLogic. The free Personal Learning Edition has model size limitations; professional licensing is required for large-scale applications.</p>
+<p><strong>NetLogo</strong> is an open-source, cross-platform agent-based modeling environment developed at Northwestern University by Uri Wilensky and the Center for Connected Learning. NetLogo uses a turtle/patch paradigm: individual agents (turtles) move and interact in a spatial grid (patches), following user-defined behavioral rules. NetLogo is particularly powerful for modeling spatial spread of disease, network-based transmission, and emergent population-level dynamics from individual behaviors. The NetLogo Models Library contains hundreds of validated epidemic, ecological, and social models. NetLogo uses its own programming language (similar to Logo/BASIC); the learning curve for custom model development is moderate but shorter than general-purpose programming. BehaviorSpace, NetLogo's built-in experimental design tool, automates parameter sweeps for sensitivity analysis.</p>
+<h4 id="table-systems-modeling-tools-comparison">Table: Systems Modeling Tools Comparison<a class="headerlink" href="#table-systems-modeling-tools-comparison" title="Permanent link">¶</a></h4>
+<table>
+<thead>
+<tr>
+<th>Tool</th>
+<th>Model Type</th>
+<th>Cost</th>
+<th>Learning Curve</th>
+<th>Best For</th>
+<th>Web-Based?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>InsightMaker</td>
+<td>SD + ABM</td>
+<td>Free</td>
+<td>Low</td>
+<td>Education, participatory modeling, prototyping</td>
+<td>Yes (fully)</td>
+</tr>
+<tr>
+<td>Vensim PLE</td>
+<td>System Dynamics</td>
+<td>Free (PLE)</td>
+<td>Moderate–High</td>
+<td>Rigorous policy analysis, publication-quality SD</td>
+<td>No (Windows)</td>
+</tr>
+<tr>
+<td>Stella Architect</td>
+<td>System Dynamics</td>
+<td>Commercial</td>
+<td>Moderate</td>
+<td>Interactive learning, story-mode presentations</td>
+<td>Run-only online</td>
+</tr>
+<tr>
+<td>AnyLogic</td>
+<td>SD + ABM + DES</td>
+<td>Commercial</td>
+<td>High</td>
+<td>Complex hybrid models, healthcare operations</td>
+<td>No (desktop)</td>
+</tr>
+<tr>
+<td>NetLogo</td>
+<td>Agent-Based</td>
+<td>Free</td>
+<td>Moderate</td>
+<td>Spatial spread, network transmission, emergence</td>
+<td>Yes (web NetLogo)</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Start with a CLD Before Building a Simulation</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Sage offers a tip">
+A persistent error in systems modeling is jumping straight to software before thinking carefully about system structure. Build a causal loop diagram first — by hand, on paper or a whiteboard, with the team. Only once you understand the feedback structure should you start translating it into a quantitative model. The discipline of CLD construction forces you to be explicit about every causal hypothesis before the math obscures the reasoning.</p>
+</div>
+<h2 id="summary-and-synthesis">Summary and Synthesis<a class="headerlink" href="#summary-and-synthesis" title="Permanent link">¶</a></h2>
+<p>Systems thinking provides public health with conceptual and analytical tools for understanding the feedback structures that generate disease patterns, health inequities, and policy failures. The stocks-and-flows vocabulary makes accumulation dynamics explicit, revealing why problems often persist long after their apparent causes have been addressed. Feedback loop analysis explains the amplifying and stabilizing forces that shape epidemic curves, chronic disease trends, and organizational behavior. The eight archetypes offer a library of recognizable structural patterns with known leverage points. Causal loop diagrams provide a shared, visual language for communicating about complex systems — making implicit assumptions explicit and discussable. Stock-and-flow models add quantitative precision, enabling projection, policy analysis, and sensitivity testing.</p>
+<p>The most important lesson from systems thinking is perhaps the most humbling: in complex systems with feedback, time delays, and nonlinearity, well-intentioned interventions frequently produce unintended consequences that partly or wholly offset their intended benefits. Recognizing this is not a counsel of despair — it is a call for more sophisticated analysis, more careful monitoring, and more willingness to revise strategy in light of emerging evidence. Chapter 15 applies these foundations to the quantitative models at the heart of infectious disease epidemiology and network science.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You're Thinking in Systems Now</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Sage celebrates learning">
+You've built the core vocabulary of systems thinking: stocks and flows, reinforcing and balancing loops, time delays, nonlinearity, emergence, path dependence, CLDs, archetypes, and the modeling tools that turn conceptual maps into dynamic simulations. This is not just an academic toolkit — it's a fundamentally different way of seeing health problems. When you hear "we tried that and it didn't work," systems thinking helps you ask: which feedback loop undid the intervention? Chapter 15 takes these foundations into the mathematics of epidemic modeling and network science.</p>
+</div>
+<h2 id="key-terms">Key Terms<a class="headerlink" href="#key-terms" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Stock</td>
+<td>Any quantity that accumulates or depletes over time; the memory of a system</td>
+</tr>
+<tr>
+<td>Flow</td>
+<td>A rate of change — the quantity entering or leaving a stock per unit time</td>
+</tr>
+<tr>
+<td>Reinforcing Loop</td>
+<td>A feedback loop that amplifies change; the source of exponential growth or collapse</td>
+</tr>
+<tr>
+<td>Balancing Loop</td>
+<td>A feedback loop that resists change and drives the system toward a goal or equilibrium</td>
+</tr>
+<tr>
+<td>Time Delay</td>
+<td>A gap between cause and effect that produces oscillation and counterintuitive behavior</td>
+</tr>
+<tr>
+<td>Causal Loop Diagram</td>
+<td>A qualitative map of a system's feedback structure, showing variables, links, and loop polarity</td>
+</tr>
+<tr>
+<td>Link Polarity</td>
+<td>The sign (+/−) indicating whether a causal relationship is same-direction (+) or opposite-direction (−)</td>
+</tr>
+<tr>
+<td>Loop Polarity</td>
+<td>Classification of a feedback loop as reinforcing (even number of negative links) or balancing (odd number)</td>
+</tr>
+<tr>
+<td>System Archetype</td>
+<td>A recurring structural pattern (combination of R and B loops) generating characteristic behavior</td>
+</tr>
+<tr>
+<td>Path Dependence</td>
+<td>The property by which system history constrains future options, making some transitions very difficult</td>
+</tr>
+<tr>
+<td>Emergence</td>
+<td>System-level properties arising from component interactions that cannot be predicted from components alone</td>
+</tr>
+<tr>
+<td>Auxiliary Variable</td>
+<td>An intermediate computed variable used to simplify rate equations in a stock-and-flow model</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../13-prevention-science/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 13. Prevention Science">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                13. Prevention Science
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../15-systems-thinking-modeling/" class="md-footer__link md-footer__link--next" aria-label="Next: 15. Systems Thinking - Modeling">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                15. Systems Thinking - Modeling
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

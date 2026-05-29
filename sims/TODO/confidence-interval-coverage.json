@@ -1,0 +1,14 @@
+{
+  "sim_id": "confidence-interval-coverage",
+  "diagram_name": "Confidence Interval Coverage from Repeated Sampling",
+  "chapter_number": 4,
+  "chapter_title": "\"Biostatistics: Statistical Foundations\"",
+  "chapter_dir": "04-biostatistics-foundations",
+  "library": "Chart.js",
+  "bloom_level": "Understand (L2)",
+  "bloom_verb": "explain",
+  "learning_objective": "Students can explain what \"95% confidence\" means by observing that approximately 5% of 95% CIs from repeated random samples fail to contain the true population mean.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** confidence-interval-coverage<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nBloom Level: Understand (L2)\nBloom Verb: explain\nLearning Objective: Students can explain what \"95% confidence\" means by observing that approximately 5% of 95% CIs from repeated random samples fail to contain the true population mean.\n\nPurpose: Correct the common misconception that \"a 95% CI has a 95% chance of containing the true value.\" The CI is either correct or it isn't; the 95% is a property of the *procedure* across many samples, not a probability statement about any single interval.\n\nLayout: Chart.js horizontal bar chart. The y-axis lists sample numbers 1 through 50 (one bar row per sample). Each bar represents a CI as a horizontal line segment with endpoint markers; bars that contain the true population mean are teal; bars that miss it are red. A vertical dashed line marks the true population mean. Controls below the chart.\n\nControls:\n- \"Draw New Samples\" button: redraws 50 CIs from fresh random samples.\n- Confidence level dropdown: \"90%\", \"95%\", \"99%\". Changing it recalculates critical value and redraws all CIs; the coverage count updates.\n- Sample size slider: n = 10, 20, 30, 50, 100. Changes the width of the CIs (larger n → narrower CIs).\n- Coverage counter display: \"X of 50 CIs contain the true mean (Y%)\".\n\nTrue population mean: fixed at 100 (displayed as a vertical dashed line). Population σ = 15. Samples drawn from N(100, 15).\n\nInteractive features:\n- Hovering a bar: shows tooltip with sample number, sample mean, lower and upper CI bounds, and whether it contains the true mean.\n- Animation: CIs are drawn sequentially (one per 30ms) when \"Draw New Samples\" is clicked, making the sequential-sampling interpretation visible.\n\nVisual style: Clean Chart.js horizontal bar chart style; teal = contains true mean; red = misses true mean; bold vertical dashed line for true mean.\n\nInstructional Rationale: Animated sequential sampling makes the frequentist definition of confidence intervals visceral in a way that no static explanation can match. Students see ~5% of bars turn red in real time."
+}

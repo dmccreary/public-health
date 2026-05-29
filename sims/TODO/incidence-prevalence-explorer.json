@@ -1,0 +1,14 @@
+{
+  "sim_id": "incidence-prevalence-explorer",
+  "diagram_name": "Incidence vs. Prevalence Explorer",
+  "chapter_number": 2,
+  "chapter_title": "\"Epidemiology: Disease Measurement\"",
+  "chapter_dir": "02-epidemiology-disease-measurement",
+  "library": "p5.js",
+  "bloom_level": "Apply — learners manipulate incidence rate and duration sliders and predict how prevalence changes, then verify their prediction against the simulation output.",
+  "bloom_verb": null,
+  "learning_objective": "Apply (L3) the relationship between incidence rate, disease duration, and prevalence proportion by adjusting simulation parameters and observing how the prevalence pool fills and drains.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** incidence-prevalence-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning objective: Apply (L3) the relationship between incidence rate, disease duration, and prevalence proportion by adjusting simulation parameters and observing how the prevalence pool fills and drains.\n\nBloom level: Apply — learners manipulate incidence rate and duration sliders and predict how prevalence changes, then verify their prediction against the simulation output.\n\nCanvas layout:\n- Left panel (60%): animated \"prevalence pool\" — new cases flow in from the top (incidence), cases leave from the bottom (recovery/death). Active cases are circles in the pool, colored by time since diagnosis.\n- Right panel (40%): numeric display showing current Incidence Rate, Duration, and calculated Prevalence; formula display updating in real time.\n\nInteractive controls (p5.js createSlider):\n- Slider: Incidence Rate (1–100 new cases per 1,000 per year)\n- Slider: Average Disease Duration (0.1–10 years)\n- Button: Reset\n- Checkbox: Show formula calculation\n\nDefault parameters:\n- Incidence Rate: 10 per 1,000/year\n- Duration: 5 years\n- Population: 10,000\n\nData Visibility Requirements:\nStage 1: Show current incidence rate (cases/1,000/yr)\nStage 2: Show duration setting\nStage 3: Show calculated prevalence using Prevalence ≈ IR × Duration\nStage 4: Show animated pool adjusting to equilibrium\n\nBehavior:\n- When sliders change, cases enter and leave pool at new rates\n- Prevalence display updates every second\n- Formula panel always shows the current calculation with actual numbers\n\nInstructional Rationale: Sliders with real-time feedback are appropriate for an Apply/L3 objective because learners must manipulate parameters and observe consequences — passive animation would prevent the prediction-and-verify cycle that cements the relationship.\n\nResponsive design: Canvas resizes on window resize. updateCanvasSize() called in setup()."
+}

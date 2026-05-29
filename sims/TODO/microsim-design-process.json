@@ -1,0 +1,14 @@
+{
+  "sim_id": "microsim-design-process",
+  "diagram_name": "MicroSim Design Process",
+  "chapter_number": 18,
+  "chapter_title": "\"Simulation Design for Public Health Education\"",
+  "chapter_dir": "18-simulation-design",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** microsim-design-process<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nDraw a vertical flowchart with eight clickable stages, connected by downward arrows. Each stage is a rounded rectangle:\n\n1. **Define Learning Objective** (blue) — \"Complete the sentence: After using this sim, students can ___.\" Red gate: Does the objective require 'and'? → If yes, loop back with \"Split into two sims\"\n2. **Choose Interaction Type** (blue) — Taxonomy: Parameter slider / Toggle scenario / Explore network / Observe animation — map to Bloom level (Remember → Create)\n3. **Select Library** (orange) — Decision diamond: Agent-based? → p5.js. Standard chart? → Chart.js. Explorable data? → Plotly. Network/flow? → vis-network\n4. **Sketch Canvas Layout** (orange) — Canvas region + control region + output/readout region. Mobile layout stack.\n5. **Implement Controls First** (green) — Build sliders/buttons before the simulation logic — test that controls fire events correctly\n6. **Implement Core Loop** (green) — setup() + draw() for p5.js; config object for Chart.js; data binding for Plotly/vis-network\n7. **Apply Accessibility Checks** (red) — Color blindness test; mobile layout test; screen reader description; performance test (500-agent cap)\n8. **Write Specification** (red) — Complete the details block: sim-id, library, status, full specification text\n\nClicking each stage expands a right-side panel with:\n- 2-3 sentence description of the stage\n- A \"Common Mistake\" callout (footgun) specific to that stage\n- A checklist of 3-4 completion criteria\n\nThe stages that have a decision gate (1, 3) show a diamond branch node. Completed stages can be checked off by clicking a checkbox in the panel."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "epidemic-curve-explorer",
+  "diagram_name": "Epidemic Curve Shape Explorer",
+  "chapter_number": 3,
+  "chapter_title": "\"Epidemiology: Study Design and Causal Inference\"",
+  "chapter_dir": "03-epidemiology-study-design",
+  "library": "Chart.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "Identify (L1) and interpret (L2) epidemic curve shapes to distinguish common-source point exposure outbreaks from propagated person-to-person outbreaks.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** epidemic-curve-explorer<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nLearning objective: Identify (L1) and interpret (L2) epidemic curve shapes to distinguish common-source point exposure outbreaks from propagated person-to-person outbreaks.\n\nCanvas layout:\n- Top: radio button selector for outbreak type (Point Source / Propagated / Mixed)\n- Main chart: bar chart showing cases by day of onset (x-axis: days, y-axis: number of cases)\n- Bottom panel: infobox explaining the selected curve type, its diagnostic characteristics, and a real-world example\n\nThree dataset modes:\n1. Point Source: Gaussian-shaped peak centered at day 7, width approximately 3 days (incubation period 2-3 days), total 60 cases. Represents a foodborne outbreak.\n2. Propagated: Three successive peaks at days 5, 19, and 33 (serial interval approximately 14 days), each larger than the last. Represents measles in a school.\n3. Mixed: Point-source peak at day 7 followed by smaller propagated peaks at days 14 and 21.\n\nInteractive behavior:\n- Selecting a radio button updates the bar chart with animation (Chart.js transition)\n- Hovering a bar shows: day, case count, \"Day of onset: X, Cases: Y\"\n- Clicking a bar highlights the bar and updates the infobox with the specific context for that day\n\nAnnotations on chart:\n- Point source mode: annotation marking \"Exposure event (Day 0)\" and bracket showing incubation period width\n- Propagated mode: annotations marking \"Generation 1\", \"Generation 2\", \"Generation 3\"\n- Serial interval annotation: double-headed arrow between peaks labeled \"Serial Interval (~14 days)\"\n\nColors: Point source bars = #2196F3 (blue); Propagated bars = #FF9800 (orange); Mixed = #9C27B0 (purple)\n\nResponsive: chart fills 100% of container width; height 350px. Resizes on window resize."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "essential-public-health-services",
+  "diagram_name": "The 10 Essential Public Health Services",
+  "chapter_number": 1,
+  "chapter_title": "Public Health Foundations",
+  "chapter_dir": "01-foundations",
+  "library": "p5.js",
+  "bloom_level": "Remember (L1)",
+  "bloom_verb": "identify",
+  "learning_objective": "Students can identify all 10 Essential Public Health Services, assign each to its correct core function, and explain the equity mandate added in the 2020 revision.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: infographic\n**sim-id:** essential-public-health-services<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nBloom Level: Remember (L1)\nBloom Verb: identify\nLearning Objective: Students can identify all 10 Essential Public Health Services, assign each to its correct core function, and explain the equity mandate added in the 2020 revision.\n\nPurpose: Provide an interactive version of the CDC's Essential Public Health Services wheel, enabling students to explore the relationship between each service and the three core functions.\n\nLayout: Circular wheel diagram centered on the left 60% of the canvas. Center circle = \"Equity\" (cross-cutting theme, always visible). Inner ring = three core function arcs (Assessment, Policy Development, Assurance), each approximately 120 degrees. Outer ring = 10 service segments radiating from the relevant core function arc. Right 40% = info panel that updates on click.\n\nCore function colors:\n- Assessment (services 1–2): light blue\n- Policy Development (services 3–5): teal\n- Assurance (services 6–10): green\n\nService-to-function mapping:\n- Assessment: Monitor (1), Diagnose (2)\n- Policy Development: Inform (3), Mobilize (4), Develop Policies (5)\n- Assurance: Enforce (6), Link (7), Assure Workforce (8), Evaluate (9), Research (10)\n\nEach outer segment labeled with a short 2–4 word name. Clicking any segment:\n- That segment brightens and gets a gold border\n- Info panel shows: full service name, core function, 2-sentence description of what this service means in practice, and one concrete real-world example\n\nClicking a core function arc: highlights all segments in that function; info panel shows overview text for that function.\n\nHovering the center \"Equity\" circle: shows — \"The 2020 revision made equity an explicit thread through all 10 services. Every service must be performed equitably, with particular attention to historically underserved communities.\"\n\nCanvas: Responsive full width, minimum 450px height. Wheel on left 60%, info panel on right 40%.\n\nVisual style: Modern flat design, white segment borders, clean sans-serif labels.\n\nInstructional Rationale: A clickable wheel mirrors the CDC's official visual representation, ensuring students actively engage with each service description rather than passively scanning a list."
+}

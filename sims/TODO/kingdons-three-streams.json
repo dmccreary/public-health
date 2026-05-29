@@ -1,0 +1,14 @@
+{
+  "sim_id": "kingdons-three-streams",
+  "diagram_name": "Kingdon's Three Streams Model",
+  "chapter_number": 8,
+  "chapter_title": "\"Health Policy and Management\"",
+  "chapter_dir": "08-health-policy-management",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** kingdons-three-streams<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nAnimated visualization of Kingdon's three streams model. Three horizontal rivers flow left to right across the canvas, labeled \"Problem Stream,\" \"Policy Stream,\" and \"Politics Stream.\" Each stream carries small labeled particles (problem = red circles labeled with example problems like \"opioid deaths\"; policy = blue squares labeled with example policies like \"prescription monitoring\"; politics = green triangles labeled with political events like \"new administration\"). A vertical \"Policy Window\" gateway appears periodically when streams are manually aligned by the user. Users can drag the three streams toward or away from the gateway to experiment with coupling. When all three streams converge at the window, an animation fires: the gateway lights up gold and a banner displays \"Policy Change!\" with an example (e.g., \"ACA passage 2010\"). Controls: Reset button, Speed slider (slow/fast particle flow), and a text overlay explaining each stream on hover."
+}

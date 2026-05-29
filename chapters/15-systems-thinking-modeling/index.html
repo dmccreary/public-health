@@ -1,0 +1,1758 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="SIR/SEIR compartmental models, agent-based modeling, network analysis in public health, group model building, model validation, policy levers, Meadows leverage points, and policy resistance.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/public-health/chapters/15-systems-thinking-modeling/">
+      
+      
+        <link rel="prev" href="../14-systems-thinking-foundations/">
+      
+      
+        <link rel="next" href="../16-data-science-foundations/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Systems Thinking: Modeling and Policy - Introduction to Public Health</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Systems Thinking: Modeling and Policy - Introduction to Public Health">
+      
+        <meta property="og:description" content="SIR/SEIR compartmental models, agent-based modeling, network analysis in public health, group model building, model validation, policy levers, Meadows leverage points, and policy resistance.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/15-systems-thinking-modeling/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/public-health/chapters/15-systems-thinking-modeling/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Systems Thinking: Modeling and Policy - Introduction to Public Health">
+      
+        <meta name="twitter:description" content="SIR/SEIR compartmental models, agent-based modeling, network analysis in public health, group model building, model validation, policy levers, Meadows leverage points, and policy resistance.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/15-systems-thinking-modeling/index.png">
+      
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#systems-thinking-modeling-and-policy" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Public Health" class="md-header__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Public Health
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Systems Thinking: Modeling and Policy
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Public Health" class="md-nav__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Introduction to Public Health
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-epidemiology-disease-measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Epi - Disease Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epidemiology-study-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epi - Study Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-biostatistics-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Biostatistics - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-biostatistics-regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Biostatistics - Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-environmental-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Environmental Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-social-behavioral-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Social and Behavioral Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-health-policy-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Health Policy and Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-global-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Global Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-health-equity-sdoh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Health Equity and SDOH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-public-health-ethics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Public Health Ethics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-public-health-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Public Health Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-prevention-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Prevention Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-systems-thinking-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Systems Thinking - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    15. Systems Thinking - Modeling
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    15. Systems Thinking - Modeling
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sirseir-compartmental-models-structure-and-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIR/SEIR Compartmental Models: Structure and Equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SIR/SEIR Compartmental Models: Structure and Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sir-model-compartment-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: SIR Model Compartment Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-extensions-seird-seirv-and-epidemic-overshoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Extensions: SEIRD, SEIRV, and Epidemic Overshoot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Extensions: SEIRD, SEIRV, and Epidemic Overshoot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsim-interactive-sirseir-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Interactive SIR/SEIR Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-based-models-agents-rules-and-emergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent-Based Models: Agents, Rules, and Emergence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-analysis-in-public-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Analysis in Public Health
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-model-building-and-participatory-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Model Building and Participatory Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-validation-face-validity-to-cross-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Validation: Face Validity to Cross-Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-analysis-meadows-leverage-points-and-policy-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Analysis: Meadows Leverage Points and Policy Resistance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Policy Analysis: Meadows Leverage Points and Policy Resistance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-meadows-leverage-points-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Meadows Leverage Points Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-science-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Science - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-science-advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Science - Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-simulation-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Simulation Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-covid-case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. COVID-19 Case Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fraud-misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Health Fraud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sirseir-compartmental-models-structure-and-equations" class="md-nav__link">
+    <span class="md-ellipsis">
+      SIR/SEIR Compartmental Models: Structure and Equations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="SIR/SEIR Compartmental Models: Structure and Equations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-sir-model-compartment-flow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: SIR Model Compartment Flow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-extensions-seird-seirv-and-epidemic-overshoot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Extensions: SEIRD, SEIRV, and Epidemic Overshoot
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Model Extensions: SEIRD, SEIRV, and Epidemic Overshoot">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#microsim-interactive-sirseir-simulator" class="md-nav__link">
+    <span class="md-ellipsis">
+      MicroSim: Interactive SIR/SEIR Simulator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#agent-based-models-agents-rules-and-emergence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Agent-Based Models: Agents, Rules, and Emergence
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#network-analysis-in-public-health" class="md-nav__link">
+    <span class="md-ellipsis">
+      Network Analysis in Public Health
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#group-model-building-and-participatory-simulation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Group Model Building and Participatory Simulation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#model-validation-face-validity-to-cross-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Model Validation: Face Validity to Cross-Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#policy-analysis-meadows-leverage-points-and-policy-resistance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Policy Analysis: Meadows Leverage Points and Policy Resistance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Policy Analysis: Meadows Leverage Points and Policy Resistance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-meadows-leverage-points-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Meadows Leverage Points Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#summary-and-synthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary and Synthesis
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Terms
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/public-health/blob/main/docs/chapters/15-systems-thinking-modeling/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="systems-thinking-modeling-and-policy">Systems Thinking: Modeling and Policy<a class="headerlink" href="#systems-thinking-modeling-and-policy" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<p>Compartmental epidemic models, agent-based simulations, and network analysis are the quantitative engines of systems thinking in public health. This chapter derives the SIR and SEIR model equations, explores their extensions to vaccination (SEIRV) and mortality (SEIRD), introduces agent-based modeling concepts, applies network analysis to public health problems, describes group model building as a participatory method, and addresses the validation, policy analysis, and unintended consequences dimensions of simulation modeling. Meadows' leverage point hierarchy provides the overarching framework for identifying where systems are most amenable to change.</p>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../02-epidemiology-disease-measurement/">Chapter 2: Epidemiology: Disease Measurement</a></li>
+<li><a href="../03-epidemiology-study-design/">Chapter 3: Epidemiology: Study Design and Causal Inference</a></li>
+<li><a href="../14-systems-thinking-foundations/">Chapter 14: Systems Thinking: Foundations and Causal Diagrams</a></li>
+</ul>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
+<p>This chapter covers the following 31 concepts from the learning graph:</p>
+<ol>
+<li>SIR Compartmental Model</li>
+<li>SEIR Compartmental Model</li>
+<li>SEIRD Model Extension</li>
+<li>SEIRV Vaccination Model</li>
+<li>Transmission Rate Beta</li>
+<li>Recovery Rate Gamma</li>
+<li>R0 in SIR Model</li>
+<li>SIR Model Equations</li>
+<li>Epidemic Overshoot</li>
+<li>Agent-Based Model</li>
+<li>Agent Rules Design</li>
+<li>Spatial Grid Models</li>
+<li>Network Topology ABM</li>
+<li>Super-Spreader Dynamics</li>
+<li>Group Model Building</li>
+<li>Mental Model Elicitation</li>
+<li>Stakeholder CLD Workshop</li>
+<li>Model Face Validity</li>
+<li>Parameter Sensitivity</li>
+<li>Historical Reproduction Test</li>
+<li>Policy Lever Identification</li>
+<li>Meadows Leverage Points</li>
+<li>Unintended Consequences</li>
+<li>Policy Resistance</li>
+<li>Wicked Problems PH</li>
+<li>Network Analysis PH</li>
+<li>Network Nodes and Edges</li>
+<li>Betweenness Centrality</li>
+<li>Degree Distribution</li>
+<li>Clustering Coefficient</li>
+<li>Network Interventions</li>
+</ol>
+<hr>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">When the Map Becomes the Territory</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Sage waves welcome">
+All models are wrong, but some are useful — George Box's aphorism is never truer than in epidemic modeling. The SIR model cannot capture every nuance of human behavior, yet it correctly predicted the shape of COVID-19 curves in dozens of countries and guided the timing of vaccine distribution strategies. In this chapter we build the models, critique them honestly, and ask: where in the system can we intervene most effectively?</p>
+</div>
+<h2 id="sirseir-compartmental-models-structure-and-equations">SIR/SEIR Compartmental Models: Structure and Equations<a class="headerlink" href="#sirseir-compartmental-models-structure-and-equations" title="Permanent link">¶</a></h2>
+<p>The <strong>SIR compartmental model</strong> is the foundational mathematical framework for infectious disease dynamics. Introduced by Kermack and McKendrick in 1927, it divides a closed population into three mutually exclusive compartments: <strong>Susceptible</strong> (S) — individuals who have no immunity and can become infected; <strong>Infectious</strong> (I) — individuals who are currently infected and capable of transmitting the disease; and <strong>Recovered</strong> (R) — individuals who have recovered and are assumed to have complete, permanent immunity.</p>
+<p>The <strong>SIR model equations</strong> describe the flow of individuals between compartments over time. Let N = S + I + R = total (constant) population. The standard differential equations are:</p>
+<div class="arithmatex">\[ \frac{dS}{dt} = -\beta \frac{S \cdot I}{N} \]</div>
+<div class="arithmatex">\[ \frac{dI}{dt} = \beta \frac{S \cdot I}{N} - \gamma I \]</div>
+<div class="arithmatex">\[ \frac{dR}{dt} = \gamma I \]</div>
+<p>The <strong>transmission rate beta</strong> (β) is the product of the average contact rate (contacts per person per day) and the probability of transmission per contact. It captures the combined effect of how often susceptible and infectious individuals encounter each other and how likely those encounters are to transmit infection. A highly infectious pathogen in a densely connected population has a high β; a less infectious pathogen in a dispersed population has a low β.</p>
+<p>The <strong>recovery rate gamma</strong> (γ) is the rate at which infectious individuals recover (or are removed from the infectious compartment by death, isolation, or recovery). Its reciprocal, 1/γ, is the mean infectious period in days. For influenza, 1/γ ≈ 2–5 days; for COVID-19 (original strain), 1/γ ≈ 5–10 days.</p>
+<p>The fundamental threshold quantity of the SIR model is <strong>R₀</strong> (the basic reproduction number), defined as the expected number of secondary cases produced by a single infectious case in a fully susceptible population. In the SIR framework:</p>
+<div class="arithmatex">\[ R_0 = \frac{\beta}{\gamma} \]</div>
+<p>When R₀ &gt; 1, each infected person infects more than one other on average, and an epidemic grows. When R₀ &lt; 1, the outbreak fades. The epidemic threshold condition — the critical fraction of the population that must be susceptible for epidemic growth — is simply 1/R₀. This directly connects R₀ to the herd immunity threshold (HIT = 1 − 1/R₀) discussed in Chapter 13.</p>
+<p>The SIR model's critical limitation for many pathogens is its assumption that individuals move directly from Susceptible to Infectious — ignoring the <strong>latent</strong> or <strong>exposed</strong> period during which an individual has been infected but is not yet infectious. The <strong>SEIR compartmental model</strong> adds an Exposed (E) compartment to capture this biological reality:</p>
+<div class="arithmatex">\[ \frac{dS}{dt} = -\beta \frac{S \cdot I}{N} \]</div>
+<div class="arithmatex">\[ \frac{dE}{dt} = \beta \frac{S \cdot I}{N} - \sigma E \]</div>
+<div class="arithmatex">\[ \frac{dI}{dt} = \sigma E - \gamma I \]</div>
+<div class="arithmatex">\[ \frac{dR}{dt} = \gamma I \]</div>
+<p>where σ is the rate of progression from exposed to infectious (1/σ = mean latent period). For COVID-19, 1/σ ≈ 3–5 days. The SEIR model produces a delayed, somewhat dampened epidemic curve relative to SIR, and is generally preferred for diseases with a distinct latent period.</p>
+<h4 id="diagram-sir-model-compartment-flow">Diagram: SIR Model Compartment Flow<a class="headerlink" href="#diagram-sir-model-compartment-flow" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/sir-compartments/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>SIR Model Compartment Flow Interactive Diagram Details</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> sir-compartments<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Interactive compartment flow diagram showing the SIR model as three connected boxes (S → I → R). Each box displays the current stock value (initialized to S=9990, I=10, R=0). Clicking each arrow between compartments reveals the rate equation (infection rate = β·S·I/N; recovery rate = γ·I) with current parameter values substituted. Clicking each compartment box shows the level equation and a mini time-series of that compartment's trajectory. A toggle switches between SIR and SEIR (adding an E box between S and I with the σ progression rate). The diagram updates in real time as β and γ sliders are adjusted, showing how stock levels shift before running the full simulation.</p>
+</details>
+<h2 id="model-extensions-seird-seirv-and-epidemic-overshoot">Model Extensions: SEIRD, SEIRV, and Epidemic Overshoot<a class="headerlink" href="#model-extensions-seird-seirv-and-epidemic-overshoot" title="Permanent link">¶</a></h2>
+<p>The basic SEIR model assumes all infectious individuals recover with complete immunity. Real diseases require extensions for disease-induced death and vaccination.</p>
+<p>The <strong>SEIRD model extension</strong> adds a Death (D) compartment, allowing a fraction of infectious individuals to die rather than recover. The infectious compartment is split: at rate γ_R, infected individuals recover; at rate μ (the disease-induced mortality rate), they die. The model equations become:</p>
+<div class="arithmatex">\[ \frac{dI}{dt} = \sigma E - (\gamma_R + \mu) I \]</div>
+<div class="arithmatex">\[ \frac{dR}{dt} = \gamma_R I \]</div>
+<div class="arithmatex">\[ \frac{dD}{dt} = \mu I \]</div>
+<p>The case fatality rate in the model is CFR = μ / (γ_R + μ). SEIRD models were central to COVID-19 mortality projections and ICU capacity planning — by projecting the death compartment trajectory, planners could estimate hospital surge timing.</p>
+<p>The <strong>SEIRV vaccination model</strong> incorporates vaccination as a flow from the Susceptible compartment directly to the Recovered (immune) compartment, bypassing the infection pathway:</p>
+<div class="arithmatex">\[ \frac{dS}{dt} = -\beta \frac{S \cdot I}{N} - \nu S \]</div>
+<div class="arithmatex">\[ \frac{dR}{dt} = \gamma I + \nu S \]</div>
+<p>where ν is the vaccination rate (fraction of susceptibles vaccinated per day). SEIRV models can evaluate the impact of vaccination campaigns on epidemic peak height, timing, and total cases — a direct application of herd immunity mathematics in a dynamic model. Key policy questions addressable with SEIRV include: what vaccination rate is needed to prevent epidemic overshoot given current disease prevalence? How does vaccine timing relative to epidemic phase affect cumulative deaths?</p>
+<p><strong>Epidemic overshoot</strong> is a counterintuitive but mathematically robust prediction of all SIR-family models: when an epidemic ends (I → 0), the total number of individuals who were infected is larger than the minimum needed to bring R_eff below 1. This occurs because infections continue to accrue even after the herd immunity threshold is crossed, driven by the large number of infectious individuals already in the system. In the absence of intervention, a pathogen with R₀ = 2.5 infects approximately 89% of the population when the epidemic finally burns out — far more than the 60% threshold (1 − 1/2.5) needed for herd immunity. Epidemic overshoot was a key argument for "flattening the curve" during COVID-19: slowing transmission reduces not just peak daily cases but total cumulative cases.</p>
+<h4 id="microsim-interactive-sirseir-simulator">MicroSim: Interactive SIR/SEIR Simulator<a class="headerlink" href="#microsim-interactive-sirseir-simulator" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/sir-seir-simulator/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Interactive SIR/SEIR Epidemic Simulator Details</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> sir-seir-simulator<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Full interactive epidemic simulator with model selection dropdown (SIR, SEIR, SEIRD, SEIRV). Parameter sliders include: β (transmission rate, 0.1–1.0), γ (recovery rate, 0.05–0.5), σ (progression rate for SEIR, 0.1–0.5), μ (mortality rate for SEIRD, 0–0.05), ν (vaccination rate for SEIRV, 0–0.1), and initial population size (1,000–100,000). Real-time epidemic curve shows S, E, I, R, D compartments in color-coded lines over a 365-day simulation. A prominent R₀ display updates as β/γ changes. A second panel shows cumulative cases and deaths. A "herd immunity threshold" horizontal dashed line marks 1−1/R₀ on the susceptible trajectory. A "Compare" button allows overlaying two model runs with different parameter sets. The simulation re-runs automatically as sliders change, allowing students to discover epidemic overshoot by reducing β mid-epidemic.</p>
+</details>
+<h2 id="agent-based-models-agents-rules-and-emergence">Agent-Based Models: Agents, Rules, and Emergence<a class="headerlink" href="#agent-based-models-agents-rules-and-emergence" title="Permanent link">¶</a></h2>
+<p>Where compartmental models treat populations as homogeneous — each susceptible individual has the same probability of encountering an infectious individual — <strong>agent-based models (ABMs)</strong> simulate thousands of individual agents, each following explicit behavioral rules and interacting with specific neighbors. The aggregate epidemic patterns emerge from these individual interactions rather than being assumed in the model structure.</p>
+<p>In an ABM, each <strong>agent</strong> represents an individual (person, household, or other unit) with a set of state variables (infected/susceptible, location, age, vaccination status) and behavioral rules (move to work, attend school, interact with neighbors). <strong>Agent rules design</strong> is the core modeling challenge: what determines who agents interact with? How do agents decide to change behavior in response to perceived risk? Rules may be deterministic (always follow the same pattern) or stochastic (probabilistic), and may be informed by time-use surveys, contact diaries, or social network data.</p>
+<p><strong>Spatial grid models</strong> are the simplest form of ABM, placing agents on a regular grid where each agent only interacts with its immediate neighbors (von Neumann or Moore neighborhoods). Spatial ABMs capture geographic heterogeneity in disease spread — the clustering of outbreaks in dense urban areas, the role of travel corridors in spatial diffusion — that compartmental models cannot represent. The classic NetLogo "Virus" model uses a spatial grid to demonstrate how herd immunity emerges from local transmission dynamics.</p>
+<p><strong>Network topology ABMs</strong> embed agents in social networks where each agent is a node connected to a specific set of other agents by edges representing contact relationships. Network structure profoundly affects epidemic dynamics: a random network (Erdős-Rényi) produces different epidemic curves than a scale-free network (Barabási-Albert) even with identical transmission and recovery parameters. In a scale-free network — where degree distribution follows a power law, meaning a few "hubs" have very many connections — vaccination strategies that target hubs are far more efficient than random vaccination.</p>
+<p><strong>Super-spreader dynamics</strong> emerge naturally in network ABMs. A super-spreader is an individual who infects a disproportionately large number of others, either because of high contact rate (a hub node), high infectivity (biological variation in shedding), or behavior that concentrates risk (large gatherings). The 20/80 rule — 20% of cases cause 80% of transmission — has been empirically documented for SARS, MERS, Ebola, COVID-19, and gonorrhea. Super-spreader dynamics violate the homogeneous mixing assumption of SIR models and require network or ABM approaches to capture. The implication for control: if transmission is highly concentrated, targeted interventions (contact tracing, event restriction) can be far more efficient than population-wide measures.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">ABM vs. Compartmental Models: Which to Choose?</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Sage thinks carefully">
+Compartmental models are simpler, faster, and analytically tractable — you can derive R₀ mathematically and prove threshold theorems. ABMs capture heterogeneity, spatial structure, and emergent behavior that compartmental models cannot. The right choice depends on the question: if you need to project population-level incidence curves, SIR/SEIR is usually sufficient. If you need to evaluate network-targeted interventions, identify super-spreader venues, or understand spatial clustering, you need an ABM. Many modern applied models use both.</p>
+</div>
+<h2 id="network-analysis-in-public-health">Network Analysis in Public Health<a class="headerlink" href="#network-analysis-in-public-health" title="Permanent link">¶</a></h2>
+<p><strong>Network analysis</strong> provides a mathematical framework for understanding how diseases, behaviors, information, and resources move through social structures. A network is a set of <strong>nodes</strong> (network nodes and edges — entities such as individuals, organizations, or locations) connected by <strong>edges</strong> (relationships, contacts, or flows). Network analysis metrics describe the structure of these connections and identify key nodes and structural properties that shape disease dynamics and intervention opportunities.</p>
+<p><strong>Degree distribution</strong> describes how connections are distributed across nodes in a network. The degree of a node is simply the number of edges it has (the number of contacts for an individual in a social network). In random networks, degree follows a Poisson distribution clustered around the mean. In social contact networks relevant to sexually transmitted infections, foodborne illness transmission, and healthcare-associated infections, degree distributions are highly right-skewed: most individuals have few connections, but a small number have many. This skewed distribution is what generates super-spreader dynamics.</p>
+<p><strong>Betweenness centrality</strong> measures how often a node lies on the shortest path between other nodes. A node with high betweenness centrality serves as a bridge between otherwise disconnected network clusters. In disease transmission, nodes with high betweenness are critical for inter-cluster spread — removing or vaccinating them disconnects transmission pathways even if they are not the highest-degree nodes. In public health service networks, organizations with high betweenness centrality serve as critical conduits for patient referrals and information flow.</p>
+<p>The <strong>clustering coefficient</strong> measures the degree to which a node's neighbors are also connected to each other — the extent to which the network is locally cliquish. High clustering creates tight local transmission chains but can limit epidemic spread to the rest of the network. Many social networks exhibit high clustering (people's friends know each other) combined with a small number of long-range "weak ties" (connections between otherwise distant clusters) — the "small-world" network structure identified by Watts and Strogatz. Small-world networks support rapid epidemic spread because a pathogen can transmit locally within dense clusters and jump between clusters via weak ties.</p>
+<p><strong>Network interventions</strong> in public health exploit network structure to improve efficiency. Examples include: contact tracing (identifying transmission networks around index cases and interrupting chains at key nodes); targeted vaccination of high-degree or high-betweenness nodes; peer health navigator programs that embed change agents at high-centrality positions in social networks of people who inject drugs; network-based recruitment for HIV testing using respondent-driven sampling.</p>
+<p><strong>Network analysis in public health</strong> has expanded dramatically with the availability of digital contact data (cell phone proximity records, health record linkages, social media networks), though each data source introduces selection bias and privacy concerns that must be explicitly addressed. Ethical network analysis requires careful attention to the harms that could arise from identifying specific individuals as high-risk nodes in publicly reported models.</p>
+<h2 id="group-model-building-and-participatory-simulation">Group Model Building and Participatory Simulation<a class="headerlink" href="#group-model-building-and-participatory-simulation" title="Permanent link">¶</a></h2>
+<p>Quantitative simulation models are most useful for policy when they incorporate the knowledge and values of the communities and decision-makers they are intended to serve. <strong>Group model building</strong> is a facilitated, participatory approach to developing system dynamics models — typically causal loop diagrams and eventually stock-and-flow models — with groups of stakeholders including community members, program staff, policymakers, and researchers.</p>
+<p><strong>Mental model elicitation</strong> is the first phase of group model building: surfacing participants' existing (often implicit) causal theories about how a problem works. Techniques include storytelling (participants describe the "story" of the problem they work on), concept mapping, card sorting, and structured brainstorming. The goal is to make tacit knowledge explicit and discussable — to surface disagreements about how the system works so they can be examined and resolved.</p>
+<p>The <strong>stakeholder CLD workshop</strong> is the core group model building session, typically lasting one to two days. Participants work in facilitated small groups to identify key variables, draw causal arrows, and assign polarities. The facilitator's role is to keep the group focused on structure rather than solutions, to probe assumptions when participants jump to policy recommendations, and to document the emerging diagram in real time on a shared screen or whiteboard. The products — a group-generated CLD, a list of key feedback loops, and a set of potential leverage points — are then used to build and calibrate the quantitative model.</p>
+<p>Group model building has been used for HIV prevention planning, obesity prevention in low-income communities, mental health system reform, and pandemic preparedness. Its strengths include stakeholder buy-in (participants are more likely to use a model they helped build), breadth of knowledge (diverse stakeholders surface considerations that researchers would miss), and democratic legitimacy (community values can be incorporated into model structure and objectives). Limitations include time intensity, the risk of groupthink, and the challenge of maintaining analytical rigor when group consensus preferences diverge from evidence.</p>
+<h2 id="model-validation-face-validity-to-cross-validation">Model Validation: Face Validity to Cross-Validation<a class="headerlink" href="#model-validation-face-validity-to-cross-validation" title="Permanent link">¶</a></h2>
+<p>A simulation model is only as useful as its accuracy — and accuracy in the context of complex social-ecological systems is a nuanced, multidimensional concept. Model validation encompasses a spectrum of tests from informal qualitative checks through quantitative statistical comparison with empirical data.</p>
+<p><strong>Model face validity</strong> is the most basic check: does the model structure make sense to experts? Does the model produce behaviors that look qualitatively like the real system? Face validity is assessed by showing model structure and output to subject-matter experts who were not involved in model building and asking whether the model captures the most important mechanisms and produces plausible dynamics. Face validity is necessary but far from sufficient.</p>
+<p><strong>Parameter sensitivity</strong> analysis tests how much model outputs change as parameters vary across their plausible ranges. If a model's policy conclusions are highly sensitive to a parameter that is poorly constrained by data, the model provides weak guidance until that parameter is better estimated. Sensitivity analysis should distinguish between parameters that affect output magnitude (important for quantitative projections) and those that affect qualitative conclusions about which intervention is most effective (important for policy guidance). The latter are the most policy-critical.</p>
+<p><strong>Historical reproduction test</strong> (also called behavior reproduction or calibration) evaluates whether the model can reproduce historical epidemic or trend data when historical parameter values are used as inputs. For an epidemic model of the 2009 H1N1 influenza pandemic, a historical reproduction test would ask: given the estimated β and γ from early outbreak data, does the model reproduce the observed epidemic curve — peak timing, peak magnitude, and total attack rate? Models that cannot reproduce well-documented historical events are poorly specified and should not be used for prospective projection.</p>
+<p>More rigorous validation methods include cross-validation (withholding a portion of historical data for model testing, fitting on the remainder), prospective validation (collecting new data and testing whether model projections made before data collection are confirmed), and ensemble modeling (comparing outputs across multiple model structures to quantify structural uncertainty). The COVID-19 pandemic produced the largest real-time ensemble modeling exercise in history, with the CDC COVID-19 Ensemble Forecast aggregating projections from dozens of independent modeling teams.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">All Models Are Wrong — Some Are Dangerous</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Sage warns of a common pitfall">
+A validated model is not a crystal ball. All models involve simplifying assumptions; the question is whether those assumptions matter for the policy question at hand. A model that performs well for 4-week projection may perform poorly for 6-month projection. A model calibrated on the original SARS-CoV-2 strain may be poorly suited to Omicron with its different transmission and severity parameters. Always communicate model uncertainty clearly, and never present a single model output as a prediction rather than a projection under specified assumptions.</p>
+</div>
+<h2 id="policy-analysis-meadows-leverage-points-and-policy-resistance">Policy Analysis: Meadows Leverage Points and Policy Resistance<a class="headerlink" href="#policy-analysis-meadows-leverage-points-and-policy-resistance" title="Permanent link">¶</a></h2>
+<p><strong>Policy lever identification</strong> is the process of using systems analysis — causal loop diagrams, stock-and-flow models, and archetype recognition — to identify where interventions are most likely to produce large, sustained improvements in health outcomes. Not all parts of a system are equally amenable to change, and not all interventions with large short-term effects produce durable change.</p>
+<p><strong>Meadows leverage points</strong> (from Donella Meadows' 1999 essay "Leverage Points: Places to Intervene in a System") provide a hierarchical taxonomy of intervention types, ranked from least to most powerful. The twelve leverage points, from weakest to strongest, are:</p>
+<ol>
+<li>Numbers (constants and parameters such as subsidies, taxes, standards)</li>
+<li>The sizes of buffers and stocks relative to their flows</li>
+<li>The structure of material flows (transport networks, age structures)</li>
+<li>The lengths of delays relative to the rate of system change</li>
+<li>The strength of negative feedback loops relative to the impacts they are trying to correct</li>
+<li>The gain around driving positive feedback loops</li>
+<li>The structure of information flows — who has access to what information</li>
+<li>The rules of the system (incentives, constraints, consequences)</li>
+<li>The power to add, change, evolve, or self-organize system structure</li>
+<li>The goals of the system</li>
+<li>The mindset or paradigm out of which the goals, rules, and structure arise</li>
+<li>The power to transcend paradigms</li>
+</ol>
+<p>The insight that "numbers" — the parameters that most policy makers focus on — are among the weakest leverage points is counterintuitive and important. Changing a tax rate or a funding level may produce a response in the short term, but the feedback structure of the system eventually re-establishes previous behavior patterns. Conversely, changing the goals of the system, the paradigms that shape how actors in the system understand and respond to it, or the information flows that enable feedback loops to function effectively — these are high-leverage interventions that can produce lasting structural change.</p>
+<h4 id="diagram-meadows-leverage-points-hierarchy">Diagram: Meadows Leverage Points Hierarchy<a class="headerlink" href="#diagram-meadows-leverage-points-hierarchy" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/meadows-leverage/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Meadows Leverage Points Hierarchy Interactive Diagram Details</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> meadows-leverage<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Interactive vertical ranked list of all 12 Meadows leverage points, displayed as a stacked horizontal bar chart with power increasing from bottom (numbers/parameters) to top (transcending paradigms). Each leverage point is a clickable bar. Clicking reveals: the leverage point name, a plain-English description, a specific public health example (e.g., leverage point 1: "cigarette tax level — raising tax reduces smoking but tobacco companies adapt pricing; smoking rebounds when tax is not adjusted for inflation"), and an explanation of why this is weaker/stronger than adjacent leverage points. A "Public Health Policy Examples" toggle re-labels all 12 bars with real policy examples from tobacco, obesity, HIV, and opioid contexts. Color gradient from pale blue (weakest) to deep orange (strongest).</p>
+</details>
+<p><strong>Unintended consequences</strong> occur when an intervention in a complex system produces effects — through pathways that were not anticipated — that offset, reverse, or worsen the intended outcome. Classic examples in public health include: methadone maintenance treatment that reduces heroin use but increases methadone diversion; mandatory minimum sentencing for drug offenses that increases incarceration without reducing substance use and destroys family social networks; sugar-sweetened beverage taxes that reduce soda consumption but are partly offset by increased consumption of fruit juice; HIV testing campaigns that identify HIV-positive individuals but produce no treatment linkage because the healthcare system is insufficiently resourced.</p>
+<p><strong>Policy resistance</strong> is the tendency of complex systems to frustrate policy efforts — not through deliberate opposition but through the feedback dynamics that generate compensating changes when an intervention creates pressure. The drug policy domain provides abundant illustrations: supply reduction (drug seizures, eradication campaigns) increases street prices, which increases the profitability of dealing, which attracts new suppliers, which restores supply and reduces prices — the balancing loop restores the system to near its previous state. Understanding which feedback loops will compensate for a given intervention is essential for designing durable policy.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Leverage Points Are Not Magic Buttons</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Sage offers a helpful tip">
+Meadows herself cautioned that high-leverage interventions in complex systems are also unpredictable — pushing on a paradigm or a system goal can produce dramatic change, but in any direction. High leverage means large effects, not reliably beneficial ones. Identifying a leverage point is the beginning of the analysis, not the end. You still need to understand the feedback dynamics that will be engaged before recommending action.</p>
+</div>
+<p><strong>Wicked problems</strong> in public health are problems that are resistant to resolution because of their complexity, the multiplicity of stakeholders with conflicting values, and the absence of a single correct solution. Horst Rittel and Melvin Webber (1973) identified ten properties of wicked problems: they have no definitive formulation; solutions are not true-or-false but good-or-bad; there is no immediate or ultimate test of a solution; every solution is a "one-shot operation"; they have no enumerable set of potential solutions; every wicked problem is essentially unique; every wicked problem is a symptom of another problem; explanations of a wicked problem can be chosen from many alternative explanations; and the problem solver has no right to be wrong. Health inequity, obesity, addiction, and climate-related health burdens are all wicked problems — they cannot be "solved" by any single intervention and require adaptive, iterative, multi-stakeholder management rather than technical fixes.</p>
+<h2 id="summary-and-synthesis">Summary and Synthesis<a class="headerlink" href="#summary-and-synthesis" title="Permanent link">¶</a></h2>
+<p>This chapter has built the quantitative and analytical toolkit for applying systems thinking to public health's most complex challenges. The SIR/SEIR family of compartmental models provides the mathematical foundation for epidemic projection, herd immunity analysis, and vaccination strategy design — built on two parameters (β and γ) whose ratio determines whether an epidemic grows or fades. Extensions to SEIRD and SEIRV capture mortality and vaccination dynamics that are central to pandemic response planning. Agent-based models add the heterogeneity, spatial structure, and network topology that compartmental models cannot represent, enabling analysis of super-spreader dynamics and network-targeted interventions. Group model building connects these quantitative tools to the knowledge and values of the communities they serve. Model validation, from face validity to historical reproduction, disciplines the modeling enterprise and prevents overconfident projections. Meadows' leverage points provide a principled framework for identifying where systems are most amenable to lasting change — and why parameter-level interventions so often disappoint. Policy resistance and unintended consequences are not obstacles to be overcome through harder pushing but signals that the system structure must be understood and worked with, not against.</p>
+<p>The most durable lesson is this: in complex systems, there is no substitute for understanding structure. An intervention designed without knowledge of the feedback loops it will trigger may produce the opposite of its intended effect. But an intervention designed to align with — or deliberately disrupt — the system's feedback structure can produce sustained, system-wide change. That is what public health systems thinking makes possible.</p>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">You've Reached the Modeling Frontier</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Sage celebrates learning">
+You've now worked through the full arc of quantitative systems modeling in public health — from the differential equations of SIR to network centrality measures to Meadows' paradigm-shifting leverage points. These are the tools used in pandemic preparedness planning rooms, in community health equity workshops, and in the academic literature that shapes health policy. Public health's biggest unsolved problems are systems problems. You're now equipped to see them clearly and intervene wisely. What does the evidence show? You can now model it.</p>
+</div>
+<h2 id="key-terms">Key Terms<a class="headerlink" href="#key-terms" title="Permanent link">¶</a></h2>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SIR Model</td>
+<td>A compartmental epidemic model dividing the population into Susceptible, Infectious, and Recovered compartments</td>
+</tr>
+<tr>
+<td>R₀</td>
+<td>The basic reproduction number: expected secondary cases per index case in a fully susceptible population; equals β/γ in the SIR model</td>
+</tr>
+<tr>
+<td>Transmission Rate (β)</td>
+<td>The per-capita rate at which susceptible individuals become infected, equal to contact rate × transmission probability per contact</td>
+</tr>
+<tr>
+<td>Recovery Rate (γ)</td>
+<td>The rate at which infectious individuals recover; its reciprocal is the mean infectious period</td>
+</tr>
+<tr>
+<td>Epidemic Overshoot</td>
+<td>The excess cases accumulated after the herd immunity threshold is crossed, due to inertia from ongoing transmission</td>
+</tr>
+<tr>
+<td>Agent-Based Model</td>
+<td>A simulation where individual agents follow explicit rules and interact with specific neighbors, generating emergent population patterns</td>
+</tr>
+<tr>
+<td>Super-Spreader</td>
+<td>An individual responsible for a disproportionate number of secondary transmissions, driven by high contact rate, infectivity, or behavior</td>
+</tr>
+<tr>
+<td>Betweenness Centrality</td>
+<td>A network metric measuring how often a node lies on shortest paths between other nodes; high betweenness = critical bridge</td>
+</tr>
+<tr>
+<td>Clustering Coefficient</td>
+<td>The fraction of a node's neighbors that are also connected to each other; measures local cliquishness</td>
+</tr>
+<tr>
+<td>Group Model Building</td>
+<td>A participatory facilitated process for building causal loop diagrams and system dynamics models with stakeholders</td>
+</tr>
+<tr>
+<td>Leverage Point</td>
+<td>A place in a system where a small shift in structure can produce large changes in system behavior</td>
+</tr>
+<tr>
+<td>Policy Resistance</td>
+<td>The tendency of complex systems to generate compensating feedback that offsets intervention effects</td>
+</tr>
+<tr>
+<td>Wicked Problem</td>
+<td>A complex, contested public problem with no single correct solution, requiring adaptive multi-stakeholder management</td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../14-systems-thinking-foundations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 14. Systems Thinking - Foundations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                14. Systems Thinking - Foundations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../16-data-science-foundations/" class="md-footer__link md-footer__link--next" aria-label="Next: 16. Data Science - Foundations">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                16. Data Science - Foundations
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

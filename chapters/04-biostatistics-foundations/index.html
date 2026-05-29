@@ -1,0 +1,2352 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Descriptive statistics, probability theory including Bayes' theorem, sampling methods, hypothesis testing framework, confidence intervals, and common inferential tests from chi-square to ANOVA applied to public health data.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/public-health/chapters/04-biostatistics-foundations/">
+      
+      
+        <link rel="prev" href="../03-epidemiology-study-design/">
+      
+      
+        <link rel="next" href="../05-biostatistics-regression/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Biostatistics: Statistical Foundations - Introduction to Public Health</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Biostatistics: Statistical Foundations - Introduction to Public Health">
+      
+        <meta property="og:description" content="Descriptive statistics, probability theory including Bayes' theorem, sampling methods, hypothesis testing framework, confidence intervals, and common inferential tests from chi-square to ANOVA applied to public health data.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/04-biostatistics-foundations/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/public-health/chapters/04-biostatistics-foundations/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Biostatistics: Statistical Foundations - Introduction to Public Health">
+      
+        <meta name="twitter:description" content="Descriptive statistics, probability theory including Bayes' theorem, sampling methods, hypothesis testing framework, confidence intervals, and common inferential tests from chi-square to ANOVA applied to public health data.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/04-biostatistics-foundations/index.png">
+      
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#biostatistics-statistical-foundations" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Public Health" class="md-header__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Public Health
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Biostatistics: Statistical Foundations
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Public Health" class="md-nav__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Introduction to Public Health
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-epidemiology-disease-measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Epi - Disease Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epidemiology-study-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epi - Study Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    4. Biostatistics - Foundations
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    4. Biostatistics - Foundations
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#describing-data-central-tendency-and-dispersion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Describing Data: Central Tendency and Dispersion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Describing Data: Central Tendency and Dispersion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measures-of-central-tendency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measures of Central Tendency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measures-of-dispersion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measures of Dispersion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Foundations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probability Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probability-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Probability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayes-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayes' Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributions-for-count-and-event-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributions for Count and Event Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distributions for Count and Event Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-normal-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Normal Distribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Normal Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-normal-distribution-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Normal Distribution Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Binomial Distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-poisson-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Poisson Distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-negative-binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Negative Binomial Distribution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sampling-methods-and-sample-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Methods and Sample Size
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sampling Methods and Sample Size">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sampling-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-size-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Size Estimation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Power
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-hypothesis-testing-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hypothesis Testing Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Hypothesis Testing Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#null-hypothesis-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Hypothesis Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-i-and-type-ii-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type I and Type II Errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type I and Type II Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-type-iii-error-and-power-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Type I/II Error and Power Visualizer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-value-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      P-Value Interpretation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confidence-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confidence Intervals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Confidence Intervals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-confidence-interval-coverage-from-repeated-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Confidence Interval Coverage from Repeated Sampling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-and-applying-inferential-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing and Applying Inferential Tests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choosing and Applying Inferential Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-categorical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Categorical Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-continuous-outcomes-between-two-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Continuous Outcomes Between Two Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-continuous-outcomes-across-three-or-more-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Continuous Outcomes Across Three or More Groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-biostatistics-regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Biostatistics - Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-environmental-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Environmental Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-social-behavioral-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Social and Behavioral Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-health-policy-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Health Policy and Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-global-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Global Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-health-equity-sdoh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Health Equity and SDOH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-public-health-ethics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Public Health Ethics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-public-health-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Public Health Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-prevention-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Prevention Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-systems-thinking-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Systems Thinking - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-systems-thinking-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Systems Thinking - Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-science-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Science - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-science-advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Science - Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-simulation-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Simulation Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-covid-case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. COVID-19 Case Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fraud-misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Health Fraud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#describing-data-central-tendency-and-dispersion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Describing Data: Central Tendency and Dispersion
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Describing Data: Central Tendency and Dispersion">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#measures-of-central-tendency" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measures of Central Tendency
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#measures-of-dispersion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measures of Dispersion
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#probability-foundations" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Foundations
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Probability Foundations">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#probability-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Probability Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditional-probability" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conditional Probability
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bayes-theorem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bayes' Theorem
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#distributions-for-count-and-event-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Distributions for Count and Event Data
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Distributions for Count and Event Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-normal-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Normal Distribution
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Normal Distribution">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-normal-distribution-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Normal Distribution Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Binomial Distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-poisson-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Poisson Distribution
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-negative-binomial-distribution" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Negative Binomial Distribution
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sampling-methods-and-sample-size" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Methods and Sample Size
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sampling Methods and Sample Size">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#sampling-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sampling Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sample-size-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sample Size Estimation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#statistical-power" class="md-nav__link">
+    <span class="md-ellipsis">
+      Statistical Power
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-hypothesis-testing-framework" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Hypothesis Testing Framework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Hypothesis Testing Framework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#null-hypothesis-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Null Hypothesis Testing
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#type-i-and-type-ii-errors" class="md-nav__link">
+    <span class="md-ellipsis">
+      Type I and Type II Errors
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Type I and Type II Errors">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-type-iii-error-and-power-visualizer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Type I/II Error and Power Visualizer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#p-value-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      P-Value Interpretation
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confidence-intervals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confidence Intervals
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Confidence Intervals">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-confidence-interval-coverage-from-repeated-sampling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Confidence Interval Coverage from Repeated Sampling
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#choosing-and-applying-inferential-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Choosing and Applying Inferential Tests
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Choosing and Applying Inferential Tests">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-categorical-data" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Categorical Data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-continuous-outcomes-between-two-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Continuous Outcomes Between Two Groups
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests-for-continuous-outcomes-across-three-or-more-groups" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests for Continuous Outcomes Across Three or More Groups
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/public-health/blob/main/docs/chapters/04-biostatistics-foundations/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="biostatistics-statistical-foundations">Biostatistics: Statistical Foundations<a class="headerlink" href="#biostatistics-statistical-foundations" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<p>Biostatistics provides the quantitative language through which public health evidence is generated, evaluated, and communicated. This chapter covers the full arc from describing data to testing hypotheses: measures of central tendency and dispersion, the major probability distributions used in count data modeling, sampling design, the null hypothesis testing framework with its error types, confidence intervals, and the suite of inferential tests used to compare groups in observational and experimental studies.</p>
+<p>This chapter assumes only the prerequisites listed in the <a href="../../course-description/">course description</a>.</p>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
+<p>This chapter covers the following 24 concepts from the learning graph:</p>
+<ol>
+<li>Descriptive Statistics</li>
+<li>Measures of Central Tendency</li>
+<li>Measures of Dispersion</li>
+<li>Normal Distribution</li>
+<li>Binomial Distribution</li>
+<li>Poisson Distribution</li>
+<li>Negative Binomial Distribution</li>
+<li>Probability Fundamentals</li>
+<li>Conditional Probability</li>
+<li>Bayes' Theorem</li>
+<li>Sampling Methods</li>
+<li>Sample Size Estimation</li>
+<li>Statistical Power</li>
+<li>Null Hypothesis Testing</li>
+<li>Type I Error Alpha</li>
+<li>Type II Error Beta</li>
+<li>P-Value Interpretation</li>
+<li>Confidence Interval</li>
+<li>Chi-Square Test</li>
+<li>Fisher's Exact Test</li>
+<li>Student T-Test</li>
+<li>Mann-Whitney U Test</li>
+<li>Analysis of Variance ANOVA</li>
+<li>Kruskal-Wallis Test</li>
+</ol>
+<hr>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">The Language of Evidence</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Sage waves welcome">
+Welcome to the chapter where we learn the language that all public health evidence speaks. Every rate you encountered in Chapters 2 and 3, every relative risk, every confidence interval attached to an odds ratio — all of it rests on the foundations you are about to build. Biostatistics is not a detour from public health practice; it is the instrument the field uses to turn raw data into defensible claims. <em>What does the evidence show?</em> This chapter teaches you how to answer that question rigorously.</p>
+</div>
+<hr>
+<h2 id="describing-data-central-tendency-and-dispersion">Describing Data: Central Tendency and Dispersion<a class="headerlink" href="#describing-data-central-tendency-and-dispersion" title="Permanent link">¶</a></h2>
+<p>Before testing hypotheses, public health analysts describe their data. <strong>Descriptive statistics</strong> are numerical summaries that characterize the distribution, central value, and spread of a dataset without generalizing beyond the observations at hand. When the CDC reports that the median household income in counties with high opioid mortality is lower than in counties with low opioid mortality, that is a descriptive finding. It does not yet establish causation, but it establishes the pattern that demands explanation.</p>
+<h3 id="measures-of-central-tendency">Measures of Central Tendency<a class="headerlink" href="#measures-of-central-tendency" title="Permanent link">¶</a></h3>
+<p><strong>Measures of central tendency</strong> capture the typical or middle value of a distribution. Three measures are used routinely:</p>
+<ul>
+<li><strong>Mean</strong> — the arithmetic average: <span class="arithmatex">\( \bar{x} = \frac{\sum x_i}{n} \)</span>. The mean uses all values in the dataset and is sensitive to extreme observations (outliers). For symmetric, bell-shaped distributions, the mean is the best single summary.</li>
+<li><strong>Median</strong> — the middle value when data are sorted in order. Half the observations fall above and half below. The median is robust to outliers and is preferred for skewed distributions such as income, hospital length of stay, or drug prices.</li>
+<li><strong>Mode</strong> — the most frequently occurring value. Used most often for categorical data (for example, the most common cause of death in a county) or to describe multimodal distributions where the mean and median would miss a second peak.</li>
+</ul>
+<p>In public health, the choice of central tendency measure is not cosmetic. Reporting mean household income rather than median income in a high-inequality area overstates typical economic conditions because a small number of very high incomes inflate the mean. The <strong>mean–median gap</strong> is itself a measure of distributional skewness and inequality.</p>
+<h3 id="measures-of-dispersion">Measures of Dispersion<a class="headerlink" href="#measures-of-dispersion" title="Permanent link">¶</a></h3>
+<p>Knowing the center of a distribution is only half the picture. <strong>Measures of dispersion</strong> quantify how spread out values are around that center. Wide dispersion in a health outcome often signals underlying inequality or heterogeneity in risk exposure.</p>
+<p>The four key dispersion measures are:</p>
+<ul>
+<li><strong>Range</strong> — maximum minus minimum. Simple but highly sensitive to outliers; tells you the full span but not typical spread.</li>
+<li><strong>Interquartile range (IQR)</strong> — the distance between the 25th percentile (Q1) and the 75th percentile (Q3). Captures the middle 50% of data and is resistant to outliers; paired with the median as a robust summary.</li>
+<li><strong>Variance</strong> — the average squared deviation from the mean: <span class="arithmatex">\( s^2 = \frac{\sum (x_i - \bar{x})^2}{n-1} \)</span>. Squaring the deviations makes variance sensitive to outliers and expressed in squared units.</li>
+<li><strong>Standard deviation (SD)</strong> — the square root of variance: <span class="arithmatex">\( s = \sqrt{s^2} \)</span>. Expressed in the same units as the original data; the most commonly reported measure of spread for approximately symmetric distributions.</li>
+</ul>
+<p>The <strong>coefficient of variation (CV)</strong> — SD divided by mean, often expressed as a percentage — allows comparison of spread across variables measured on different scales. A CV of 40% on one lab measure versus 10% on another tells you the first has much more relative variability.</p>
+<p>Two datasets can share identical means and standard deviations while having very different shapes. Always pair numerical summaries with visual displays — histograms, box plots, or density curves — before applying inferential tests.</p>
+<h2 id="probability-foundations">Probability Foundations<a class="headerlink" href="#probability-foundations" title="Permanent link">¶</a></h2>
+<h3 id="probability-fundamentals">Probability Fundamentals<a class="headerlink" href="#probability-fundamentals" title="Permanent link">¶</a></h3>
+<p><strong>Probability</strong> is the mathematical framework for quantifying uncertainty. Formally, the probability of event A, written <span class="arithmatex">\( P(A) \)</span>, is a number between 0 and 1 representing the long-run relative frequency of the event in a large number of identical trials. Three foundational rules govern all probability calculations:</p>
+<ul>
+<li><strong>Complement rule:</strong> <span class="arithmatex">\( P(\text{not } A) = 1 - P(A) \)</span>. If the probability of testing positive is 0.15, the probability of testing negative is 0.85.</li>
+<li><strong>Addition rule (mutually exclusive events):</strong> <span class="arithmatex">\( P(A \text{ or } B) = P(A) + P(B) \)</span> when A and B cannot both occur simultaneously.</li>
+<li><strong>Multiplication rule (independent events):</strong> <span class="arithmatex">\( P(A \text{ and } B) = P(A) \times P(B) \)</span> when the occurrence of A does not affect the probability of B.</li>
+</ul>
+<p>These simple rules underlie the more complex calculations used throughout public health, from calculating the probability that a screening test correctly identifies disease to estimating the likelihood that an observed outbreak cluster arose by chance.</p>
+<h3 id="conditional-probability">Conditional Probability<a class="headerlink" href="#conditional-probability" title="Permanent link">¶</a></h3>
+<p><strong>Conditional probability</strong> is the probability that event A occurs <em>given that</em> event B has already occurred, written <span class="arithmatex">\( P(A | B) \)</span>. It is defined as:</p>
+<div class="arithmatex">\[
+P(A | B) = \frac{P(A \text{ and } B)}{P(B)}
+\]</div>
+<p>Conditional probability is central to clinical and population-level decision-making. The probability that a patient has tuberculosis, given that they tested positive on a skin test, depends not only on the test's characteristics but on the prevalence of TB in the population — a fact that many clinicians (and students) find counterintuitive until they work through the arithmetic.</p>
+<p>The <strong>2×2 contingency table</strong> — disease positive/negative crossed with test positive/negative — is the operational structure for conditional probability in diagnostic testing. It gives rise to sensitivity <span class="arithmatex">\( P(\text{test}^+ | \text{disease}^+) \)</span>, specificity <span class="arithmatex">\( P(\text{test}^- | \text{disease}^-) \)</span>, positive predictive value <span class="arithmatex">\( P(\text{disease}^+ | \text{test}^+) \)</span>, and negative predictive value <span class="arithmatex">\( P(\text{disease}^- | \text{test}^-) \)</span>, all of which were introduced in Chapter 3.</p>
+<h3 id="bayes-theorem">Bayes' Theorem<a class="headerlink" href="#bayes-theorem" title="Permanent link">¶</a></h3>
+<p><strong>Bayes' theorem</strong> formalizes the logic of updating beliefs in light of new evidence. Starting from a prior probability — our belief about the probability of an event before new data arrive — we update it using the likelihood of the observed data under that hypothesis to produce a posterior probability. The formal statement is:</p>
+<div class="arithmatex">\[
+P(D | T^+) = \frac{P(T^+ | D) \cdot P(D)}{P(T^+ | D) \cdot P(D) + P(T^+ | \bar{D}) \cdot P(\bar{D})}
+\]</div>
+<p>Where <span class="arithmatex">\( D \)</span> = disease present, <span class="arithmatex">\( T^+ \)</span> = test positive, <span class="arithmatex">\( P(D) \)</span> = prior probability of disease (prevalence), <span class="arithmatex">\( P(T^+ | D) \)</span> = sensitivity, and <span class="arithmatex">\( P(T^+ | \bar{D}) \)</span> = false positive rate (1 − specificity).</p>
+<p>The practical lesson from Bayes' theorem is profound: <strong>a positive test result is more meaningful in a high-prevalence population.</strong> Consider a test with sensitivity 90% and specificity 95%. In a population with 1% disease prevalence, the positive predictive value is only about 15% — meaning 85% of positives are false alarms. In a population with 20% prevalence, the PPV rises to roughly 82%. This is why mass screening programs targeting low-prevalence populations require highly specific tests, and why Bayes' reasoning must inform every screening policy decision.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Why does prevalence change what a test result means?</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Sage looks thoughtful with clipboard">
+Think about it this way: if almost no one in the population has the disease, the handful who test positive are mostly false positives just by the mathematics of large numbers. Even a test that is 95% specific will produce many false positives when the true cases are rare. This is sometimes called the <strong>base rate fallacy</strong> — the tendency to ignore prevalence when interpreting test results. Bayes' theorem is the corrective. The next time you see a news headline about a new diagnostic test with "95% accuracy," ask: accuracy in which population, at what prevalence? That is the question that determines whether the test is clinically useful.</p>
+</div>
+<h2 id="distributions-for-count-and-event-data">Distributions for Count and Event Data<a class="headerlink" href="#distributions-for-count-and-event-data" title="Permanent link">¶</a></h2>
+<p><strong>Probability distributions</strong> are mathematical functions that describe the likelihood of different values for a random variable. Choosing the right distribution for your data is a foundational modeling decision; using the wrong distribution produces misleading estimates.</p>
+<h3 id="the-normal-distribution">The Normal Distribution<a class="headerlink" href="#the-normal-distribution" title="Permanent link">¶</a></h3>
+<p>The <strong>normal distribution</strong> (also called the Gaussian distribution) is a continuous, symmetric, bell-shaped distribution fully characterized by two parameters: the mean <span class="arithmatex">\( \mu \)</span> and the standard deviation <span class="arithmatex">\( \sigma \)</span>. Its probability density function is:</p>
+<div class="arithmatex">\[
+f(x) = \frac{1}{\sigma\sqrt{2\pi}} e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^2}
+\]</div>
+<p>The normal distribution has two empirical rules that are widely used:</p>
+<ul>
+<li>Approximately 68% of values fall within 1 SD of the mean</li>
+<li>Approximately 95% of values fall within 1.96 SD of the mean</li>
+<li>Approximately 99.7% of values fall within 3 SD of the mean</li>
+</ul>
+<p>In public health, the normal distribution approximates the sampling distribution of means for large samples (Central Limit Theorem), making it the mathematical foundation of most classical inferential tests even when individual data are not normally distributed. Continuous outcomes such as blood pressure, serum cholesterol, and height in healthy populations are approximately normally distributed.</p>
+<p>The <strong>standard normal distribution</strong> (Z distribution) has <span class="arithmatex">\( \mu = 0 \)</span> and <span class="arithmatex">\( \sigma = 1 \)</span>. Any normally distributed variable can be converted to a Z score: <span class="arithmatex">\( Z = \frac{x - \mu}{\sigma} \)</span>. Z scores express how many standard deviations an observation lies from the mean, enabling comparisons across different scales.</p>
+<p>The interactive explorer below lets you manipulate the mean and standard deviation of a normal distribution and observe how the curve shape and probability intervals change.</p>
+<h4 id="diagram-normal-distribution-explorer">Diagram: Normal Distribution Explorer<a class="headerlink" href="#diagram-normal-distribution-explorer" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/normal-distribution-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Normal Distribution Explorer — Interactive MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> normal-distribution-explorer<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Understand (L2)
+Bloom Verb: explain
+Learning Objective: Students can explain how changing the mean and standard deviation of a normal distribution affects its shape, center, and probability intervals, and identify what fraction of values fall within 1, 2, and 3 standard deviations.</p>
+<p>Purpose: Build intuition about normal distribution shape and parameterization before using the normal as the foundation for hypothesis testing and confidence intervals.</p>
+<p>Layout: Full-width canvas. Left 65%: smooth bell curve drawn on axes labeled with values. Right 35%: numeric readout panel showing current μ, σ, and the percent of area under the curve within ±1σ, ±1.96σ, ±3σ. Bottom: slider controls.</p>
+<p>Controls:
+- Mean slider: range −50 to 50, step 1, default 0. Slides the entire curve left/right.
+- SD slider: range 1 to 30, step 0.5, default 10. Widens/narrows the curve.
+- Shading selector (dropdown): "None", "±1σ (68%)", "±1.96σ (95%)", "±3σ (99.7%)", "Custom range". When a shading option is selected, the area under the curve in that range fills with a semi-transparent teal color, and the percentage is shown in a bold label on the canvas.
+- Reset button: returns to μ=0, σ=10.</p>
+<p>Interactive features:
+- Hovering the curve at any x position shows a tooltip: x value, z-score = (x−μ)/σ, and the probability density at that point.
+- When "Custom range" is selected in the shading dropdown, two additional sliders appear: lower bound and upper bound. The shaded area and exact probability are computed and displayed.</p>
+<p>Axis behavior:
+- x-axis always spans μ ± 4σ to keep the curve visible regardless of slider settings.
+- y-axis scales automatically so the peak of the curve uses about 75% of the canvas height.</p>
+<p>Visual style: White background, teal curve line (3px), teal fill for shaded areas, clean axis labels.</p>
+<p>Canvas: Responsive full container width, height 500px.</p>
+<p>Instructional Rationale: Direct manipulation of μ and σ with live area shading teaches the empirical rule more effectively than static figures, and builds the intuition needed to understand confidence intervals and p-values.</p>
+</details>
+<h3 id="the-binomial-distribution">The Binomial Distribution<a class="headerlink" href="#the-binomial-distribution" title="Permanent link">¶</a></h3>
+<p>The <strong>binomial distribution</strong> models the number of "successes" in a fixed number of independent trials when each trial has the same probability of success. It applies to public health outcomes that are binary (yes/no): disease or no disease, vaccinated or unvaccinated, positive or negative test result.</p>
+<p>If <span class="arithmatex">\( n \)</span> is the number of trials and <span class="arithmatex">\( p \)</span> is the probability of success on each trial, the probability of exactly <span class="arithmatex">\( k \)</span> successes is:</p>
+<div class="arithmatex">\[
+P(X = k) = \binom{n}{k} p^k (1-p)^{n-k}
+\]</div>
+<p>The mean of a binomial distribution is <span class="arithmatex">\( \mu = np \)</span> and the variance is <span class="arithmatex">\( \sigma^2 = np(1-p) \)</span>. Public health examples: the number of individuals in a household of five who contract influenza when household attack rate is 30%; the number of positive rapid tests among 20 contacts screened during a contact investigation.</p>
+<h3 id="the-poisson-distribution">The Poisson Distribution<a class="headerlink" href="#the-poisson-distribution" title="Permanent link">¶</a></h3>
+<p>The <strong>Poisson distribution</strong> models the number of events occurring in a fixed time period or area when events occur independently at a constant average rate <span class="arithmatex">\( \lambda \)</span> (lambda). Its probability mass function is:</p>
+<div class="arithmatex">\[
+P(X = k) = \frac{\lambda^k e^{-\lambda}}{k!}
+\]</div>
+<p>A distinctive property of the Poisson distribution is that its mean equals its variance: <span class="arithmatex">\( E[X] = Var[X] = \lambda \)</span>. This becomes important when fitting count data: if the observed variance substantially exceeds the mean, the Poisson assumption is violated — a condition known as <strong>overdispersion</strong>.</p>
+<p>Public health applications include: counts of new disease cases per week in a surveillance region, emergency department visits per day in a hospital, and deaths per year attributable to a specific cause in a county. The Poisson model is the foundation for Poisson regression, introduced in Chapter 5.</p>
+<h3 id="the-negative-binomial-distribution">The Negative Binomial Distribution<a class="headerlink" href="#the-negative-binomial-distribution" title="Permanent link">¶</a></h3>
+<p>The <strong>negative binomial distribution</strong> is a generalization of the Poisson that accommodates overdispersed count data — datasets where the variance exceeds the mean. In infectious disease modeling, overdispersion reflects real-world heterogeneity in transmission: most infected individuals transmit to few or no others, while a small number of "superspreaders" drive a disproportionate share of onward infections. The negative binomial is parameterized by the mean <span class="arithmatex">\( \mu \)</span> and a dispersion parameter <span class="arithmatex">\( k \)</span> (or <span class="arithmatex">\( r \)</span>) that controls how much variance exceeds the mean. As <span class="arithmatex">\( k \to \infty \)</span>, the negative binomial converges to the Poisson.</p>
+<p>SARS-CoV-2 transmission modeling showed that the overdispersion parameter <span class="arithmatex">\( k \)</span> for COVID-19 was approximately 0.1–0.3 (low), meaning that transmission was highly overdispersed: roughly 10–20% of infected individuals were responsible for 80% of transmission events. This insight directly informed contact-tracing strategy — identifying and quarantining individuals linked to superspreading events was more efficient than symmetric contact tracing of all cases.</p>
+<p>The table below compares all four distributions covered in this chapter, summarizing their parameters, the type of data they model, and their primary public health applications. Each distribution has been defined in the preceding text; this table serves as a reference summary.</p>
+<table>
+<thead>
+<tr>
+<th>Distribution</th>
+<th>Parameters</th>
+<th>Type of Data</th>
+<th>Key Property</th>
+<th>Public Health Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Normal</strong></td>
+<td>μ (mean), σ (SD)</td>
+<td>Continuous, symmetric</td>
+<td>68-95-99.7 rule</td>
+<td>Systolic blood pressure in adults</td>
+</tr>
+<tr>
+<td><strong>Binomial</strong></td>
+<td>n (trials), p (probability)</td>
+<td>Count of binary outcomes</td>
+<td>Mean = np, Var = np(1−p)</td>
+<td>Cases among n contacts with attack rate p</td>
+</tr>
+<tr>
+<td><strong>Poisson</strong></td>
+<td>λ (rate)</td>
+<td>Event counts in time/space</td>
+<td>Mean = Variance = λ</td>
+<td>Weekly disease reports; rare adverse events</td>
+</tr>
+<tr>
+<td><strong>Negative Binomial</strong></td>
+<td>μ (mean), k (dispersion)</td>
+<td>Overdispersed counts</td>
+<td>Variance &gt; Mean</td>
+<td>COVID-19 superspreading events</td>
+</tr>
+</tbody>
+</table>
+<h2 id="sampling-methods-and-sample-size">Sampling Methods and Sample Size<a class="headerlink" href="#sampling-methods-and-sample-size" title="Permanent link">¶</a></h2>
+<h3 id="sampling-methods">Sampling Methods<a class="headerlink" href="#sampling-methods" title="Permanent link">¶</a></h3>
+<p>A <strong>sample</strong> is a subset of a population selected for measurement, with the goal of making inferences about the full population. The design of the sampling process determines whether those inferences are valid. <strong>Sampling methods</strong> fall into two major categories: probability sampling (every unit has a known, non-zero probability of selection) and non-probability sampling (selection is not governed by chance).</p>
+<p>The major probability sampling designs are:</p>
+<ul>
+<li><strong>Simple random sampling</strong> — every unit in the population has an equal probability of being selected. The simplest design; requires a complete sampling frame (list of all population members). Assigning random numbers to a registry and selecting the top n is a straightforward implementation.</li>
+<li><strong>Systematic sampling</strong> — every k-th unit is selected after a random start. Used when a sampling frame is ordered (for example, medical records sorted by date of visit). Efficient but vulnerable to periodicity bias if the ordering has a cycle that aligns with k.</li>
+<li><strong>Stratified sampling</strong> — the population is divided into non-overlapping subgroups (strata) such as age groups, geographic regions, or racial/ethnic groups, and random samples are drawn independently from each stratum. Stratification guarantees adequate representation of smaller subgroups and can improve precision by reducing within-stratum variance.</li>
+<li><strong>Cluster sampling</strong> — naturally occurring groups (clusters) such as households, schools, or census tracts are randomly selected, and all or a random subset of members within selected clusters are enumerated. Used when a complete individual-level sampling frame is unavailable or when field logistics favor group enumeration. Cluster samples require special analysis to account for the correlation within clusters (design effect).</li>
+<li><strong>Multistage sampling</strong> — sequential application of sampling designs at successive levels (for example, randomly selecting counties, then census tracts within counties, then households within tracts). The design behind most large national surveys including the National Health and Nutrition Examination Survey (NHANES) and the Behavioral Risk Factor Surveillance System (BRFSS).</li>
+</ul>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Survey weights are not optional extras.</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Sage offers a practical tip">
+When you analyze data from stratified or cluster surveys — NHANES, BRFSS, the American Community Survey — you must apply the survey weights provided in the dataset. These weights correct for unequal probabilities of selection and post-stratification adjustments. Ignoring survey weights produces biased prevalence estimates and incorrect standard errors. Every major statistical package (R's survey package, Stata's svy prefix, SAS PROC SURVEYFREQ) has dedicated survey analysis procedures. Using standard regression procedures on survey data without weights is a footgun: the code runs without errors, the output looks normal, and the estimates are silently wrong.</p>
+</div>
+<h3 id="sample-size-estimation">Sample Size Estimation<a class="headerlink" href="#sample-size-estimation" title="Permanent link">¶</a></h3>
+<p>A study must be large enough to detect an effect if one truly exists — but not so large that it wastes resources or exposes unnecessary participants to interventions or risks. <strong>Sample size estimation</strong> is the prospective calculation of how many participants are required to achieve adequate statistical power.</p>
+<p>The inputs to a sample size calculation are:</p>
+<ol>
+<li><strong>Effect size</strong> — the minimum clinically or programmatically meaningful difference the study is designed to detect. Smaller effects require larger samples.</li>
+<li><strong>Significance level (α)</strong> — the acceptable Type I error rate (typically 0.05). Lower α requires larger samples.</li>
+<li><strong>Power (1 − β)</strong> — the desired probability of detecting the effect if it truly exists (typically 0.80 or 0.90). Higher power requires larger samples.</li>
+<li><strong>Variability (σ)</strong> — for continuous outcomes, the standard deviation in the outcome variable; for proportions, the baseline prevalence. Greater variability requires larger samples.</li>
+</ol>
+<p>For comparing two means with equal group sizes, the required sample size per group is approximately:</p>
+<div class="arithmatex">\[
+n = \frac{2\sigma^2 (Z_{\alpha/2} + Z_\beta)^2}{\delta^2}
+\]</div>
+<p>Where <span class="arithmatex">\( \delta \)</span> is the minimum detectable difference, <span class="arithmatex">\( Z_{\alpha/2} \)</span> is the critical value for the chosen α (1.96 for α = 0.05 two-tailed), and <span class="arithmatex">\( Z_\beta \)</span> is the critical value for desired power (0.84 for 80% power).</p>
+<h3 id="statistical-power">Statistical Power<a class="headerlink" href="#statistical-power" title="Permanent link">¶</a></h3>
+<p><strong>Statistical power</strong> is the probability that a study will correctly reject the null hypothesis when it is false — the probability of detecting a real effect. Power <span class="arithmatex">\( = 1 - \beta \)</span>, where <span class="arithmatex">\( \beta \)</span> is the probability of a Type II error (missing a real effect). A study with 80% power has a 20% chance of missing a real effect of the specified size.</p>
+<p>Power is a function of four quantities: sample size, effect size, variability, and α. Manipulating any one of them changes power. The most common actionable lever is sample size — larger samples provide higher power. Post-hoc power calculations on completed studies are widely discouraged because power is a prospective property; after the study is done, the p-value already tells you whether the effect was detected.</p>
+<h2 id="the-hypothesis-testing-framework">The Hypothesis Testing Framework<a class="headerlink" href="#the-hypothesis-testing-framework" title="Permanent link">¶</a></h2>
+<h3 id="null-hypothesis-testing">Null Hypothesis Testing<a class="headerlink" href="#null-hypothesis-testing" title="Permanent link">¶</a></h3>
+<p><strong>Null hypothesis testing</strong> is the formal framework by which public health researchers decide whether observed data are compatible with a hypothesis of no effect. The procedure has five steps:</p>
+<ol>
+<li>State the <strong>null hypothesis (H₀)</strong>: typically, no difference, no association, or no effect. Example: "The mean systolic blood pressure is equal in the intervention and control groups."</li>
+<li>State the <strong>alternative hypothesis (H₁)</strong>: the condition that would be concluded if H₀ is rejected. Two-tailed: "The means differ." One-tailed: "The mean is higher in the intervention group."</li>
+<li>Choose a <strong>significance level (α)</strong>: the threshold probability below which results are considered too unlikely to be chance alone. The conventional choice is α = 0.05, but this is a convention, not a law of nature.</li>
+<li><strong>Compute a test statistic</strong> from the data; compare it to the distribution expected under H₀.</li>
+<li><strong>Make a decision</strong>: if the p-value ≤ α, reject H₀; if p-value &gt; α, fail to reject H₀.</li>
+</ol>
+<p>The procedure does not prove H₀ true when we fail to reject it. Absence of evidence is not evidence of absence. "Failing to reject" means the data are insufficient to conclude there is an effect, not that no effect exists.</p>
+<h3 id="type-i-and-type-ii-errors">Type I and Type II Errors<a class="headerlink" href="#type-i-and-type-ii-errors" title="Permanent link">¶</a></h3>
+<p>Every hypothesis test can produce one of four outcomes. Two are correct decisions; two are errors.</p>
+<ul>
+<li><strong>Type I error (false positive)</strong>: Rejecting H₀ when H₀ is actually true. The probability of a Type I error is α. In a regulatory context, this means approving an ineffective drug; in a surveillance context, investigating a non-existent cluster. α is set in advance by the analyst.</li>
+<li><strong>Type II error (false negative)</strong>: Failing to reject H₀ when H₀ is false (the effect is real). The probability of a Type II error is β. This means missing a real drug effect or failing to detect a real outbreak signal. β is determined by sample size, effect size, and variability — it is not directly set by the analyst but is controlled through study design.</li>
+</ul>
+<p>The relationship between α and β involves an unavoidable trade-off: for a fixed sample size, decreasing α (becoming more conservative about false positives) increases β (missing more real effects). The only way to reduce both simultaneously is to increase the sample size or the effect size.</p>
+<p>The interactive simulation below allows you to adjust α, effect size, and sample size to observe how these choices affect the distributions of the null and alternative hypotheses, the critical value, and the resulting Type I error, Type II error, and statistical power.</p>
+<h4 id="diagram-type-iii-error-and-power-visualizer">Diagram: Type I/II Error and Power Visualizer<a class="headerlink" href="#diagram-type-iii-error-and-power-visualizer" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/hypothesis-error-power/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>Type I/II Error and Power Visualizer — Interactive MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> hypothesis-error-power<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Understand (L2)
+Bloom Verb: explain
+Learning Objective: Students can explain the trade-off between Type I and Type II errors and describe how changing alpha, effect size, and sample size affect statistical power.</p>
+<p>Purpose: Visualize the two overlapping sampling distributions (null and alternative) and the areas corresponding to α (Type I), β (Type II), and 1−β (power), making the conceptual relationships concrete and manipulable.</p>
+<p>Layout: Canvas divided into:
+- Top 65%: main visualization showing two overlapping normal curves — the null distribution (blue) centered at 0 and the alternative distribution (orange) centered at the effect size δ. The critical value is shown as a vertical dashed line. Four colored shaded areas: blue area to the right of critical value under null curve = α (Type I error); orange area to the left of critical value under alternative curve = β (Type II error); orange area to the right of critical value = power (1−β). Labels for each shaded region with percentages.
+- Bottom 35%: three sliders and a numeric summary panel.</p>
+<p>Controls:
+- Alpha (α) slider: range 0.01 to 0.20, step 0.01, default 0.05. Moving it shifts the critical value.
+- Effect size (δ in SD units) slider: range 0.1 to 2.0, step 0.05, default 0.5. Moving it shifts the alternative distribution curve.
+- Sample size slider: range 10 to 500, step 10, default 80. Changing n changes the SE of both distributions (narrowing them), which changes overlap.</p>
+<p>Numeric summary panel (updates live): shows α, β, Power (1−β), and effect size in SD units.</p>
+<p>Visual style: Null distribution in light blue, alternative distribution in light orange, shaded regions semi-transparent, critical value as dashed black vertical line, labels in bold matching their region color.</p>
+<p>Interactive behavior:
+- All three sliders update the visualization in real time.
+- Hover over any shaded area: tooltip shows its name, probability value, and one-sentence plain-language description (e.g., "Type I Error: The probability of detecting an effect that does not exist. Set by choosing alpha before the study.")</p>
+<p>Reset button returns all sliders to default.</p>
+<p>Canvas: Responsive full container width, 520px height.</p>
+<p>Instructional Rationale: The abstract relationship between α, β, and power becomes intuitive when students can drag a slider and watch the regions change size. This is the central insight students need to evaluate study design and interpret published p-values.</p>
+</details>
+<h3 id="p-value-interpretation">P-Value Interpretation<a class="headerlink" href="#p-value-interpretation" title="Permanent link">¶</a></h3>
+<p>The <strong>p-value</strong> is the probability of observing a test statistic as extreme as or more extreme than the one computed from the data, assuming the null hypothesis is true. It is <em>not</em>:</p>
+<ul>
+<li>The probability that H₀ is true</li>
+<li>The probability that the result was due to chance</li>
+<li>The probability that the finding will replicate</li>
+<li>A measure of effect size or practical importance</li>
+</ul>
+<p>A p-value of 0.03 means: "If H₀ were true, we would observe a test statistic this extreme or more extreme 3% of the time." It does not mean there is a 3% chance the null is true.</p>
+<p>The misinterpretation of p-values is one of the most pervasive errors in the published public health literature. A large study with a small but clinically trivial effect can produce p = 0.001; a small study that is underpowered to detect a large, clinically important effect may produce p = 0.20. The p-value should always be interpreted alongside the effect size and its confidence interval, not as a standalone verdict.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Statistical significance ≠ practical importance.</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Sage holds up a cautionary claw">
+With a large enough sample, even trivially small differences become statistically significant. An intervention that reduces mean systolic blood pressure by 0.5 mmHg may produce p &lt; 0.001 in a trial of 50,000 participants — a highly significant result that is clinically meaningless, since a 0.5 mmHg reduction has no detectable effect on cardiovascular outcomes. The question "Is it significant?" must always be paired with "Is the effect large enough to matter?" Reporting effect sizes with confidence intervals, rather than p-values alone, is the standard recommendation of the American Statistical Association's 2016 and 2019 statements on p-values.</p>
+</div>
+<h3 id="confidence-intervals">Confidence Intervals<a class="headerlink" href="#confidence-intervals" title="Permanent link">¶</a></h3>
+<p>A <strong>confidence interval (CI)</strong> provides a range of values that, under repeated sampling, would contain the true population parameter in a specified percentage of samples. A 95% CI means that if we drew 100 independent random samples and computed a 95% CI from each one, approximately 95 of those intervals would contain the true population value.</p>
+<p>The 95% CI for a mean is:</p>
+<div class="arithmatex">\[
+\bar{x} \pm 1.96 \cdot \frac{s}{\sqrt{n}}
+\]</div>
+<p>The width of the confidence interval is determined by the standard error (related to sample size) and the critical value (related to confidence level). Wider intervals reflect more uncertainty; narrower intervals reflect more precision. A 99% CI is wider than a 95% CI because higher confidence requires covering more of the sampling distribution.</p>
+<p>Critically, a confidence interval that does not cross the null value (0 for a difference, 1 for a ratio) corresponds to a statistically significant result at the matching α level. If a 95% CI for the difference in means between two groups is (2.1, 8.7 mmHg), it does not cross 0 — we would reject H₀ at α = 0.05. If it were (−0.3, 8.7), it crosses 0 — we would fail to reject H₀. The CI conveys not just significance but the plausible range of the effect, which p-values alone do not.</p>
+<p>The diagram below demonstrates confidence interval behavior by simulating repeated sampling. Each horizontal bar represents a 95% CI from one sample; the vertical line is the true population mean. Observe how approximately 5% of intervals miss the true value — this is the 95% coverage property in action.</p>
+<h4 id="diagram-confidence-interval-coverage-from-repeated-sampling">Diagram: Confidence Interval Coverage from Repeated Sampling<a class="headerlink" href="#diagram-confidence-interval-coverage-from-repeated-sampling" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/confidence-interval-coverage/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Confidence Interval Coverage — Interactive Chart.js Simulation</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> confidence-interval-coverage<br>
+<strong>Library:</strong> Chart.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Understand (L2)
+Bloom Verb: explain
+Learning Objective: Students can explain what "95% confidence" means by observing that approximately 5% of 95% CIs from repeated random samples fail to contain the true population mean.</p>
+<p>Purpose: Correct the common misconception that "a 95% CI has a 95% chance of containing the true value." The CI is either correct or it isn't; the 95% is a property of the <em>procedure</em> across many samples, not a probability statement about any single interval.</p>
+<p>Layout: Chart.js horizontal bar chart. The y-axis lists sample numbers 1 through 50 (one bar row per sample). Each bar represents a CI as a horizontal line segment with endpoint markers; bars that contain the true population mean are teal; bars that miss it are red. A vertical dashed line marks the true population mean. Controls below the chart.</p>
+<p>Controls:
+- "Draw New Samples" button: redraws 50 CIs from fresh random samples.
+- Confidence level dropdown: "90%", "95%", "99%". Changing it recalculates critical value and redraws all CIs; the coverage count updates.
+- Sample size slider: n = 10, 20, 30, 50, 100. Changes the width of the CIs (larger n → narrower CIs).
+- Coverage counter display: "X of 50 CIs contain the true mean (Y%)".</p>
+<p>True population mean: fixed at 100 (displayed as a vertical dashed line). Population σ = 15. Samples drawn from N(100, 15).</p>
+<p>Interactive features:
+- Hovering a bar: shows tooltip with sample number, sample mean, lower and upper CI bounds, and whether it contains the true mean.
+- Animation: CIs are drawn sequentially (one per 30ms) when "Draw New Samples" is clicked, making the sequential-sampling interpretation visible.</p>
+<p>Visual style: Clean Chart.js horizontal bar chart style; teal = contains true mean; red = misses true mean; bold vertical dashed line for true mean.</p>
+<p>Instructional Rationale: Animated sequential sampling makes the frequentist definition of confidence intervals visceral in a way that no static explanation can match. Students see ~5% of bars turn red in real time.</p>
+</details>
+<h2 id="choosing-and-applying-inferential-tests">Choosing and Applying Inferential Tests<a class="headerlink" href="#choosing-and-applying-inferential-tests" title="Permanent link">¶</a></h2>
+<p>Having built the statistical and probability foundation, we are now equipped to select and apply the inferential tests that appear throughout the public health literature. The goal of <strong>inferential statistics</strong> is to draw conclusions about a population based on a sample. Different test statistics are appropriate for different data types, numbers of groups, and whether the data meet parametric assumptions.</p>
+<p>The key branching decisions are: (1) What is the outcome data type — continuous or categorical? (2) How many groups are being compared? (3) Are the samples independent or paired? (4) Do the data meet the assumptions of parametric tests (approximate normality, homogeneous variance)?</p>
+<h3 id="tests-for-categorical-data">Tests for Categorical Data<a class="headerlink" href="#tests-for-categorical-data" title="Permanent link">¶</a></h3>
+<p>The <strong>chi-square test</strong> (<span class="arithmatex">\( \chi^2 \)</span>) is the most widely used test for comparing the distribution of a categorical outcome across two or more independent groups. It compares observed cell counts in a contingency table to the counts expected under the null hypothesis of no association between the row and column variables.</p>
+<div class="arithmatex">\[
+\chi^2 = \sum \frac{(O - E)^2}{E}
+\]</div>
+<p>Where O is the observed count and E is the expected count for each cell. The test statistic follows a chi-square distribution with degrees of freedom equal to (rows − 1)(columns − 1). The chi-square test requires that expected cell counts be ≥ 5 in at least 80% of cells; when this is not met (often in small studies), <strong>Fisher's exact test</strong> is preferred.</p>
+<p><strong>Fisher's exact test</strong> calculates the exact probability of observing a contingency table as extreme as or more extreme than the observed table, given the marginal totals are fixed. It is exact rather than asymptotic, making it appropriate for 2×2 tables with small sample sizes or rare events. In a study investigating an outbreak among 12 restaurant patrons, with only 4 who ate the suspected food and 2 who became ill, the cell counts are too small for the chi-square approximation and Fisher's exact test is the correct tool.</p>
+<h3 id="tests-for-continuous-outcomes-between-two-groups">Tests for Continuous Outcomes Between Two Groups<a class="headerlink" href="#tests-for-continuous-outcomes-between-two-groups" title="Permanent link">¶</a></h3>
+<p>The <strong>Student's t-test</strong> compares the means of a continuous outcome between two groups. It assumes the outcome is approximately normally distributed within each group, or that the sample is large enough for the Central Limit Theorem to apply. The test statistic is:</p>
+<div class="arithmatex">\[
+t = \frac{\bar{x}_1 - \bar{x}_2}{SE_{\bar{x}_1 - \bar{x}_2}}
+\]</div>
+<p>The independent-samples t-test applies when the two groups consist of different individuals (for example, treatment vs. control in an RCT). The paired t-test applies when the same individuals are measured twice (pre-post intervention), using the within-person differences as the unit of analysis.</p>
+<p>The <strong>Mann-Whitney U test</strong> (also called the Wilcoxon rank-sum test) is the non-parametric alternative to the independent-samples t-test. Instead of comparing means, it compares the <em>rank distributions</em> of two independent groups, testing whether one group tends to have higher ranks than the other. It is appropriate when:</p>
+<ul>
+<li>The continuous outcome is severely skewed (for example, hospital length of stay, emergency response times)</li>
+<li>The sample size is too small to invoke the Central Limit Theorem</li>
+<li>The outcome is measured on an ordinal scale</li>
+</ul>
+<h3 id="tests-for-continuous-outcomes-across-three-or-more-groups">Tests for Continuous Outcomes Across Three or More Groups<a class="headerlink" href="#tests-for-continuous-outcomes-across-three-or-more-groups" title="Permanent link">¶</a></h3>
+<p><strong>Analysis of Variance (ANOVA)</strong> extends the t-test logic to three or more groups by partitioning the total variance in the outcome into variance between groups (explained by group membership) and variance within groups (unexplained residual). The F-statistic is the ratio of between-group to within-group mean squares:</p>
+<div class="arithmatex">\[
+F = \frac{\text{Mean Square Between Groups}}{\text{Mean Square Within Groups}}
+\]</div>
+<p>A significant F-statistic tells you that at least one group mean differs from the others, but not <em>which</em> groups differ. Post-hoc tests (Tukey's HSD, Bonferroni correction, Sidak correction) are used after a significant ANOVA to identify specific pairwise differences while controlling the family-wise error rate.</p>
+<p>ANOVA assumes: (1) observations within each group are normally distributed; (2) variances are approximately equal across groups (homoscedasticity); (3) observations are independent. When these assumptions are violated — as often happens with count data, survival outcomes, or small non-normal samples — the non-parametric alternative is appropriate.</p>
+<p>The <strong>Kruskal-Wallis test</strong> is the non-parametric equivalent of one-way ANOVA. Like the Mann-Whitney U, it operates on ranks rather than raw values, testing whether the rank distributions of three or more independent groups are equal. It does not assume normality but does assume the group distributions have similar shapes. When a significant Kruskal-Wallis result is found, pairwise Dunn tests with appropriate corrections identify which specific groups differ.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">There are a lot of tests here — how will I know which to choose?</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Sage extends a wing encouragingly">
+It is a fair concern. The good news is that the decision tree is navigable with three questions: What type is my outcome variable (categorical, continuous, ordinal)? How many groups am I comparing (two, or three+)? Are my data approximately normal or do they violate parametric assumptions? The table below summarizes the answer to all combinations. Keep it as a reference — over time you will develop intuition about which test you need before you even look at the table.</p>
+</div>
+<p>The table below summarizes all six inferential tests covered in this section, organized by the decision criteria that drive test selection. All six tests have been fully described above; the table is a cross-reference tool.</p>
+<table>
+<thead>
+<tr>
+<th>Outcome Type</th>
+<th>Groups</th>
+<th>Parametric Assumption Met?</th>
+<th>Recommended Test</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Categorical</td>
+<td>2+ (independent)</td>
+<td>n/a</td>
+<td>Chi-Square Test</td>
+</tr>
+<tr>
+<td>Categorical</td>
+<td>2 (small n or sparse cells)</td>
+<td>n/a</td>
+<td>Fisher's Exact Test</td>
+</tr>
+<tr>
+<td>Continuous</td>
+<td>2 (independent)</td>
+<td>Yes (or large n)</td>
+<td>Student's T-Test</td>
+</tr>
+<tr>
+<td>Continuous</td>
+<td>2 (independent)</td>
+<td>No (skewed, small n)</td>
+<td>Mann-Whitney U Test</td>
+</tr>
+<tr>
+<td>Continuous</td>
+<td>3+ (independent)</td>
+<td>Yes</td>
+<td>Analysis of Variance (ANOVA)</td>
+</tr>
+<tr>
+<td>Continuous</td>
+<td>3+ (independent)</td>
+<td>No</td>
+<td>Kruskal-Wallis Test</td>
+</tr>
+</tbody>
+</table>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
+<p>Biostatistics is the analytical backbone of public health evidence. This chapter has built the quantitative foundations you will apply in every subsequent chapter:</p>
+<ul>
+<li><strong>Descriptive statistics</strong> — means, medians, standard deviations, IQR — characterize data before any inference; always pair numerical summaries with visual inspection.</li>
+<li><strong>Probability fundamentals</strong> provide the logical foundation for all statistical inference; conditional probability and Bayes' theorem explain why prevalence determines what a positive test result actually means.</li>
+<li><strong>Probability distributions</strong> — normal, binomial, Poisson, and negative binomial — each model a different data-generating process. Matching the right distribution to your data is a foundational modeling choice.</li>
+<li><strong>Sampling design</strong> determines the validity of population inferences; probability sampling with appropriate weights is required for valid survey estimates.</li>
+<li><strong>Sample size estimation</strong> and <strong>statistical power</strong> must be determined prospectively; underpowered studies waste resources and produce misleading negative findings.</li>
+<li><strong>Null hypothesis testing</strong> uses the p-value to assess compatibility of data with the null — a p-value is not the probability the null is true. Type I errors (false positives) are controlled by α; Type II errors (false negatives) are controlled by study design and power.</li>
+<li><strong>Confidence intervals</strong> convey both significance and the plausible range of the true effect; they are more informative than p-values alone.</li>
+<li><strong>Test selection</strong> follows from data type (categorical vs. continuous), number of groups, and whether parametric assumptions are met. Chi-square and Fisher's for categorical outcomes; t-test and Mann-Whitney for two groups; ANOVA and Kruskal-Wallis for three or more groups.</li>
+</ul>
+<details class="question">
+<summary>Self-Check: Can you match the concept to the situation? — Click to check your answers</summary>
+<p><strong>Scenario 1:</strong> You have a continuous outcome (blood pressure), two independent groups, and n = 8 per group with non-normal data. → Mann-Whitney U test.</p>
+<p><strong>Scenario 2:</strong> You want to test whether smoking status (yes/no) differs between three age groups. → Chi-square test (or Fisher's exact if any expected cell &lt; 5).</p>
+<p><strong>Scenario 3:</strong> A screening test for TB has sensitivity 85% and specificity 97%. The population prevalence is 0.5%. What is the positive predictive value? → Use Bayes' theorem: PPV ≈ 12%. Most positives in a low-prevalence population are false positives.</p>
+<p><strong>Scenario 4:</strong> A researcher says "our p-value was 0.04, so there is a 96% chance the drug works." → Incorrect. The p-value is the probability of seeing the data under the null, not the probability the drug works.</p>
+<p><strong>Scenario 5:</strong> You increase α from 0.05 to 0.10 in a study of fixed size. → Type I error probability increases; Type II error (β) decreases; power increases.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 4 complete — you now speak the language of evidence.</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Sage raises a wing in celebration">
+You have built the quantitative foundation that every other chapter in this textbook relies on. Probability, distributions, sampling, hypothesis testing, confidence intervals, and the suite of inferential tests — these are the tools with which public health investigators turn data into defensible claims. Chapter 5 extends this foundation into the regression and advanced methods that dominate the published research literature. Well done — <em>Let's look at the data together.</em></p>
+</div>
+<hr>
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">¶</a></h2>
+<ul>
+<li>Rosner, B. (2016). <em>Fundamentals of Biostatistics</em> (8th ed.). Cengage Learning.</li>
+<li>Gerstman, B. B. (2015). <em>Basic Biostatistics: Statistics for Public Health Practice</em> (2nd ed.). Jones &amp; Bartlett.</li>
+<li>Greenhalgh, T. (2019). How to read a paper: Statistics for the non-statistician. <em>BMJ</em>, 315, 422–425.</li>
+<li>Wasserstein, R. L., &amp; Lazar, N. A. (2016). The ASA's statement on p-values: Context, process, and purpose. <em>The American Statistician</em>, 70(2), 129–133.</li>
+<li>Centers for Disease Control and Prevention. (2012). <em>Principles of Epidemiology in Public Health Practice</em> (3rd ed.), Module 2: Summarizing Data. CDC Public Health 101 Series.</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../03-epidemiology-study-design/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 3. Epi - Study Design">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                3. Epi - Study Design
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../05-biostatistics-regression/" class="md-footer__link md-footer__link--next" aria-label="Next: 5. Biostatistics - Regression">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                5. Biostatistics - Regression
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

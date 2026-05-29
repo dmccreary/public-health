@@ -1,0 +1,14 @@
+{
+  "sim_id": "spatial-analysis-workflow",
+  "diagram_name": "Spatial Analysis Workflow",
+  "chapter_number": 17,
+  "chapter_title": "\"Data Science Advanced: Spatial Analysis and Machine Learning\"",
+  "chapter_dir": "17-data-science-advanced",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** spatial-analysis-workflow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nDraw a horizontal pipeline diagram with five clickable stages arranged left to right, connected by arrows:\n\n1. **Data Acquisition** (blue) — Point data (cases, addresses) + Boundary files (shapefiles, GeoJSON) + Rate denominators (Census ACS)\n2. **Preprocessing** (blue) — Geocoding addresses → coordinates; Spatial join cases to census tracts; Compute age-standardized rates\n3. **Exploratory Mapping** (green) — Choropleth map (choropleth); KDE surface (heat map); Dot density map\n4. **Cluster Detection** (orange) — Moran's I (global autocorrelation); LISA map (local clusters); SaTScan (space-time scan)\n5. **Communication** (red) — Static map (publication); Leaflet/Folium web map (interactive); Shiny/Dash dashboard (stakeholder)\n\nEach stage box is clickable and expands a panel below the pipeline showing:\n- The key tools used at that stage (Python: geopandas, pysal, folium; R: sf, spdep, leaflet)\n- A 3-4 sentence description of what happens at this stage\n- A \"common mistake\" warning (e.g., at Preprocessing: \"Forgetting to reproject to a common CRS before spatial join produces silently wrong results\" — a classic footgun)\n\nColor scheme: blue = data operations, green = visualization, orange = statistics, red = output."
+}

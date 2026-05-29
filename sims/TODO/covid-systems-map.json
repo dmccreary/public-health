@@ -1,0 +1,14 @@
+{
+  "sim_id": "covid-systems-map",
+  "diagram_name": "COVID-19 Systems Causal Loop Map",
+  "chapter_number": 19,
+  "chapter_title": "\"COVID-19 as a Public Health Master Case Study\"",
+  "chapter_dir": "19-covid-case-study",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** covid-systems-map<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive causal loop diagram for COVID-19 system dynamics. Nodes (rendered as labeled oval buttons) represent: Infectious Population, Transmission Rate, NPI Compliance, Vaccine Coverage, Vaccine Hesitancy, Misinformation Volume, Political Polarization, ICU Occupancy, Mortality Signal, Pandemic Fatigue, Variant Fitness, Wastewater Signal. Edges connect nodes with polarity labels (+ or −). Loops are highlighted in distinct colors: R1 transmission loop (red), R2 misinformation loop (orange), R3 polarization loop (purple), B1 herd immunity loop (green), B2 surge loop (blue). Clicking any node highlights all connected edges and displays a 2–3 sentence description of that variable's role in the system. Clicking any loop label animates the loop path and shows a popup explaining the feedback mechanism. Legend in lower right shows R (reinforcing) vs B (balancing) loop notation. Reset button returns to default view. Canvas: 800×520px."
+}

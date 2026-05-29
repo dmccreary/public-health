@@ -1,0 +1,21 @@
+{
+  "title": "Determinants of Health — Concentric Layers",
+  "description": "Students can explain how determinants of health operate at multiple levels and describe how outer-ring factors constrain and shape inner-ring choices and outcomes.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "determinants-of-health-layers",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "explain",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Public Health Foundations",
+  "chapter_dir": "01-foundations"
+}

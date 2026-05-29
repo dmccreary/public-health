@@ -1,0 +1,14 @@
+{
+  "sim_id": "cerc-stages-timeline",
+  "diagram_name": "CERC Five Stages Timeline",
+  "chapter_number": 12,
+  "chapter_title": "\"Public Health Communication\"",
+  "chapter_dir": "12-public-health-communication",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** cerc-stages-timeline<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nDraw a horizontal timeline divided into five labeled stage segments: Pre-Crisis, Initial Event, Maintenance, Resolution, Evaluation. Each stage occupies proportional space with a distinctive background color (blue, orange, red, yellow, green). Above the timeline, each stage has a clickable header button. Below the timeline, there is a panel that displays when a stage is clicked: (1) stage name as heading, (2) typical duration, (3) 3-4 key communication tasks as a bullet list, (4) a COVID-19 example for each stage. Small event marker icons appear above the timeline to show where real-world events (e.g., \"First press briefing\", \"WHO declaration\", \"Vaccine approval\") can appear. Clicking an event marker shows a tooltip. A \"Reset\" button clears the selection. Responsive to container width."
+}

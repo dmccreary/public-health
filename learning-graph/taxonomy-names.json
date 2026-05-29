@@ -1,0 +1,18 @@
+{
+  "FOUND": "Public Health Foundations",
+  "EPID": "Epidemiology",
+  "BSTAT": "Biostatistics",
+  "ENVH": "Environmental Health",
+  "SOCBEH": "Social and Behavioral Health",
+  "POLMGT": "Health Policy and Management",
+  "GLOB": "Global Health",
+  "EQUITY": "Health Equity and SDOH",
+  "ETHICS": "Public Health Ethics",
+  "COMM": "Public Health Communication",
+  "PREV": "Prevention Science",
+  "SYS": "Systems Thinking",
+  "DATSCI": "Data Science",
+  "SIM": "Simulation Design",
+  "COVID": "COVID-19 Case Studies",
+  "FRAUD": "Health Fraud and Misinformation"
+}

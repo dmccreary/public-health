@@ -1,0 +1,2268 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Quantitative measures of disease frequency and association, foundational study designs from cross-sectional to randomized controlled trials, and causal inference frameworks including Bradford Hill criteria and directed acyclic graphs.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/public-health/chapters/02-epidemiology-disease-measurement/">
+      
+      
+        <link rel="prev" href="../01-foundations/">
+      
+      
+        <link rel="next" href="../03-epidemiology-study-design/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Epidemiology: Disease Measurement - Introduction to Public Health</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Epidemiology: Disease Measurement - Introduction to Public Health">
+      
+        <meta property="og:description" content="Quantitative measures of disease frequency and association, foundational study designs from cross-sectional to randomized controlled trials, and causal inference frameworks including Bradford Hill criteria and directed acyclic graphs.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/02-epidemiology-disease-measurement/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/public-health/chapters/02-epidemiology-disease-measurement/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Epidemiology: Disease Measurement - Introduction to Public Health">
+      
+        <meta name="twitter:description" content="Quantitative measures of disease frequency and association, foundational study designs from cross-sectional to randomized controlled trials, and causal inference frameworks including Bradford Hill criteria and directed acyclic graphs.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/02-epidemiology-disease-measurement/index.png">
+      
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#epidemiology-disease-measurement" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Public Health" class="md-header__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Public Health
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Epidemiology: Disease Measurement
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Public Health" class="md-nav__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Introduction to Public Health
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    2. Epi - Disease Measurement
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    2. Epi - Disease Measurement
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-language-of-disease-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Language of Disease Frequency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Language of Disease Frequency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incidence-rate-cumulative-incidence-and-prevalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incidence Rate, Cumulative Incidence, and Prevalence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incidence Rate, Cumulative Incidence, and Prevalence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-incidence-vs-prevalence-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Incidence vs. Prevalence Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mortality-rate-morbidity-rate-and-fatality-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mortality Rate, Morbidity Rate, and Fatality Ratios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attack-rate-and-secondary-attack-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Rate and Secondary Attack Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age-standardized-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age-Standardized Rates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measures-of-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measures of Association
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures of Association">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relative-risk-odds-ratio-and-hazard-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Risk, Odds Ratio, and Hazard Ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributable-risk-and-population-attributable-fraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributable Risk and Population Attributable Fraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-needed-to-treat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number Needed to Treat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epidemiological-study-designs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epidemiological Study Designs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epidemiological Study Designs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-sectional-study-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Sectional Study Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-control-study-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case-Control Study Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cohort-study-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cohort Study Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#randomized-controlled-trial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomized Controlled Trial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecological-study-design-and-the-ecological-fallacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ecological Study Design and the Ecological Fallacy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-experiment-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Experiment Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Natural Experiment Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-study-design-evidence-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Study Design Evidence Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-association-to-causation-causal-inference-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Association to Causation: Causal Inference Frameworks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Association to Causation: Causal Inference Frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bradford-hill-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bradford Hill Criteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directed-acyclic-graph-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directed Acyclic Graph (DAG)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directed Acyclic Graph (DAG)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-dag-variable-structures-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: DAG Variable Structures Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counterfactual-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counterfactual Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epidemiology-study-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epi - Study Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-biostatistics-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Biostatistics - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-biostatistics-regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Biostatistics - Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-environmental-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Environmental Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-social-behavioral-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Social and Behavioral Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-health-policy-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Health Policy and Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-global-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Global Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-health-equity-sdoh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Health Equity and SDOH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-public-health-ethics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Public Health Ethics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-public-health-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Public Health Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-prevention-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Prevention Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-systems-thinking-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Systems Thinking - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-systems-thinking-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Systems Thinking - Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-science-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Science - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-science-advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Science - Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-simulation-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Simulation Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-covid-case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. COVID-19 Case Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fraud-misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Health Fraud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-language-of-disease-frequency" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Language of Disease Frequency
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Language of Disease Frequency">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#incidence-rate-cumulative-incidence-and-prevalence" class="md-nav__link">
+    <span class="md-ellipsis">
+      Incidence Rate, Cumulative Incidence, and Prevalence
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Incidence Rate, Cumulative Incidence, and Prevalence">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-incidence-vs-prevalence-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Incidence vs. Prevalence Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mortality-rate-morbidity-rate-and-fatality-ratios" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mortality Rate, Morbidity Rate, and Fatality Ratios
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attack-rate-and-secondary-attack-rate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attack Rate and Secondary Attack Rate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#age-standardized-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Age-Standardized Rates
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#measures-of-association" class="md-nav__link">
+    <span class="md-ellipsis">
+      Measures of Association
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Measures of Association">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#relative-risk-odds-ratio-and-hazard-ratio" class="md-nav__link">
+    <span class="md-ellipsis">
+      Relative Risk, Odds Ratio, and Hazard Ratio
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#attributable-risk-and-population-attributable-fraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Attributable Risk and Population Attributable Fraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#number-needed-to-treat" class="md-nav__link">
+    <span class="md-ellipsis">
+      Number Needed to Treat
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epidemiological-study-designs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epidemiological Study Designs
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epidemiological Study Designs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#cross-sectional-study-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cross-Sectional Study Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#case-control-study-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case-Control Study Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cohort-study-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cohort Study Design
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#randomized-controlled-trial" class="md-nav__link">
+    <span class="md-ellipsis">
+      Randomized Controlled Trial
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ecological-study-design-and-the-ecological-fallacy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ecological Study Design and the Ecological Fallacy
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#natural-experiment-design" class="md-nav__link">
+    <span class="md-ellipsis">
+      Natural Experiment Design
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Natural Experiment Design">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-study-design-evidence-hierarchy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Study Design Evidence Hierarchy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#from-association-to-causation-causal-inference-frameworks" class="md-nav__link">
+    <span class="md-ellipsis">
+      From Association to Causation: Causal Inference Frameworks
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="From Association to Causation: Causal Inference Frameworks">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bradford-hill-criteria" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bradford Hill Criteria
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#directed-acyclic-graph-dag" class="md-nav__link">
+    <span class="md-ellipsis">
+      Directed Acyclic Graph (DAG)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Directed Acyclic Graph (DAG)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-dag-variable-structures-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: DAG Variable Structures Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#counterfactual-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Counterfactual Model
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/public-health/blob/main/docs/chapters/02-epidemiology-disease-measurement/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="epidemiology-disease-measurement">Epidemiology: Disease Measurement<a class="headerlink" href="#epidemiology-disease-measurement" title="Permanent link">¶</a></h1>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">Welcome, Investigators</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Sage waves welcome">
+This chapter is where public health thinking becomes quantitative. Numbers are how we tell the story of disease across populations — and how we compare that story across time, place, and person. Let's look at the data together.</p>
+</div>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<p>Epidemiology is the core science of public health — the systematic study of how disease is distributed across populations and what determines that distribution. This chapter introduces the full toolkit of disease measurement: how to quantify how common a disease is, how strongly a risk factor predicts it, and how to choose a study design that answers a causal question. The Bradford Hill criteria and directed acyclic graphs provide the formal framework for moving from observed association to causal inference.</p>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations/">Chapter 1: Public Health Foundations</a></li>
+</ul>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
+<p>This chapter covers the following 25 concepts from the learning graph:</p>
+<ol>
+<li>Incidence Rate</li>
+<li>Prevalence Proportion</li>
+<li>Cumulative Incidence</li>
+<li>Mortality Rate</li>
+<li>Case Fatality Ratio</li>
+<li>Infection Fatality Ratio</li>
+<li>Morbidity Rate</li>
+<li>Attack Rate</li>
+<li>Secondary Attack Rate</li>
+<li>Age-Standardized Rates</li>
+<li>Relative Risk</li>
+<li>Odds Ratio</li>
+<li>Hazard Ratio</li>
+<li>Attributable Risk</li>
+<li>Population Attrib Fraction</li>
+<li>Number Needed to Treat</li>
+<li>Cross-Sectional Study Design</li>
+<li>Case-Control Study Design</li>
+<li>Cohort Study Design</li>
+<li>Randomized Controlled Trial</li>
+<li>Ecological Study Design</li>
+<li>Natural Experiment Design</li>
+<li>Bradford Hill Criteria</li>
+<li>Directed Acyclic Graph</li>
+<li>Counterfactual Model</li>
+</ol>
+<hr>
+<h2 id="the-language-of-disease-frequency">The Language of Disease Frequency<a class="headerlink" href="#the-language-of-disease-frequency" title="Permanent link">¶</a></h2>
+<p>Public health workers share a precise vocabulary for describing how common disease is in a population. Imprecision in this vocabulary leads to confusion in policy and practice — a mistake that recurred visibly during the COVID-19 pandemic, when journalists, politicians, and even some public health officials used "case fatality ratio" and "infection fatality ratio" interchangeably despite their meaning very different things. Mastering these terms is not academic pedantry; it is operational precision.</p>
+<p>All measures of disease frequency share a common structural skeleton: a numerator (cases or events), a denominator (the population at risk or under observation), and a time dimension (how long was observation occurring?). The differences between measures lie in exactly how each component is defined.</p>
+<h3 id="incidence-rate-cumulative-incidence-and-prevalence">Incidence Rate, Cumulative Incidence, and Prevalence<a class="headerlink" href="#incidence-rate-cumulative-incidence-and-prevalence" title="Permanent link">¶</a></h3>
+<p>The most fundamental distinction in disease frequency is between <strong>incidence</strong> (new cases occurring during a period) and <strong>prevalence</strong> (existing cases present at a moment in time). Before we examine these formally, two definitions matter:</p>
+<ul>
+<li><strong>Population at risk</strong>: the people who do not already have the disease and could potentially develop it. People who are immune or already infected are excluded from this denominator.</li>
+<li><strong>Person-time</strong>: a unit that combines people and time. If 100 people are followed for one year, that is 100 person-years of observation.</li>
+</ul>
+<p>The <strong>incidence rate</strong> (also called incidence density) measures the rate at which new cases occur in a population at risk:</p>
+<div class="arithmatex">\[ \text{Incidence Rate} = \frac{\text{New cases during period}}{\text{Person-time at risk during period}} \]</div>
+<p>The result is expressed as cases per 1,000 (or 100,000) person-years. A rate of 50 per 100,000 person-years means that in a population of 100,000 people observed for one year, you would expect 50 new cases. The incidence rate is appropriate when follow-up time varies across individuals — as in prospective cohort studies where some participants drop out early.</p>
+<p><strong>Cumulative incidence</strong> (also called incidence proportion or attack rate in outbreak contexts) takes a simpler form:</p>
+<div class="arithmatex">\[ \text{Cumulative Incidence} = \frac{\text{New cases during period}}{\text{Population at risk at start of period}} \]</div>
+<p>This is interpreted as a probability — the probability that a disease-free individual will develop the disease over the specified time period. Cumulative incidence is dimensionless (a proportion between 0 and 1, often expressed as a percentage) and is appropriate only when the observation period is fixed and follow-up is complete.</p>
+<p><strong>Prevalence proportion</strong> counts existing cases, not new ones:</p>
+<div class="arithmatex">\[ \text{Prevalence} = \frac{\text{Existing cases at a point in time}}{\text{Total population at that time}} \]</div>
+<p>The relationship between incidence and prevalence is summarized by the <strong>prevalence pot formula</strong>: Prevalence ≈ Incidence Rate × Average Disease Duration. A disease can have high prevalence because it is common (high incidence) or because it lasts a long time (high duration), or both. HIV before antiretroviral therapy had high incidence and long duration; influenza has high incidence but short duration. This relationship is why effective HIV treatment paradoxically increased HIV prevalence — treated patients lived longer, filling the prevalence pot even as incidence fell.</p>
+<h4 id="diagram-incidence-vs-prevalence-explorer">Diagram: Incidence vs. Prevalence Explorer<a class="headerlink" href="#diagram-incidence-vs-prevalence-explorer" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/incidence-prevalence-explorer/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Incidence vs. Prevalence Explorer MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> incidence-prevalence-explorer<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Apply (L3) the relationship between incidence rate, disease duration, and prevalence proportion by adjusting simulation parameters and observing how the prevalence pool fills and drains.</p>
+<p>Bloom level: Apply — learners manipulate incidence rate and duration sliders and predict how prevalence changes, then verify their prediction against the simulation output.</p>
+<p>Canvas layout:
+- Left panel (60%): animated "prevalence pool" — new cases flow in from the top (incidence), cases leave from the bottom (recovery/death). Active cases are circles in the pool, colored by time since diagnosis.
+- Right panel (40%): numeric display showing current Incidence Rate, Duration, and calculated Prevalence; formula display updating in real time.</p>
+<p>Interactive controls (p5.js createSlider):
+- Slider: Incidence Rate (1–100 new cases per 1,000 per year)
+- Slider: Average Disease Duration (0.1–10 years)
+- Button: Reset
+- Checkbox: Show formula calculation</p>
+<p>Default parameters:
+- Incidence Rate: 10 per 1,000/year
+- Duration: 5 years
+- Population: 10,000</p>
+<p>Data Visibility Requirements:
+Stage 1: Show current incidence rate (cases/1,000/yr)
+Stage 2: Show duration setting
+Stage 3: Show calculated prevalence using Prevalence ≈ IR × Duration
+Stage 4: Show animated pool adjusting to equilibrium</p>
+<p>Behavior:
+- When sliders change, cases enter and leave pool at new rates
+- Prevalence display updates every second
+- Formula panel always shows the current calculation with actual numbers</p>
+<p>Instructional Rationale: Sliders with real-time feedback are appropriate for an Apply/L3 objective because learners must manipulate parameters and observe consequences — passive animation would prevent the prediction-and-verify cycle that cements the relationship.</p>
+<p>Responsive design: Canvas resizes on window resize. updateCanvasSize() called in setup().</p>
+</details>
+<h3 id="mortality-rate-morbidity-rate-and-fatality-ratios">Mortality Rate, Morbidity Rate, and Fatality Ratios<a class="headerlink" href="#mortality-rate-morbidity-rate-and-fatality-ratios" title="Permanent link">¶</a></h3>
+<p>The <strong>mortality rate</strong> is an incidence rate specifically counting deaths as the outcome. Like all rates, it requires a denominator of person-time at risk and a specified time period. Mortality rates are routinely age-standardized (see below) to allow fair comparisons across populations with different age structures.</p>
+<p><strong>Morbidity rate</strong> is a broader term for any measure of the frequency of disease in a population, encompassing both incidence and prevalence. In practice, "morbidity" often contrasts with "mortality" to signal that we are discussing illness burden, not death.</p>
+<p>Two ratios describe the severity of disease once acquired. Before examining them, note that both are called "ratios" rather than "rates" — they have a defined numerator and denominator but lack a time dimension in the denominator, which distinguishes them from true rates.</p>
+<ul>
+<li>
+<p><strong>Case Fatality Ratio (CFR)</strong>: Deaths / Confirmed cases. The CFR answers: "Of the people we know had this disease, what fraction died?" Its critical limitation is that it depends on how many cases are detected. When testing is limited, many mild cases are missed, the denominator shrinks, and the CFR climbs artificially. During the early COVID-19 pandemic, CFRs varied from 0.1% to over 10% across countries largely because testing capacity differed, not because the virus behaved differently.</p>
+</li>
+<li>
+<p><strong>Infection Fatality Ratio (IFR)</strong>: Deaths / All infected people (confirmed + estimated undetected). The IFR corrects for undertesting by using seroprevalence studies or other methods to estimate the true number infected. Because its denominator is larger, the IFR is always ≤ the CFR. For COVID-19, the IFR for the ancestral strain was estimated at approximately 0.5–1.0% — an order of magnitude below many early CFR estimates.</p>
+</li>
+</ul>
+<h3 id="attack-rate-and-secondary-attack-rate">Attack Rate and Secondary Attack Rate<a class="headerlink" href="#attack-rate-and-secondary-attack-rate" title="Permanent link">¶</a></h3>
+<p><strong>Attack rate</strong> is the cumulative incidence in a defined population during a defined outbreak or exposure event. In a foodborne illness investigation, the attack rate among people who ate the suspect food versus those who did not drives the identification of the vehicle:</p>
+<div class="arithmatex">\[ \text{Attack Rate} = \frac{\text{Ill among those exposed}}{\text{Total exposed}} \times 100\% \]</div>
+<p><strong>Secondary attack rate (SAR)</strong> measures how readily a pathogen spreads within households or close-contact settings after an index case is introduced:</p>
+<div class="arithmatex">\[ \text{SAR} = \frac{\text{New cases among contacts}}{\text{Susceptible contacts}} \times 100\% \]</div>
+<p>The SAR is one of several proxies for transmissibility. For COVID-19 in unvaccinated households, SARs ranged from approximately 15–25% for the original strain and climbed above 40% for Omicron, reflecting the variant's enhanced transmissibility.</p>
+<h3 id="age-standardized-rates">Age-Standardized Rates<a class="headerlink" href="#age-standardized-rates" title="Permanent link">¶</a></h3>
+<p>A population with a higher proportion of elderly residents will appear to have a higher mortality rate than a younger population, even if age-specific risks are identical. <strong>Age standardization</strong> removes this confounding by applying a population's observed age-specific rates to a reference (standard) population's age distribution.</p>
+<p>Two methods exist: <strong>direct standardization</strong> applies the observed age-specific rates to a standard population; <strong>indirect standardization</strong> (producing the Standardized Mortality Ratio, or SMR) applies a reference population's age-specific rates to the study population's age structure. Age-standardized rates are the currency of international and temporal mortality comparisons — the Global Burden of Disease study uses them to enable valid comparisons of death rates across 195 countries.</p>
+<p>The following table summarizes the major measures of disease frequency:</p>
+<table>
+<thead>
+<tr>
+<th>Measure</th>
+<th>Numerator</th>
+<th>Denominator</th>
+<th>Time Dimension</th>
+<th>Interpretation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Incidence Rate</td>
+<td>New cases</td>
+<td>Person-time at risk</td>
+<td>Embedded in denominator</td>
+<td>Rate per person-time</td>
+</tr>
+<tr>
+<td>Cumulative Incidence</td>
+<td>New cases</td>
+<td>Population at risk (start)</td>
+<td>Fixed period</td>
+<td>Probability of disease</td>
+</tr>
+<tr>
+<td>Prevalence</td>
+<td>Existing cases</td>
+<td>Total population</td>
+<td>Point in time</td>
+<td>Proportion currently ill</td>
+</tr>
+<tr>
+<td>Mortality Rate</td>
+<td>Deaths</td>
+<td>Person-time at risk</td>
+<td>Embedded</td>
+<td>Rate of death</td>
+</tr>
+<tr>
+<td>CFR</td>
+<td>Deaths</td>
+<td>Confirmed cases</td>
+<td>None</td>
+<td>Proportion of confirmed cases dying</td>
+</tr>
+<tr>
+<td>IFR</td>
+<td>Deaths</td>
+<td>All infected</td>
+<td>None</td>
+<td>Proportion of all infected dying</td>
+</tr>
+<tr>
+<td>Attack Rate</td>
+<td>Ill (exposed)</td>
+<td>Total exposed</td>
+<td>Outbreak period</td>
+<td>Probability of illness if exposed</td>
+</tr>
+<tr>
+<td>SAR</td>
+<td>New cases in contacts</td>
+<td>Susceptible contacts</td>
+<td>Contact period</td>
+<td>Probability of spread within groups</td>
+</tr>
+</tbody>
+</table>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What does the evidence show?</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Sage thinking">
+When a headline says a disease has a "10% death rate," pause and ask: death rate measured how? Is this the case fatality ratio from confirmed cases only — which inflates the denominator problem — or an age-standardized mortality rate from a population-based cohort? The word "rate" is used loosely in public discourse; investigators use it precisely.</p>
+</div>
+<hr>
+<h2 id="measures-of-association">Measures of Association<a class="headerlink" href="#measures-of-association" title="Permanent link">¶</a></h2>
+<p>Knowing how common a disease is tells you about burden. Knowing how strongly a risk factor is associated with that disease tells you about causes and potential interventions. Measures of association compare disease frequency between exposed and unexposed groups.</p>
+<p>The foundation for calculating measures of association is the <strong>2×2 contingency table</strong>, which cross-classifies individuals by exposure status (exposed vs. unexposed) and disease outcome (diseased vs. disease-free):</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><strong>Disease +</strong></th>
+<th><strong>Disease −</strong></th>
+<th><strong>Total</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Exposed</strong></td>
+<td>a</td>
+<td>b</td>
+<td>a+b</td>
+</tr>
+<tr>
+<td><strong>Unexposed</strong></td>
+<td>c</td>
+<td>d</td>
+<td>c+d</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td>a+c</td>
+<td>b+d</td>
+<td>N</td>
+</tr>
+</tbody>
+</table>
+<p>With this table in hand, three primary ratio measures emerge.</p>
+<h3 id="relative-risk-odds-ratio-and-hazard-ratio">Relative Risk, Odds Ratio, and Hazard Ratio<a class="headerlink" href="#relative-risk-odds-ratio-and-hazard-ratio" title="Permanent link">¶</a></h3>
+<p>The <strong>relative risk (RR)</strong>, also called risk ratio, is the ratio of cumulative incidence in the exposed group to cumulative incidence in the unexposed group:</p>
+<div class="arithmatex">\[ RR = \frac{a/(a+b)}{c/(c+d)} \]</div>
+<p>An RR of 1.0 means no association. An RR of 3.0 means the exposed group develops the disease three times as often as the unexposed group. The RR is the most interpretable measure of association and is used whenever cumulative incidence can be calculated directly — that is, in cohort studies and RCTs.</p>
+<p>The <strong>odds ratio (OR)</strong> is the ratio of the odds of exposure among cases to the odds of exposure among controls:</p>
+<div class="arithmatex">\[ OR = \frac{a/b}{c/d} = \frac{ad}{bc} \]</div>
+<p>The OR is the required measure in case-control studies, where the investigator has sampled on outcome (cases and controls), making it impossible to calculate true cumulative incidence from the study data. When disease is rare (prevalence &lt; 10%), the OR approximates the RR — but when disease is common, the OR diverges from the RR, often substantially. Misinterpreting ORs as RRs is one of the most common errors in reading epidemiological literature.</p>
+<p>The <strong>hazard ratio (HR)</strong> is the measure of association from survival analysis. It represents the ratio of instantaneous event rates (hazards) between two groups over the follow-up period. HRs appear in Cox proportional hazards models and Kaplan-Meier comparisons. Like the RR, an HR &gt; 1 signals elevated risk in the exposed group; an HR &lt; 1 signals protection. Unlike the RR, the HR accounts for censoring — participants who leave the study before experiencing the outcome are not simply discarded.</p>
+<h3 id="attributable-risk-and-population-attributable-fraction">Attributable Risk and Population Attributable Fraction<a class="headerlink" href="#attributable-risk-and-population-attributable-fraction" title="Permanent link">¶</a></h3>
+<p>Ratio measures (RR, OR, HR) describe how much more likely exposed individuals are to develop disease. <strong>Absolute</strong> measures of association describe how many cases in a population are attributable to the exposure. Two absolute measures matter for policy:</p>
+<p><strong>Attributable risk (AR)</strong>, also called risk difference, is the excess incidence in the exposed group:</p>
+<div class="arithmatex">\[ AR = CI_{exposed} - CI_{unexposed} \]</div>
+<p>If smokers have a 20% ten-year risk of lung cancer and non-smokers have a 1% risk, the AR is 19 percentage points — that is the excess risk attributable to smoking in an individual who smokes.</p>
+<p><strong>Population attributable fraction (PAF)</strong> extends this to the entire population, estimating the proportion of all cases that would disappear if the exposure were eliminated:</p>
+<div class="arithmatex">\[ PAF = \frac{CI_{population} - CI_{unexposed}}{CI_{population}} \]</div>
+<p>The PAF depends on both the strength of the association (the RR) and the prevalence of the exposure. Tobacco is the classic example: its RR for lung cancer is enormous, but because smoking prevalence has declined, the PAF has also declined over decades. Conversely, physical inactivity has a more modest RR for cardiovascular disease but an enormous PAF because it is so prevalent.</p>
+<h3 id="number-needed-to-treat">Number Needed to Treat<a class="headerlink" href="#number-needed-to-treat" title="Permanent link">¶</a></h3>
+<p>The <strong>number needed to treat (NNT)</strong> is the reciprocal of the absolute risk reduction (ARR) in a clinical trial or intervention study:</p>
+<div class="arithmatex">\[ NNT = \frac{1}{ARR} = \frac{1}{CI_{control} - CI_{intervention}} \]</div>
+<p>An NNT of 20 means that 20 people must receive the intervention for one person to benefit beyond what would occur with the control condition. NNT is widely used in evidence-based medicine and cost-effectiveness analysis. Its complement, the <strong>number needed to harm (NNH)</strong>, applies the same logic to adverse events.</p>
+<div class="admonition mascot-tip">
+<p class="admonition-title">Tip: NNT and absolute vs. relative risk</p>
+<p><img src="../../img/mascot/tip.png" class="mascot-admonition-img" alt="Sage offering a tip">
+Pharmaceutical advertising almost always presents relative risk reductions rather than NNTs. A drug that cuts the risk of a rare outcome from 0.2% to 0.1% has an impressive-sounding 50% relative reduction — but an NNT of 1,000. Always ask: "What is the absolute risk reduction?" That is the number that tells you how useful the intervention actually is.</p>
+</div>
+<hr>
+<h2 id="epidemiological-study-designs">Epidemiological Study Designs<a class="headerlink" href="#epidemiological-study-designs" title="Permanent link">¶</a></h2>
+<p>Choosing the right study design is among the most consequential decisions an epidemiologist makes. Each design answers certain questions well and handles certain biases poorly. Before we examine the hierarchy, three definitions are essential:</p>
+<ul>
+<li><strong>Internal validity</strong>: how well a study measures the true relationship between exposure and outcome within the study population, free from bias and confounding.</li>
+<li><strong>External validity (generalizability)</strong>: how well the study's findings apply to populations beyond the study sample.</li>
+<li><strong>Confounding</strong>: a distortion of the exposure-outcome relationship caused by a third variable that is associated with both the exposure and the outcome, but is not on the causal pathway between them.</li>
+</ul>
+<p>These concepts are always in tension: designs with the best internal validity (RCTs) are often the hardest to generalize; designs with broad external validity (ecological studies) are most vulnerable to confounding.</p>
+<p>The following table organizes the six study designs covered in this chapter:</p>
+<table>
+<thead>
+<tr>
+<th>Design</th>
+<th>Direction</th>
+<th>Can Calculate RR?</th>
+<th>Randomized?</th>
+<th>Confounding Control</th>
+<th>Typical Use Case</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cross-Sectional</td>
+<td>Simultaneous</td>
+<td>No (prevalence ratio only)</td>
+<td>No</td>
+<td>Adjustment only</td>
+<td>Prevalence, needs assessments</td>
+</tr>
+<tr>
+<td>Case-Control</td>
+<td>Retrospective</td>
+<td>No (OR only)</td>
+<td>No</td>
+<td>Matching, adjustment</td>
+<td>Rare diseases, outbreak investigation</td>
+</tr>
+<tr>
+<td>Cohort (prospective)</td>
+<td>Forward</td>
+<td>Yes</td>
+<td>No</td>
+<td>Adjustment, restriction</td>
+<td>Long-term exposure effects</td>
+</tr>
+<tr>
+<td>Cohort (retrospective)</td>
+<td>Forward (historical)</td>
+<td>Yes</td>
+<td>No</td>
+<td>Adjustment, restriction</td>
+<td>Occupational exposures</td>
+</tr>
+<tr>
+<td>RCT</td>
+<td>Forward</td>
+<td>Yes</td>
+<td>Yes</td>
+<td>Randomization</td>
+<td>Efficacy of interventions</td>
+</tr>
+<tr>
+<td>Ecological</td>
+<td>Aggregate</td>
+<td>Ecological RR only</td>
+<td>No</td>
+<td>None (ecological fallacy risk)</td>
+<td>Hypothesis generation</td>
+</tr>
+<tr>
+<td>Natural Experiment</td>
+<td>Varies</td>
+<td>Sometimes</td>
+<td>No (quasi-random)</td>
+<td>As-if randomization</td>
+<td>Policy evaluation</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cross-sectional-study-design">Cross-Sectional Study Design<a class="headerlink" href="#cross-sectional-study-design" title="Permanent link">¶</a></h3>
+<p>A <strong>cross-sectional study</strong> takes a snapshot of a population at a single point in time (or over a short period), measuring both exposure and outcome simultaneously. Because exposure and disease are measured at the same moment, temporal sequence — and therefore causality — cannot be established. Did the exposure precede the disease, or did the disease change the exposure?</p>
+<p>Cross-sectional studies are the workhorses of public health surveillance and needs assessment. The Behavioral Risk Factor Surveillance System (BRFSS) and the National Health and Nutrition Examination Survey (NHANES) are both cross-sectional in design. They generate prevalence proportions, prevalence ratios, and proportion differences — not incidence rates or relative risks.</p>
+<h3 id="case-control-study-design">Case-Control Study Design<a class="headerlink" href="#case-control-study-design" title="Permanent link">¶</a></h3>
+<p>A <strong>case-control study</strong> identifies people with the disease of interest (cases) and comparable people without the disease (controls), then looks backward to compare their exposure histories. Because the investigator selects participants based on their outcome status, the calculation of absolute risks from within the study is impossible — the proportion of cases to controls reflects the investigator's sampling decision, not the true disease frequency. The OR is therefore the appropriate measure of association.</p>
+<p>Case-control designs excel when the outcome is rare and the induction period (time from exposure to disease) is long. Case-control studies were used to first link thalidomide to birth defects, to establish the smoking-lung cancer link (before prospective cohorts were feasible), and to identify the source of most foodborne illness outbreaks within days rather than years. Their primary vulnerability is <strong>recall bias</strong> — cases may remember and report past exposures differently than controls, especially if they have been thinking about why they got sick.</p>
+<h3 id="cohort-study-design">Cohort Study Design<a class="headerlink" href="#cohort-study-design" title="Permanent link">¶</a></h3>
+<p>A <strong>cohort study</strong> identifies a group of people who are initially free of the outcome of interest, classifies them by exposure status, and follows them forward in time to observe who develops the outcome. Because participants are followed from exposure to outcome, cumulative incidence and incidence rates can be calculated directly, and the RR is the natural measure of association.</p>
+<p><strong>Prospective cohorts</strong> enroll and follow participants in real time, enabling collection of carefully measured exposure data but requiring years or decades and substantial funding. The Nurses' Health Study, the Framingham Heart Study, and the UK Biobank are landmark prospective cohorts. <strong>Retrospective cohorts</strong> identify a defined group in the past (e.g., workers in a chemical plant) and use historical records to reconstruct their exposure and outcome experience — much faster and cheaper, but dependent on the quality of historical records.</p>
+<p>Cohort studies are vulnerable to <strong>loss to follow-up</strong> bias: if participants who drop out differ systematically from those who remain, the results will be distorted. They also cannot efficiently study rare outcomes — a cohort study of pancreatic cancer would need to enroll millions of participants to observe enough cases.</p>
+<h3 id="randomized-controlled-trial">Randomized Controlled Trial<a class="headerlink" href="#randomized-controlled-trial" title="Permanent link">¶</a></h3>
+<p>A <strong>randomized controlled trial (RCT)</strong> randomly assigns participants to intervention and control conditions, then follows them forward to compare outcomes. Randomization distributes both measured and unmeasured confounders equally between groups (in expectation), making the RCT the only study design that can establish causality rather than merely association. Regulatory agencies require RCT evidence for drug approvals.</p>
+<p>The limitations of RCTs are practical and ethical rather than logical. You cannot randomize people to smoke or to live in poverty. RCTs of public health interventions face particular challenges: community-level interventions cannot be double-blinded, outcomes of interest (cardiovascular disease, cancer, death) require decades of follow-up, and participants recruited into trials may differ meaningfully from the broader population.</p>
+<h3 id="ecological-study-design-and-the-ecological-fallacy">Ecological Study Design and the Ecological Fallacy<a class="headerlink" href="#ecological-study-design-and-the-ecological-fallacy" title="Permanent link">¶</a></h3>
+<p>An <strong>ecological study</strong> uses aggregate data — data measured at the group level rather than the individual level — to examine relationships between exposures and outcomes across groups (countries, counties, time periods). John Snow's original cholera maps were ecological. Ecological studies are fast, cheap, and excellent for generating hypotheses.</p>
+<p>Their fundamental limitation is the <strong>ecological fallacy</strong>: the correlation observed at the group level may not hold at the individual level. A country with high per-capita fat intake and high heart disease rates does not tell us that the individuals with high fat intake are the ones getting heart disease. Ecological correlations reflect group averages, not individual relationships, and unmeasured confounders at the group level are essentially impossible to control.</p>
+<h3 id="natural-experiment-design">Natural Experiment Design<a class="headerlink" href="#natural-experiment-design" title="Permanent link">¶</a></h3>
+<p>A <strong>natural experiment</strong> exploits a real-world event that assigns exposure in a way that is quasi-random or as-if random — not because the investigator designed it, but because external forces (policy changes, geographic boundaries, lotteries) created exposure variation that was not driven by individuals' own choices or health status. The Oregon Medicaid lottery (which randomly assigned Medicaid eligibility by lottery) is a classic public health natural experiment. Differences-in-differences analyses and regression discontinuity designs are the primary analytical approaches.</p>
+<p>Natural experiments fill a critical gap: they enable causal inference about policy-level exposures that could never be randomized by a researcher. Their weakness is that the "as-if random" assumption may not fully hold — the policy or event may have anticipated individual behavior changes that confound the analysis.</p>
+<h4 id="diagram-study-design-evidence-hierarchy">Diagram: Study Design Evidence Hierarchy<a class="headerlink" href="#diagram-study-design-evidence-hierarchy" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/study-design-hierarchy/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Evidence Pyramid Interactive Diagram</summary>
+<p>Type: diagram
+<strong>sim-id:</strong> study-design-hierarchy<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Identify (L1) and compare (L4) epidemiological study designs by their position in the evidence hierarchy, their key strengths, and their primary limitations.</p>
+<p>Canvas layout:
+- Main drawing area showing a triangular pyramid divided into 6 horizontal layers
+- Right side panel (250px): infobox that updates when a layer is clicked or hovered</p>
+<p>Pyramid layers (bottom to top, increasing evidence strength):
+1. Ecological Studies (bottom, widest) — gray
+2. Cross-Sectional Studies — light blue
+3. Case-Control Studies — blue
+4. Cohort Studies (Prospective &amp; Retrospective) — teal
+5. RCTs and Quasi-Experimental (Natural Experiments) — green
+6. Systematic Reviews &amp; Meta-Analyses (top, narrowest) — gold</p>
+<p>Each layer is a clickable trapezoid labeled with the design name.</p>
+<p>On hover: layer brightens, cursor becomes pointer
+On click: infobox updates with:
+- Design name and definition
+- Can calculate RR directly? (Yes/No)
+- Randomized? (Yes/No)
+- Primary bias vulnerability
+- Classic public health example (e.g., "Snow's cholera maps" for ecological)
+- Typical use case</p>
+<p>Labels on pyramid left side: "↑ Internal Validity", "↑ Evidence Strength"
+Labels on pyramid right side: "↑ Cost &amp; Time", "↓ Feasibility"</p>
+<p>Responsive design: Canvas resizes on window resize; pyramid scales to container width.</p>
+</details>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Common mistake: confusing study design with evidence quality</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Sage with a gentle warning">
+A well-conducted cohort study can provide stronger evidence than a poorly designed RCT. The evidence hierarchy describes the <em>potential</em> for each design to establish causality, not the quality of any specific study. When reading literature, look at both design type and methodological quality — reporting guidelines (STROBE for observational studies, CONSORT for RCTs) help you assess both.</p>
+</div>
+<hr>
+<h2 id="from-association-to-causation-causal-inference-frameworks">From Association to Causation: Causal Inference Frameworks<a class="headerlink" href="#from-association-to-causation-causal-inference-frameworks" title="Permanent link">¶</a></h2>
+<p>Finding a statistically significant association between an exposure and an outcome is the beginning of causal inquiry, not the end. An association can arise from:</p>
+<ol>
+<li><strong>Chance</strong> (random error, especially in small samples)</li>
+<li><strong>Bias</strong> (systematic error in study design, data collection, or analysis)</li>
+<li><strong>Confounding</strong> (a third variable explaining the apparent association)</li>
+<li><strong>True causation</strong> (the exposure actually causes the outcome)</li>
+</ol>
+<p>Three formal frameworks help epidemiologists navigate this reasoning.</p>
+<h3 id="bradford-hill-criteria">Bradford Hill Criteria<a class="headerlink" href="#bradford-hill-criteria" title="Permanent link">¶</a></h3>
+<p>In 1965, Austin Bradford Hill proposed nine criteria for evaluating whether a statistical association is likely to reflect a causal relationship. These criteria are not a checklist — no single criterion is necessary or sufficient — but together they structure causal argument. Before we examine them, note that Hill himself was careful to say they assess the <em>plausibility</em> of a causal interpretation, not its proof.</p>
+<p>The nine criteria are:</p>
+<ol>
+<li><strong>Strength of association</strong>: Larger effect sizes are less likely to be explained by unmeasured confounding. An RR of 10 (smoking and lung cancer) is harder to explain away than an RR of 1.2.</li>
+<li><strong>Consistency</strong>: Has the association been replicated by different investigators, in different places, at different times, using different methods?</li>
+<li><strong>Specificity</strong>: Does the exposure predict this outcome specifically, or does it predict many different outcomes? (Specificity is the weakest criterion — most major exposures have multiple effects.)</li>
+<li><strong>Temporality</strong>: Does the exposure precede the outcome in time? This is the only criterion that is strictly <em>necessary</em> for causation — an effect cannot precede its cause.</li>
+<li><strong>Biological gradient</strong>: Is there a dose-response relationship? More exposure producing more disease strengthens the causal argument.</li>
+<li><strong>Plausibility</strong>: Is there a plausible biological mechanism? Note that plausibility is theory-dependent — many causal relationships were established before the mechanism was known.</li>
+<li><strong>Coherence</strong>: Do the laboratory and epidemiological evidence tell the same story, without contradiction?</li>
+<li><strong>Experiment</strong>: Does removing the exposure (natural or quasi-experimental) reduce disease? When available, this is among the strongest evidence.</li>
+<li><strong>Analogy</strong>: Do similar exposures cause similar diseases? (Weakest criterion — an argument from analogy that should be used cautiously.)</li>
+</ol>
+<h3 id="directed-acyclic-graph-dag">Directed Acyclic Graph (DAG)<a class="headerlink" href="#directed-acyclic-graph-dag" title="Permanent link">¶</a></h3>
+<p>A <strong>directed acyclic graph (DAG)</strong> is a formal diagram used to encode causal assumptions about the relationships among variables in an epidemiological analysis. A DAG consists of variables (nodes) and arrows (directed edges) that represent direct causal effects; the "acyclic" constraint means no variable can be its own cause (no cycles). DAGs were formalized for epidemiology by Miguel Hernán and colleagues and have become the standard method for identifying and addressing confounding.</p>
+<p>In a DAG, three structural patterns produce different statistical relationships:</p>
+<ul>
+<li><strong>Confounder</strong>: A variable (C) that causes both the exposure (E) and the outcome (O): E ← C → O. Failing to adjust for a confounder produces biased estimates.</li>
+<li><strong>Mediator</strong>: A variable (M) that lies on the causal pathway from E to O: E → M → O. Adjusting for a mediator blocks the indirect effect and is usually not desired unless mediation analysis is the goal.</li>
+<li><strong>Collider</strong>: A variable (L) that is caused by both E and O: E → L ← O. Adjusting for a collider (e.g., conditioning on a study entry criterion) <em>opens</em> a spurious association between E and O — called <strong>collider bias</strong> or <strong>selection bias</strong>.</li>
+</ul>
+<p>The critical implication: you should not simply "adjust for everything" in a regression. Adjusting for a collider introduces bias that would not otherwise exist. DAGs make explicit which variables to adjust for, which to avoid, and why.</p>
+<h4 id="diagram-dag-variable-structures-explorer">Diagram: DAG Variable Structures Explorer<a class="headerlink" href="#diagram-dag-variable-structures-explorer" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/dag-variable-structures/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>DAG Variable Structures — Confounder, Mediator, Collider</summary>
+<p>Type: diagram
+<strong>sim-id:</strong> dag-variable-structures<br>
+<strong>Library:</strong> vis-network<br>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Differentiate (L4) the three causal structures in a DAG — confounder, mediator, and collider — and explain the consequences of adjusting (or not adjusting) for each.</p>
+<p>Canvas layout:
+- Main vis-network graph (60% width): shows three separate DAG structures arranged vertically
+- Right panel (40%): explains the currently selected structure</p>
+<p>Three structures displayed simultaneously with labeled groups:
+Group 1 — Confounder: C → E, C → O, E → O. Nodes: E (Exposure, blue circle), O (Outcome, orange circle), C (Confounder, red circle).
+Group 2 — Mediator: E → M → O. Nodes: E (blue), M (Mediator, green), O (orange).
+Group 3 — Collider: E → L ← O. Nodes: E (blue), L (Collider, purple), O (orange).</p>
+<p>Interactive behavior:
+- Click any node: right panel shows the variable type (confounder/mediator/collider), its definition, whether to adjust for it, and the consequence of wrong choice.
+- Click any edge: shows what the arrow represents (direct causal effect from source to target).
+- Hover node: node highlights, tooltip shows variable label and type.
+- Checkbox in right panel: "Show adjusted version" — when checked, adjusted variables are shown with a box (conditioning symbol) and the path status (open/closed) updates.</p>
+<p>Node styling: Circles, radius 30px; E = #2196F3 (blue), O = #FF9800 (orange), C = #F44336 (red), M = #4CAF50 (green), L = #9C27B0 (purple). Edges: black arrows, width 2.
+Layout: Static positions (not physics-based) to keep three groups legible.</p>
+<p>Responsive: vis-network container fills 60% of the parent width; panel updates dynamically.</p>
+</details>
+<h3 id="counterfactual-model">Counterfactual Model<a class="headerlink" href="#counterfactual-model" title="Permanent link">¶</a></h3>
+<p>The <strong>counterfactual model</strong> (also called the potential outcomes framework) provides the most formal definition of a causal effect. The causal effect of an exposure on an individual is the difference between two potential outcomes: what would have happened to that person <em>if they had been exposed</em> versus <em>if they had not been exposed</em>. Because any individual can only be observed in one state (exposed or unexposed), the counterfactual outcome is by definition unobservable — this is the <strong>fundamental problem of causal inference</strong>.</p>
+<p>The solution in epidemiology is to construct a comparison group that approximates the counterfactual — that is, who are identical to the exposed group in all relevant ways except for the exposure itself. Randomization in an RCT creates this counterfactual condition in expectation. Observational study designs attempt to approximate it through matching, restriction, stratification, regression adjustment, propensity scores, instrumental variables, or natural experiments.</p>
+<p>The counterfactual model makes explicit what most epidemiologists knew intuitively: the validity of a causal inference depends on the exchangeability of the exposed and unexposed groups — the assumption that, in the absence of exposure, they would have had the same outcome risk.</p>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">Difficult concept ahead</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Sage encouraging">
+The counterfactual model and DAGs can feel abstract on first encounter. The best way to build intuition is to pick a real exposure-outcome pair — say, air pollution and lung disease — and draw every variable you think might confound, mediate, or collide in that relationship. Drawing it badly on the first try is exactly the point. The process of correcting the graph is how you learn causal reasoning.</p>
+</div>
+<hr>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
+<p>This chapter introduced the quantitative vocabulary of epidemiology across three domains:</p>
+<p><strong>Measures of Disease Frequency:</strong></p>
+<ul>
+<li>Incidence rate, cumulative incidence, and prevalence are related by Prevalence ≈ IR × Duration — they measure different things and cannot be substituted for each other.</li>
+<li>CFR and IFR differ by how many cases are in the denominator; CFR inflates with limited testing.</li>
+<li>Age standardization enables fair comparisons across populations with different age structures.</li>
+</ul>
+<p><strong>Measures of Association:</strong></p>
+<ul>
+<li>RR is the most interpretable ratio measure but requires cohort data; OR is required in case-control studies.</li>
+<li>The OR approximates the RR only when disease is rare (&lt; 10%).</li>
+<li>Attributable risk and PAF translate ratio measures into population impact, essential for priority-setting.</li>
+<li>NNT translates absolute risk reduction into a clinically intuitive form.</li>
+</ul>
+<p><strong>Study Designs and Causal Inference:</strong></p>
+<ul>
+<li>No study design is inherently best; the right choice depends on the research question, feasibility, and the primary bias to minimize.</li>
+<li>Temporality — exposure before outcome — is the only necessary criterion in Bradford Hill's framework.</li>
+<li>DAGs make explicit which variables should and should not be adjusted for in analysis.</li>
+<li>The counterfactual framework defines causal effect as a comparison of potential outcomes — never directly observable, always the target.</li>
+</ul>
+<details class="question">
+<summary>Self-Check: Which measure of association fits the design?</summary>
+<p>A researcher conducts a case-control study of a rare cancer. She identifies 200 cases from a cancer registry and 400 matched controls from hospital records. Which measure of association should she calculate, and why?</p>
+<p><strong>Answer:</strong> The <strong>odds ratio</strong>, because the study design samples on outcome status (cases and controls are selected based on whether they have the disease). Cumulative incidence cannot be calculated from case-control data — the proportion of cases in the study reflects the investigator's sampling decision, not the true disease frequency. The OR approximates the RR in this context because the cancer is rare.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 2 complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Sage celebrating">
+You now have the measurement toolkit that underlies nearly every chapter that follows. Incidence, prevalence, RR, OR, and study design literacy will come up again and again — in systems modeling, in COVID-19 case studies, in health policy evaluation, and in data science applications. The language you learned here is the foundation.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../01-foundations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 1. Foundations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                1. Foundations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../03-epidemiology-study-design/" class="md-footer__link md-footer__link--next" aria-label="Next: 3. Epi - Study Design">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                3. Epi - Study Design
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

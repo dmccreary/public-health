@@ -1,0 +1,21 @@
+{
+  "title": "MicroSim Design Process",
+  "description": "MicroSim Design Process",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "microsim-design-process",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 18,
+  "chapter_title": "\"Simulation Design for Public Health Education\"",
+  "chapter_dir": "18-simulation-design"
+}

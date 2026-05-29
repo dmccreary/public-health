@@ -1,0 +1,21 @@
+{
+  "title": "US Health System Structure",
+  "description": "US Health System Structure",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "us-health-system-structure",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 8,
+  "chapter_title": "\"Health Policy and Management\"",
+  "chapter_dir": "08-health-policy-management"
+}

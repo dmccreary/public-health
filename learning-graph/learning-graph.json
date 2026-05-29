@@ -1,0 +1,5592 @@
+{
+  "metadata": {
+    "title": "Introduction to Public Health",
+    "description": "An interactive intelligent textbook covering core public health concepts, competencies, and frameworks as defined by CEPH, CDC, and WHO, spanning epidemiology, biostatistics, environmental health, health policy, systems thinking, data science, and COVID-19 case studies.",
+    "creator": "Dan McCreary",
+    "date": "2026-05-28",
+    "version": "1.0",
+    "format": "Learning Graph JSON v1.0",
+    "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+    "license": "CC BY-NC-SA 4.0 DEED"
+  },
+  "groups": {
+    "FOUND": {
+      "classifierName": "Public Health Foundations",
+      "color": "SteelBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "EPID": {
+      "classifierName": "Epidemiology",
+      "color": "DarkSlateBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "BSTAT": {
+      "classifierName": "Biostatistics",
+      "color": "DarkGreen",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ENVH": {
+      "classifierName": "Environmental Health",
+      "color": "OliveDrab",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SOCBEH": {
+      "classifierName": "Social and Behavioral Health",
+      "color": "Teal",
+      "font": {
+        "color": "white"
+      }
+    },
+    "POLMGT": {
+      "classifierName": "Health Policy and Management",
+      "color": "DodgerBlue",
+      "font": {
+        "color": "white"
+      }
+    },
+    "GLOB": {
+      "classifierName": "Global Health",
+      "color": "MediumPurple",
+      "font": {
+        "color": "white"
+      }
+    },
+    "EQUITY": {
+      "classifierName": "Health Equity and SDOH",
+      "color": "Crimson",
+      "font": {
+        "color": "white"
+      }
+    },
+    "ETHICS": {
+      "classifierName": "Public Health Ethics",
+      "color": "DarkRed",
+      "font": {
+        "color": "white"
+      }
+    },
+    "COMM": {
+      "classifierName": "Public Health Communication",
+      "color": "DarkGoldenrod",
+      "font": {
+        "color": "white"
+      }
+    },
+    "PREV": {
+      "classifierName": "Prevention Science",
+      "color": "DarkOrchid",
+      "font": {
+        "color": "white"
+      }
+    },
+    "SYS": {
+      "classifierName": "Systems Thinking",
+      "color": "Orange",
+      "font": {
+        "color": "black"
+      }
+    },
+    "DATSCI": {
+      "classifierName": "Data Science",
+      "color": "LimeGreen",
+      "font": {
+        "color": "black"
+      }
+    },
+    "SIM": {
+      "classifierName": "Simulation Design",
+      "color": "HotPink",
+      "font": {
+        "color": "black"
+      }
+    },
+    "COVID": {
+      "classifierName": "COVID-19 Case Studies",
+      "color": "Tomato",
+      "font": {
+        "color": "white"
+      }
+    },
+    "FRAUD": {
+      "classifierName": "Health Fraud and Misinformation",
+      "color": "SaddleBrown",
+      "font": {
+        "color": "white"
+      }
+    }
+  },
+  "nodes": [
+    {
+      "id": 1,
+      "label": "Public Health Definition",
+      "group": "FOUND",
+      "shape": "box"
+    },
+    {
+      "id": 2,
+      "label": "Population Health",
+      "group": "FOUND"
+    },
+    {
+      "id": 3,
+      "label": "Health vs. Disease",
+      "group": "FOUND"
+    },
+    {
+      "id": 4,
+      "label": "Determinants of Health",
+      "group": "FOUND"
+    },
+    {
+      "id": 5,
+      "label": "Public Health History",
+      "group": "FOUND"
+    },
+    {
+      "id": 6,
+      "label": "Germ Theory of Disease",
+      "group": "FOUND"
+    },
+    {
+      "id": 7,
+      "label": "Epidemiological Triad",
+      "group": "FOUND"
+    },
+    {
+      "id": 8,
+      "label": "Natural History of Disease",
+      "group": "FOUND"
+    },
+    {
+      "id": 9,
+      "label": "Public Health Functions",
+      "group": "FOUND"
+    },
+    {
+      "id": 10,
+      "label": "Essential Public Health Services",
+      "group": "FOUND"
+    },
+    {
+      "id": 11,
+      "label": "Public Health Infrastructure",
+      "group": "FOUND"
+    },
+    {
+      "id": 12,
+      "label": "Health Indicators",
+      "group": "FOUND"
+    },
+    {
+      "id": 13,
+      "label": "Burden of Disease",
+      "group": "FOUND"
+    },
+    {
+      "id": 14,
+      "label": "Primary Prevention",
+      "group": "FOUND"
+    },
+    {
+      "id": 15,
+      "label": "Secondary Prevention",
+      "group": "FOUND"
+    },
+    {
+      "id": 16,
+      "label": "Tertiary Prevention",
+      "group": "FOUND"
+    },
+    {
+      "id": 17,
+      "label": "Primordial Prevention",
+      "group": "FOUND"
+    },
+    {
+      "id": 18,
+      "label": "Public Health Workforce",
+      "group": "FOUND"
+    },
+    {
+      "id": 19,
+      "label": "CEPH Accreditation Standards",
+      "group": "FOUND"
+    },
+    {
+      "id": 20,
+      "label": "One Health Framework",
+      "group": "FOUND"
+    },
+    {
+      "id": 21,
+      "label": "Incidence Rate",
+      "group": "EPID"
+    },
+    {
+      "id": 22,
+      "label": "Prevalence Proportion",
+      "group": "EPID"
+    },
+    {
+      "id": 23,
+      "label": "Cumulative Incidence",
+      "group": "EPID"
+    },
+    {
+      "id": 24,
+      "label": "Mortality Rate",
+      "group": "EPID"
+    },
+    {
+      "id": 25,
+      "label": "Case Fatality Ratio",
+      "group": "EPID"
+    },
+    {
+      "id": 26,
+      "label": "Infection Fatality Ratio",
+      "group": "EPID"
+    },
+    {
+      "id": 27,
+      "label": "Morbidity Rate",
+      "group": "EPID"
+    },
+    {
+      "id": 28,
+      "label": "Attack Rate",
+      "group": "EPID"
+    },
+    {
+      "id": 29,
+      "label": "Secondary Attack Rate",
+      "group": "EPID"
+    },
+    {
+      "id": 30,
+      "label": "Age-Standardized Rates",
+      "group": "EPID"
+    },
+    {
+      "id": 31,
+      "label": "Relative Risk",
+      "group": "EPID"
+    },
+    {
+      "id": 32,
+      "label": "Odds Ratio",
+      "group": "EPID"
+    },
+    {
+      "id": 33,
+      "label": "Hazard Ratio",
+      "group": "EPID"
+    },
+    {
+      "id": 34,
+      "label": "Attributable Risk",
+      "group": "EPID"
+    },
+    {
+      "id": 35,
+      "label": "Population Attrib Fraction",
+      "group": "EPID"
+    },
+    {
+      "id": 36,
+      "label": "Number Needed to Treat",
+      "group": "EPID"
+    },
+    {
+      "id": 37,
+      "label": "Cross-Sectional Study Design",
+      "group": "EPID"
+    },
+    {
+      "id": 38,
+      "label": "Case-Control Study Design",
+      "group": "EPID"
+    },
+    {
+      "id": 39,
+      "label": "Cohort Study Design",
+      "group": "EPID"
+    },
+    {
+      "id": 40,
+      "label": "Randomized Controlled Trial",
+      "group": "EPID"
+    },
+    {
+      "id": 41,
+      "label": "Ecological Study Design",
+      "group": "EPID"
+    },
+    {
+      "id": 42,
+      "label": "Natural Experiment Design",
+      "group": "EPID"
+    },
+    {
+      "id": 43,
+      "label": "Bradford Hill Criteria",
+      "group": "EPID"
+    },
+    {
+      "id": 44,
+      "label": "Directed Acyclic Graph",
+      "group": "EPID"
+    },
+    {
+      "id": 45,
+      "label": "Counterfactual Model",
+      "group": "EPID"
+    },
+    {
+      "id": 46,
+      "label": "Confounding Variable",
+      "group": "EPID"
+    },
+    {
+      "id": 47,
+      "label": "Selection Bias",
+      "group": "EPID"
+    },
+    {
+      "id": 48,
+      "label": "Information Bias",
+      "group": "EPID"
+    },
+    {
+      "id": 49,
+      "label": "Effect Modification",
+      "group": "EPID"
+    },
+    {
+      "id": 50,
+      "label": "Surveillance System Design",
+      "group": "EPID"
+    },
+    {
+      "id": 51,
+      "label": "Passive Surveillance",
+      "group": "EPID"
+    },
+    {
+      "id": 52,
+      "label": "Active Surveillance",
+      "group": "EPID"
+    },
+    {
+      "id": 53,
+      "label": "Sentinel Surveillance",
+      "group": "EPID"
+    },
+    {
+      "id": 54,
+      "label": "Syndromic Surveillance",
+      "group": "EPID"
+    },
+    {
+      "id": 55,
+      "label": "Reportable Conditions",
+      "group": "EPID"
+    },
+    {
+      "id": 56,
+      "label": "Outbreak Investigation",
+      "group": "EPID"
+    },
+    {
+      "id": 57,
+      "label": "Case Definition",
+      "group": "EPID"
+    },
+    {
+      "id": 58,
+      "label": "Epidemic Curve",
+      "group": "EPID"
+    },
+    {
+      "id": 59,
+      "label": "Index Case Identification",
+      "group": "EPID"
+    },
+    {
+      "id": 60,
+      "label": "Source Hypothesis Testing",
+      "group": "EPID"
+    },
+    {
+      "id": 61,
+      "label": "R0 Basic Reproduction Number",
+      "group": "EPID"
+    },
+    {
+      "id": 62,
+      "label": "Effective Reproduction Rt",
+      "group": "EPID"
+    },
+    {
+      "id": 63,
+      "label": "Serial Interval",
+      "group": "EPID"
+    },
+    {
+      "id": 64,
+      "label": "Generation Time",
+      "group": "EPID"
+    },
+    {
+      "id": 65,
+      "label": "Herd Immunity Threshold",
+      "group": "EPID"
+    },
+    {
+      "id": 66,
+      "label": "Screening Sensitivity",
+      "group": "EPID"
+    },
+    {
+      "id": 67,
+      "label": "Screening Specificity",
+      "group": "EPID"
+    },
+    {
+      "id": 68,
+      "label": "Positive Predictive Value",
+      "group": "EPID"
+    },
+    {
+      "id": 69,
+      "label": "Negative Predictive Value",
+      "group": "EPID"
+    },
+    {
+      "id": 70,
+      "label": "Descriptive Statistics",
+      "group": "BSTAT",
+      "shape": "box"
+    },
+    {
+      "id": 71,
+      "label": "Measures of Central Tendency",
+      "group": "BSTAT"
+    },
+    {
+      "id": 72,
+      "label": "Measures of Dispersion",
+      "group": "BSTAT"
+    },
+    {
+      "id": 73,
+      "label": "Normal Distribution",
+      "group": "BSTAT"
+    },
+    {
+      "id": 74,
+      "label": "Binomial Distribution",
+      "group": "BSTAT"
+    },
+    {
+      "id": 75,
+      "label": "Poisson Distribution",
+      "group": "BSTAT"
+    },
+    {
+      "id": 76,
+      "label": "Negative Binomial Distribution",
+      "group": "BSTAT"
+    },
+    {
+      "id": 77,
+      "label": "Probability Fundamentals",
+      "group": "BSTAT",
+      "shape": "box"
+    },
+    {
+      "id": 78,
+      "label": "Conditional Probability",
+      "group": "BSTAT"
+    },
+    {
+      "id": 79,
+      "label": "Bayes' Theorem",
+      "group": "BSTAT"
+    },
+    {
+      "id": 80,
+      "label": "Sampling Methods",
+      "group": "BSTAT"
+    },
+    {
+      "id": 81,
+      "label": "Sample Size Estimation",
+      "group": "BSTAT"
+    },
+    {
+      "id": 82,
+      "label": "Statistical Power",
+      "group": "BSTAT"
+    },
+    {
+      "id": 83,
+      "label": "Null Hypothesis Testing",
+      "group": "BSTAT"
+    },
+    {
+      "id": 84,
+      "label": "Type I Error Alpha",
+      "group": "BSTAT"
+    },
+    {
+      "id": 85,
+      "label": "Type II Error Beta",
+      "group": "BSTAT"
+    },
+    {
+      "id": 86,
+      "label": "P-Value Interpretation",
+      "group": "BSTAT"
+    },
+    {
+      "id": 87,
+      "label": "Confidence Interval",
+      "group": "BSTAT"
+    },
+    {
+      "id": 88,
+      "label": "Chi-Square Test",
+      "group": "BSTAT"
+    },
+    {
+      "id": 89,
+      "label": "Fisher's Exact Test",
+      "group": "BSTAT"
+    },
+    {
+      "id": 90,
+      "label": "Student T-Test",
+      "group": "BSTAT"
+    },
+    {
+      "id": 91,
+      "label": "Mann-Whitney U Test",
+      "group": "BSTAT"
+    },
+    {
+      "id": 92,
+      "label": "Analysis of Variance ANOVA",
+      "group": "BSTAT"
+    },
+    {
+      "id": 93,
+      "label": "Kruskal-Wallis Test",
+      "group": "BSTAT"
+    },
+    {
+      "id": 94,
+      "label": "Linear Regression",
+      "group": "BSTAT"
+    },
+    {
+      "id": 95,
+      "label": "Logistic Regression",
+      "group": "BSTAT"
+    },
+    {
+      "id": 96,
+      "label": "Poisson Regression for Rates",
+      "group": "BSTAT"
+    },
+    {
+      "id": 97,
+      "label": "Cox Proportional Hazards",
+      "group": "BSTAT"
+    },
+    {
+      "id": 98,
+      "label": "Kaplan-Meier Survival Curve",
+      "group": "BSTAT"
+    },
+    {
+      "id": 99,
+      "label": "Meta-Analysis Methods",
+      "group": "BSTAT"
+    },
+    {
+      "id": 100,
+      "label": "Forest Plot Interpretation",
+      "group": "BSTAT"
+    },
+    {
+      "id": 101,
+      "label": "Heterogeneity in Meta-Analysis",
+      "group": "BSTAT"
+    },
+    {
+      "id": 102,
+      "label": "Multiple Comparisons Problem",
+      "group": "BSTAT"
+    },
+    {
+      "id": 103,
+      "label": "Standardization Methods",
+      "group": "BSTAT"
+    },
+    {
+      "id": 104,
+      "label": "Missing Data Mechanisms",
+      "group": "BSTAT"
+    },
+    {
+      "id": 105,
+      "label": "Multiple Imputation Methods",
+      "group": "BSTAT"
+    },
+    {
+      "id": 106,
+      "label": "Interrupted Time-Series Analysis",
+      "group": "BSTAT"
+    },
+    {
+      "id": 107,
+      "label": "Excess Mortality Estimation",
+      "group": "BSTAT"
+    },
+    {
+      "id": 108,
+      "label": "Sensitivity Analysis Stats",
+      "group": "BSTAT"
+    },
+    {
+      "id": 109,
+      "label": "Systematic Review Protocol",
+      "group": "BSTAT"
+    },
+    {
+      "id": 110,
+      "label": "Environmental Risk Assessment",
+      "group": "ENVH"
+    },
+    {
+      "id": 111,
+      "label": "Hazard Identification",
+      "group": "ENVH"
+    },
+    {
+      "id": 112,
+      "label": "Dose-Response Assessment",
+      "group": "ENVH"
+    },
+    {
+      "id": 113,
+      "label": "Exposure Assessment",
+      "group": "ENVH"
+    },
+    {
+      "id": 114,
+      "label": "Risk Characterization",
+      "group": "ENVH"
+    },
+    {
+      "id": 115,
+      "label": "Air Quality Index",
+      "group": "ENVH"
+    },
+    {
+      "id": 116,
+      "label": "Criteria Air Pollutants",
+      "group": "ENVH"
+    },
+    {
+      "id": 117,
+      "label": "Particulate Matter PM2.5",
+      "group": "ENVH"
+    },
+    {
+      "id": 118,
+      "label": "Ozone Health Effects",
+      "group": "ENVH"
+    },
+    {
+      "id": 119,
+      "label": "Indoor Air Quality",
+      "group": "ENVH"
+    },
+    {
+      "id": 120,
+      "label": "Water Safety Standards",
+      "group": "ENVH"
+    },
+    {
+      "id": 121,
+      "label": "Drinking Water Treatment",
+      "group": "ENVH"
+    },
+    {
+      "id": 122,
+      "label": "Waterborne Disease Pathogens",
+      "group": "ENVH"
+    },
+    {
+      "id": 123,
+      "label": "Safe Drinking Water Act",
+      "group": "ENVH"
+    },
+    {
+      "id": 124,
+      "label": "Toxicology Dose-Response",
+      "group": "ENVH"
+    },
+    {
+      "id": 125,
+      "label": "Bioaccumulation",
+      "group": "ENVH"
+    },
+    {
+      "id": 126,
+      "label": "Endocrine Disruption",
+      "group": "ENVH"
+    },
+    {
+      "id": 127,
+      "label": "Built Environment Health",
+      "group": "ENVH"
+    },
+    {
+      "id": 128,
+      "label": "Urban Heat Island Effect",
+      "group": "ENVH"
+    },
+    {
+      "id": 129,
+      "label": "Food Desert Definition",
+      "group": "ENVH"
+    },
+    {
+      "id": 130,
+      "label": "Climate Change Health Impacts",
+      "group": "ENVH"
+    },
+    {
+      "id": 131,
+      "label": "Vector-Borne Disease Expansion",
+      "group": "ENVH"
+    },
+    {
+      "id": 132,
+      "label": "Wildfire and Air Quality",
+      "group": "ENVH"
+    },
+    {
+      "id": 133,
+      "label": "Environmental Justice",
+      "group": "ENVH"
+    },
+    {
+      "id": 134,
+      "label": "Cumulative Exposure Burden",
+      "group": "ENVH"
+    },
+    {
+      "id": 135,
+      "label": "EJScreen Tool",
+      "group": "ENVH"
+    },
+    {
+      "id": 136,
+      "label": "Legacy Contamination",
+      "group": "ENVH"
+    },
+    {
+      "id": 137,
+      "label": "Green Space Health Benefits",
+      "group": "ENVH"
+    },
+    {
+      "id": 138,
+      "label": "Health Belief Model",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 139,
+      "label": "Perceived Susceptibility",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 140,
+      "label": "Perceived Severity",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 141,
+      "label": "Perceived Benefits and Barriers",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 142,
+      "label": "Self-Efficacy Construct",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 143,
+      "label": "Transtheoretical Model",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 144,
+      "label": "Stages of Change",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 145,
+      "label": "Social Cognitive Theory",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 146,
+      "label": "Reciprocal Determinism",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 147,
+      "label": "Theory of Planned Behavior",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 148,
+      "label": "Social Norms in Health",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 149,
+      "label": "Social-Ecological Model",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 150,
+      "label": "Multilevel Interventions",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 151,
+      "label": "Social Capital",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 152,
+      "label": "Bonding vs Bridging Capital",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 153,
+      "label": "Behavioral Economics Health",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 154,
+      "label": "Nudge Theory",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 155,
+      "label": "Default Effects",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 156,
+      "label": "Loss Aversion in Health",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 157,
+      "label": "Health Literacy Definition",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 158,
+      "label": "Functional Health Literacy",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 159,
+      "label": "Communicative Health Literacy",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 160,
+      "label": "Critical Health Literacy",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 161,
+      "label": "Low-Literacy Communication",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 162,
+      "label": "Cultural Humility",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 163,
+      "label": "CLAS Standards",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 164,
+      "label": "Community Health Workers",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 165,
+      "label": "Promotoras Model",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 166,
+      "label": "Structural Racism Mechanisms",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 167,
+      "label": "Weathering Hypothesis",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 168,
+      "label": "Behavioral Intervention Design",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 169,
+      "label": "Fidelity vs Adaptation",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 170,
+      "label": "Motivational Interviewing",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 171,
+      "label": "Pandemic Fatigue",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 172,
+      "label": "Vaccine Hesitancy Dynamics",
+      "group": "SOCBEH"
+    },
+    {
+      "id": 173,
+      "label": "US Health System Structure",
+      "group": "POLMGT"
+    },
+    {
+      "id": 174,
+      "label": "Federal Health Agencies",
+      "group": "POLMGT"
+    },
+    {
+      "id": 175,
+      "label": "State Health Departments",
+      "group": "POLMGT"
+    },
+    {
+      "id": 176,
+      "label": "Local Health Departments",
+      "group": "POLMGT"
+    },
+    {
+      "id": 177,
+      "label": "Safety Net Providers",
+      "group": "POLMGT"
+    },
+    {
+      "id": 178,
+      "label": "Federally Qualified Centers",
+      "group": "POLMGT"
+    },
+    {
+      "id": 179,
+      "label": "Kingdon's Streams Model",
+      "group": "POLMGT"
+    },
+    {
+      "id": 180,
+      "label": "Policy Development Cycle",
+      "group": "POLMGT"
+    },
+    {
+      "id": 181,
+      "label": "Health Policy Agenda Setting",
+      "group": "POLMGT"
+    },
+    {
+      "id": 182,
+      "label": "Employer-Sponsored Insurance",
+      "group": "POLMGT"
+    },
+    {
+      "id": 183,
+      "label": "Medicaid Program",
+      "group": "POLMGT"
+    },
+    {
+      "id": 184,
+      "label": "Medicare Program",
+      "group": "POLMGT"
+    },
+    {
+      "id": 185,
+      "label": "ACA Coverage Provisions",
+      "group": "POLMGT"
+    },
+    {
+      "id": 186,
+      "label": "Uninsurance and Underinsurance",
+      "group": "POLMGT"
+    },
+    {
+      "id": 187,
+      "label": "Public Health Law",
+      "group": "POLMGT"
+    },
+    {
+      "id": 188,
+      "label": "Police Powers in Public Health",
+      "group": "POLMGT"
+    },
+    {
+      "id": 189,
+      "label": "Quarantine Authority",
+      "group": "POLMGT"
+    },
+    {
+      "id": 190,
+      "label": "Mandatory Reporting Laws",
+      "group": "POLMGT"
+    },
+    {
+      "id": 191,
+      "label": "Emergency Use Authorization",
+      "group": "POLMGT"
+    },
+    {
+      "id": 192,
+      "label": "PHAB Accreditation",
+      "group": "POLMGT"
+    },
+    {
+      "id": 193,
+      "label": "Logic Model Development",
+      "group": "POLMGT"
+    },
+    {
+      "id": 194,
+      "label": "PRECEDE-PROCEED Model",
+      "group": "POLMGT"
+    },
+    {
+      "id": 195,
+      "label": "MAPP Framework",
+      "group": "POLMGT"
+    },
+    {
+      "id": 196,
+      "label": "Cost-Effectiveness Analysis",
+      "group": "POLMGT"
+    },
+    {
+      "id": 197,
+      "label": "Cost-Benefit Analysis",
+      "group": "POLMGT"
+    },
+    {
+      "id": 198,
+      "label": "QALY Concept",
+      "group": "POLMGT"
+    },
+    {
+      "id": 199,
+      "label": "Return on Investment Prevention",
+      "group": "POLMGT"
+    },
+    {
+      "id": 200,
+      "label": "PDSA Quality Cycle",
+      "group": "POLMGT"
+    },
+    {
+      "id": 201,
+      "label": "Lean in Public Health",
+      "group": "POLMGT"
+    },
+    {
+      "id": 202,
+      "label": "Performance Management",
+      "group": "POLMGT"
+    },
+    {
+      "id": 203,
+      "label": "Global Burden of Disease",
+      "group": "GLOB"
+    },
+    {
+      "id": 204,
+      "label": "DALYs Concept",
+      "group": "GLOB"
+    },
+    {
+      "id": 205,
+      "label": "Years of Life Lost",
+      "group": "GLOB"
+    },
+    {
+      "id": 206,
+      "label": "Years Lived with Disability",
+      "group": "GLOB"
+    },
+    {
+      "id": 207,
+      "label": "Epidemiological Transition",
+      "group": "GLOB"
+    },
+    {
+      "id": 208,
+      "label": "Demographic Transition",
+      "group": "GLOB"
+    },
+    {
+      "id": 209,
+      "label": "Double Burden of Disease",
+      "group": "GLOB"
+    },
+    {
+      "id": 210,
+      "label": "Universal Health Coverage",
+      "group": "GLOB"
+    },
+    {
+      "id": 211,
+      "label": "Financial Protection Index",
+      "group": "GLOB"
+    },
+    {
+      "id": 212,
+      "label": "Service Coverage Index",
+      "group": "GLOB"
+    },
+    {
+      "id": 213,
+      "label": "Abuja Declaration",
+      "group": "GLOB"
+    },
+    {
+      "id": 214,
+      "label": "Catastrophic Health Expenditure",
+      "group": "GLOB"
+    },
+    {
+      "id": 215,
+      "label": "SDG 3 Health Targets",
+      "group": "GLOB"
+    },
+    {
+      "id": 216,
+      "label": "International Health Regulations",
+      "group": "GLOB"
+    },
+    {
+      "id": 217,
+      "label": "PHEIC Declaration",
+      "group": "GLOB"
+    },
+    {
+      "id": 218,
+      "label": "Global Health Security Index",
+      "group": "GLOB"
+    },
+    {
+      "id": 219,
+      "label": "Neglected Tropical Diseases",
+      "group": "GLOB"
+    },
+    {
+      "id": 220,
+      "label": "Preventive Chemotherapy",
+      "group": "GLOB"
+    },
+    {
+      "id": 221,
+      "label": "Global Health Governance",
+      "group": "GLOB"
+    },
+    {
+      "id": 222,
+      "label": "WHO Structure and Mandate",
+      "group": "GLOB"
+    },
+    {
+      "id": 223,
+      "label": "World Bank Health Financing",
+      "group": "GLOB"
+    },
+    {
+      "id": 224,
+      "label": "GAVI Vaccine Alliance",
+      "group": "GLOB"
+    },
+    {
+      "id": 225,
+      "label": "Global Fund HIV TB Malaria",
+      "group": "GLOB"
+    },
+    {
+      "id": 226,
+      "label": "PEPFAR Program",
+      "group": "GLOB"
+    },
+    {
+      "id": 227,
+      "label": "Sphere Humanitarian Standards",
+      "group": "GLOB"
+    },
+    {
+      "id": 228,
+      "label": "Health Equity Definition",
+      "group": "EQUITY"
+    },
+    {
+      "id": 229,
+      "label": "Health Disparities Definition",
+      "group": "EQUITY"
+    },
+    {
+      "id": 230,
+      "label": "Social Determinants of Health",
+      "group": "EQUITY"
+    },
+    {
+      "id": 231,
+      "label": "Dahlgren-Whitehead Model",
+      "group": "EQUITY"
+    },
+    {
+      "id": 232,
+      "label": "WHO CSDH Commission Findings",
+      "group": "EQUITY"
+    },
+    {
+      "id": 233,
+      "label": "Income Gradient Health",
+      "group": "EQUITY"
+    },
+    {
+      "id": 234,
+      "label": "Education as Health Determinant",
+      "group": "EQUITY"
+    },
+    {
+      "id": 235,
+      "label": "Housing Quality and Health",
+      "group": "EQUITY"
+    },
+    {
+      "id": 236,
+      "label": "Food Security and Health",
+      "group": "EQUITY"
+    },
+    {
+      "id": 237,
+      "label": "Employment and Health",
+      "group": "EQUITY"
+    },
+    {
+      "id": 238,
+      "label": "Transportation Access Health",
+      "group": "EQUITY"
+    },
+    {
+      "id": 239,
+      "label": "Neighborhood Effects Health",
+      "group": "EQUITY"
+    },
+    {
+      "id": 240,
+      "label": "Racial Health Disparities",
+      "group": "EQUITY"
+    },
+    {
+      "id": 241,
+      "label": "Maternal Mortality Disparities",
+      "group": "EQUITY"
+    },
+    {
+      "id": 242,
+      "label": "Infant Mortality Disparities",
+      "group": "EQUITY"
+    },
+    {
+      "id": 243,
+      "label": "Life Expectancy Gaps",
+      "group": "EQUITY"
+    },
+    {
+      "id": 244,
+      "label": "Historical Trauma",
+      "group": "EQUITY"
+    },
+    {
+      "id": 245,
+      "label": "Intergenerational Poverty",
+      "group": "EQUITY"
+    },
+    {
+      "id": 246,
+      "label": "Intersectionality Framework",
+      "group": "EQUITY"
+    },
+    {
+      "id": 247,
+      "label": "Place-Based Interventions",
+      "group": "EQUITY"
+    },
+    {
+      "id": 248,
+      "label": "Moving to Opportunity Study",
+      "group": "EQUITY"
+    },
+    {
+      "id": 249,
+      "label": "Community Development Finance",
+      "group": "EQUITY"
+    },
+    {
+      "id": 250,
+      "label": "Upstream Policy Levers",
+      "group": "EQUITY"
+    },
+    {
+      "id": 251,
+      "label": "Healthy People 2030 Goals",
+      "group": "EQUITY"
+    },
+    {
+      "id": 252,
+      "label": "Root Cause Analysis PH",
+      "group": "EQUITY"
+    },
+    {
+      "id": 253,
+      "label": "Health in All Policies",
+      "group": "EQUITY"
+    },
+    {
+      "id": 254,
+      "label": "Structural Competency",
+      "group": "EQUITY"
+    },
+    {
+      "id": 255,
+      "label": "Redlining Health Effects",
+      "group": "EQUITY"
+    },
+    {
+      "id": 256,
+      "label": "Criminal Justice Health Impact",
+      "group": "EQUITY"
+    },
+    {
+      "id": 257,
+      "label": "Long COVID Equity Burden",
+      "group": "EQUITY"
+    },
+    {
+      "id": 258,
+      "label": "Bioethics Principles",
+      "group": "ETHICS",
+      "shape": "box"
+    },
+    {
+      "id": 259,
+      "label": "Autonomy in Public Health",
+      "group": "ETHICS"
+    },
+    {
+      "id": 260,
+      "label": "Beneficence and Maleficence",
+      "group": "ETHICS"
+    },
+    {
+      "id": 261,
+      "label": "Justice in Public Health",
+      "group": "ETHICS"
+    },
+    {
+      "id": 262,
+      "label": "Stewardship Model Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 263,
+      "label": "Nuffield Ladder of Intervention",
+      "group": "ETHICS"
+    },
+    {
+      "id": 264,
+      "label": "Utilitarian Ethics in PH",
+      "group": "ETHICS"
+    },
+    {
+      "id": 265,
+      "label": "Egalitarian Health Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 266,
+      "label": "Communitarian Health Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 267,
+      "label": "Research Ethics Belmont Report",
+      "group": "ETHICS"
+    },
+    {
+      "id": 268,
+      "label": "Informed Consent",
+      "group": "ETHICS"
+    },
+    {
+      "id": 269,
+      "label": "Vulnerable Populations Research",
+      "group": "ETHICS"
+    },
+    {
+      "id": 270,
+      "label": "Mandatory Vaccination Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 271,
+      "label": "Fluoridation Ethics Debate",
+      "group": "ETHICS"
+    },
+    {
+      "id": 272,
+      "label": "Data Ethics in Public Health",
+      "group": "ETHICS"
+    },
+    {
+      "id": 273,
+      "label": "Algorithmic Bias Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 274,
+      "label": "Distributive Justice",
+      "group": "ETHICS"
+    },
+    {
+      "id": 275,
+      "label": "Procedural Justice",
+      "group": "ETHICS"
+    },
+    {
+      "id": 276,
+      "label": "Restorative Justice Health",
+      "group": "ETHICS"
+    },
+    {
+      "id": 277,
+      "label": "Global Health Ethics",
+      "group": "ETHICS"
+    },
+    {
+      "id": 278,
+      "label": "Plain Language Principles",
+      "group": "COMM"
+    },
+    {
+      "id": 279,
+      "label": "Teach-Back Method",
+      "group": "COMM"
+    },
+    {
+      "id": 280,
+      "label": "Risk Communication Principles",
+      "group": "COMM"
+    },
+    {
+      "id": 281,
+      "label": "Mental Models Approach",
+      "group": "COMM"
+    },
+    {
+      "id": 282,
+      "label": "Numeracy and Health Decisions",
+      "group": "COMM"
+    },
+    {
+      "id": 283,
+      "label": "Uncertainty Communication",
+      "group": "COMM"
+    },
+    {
+      "id": 284,
+      "label": "CERC Framework",
+      "group": "COMM"
+    },
+    {
+      "id": 285,
+      "label": "CERC Six Principles",
+      "group": "COMM"
+    },
+    {
+      "id": 286,
+      "label": "CERC Five Stages",
+      "group": "COMM"
+    },
+    {
+      "id": 287,
+      "label": "Audience Segmentation",
+      "group": "COMM"
+    },
+    {
+      "id": 288,
+      "label": "Message Tailoring",
+      "group": "COMM"
+    },
+    {
+      "id": 289,
+      "label": "Social Media in Public Health",
+      "group": "COMM"
+    },
+    {
+      "id": 290,
+      "label": "Infoveillance Methods",
+      "group": "COMM"
+    },
+    {
+      "id": 291,
+      "label": "Twitter Epidemiology",
+      "group": "COMM"
+    },
+    {
+      "id": 292,
+      "label": "Health Misinformation",
+      "group": "COMM"
+    },
+    {
+      "id": 293,
+      "label": "Prebunking Strategy",
+      "group": "COMM"
+    },
+    {
+      "id": 294,
+      "label": "Inoculation Theory",
+      "group": "COMM"
+    },
+    {
+      "id": 295,
+      "label": "SIFT Fact-Checking Method",
+      "group": "COMM"
+    },
+    {
+      "id": 296,
+      "label": "Cultural Tailoring",
+      "group": "COMM"
+    },
+    {
+      "id": 297,
+      "label": "Back-Translation Method",
+      "group": "COMM"
+    },
+    {
+      "id": 298,
+      "label": "Campaign Evaluation Methods",
+      "group": "COMM"
+    },
+    {
+      "id": 299,
+      "label": "EPPM Framework",
+      "group": "COMM"
+    },
+    {
+      "id": 300,
+      "label": "Influencer Partnerships",
+      "group": "COMM"
+    },
+    {
+      "id": 301,
+      "label": "Infodemic Management",
+      "group": "COMM"
+    },
+    {
+      "id": 302,
+      "label": "Crisis Communication Failure",
+      "group": "COMM"
+    },
+    {
+      "id": 303,
+      "label": "IOM Prevention Spectrum",
+      "group": "PREV"
+    },
+    {
+      "id": 304,
+      "label": "Universal Prevention",
+      "group": "PREV"
+    },
+    {
+      "id": 305,
+      "label": "Selective Prevention",
+      "group": "PREV"
+    },
+    {
+      "id": 306,
+      "label": "Indicated Prevention",
+      "group": "PREV"
+    },
+    {
+      "id": 307,
+      "label": "Evidence-Based Practice",
+      "group": "PREV"
+    },
+    {
+      "id": 308,
+      "label": "Hierarchy of Evidence",
+      "group": "PREV"
+    },
+    {
+      "id": 309,
+      "label": "Community Guide Evidence Base",
+      "group": "PREV"
+    },
+    {
+      "id": 310,
+      "label": "USPSTF Evidence Grading",
+      "group": "PREV"
+    },
+    {
+      "id": 311,
+      "label": "GRADE Framework",
+      "group": "PREV"
+    },
+    {
+      "id": 312,
+      "label": "Herd Immunity Calculation",
+      "group": "PREV"
+    },
+    {
+      "id": 313,
+      "label": "Immunization Schedule",
+      "group": "PREV"
+    },
+    {
+      "id": 314,
+      "label": "Vaccine Breakthrough Infection",
+      "group": "PREV"
+    },
+    {
+      "id": 315,
+      "label": "Cold Chain Requirements",
+      "group": "PREV"
+    },
+    {
+      "id": 316,
+      "label": "Vaccine Hesitancy Measurement",
+      "group": "PREV"
+    },
+    {
+      "id": 317,
+      "label": "Tobacco Cessation Interventions",
+      "group": "PREV"
+    },
+    {
+      "id": 318,
+      "label": "Physical Inactivity Interventions",
+      "group": "PREV"
+    },
+    {
+      "id": 319,
+      "label": "Dietary Intervention Evidence",
+      "group": "PREV"
+    },
+    {
+      "id": 320,
+      "label": "Alcohol Use Interventions",
+      "group": "PREV"
+    },
+    {
+      "id": 321,
+      "label": "Obesity Prevention Strategies",
+      "group": "PREV"
+    },
+    {
+      "id": 322,
+      "label": "Haddon Matrix",
+      "group": "PREV"
+    },
+    {
+      "id": 323,
+      "label": "Injury Prevention Frameworks",
+      "group": "PREV"
+    },
+    {
+      "id": 324,
+      "label": "Violence Prevention PH",
+      "group": "PREV"
+    },
+    {
+      "id": 325,
+      "label": "Harm Reduction Philosophy",
+      "group": "PREV"
+    },
+    {
+      "id": 326,
+      "label": "Naloxone Distribution",
+      "group": "PREV"
+    },
+    {
+      "id": 327,
+      "label": "Syringe Service Programs",
+      "group": "PREV"
+    },
+    {
+      "id": 328,
+      "label": "Implementation Science EPIS",
+      "group": "PREV"
+    },
+    {
+      "id": 329,
+      "label": "De-Implementation",
+      "group": "PREV"
+    },
+    {
+      "id": 330,
+      "label": "Scale-Up Strategies",
+      "group": "PREV"
+    },
+    {
+      "id": 331,
+      "label": "Brief Motivational Interviewing",
+      "group": "PREV"
+    },
+    {
+      "id": 332,
+      "label": "Screening Program Design",
+      "group": "PREV"
+    },
+    {
+      "id": 333,
+      "label": "Systems Thinking Concepts",
+      "group": "SYS",
+      "shape": "box"
+    },
+    {
+      "id": 334,
+      "label": "System Stocks",
+      "group": "SYS"
+    },
+    {
+      "id": 335,
+      "label": "System Flows",
+      "group": "SYS"
+    },
+    {
+      "id": 336,
+      "label": "Feedback Loops",
+      "group": "SYS"
+    },
+    {
+      "id": 337,
+      "label": "Reinforcing Feedback Loop",
+      "group": "SYS"
+    },
+    {
+      "id": 338,
+      "label": "Balancing Feedback Loop",
+      "group": "SYS"
+    },
+    {
+      "id": 339,
+      "label": "Time Delays in Systems",
+      "group": "SYS"
+    },
+    {
+      "id": 340,
+      "label": "Nonlinearity in Systems",
+      "group": "SYS"
+    },
+    {
+      "id": 341,
+      "label": "Emergence in Systems",
+      "group": "SYS"
+    },
+    {
+      "id": 342,
+      "label": "Path Dependence",
+      "group": "SYS"
+    },
+    {
+      "id": 343,
+      "label": "Causal Loop Diagram",
+      "group": "SYS"
+    },
+    {
+      "id": 344,
+      "label": "CLD Variable Identification",
+      "group": "SYS"
+    },
+    {
+      "id": 345,
+      "label": "CLD Link Polarity",
+      "group": "SYS"
+    },
+    {
+      "id": 346,
+      "label": "CLD Loop Polarity",
+      "group": "SYS"
+    },
+    {
+      "id": 347,
+      "label": "CLD Loop Naming",
+      "group": "SYS"
+    },
+    {
+      "id": 348,
+      "label": "System Archetypes",
+      "group": "SYS"
+    },
+    {
+      "id": 349,
+      "label": "Limits to Growth Archetype",
+      "group": "SYS"
+    },
+    {
+      "id": 350,
+      "label": "Shifting the Burden Archetype",
+      "group": "SYS"
+    },
+    {
+      "id": 351,
+      "label": "Tragedy of Commons Archetype",
+      "group": "SYS"
+    },
+    {
+      "id": 352,
+      "label": "Fixes that Fail Archetype",
+      "group": "SYS"
+    },
+    {
+      "id": 353,
+      "label": "Escalation Archetype",
+      "group": "SYS"
+    },
+    {
+      "id": 354,
+      "label": "Eroding Goals Archetype",
+      "group": "SYS"
+    },
+    {
+      "id": 355,
+      "label": "Success to Successful Arch",
+      "group": "SYS"
+    },
+    {
+      "id": 356,
+      "label": "Addiction Archetype",
+      "group": "SYS"
+    },
+    {
+      "id": 357,
+      "label": "Stock-and-Flow Diagram",
+      "group": "SYS"
+    },
+    {
+      "id": 358,
+      "label": "Level Equations",
+      "group": "SYS"
+    },
+    {
+      "id": 359,
+      "label": "Rate Equations",
+      "group": "SYS"
+    },
+    {
+      "id": 360,
+      "label": "Auxiliary Variables",
+      "group": "SYS"
+    },
+    {
+      "id": 361,
+      "label": "Initial Conditions Setting",
+      "group": "SYS"
+    },
+    {
+      "id": 362,
+      "label": "InsightMaker Tool",
+      "group": "SYS"
+    },
+    {
+      "id": 363,
+      "label": "Vensim PLE Tool",
+      "group": "SYS"
+    },
+    {
+      "id": 364,
+      "label": "Stella Architect Tool",
+      "group": "SYS"
+    },
+    {
+      "id": 365,
+      "label": "AnyLogic Multi-Method",
+      "group": "SYS"
+    },
+    {
+      "id": 366,
+      "label": "NetLogo Agent-Based Tool",
+      "group": "SYS"
+    },
+    {
+      "id": 367,
+      "label": "SIR Compartmental Model",
+      "group": "SYS"
+    },
+    {
+      "id": 368,
+      "label": "SEIR Compartmental Model",
+      "group": "SYS"
+    },
+    {
+      "id": 369,
+      "label": "SEIRD Model Extension",
+      "group": "SYS"
+    },
+    {
+      "id": 370,
+      "label": "SEIRV Vaccination Model",
+      "group": "SYS"
+    },
+    {
+      "id": 371,
+      "label": "Transmission Rate Beta",
+      "group": "SYS"
+    },
+    {
+      "id": 372,
+      "label": "Recovery Rate Gamma",
+      "group": "SYS"
+    },
+    {
+      "id": 373,
+      "label": "R0 in SIR Model",
+      "group": "SYS"
+    },
+    {
+      "id": 374,
+      "label": "SIR Model Equations",
+      "group": "SYS"
+    },
+    {
+      "id": 375,
+      "label": "Epidemic Overshoot",
+      "group": "SYS"
+    },
+    {
+      "id": 376,
+      "label": "Agent-Based Model",
+      "group": "SYS"
+    },
+    {
+      "id": 377,
+      "label": "Agent Rules Design",
+      "group": "SYS"
+    },
+    {
+      "id": 378,
+      "label": "Spatial Grid Models",
+      "group": "SYS"
+    },
+    {
+      "id": 379,
+      "label": "Network Topology ABM",
+      "group": "SYS"
+    },
+    {
+      "id": 380,
+      "label": "Super-Spreader Dynamics",
+      "group": "SYS"
+    },
+    {
+      "id": 381,
+      "label": "Group Model Building",
+      "group": "SYS"
+    },
+    {
+      "id": 382,
+      "label": "Mental Model Elicitation",
+      "group": "SYS"
+    },
+    {
+      "id": 383,
+      "label": "Stakeholder CLD Workshop",
+      "group": "SYS"
+    },
+    {
+      "id": 384,
+      "label": "Model Face Validity",
+      "group": "SYS"
+    },
+    {
+      "id": 385,
+      "label": "Parameter Sensitivity",
+      "group": "SYS"
+    },
+    {
+      "id": 386,
+      "label": "Historical Reproduction Test",
+      "group": "SYS"
+    },
+    {
+      "id": 387,
+      "label": "Policy Lever Identification",
+      "group": "SYS"
+    },
+    {
+      "id": 388,
+      "label": "Meadows Leverage Points",
+      "group": "SYS"
+    },
+    {
+      "id": 389,
+      "label": "Unintended Consequences",
+      "group": "SYS"
+    },
+    {
+      "id": 390,
+      "label": "Policy Resistance",
+      "group": "SYS"
+    },
+    {
+      "id": 391,
+      "label": "Wicked Problems PH",
+      "group": "SYS"
+    },
+    {
+      "id": 392,
+      "label": "Network Analysis PH",
+      "group": "SYS"
+    },
+    {
+      "id": 393,
+      "label": "Network Nodes and Edges",
+      "group": "SYS"
+    },
+    {
+      "id": 394,
+      "label": "Betweenness Centrality",
+      "group": "SYS"
+    },
+    {
+      "id": 395,
+      "label": "Degree Distribution",
+      "group": "SYS"
+    },
+    {
+      "id": 396,
+      "label": "Clustering Coefficient",
+      "group": "SYS"
+    },
+    {
+      "id": 397,
+      "label": "Network Interventions",
+      "group": "SYS"
+    },
+    {
+      "id": 398,
+      "label": "R Statistical Computing",
+      "group": "DATSCI"
+    },
+    {
+      "id": 399,
+      "label": "tidyverse R Suite",
+      "group": "DATSCI"
+    },
+    {
+      "id": 400,
+      "label": "ggplot2 Visualization",
+      "group": "DATSCI"
+    },
+    {
+      "id": 401,
+      "label": "dplyr Data Manipulation",
+      "group": "DATSCI"
+    },
+    {
+      "id": 402,
+      "label": "Python for Public Health",
+      "group": "DATSCI",
+      "shape": "box"
+    },
+    {
+      "id": 403,
+      "label": "pandas Data Analysis",
+      "group": "DATSCI"
+    },
+    {
+      "id": 404,
+      "label": "NumPy Scientific Computing",
+      "group": "DATSCI"
+    },
+    {
+      "id": 405,
+      "label": "scikit-learn Machine Learning",
+      "group": "DATSCI"
+    },
+    {
+      "id": 406,
+      "label": "Reproducible Research",
+      "group": "DATSCI"
+    },
+    {
+      "id": 407,
+      "label": "R Markdown Documents",
+      "group": "DATSCI"
+    },
+    {
+      "id": 408,
+      "label": "Jupyter Notebooks",
+      "group": "DATSCI"
+    },
+    {
+      "id": 409,
+      "label": "Git Version Control",
+      "group": "DATSCI"
+    },
+    {
+      "id": 410,
+      "label": "GitHub for Public Health",
+      "group": "DATSCI"
+    },
+    {
+      "id": 411,
+      "label": "CDC WONDER Database",
+      "group": "DATSCI"
+    },
+    {
+      "id": 412,
+      "label": "BRFSS Survey Data",
+      "group": "DATSCI"
+    },
+    {
+      "id": 413,
+      "label": "NHANES Survey Data",
+      "group": "DATSCI"
+    },
+    {
+      "id": 414,
+      "label": "SEER Cancer Registry",
+      "group": "DATSCI"
+    },
+    {
+      "id": 415,
+      "label": "HCUP Hospital Data",
+      "group": "DATSCI"
+    },
+    {
+      "id": 416,
+      "label": "Vital Statistics Data",
+      "group": "DATSCI"
+    },
+    {
+      "id": 417,
+      "label": "American Community Survey",
+      "group": "DATSCI"
+    },
+    {
+      "id": 418,
+      "label": "Data Cleaning Methods",
+      "group": "DATSCI"
+    },
+    {
+      "id": 419,
+      "label": "Missing Data Handling",
+      "group": "DATSCI"
+    },
+    {
+      "id": 420,
+      "label": "Record Linkage Methods",
+      "group": "DATSCI"
+    },
+    {
+      "id": 421,
+      "label": "GIS Spatial Analysis",
+      "group": "DATSCI"
+    },
+    {
+      "id": 422,
+      "label": "Choropleth Map Design",
+      "group": "DATSCI"
+    },
+    {
+      "id": 423,
+      "label": "Kernel Density Estimation",
+      "group": "DATSCI"
+    },
+    {
+      "id": 424,
+      "label": "Spatial Autocorrelation",
+      "group": "DATSCI"
+    },
+    {
+      "id": 425,
+      "label": "Moran's I Statistic",
+      "group": "DATSCI"
+    },
+    {
+      "id": 426,
+      "label": "SaTScan Cluster Detection",
+      "group": "DATSCI"
+    },
+    {
+      "id": 427,
+      "label": "QGIS for Public Health",
+      "group": "DATSCI"
+    },
+    {
+      "id": 428,
+      "label": "R Leaflet Mapping",
+      "group": "DATSCI"
+    },
+    {
+      "id": 429,
+      "label": "R Shiny Dashboards",
+      "group": "DATSCI"
+    },
+    {
+      "id": 430,
+      "label": "Time-Series Analysis PH",
+      "group": "DATSCI"
+    },
+    {
+      "id": 431,
+      "label": "Machine Learning Basics",
+      "group": "DATSCI"
+    },
+    {
+      "id": 432,
+      "label": "Supervised Learning",
+      "group": "DATSCI"
+    },
+    {
+      "id": 433,
+      "label": "Random Forest Model",
+      "group": "DATSCI"
+    },
+    {
+      "id": 434,
+      "label": "Gradient Boosting Model",
+      "group": "DATSCI"
+    },
+    {
+      "id": 435,
+      "label": "Cross-Validation Methods",
+      "group": "DATSCI"
+    },
+    {
+      "id": 436,
+      "label": "AUC ROC Performance",
+      "group": "DATSCI"
+    },
+    {
+      "id": 437,
+      "label": "Unsupervised Learning",
+      "group": "DATSCI"
+    },
+    {
+      "id": 438,
+      "label": "K-Means Clustering",
+      "group": "DATSCI"
+    },
+    {
+      "id": 439,
+      "label": "NLP for Surveillance",
+      "group": "DATSCI"
+    },
+    {
+      "id": 440,
+      "label": "Sentiment Analysis PH",
+      "group": "DATSCI"
+    },
+    {
+      "id": 441,
+      "label": "Wastewater Epidemiology",
+      "group": "DATSCI"
+    },
+    {
+      "id": 442,
+      "label": "Social Media Data Mining",
+      "group": "DATSCI"
+    },
+    {
+      "id": 443,
+      "label": "MicroSim Design Principles",
+      "group": "SIM"
+    },
+    {
+      "id": 444,
+      "label": "p5.js for Health Sims",
+      "group": "SIM"
+    },
+    {
+      "id": 445,
+      "label": "Chart.js Visualization",
+      "group": "SIM"
+    },
+    {
+      "id": 446,
+      "label": "Plotly Interactive Charts",
+      "group": "SIM"
+    },
+    {
+      "id": 447,
+      "label": "vis-network Library",
+      "group": "SIM"
+    },
+    {
+      "id": 448,
+      "label": "Interactive SEIR Simulator",
+      "group": "SIM"
+    },
+    {
+      "id": 449,
+      "label": "SIR Parameter Sliders",
+      "group": "SIM"
+    },
+    {
+      "id": 450,
+      "label": "Epidemic Curve Animation",
+      "group": "SIM"
+    },
+    {
+      "id": 451,
+      "label": "CLD Interactive Simulation",
+      "group": "SIM"
+    },
+    {
+      "id": 452,
+      "label": "Health Equity Simulation",
+      "group": "SIM"
+    },
+    {
+      "id": 453,
+      "label": "ICU Surge Capacity Model",
+      "group": "SIM"
+    },
+    {
+      "id": 454,
+      "label": "Behavioral Intervention Sim",
+      "group": "SIM"
+    },
+    {
+      "id": 455,
+      "label": "Network Spread Simulation",
+      "group": "SIM"
+    },
+    {
+      "id": 456,
+      "label": "Herd Immunity Visualization",
+      "group": "SIM"
+    },
+    {
+      "id": 457,
+      "label": "Dose-Response Explorer",
+      "group": "SIM"
+    },
+    {
+      "id": 458,
+      "label": "Policy Lever Simulation",
+      "group": "SIM"
+    },
+    {
+      "id": 459,
+      "label": "Demographic Pyramid Sim",
+      "group": "SIM"
+    },
+    {
+      "id": 460,
+      "label": "Vaccination Coverage Sim",
+      "group": "SIM"
+    },
+    {
+      "id": 461,
+      "label": "Contact Tracing Sim",
+      "group": "SIM"
+    },
+    {
+      "id": 462,
+      "label": "Health Disparities Viz",
+      "group": "SIM"
+    },
+    {
+      "id": 463,
+      "label": "Supply Chain Surge Sim",
+      "group": "SIM"
+    },
+    {
+      "id": 464,
+      "label": "Environmental Exposure Sim",
+      "group": "SIM"
+    },
+    {
+      "id": 465,
+      "label": "COVID-19 Origins Detection",
+      "group": "COVID"
+    },
+    {
+      "id": 466,
+      "label": "COVID-19 Genomic Surveillance",
+      "group": "COVID"
+    },
+    {
+      "id": 467,
+      "label": "COVID-19 Variant Emergence",
+      "group": "COVID"
+    },
+    {
+      "id": 468,
+      "label": "COVID-19 R0 Estimation",
+      "group": "COVID"
+    },
+    {
+      "id": 469,
+      "label": "COVID-19 IFR vs CFR",
+      "group": "COVID"
+    },
+    {
+      "id": 470,
+      "label": "COVID-19 Excess Mortality",
+      "group": "COVID"
+    },
+    {
+      "id": 471,
+      "label": "COVID-19 Data Infrastructure",
+      "group": "COVID"
+    },
+    {
+      "id": 472,
+      "label": "COVID-19 NPI Evidence",
+      "group": "COVID"
+    },
+    {
+      "id": 473,
+      "label": "COVID-19 Mask Compliance",
+      "group": "COVID"
+    },
+    {
+      "id": 474,
+      "label": "COVID-19 Vaccine Development",
+      "group": "COVID"
+    },
+    {
+      "id": 475,
+      "label": "COVID-19 Vaccine Distribution",
+      "group": "COVID"
+    },
+    {
+      "id": 476,
+      "label": "COVID-19 Equity Failures",
+      "group": "COVID"
+    },
+    {
+      "id": 477,
+      "label": "COVID-19 Communication Failure",
+      "group": "COVID"
+    },
+    {
+      "id": 478,
+      "label": "COVID-19 Misinformation",
+      "group": "COVID"
+    },
+    {
+      "id": 479,
+      "label": "Long COVID Burden",
+      "group": "COVID"
+    },
+    {
+      "id": 480,
+      "label": "COVID-19 Healthcare Surge",
+      "group": "COVID"
+    },
+    {
+      "id": 481,
+      "label": "COVID-19 Systems Analysis",
+      "group": "COVID"
+    },
+    {
+      "id": 482,
+      "label": "COVID Wastewater Surveillance",
+      "group": "COVID"
+    },
+    {
+      "id": 483,
+      "label": "COVID-19 Modeling Failures",
+      "group": "COVID"
+    },
+    {
+      "id": 484,
+      "label": "Pandemic Preparedness Lessons",
+      "group": "COVID"
+    },
+    {
+      "id": 485,
+      "label": "DSHEA 1994 Regulation",
+      "group": "FRAUD"
+    },
+    {
+      "id": 486,
+      "label": "Supplement Industry Scale",
+      "group": "FRAUD"
+    },
+    {
+      "id": 487,
+      "label": "FDA vs FTC Jurisdiction",
+      "group": "FRAUD"
+    },
+    {
+      "id": 488,
+      "label": "Miracle Cure Fraud Claims",
+      "group": "FRAUD"
+    },
+    {
+      "id": 489,
+      "label": "MLM Health Products",
+      "group": "FRAUD"
+    },
+    {
+      "id": 490,
+      "label": "Digital Health Fraud Marketing",
+      "group": "FRAUD"
+    },
+    {
+      "id": 491,
+      "label": "Supplement Science Evidence",
+      "group": "FRAUD"
+    },
+    {
+      "id": 492,
+      "label": "Vulnerable Population Targeting",
+      "group": "FRAUD"
+    },
+    {
+      "id": 493,
+      "label": "COVID Supplement Fraud",
+      "group": "FRAUD"
+    },
+    {
+      "id": 494,
+      "label": "Consumer Protection Tools",
+      "group": "FRAUD"
+    },
+    {
+      "id": 495,
+      "label": "QuackWatch Methods",
+      "group": "FRAUD"
+    },
+    {
+      "id": 496,
+      "label": "NSF USP Certification",
+      "group": "FRAUD"
+    },
+    {
+      "id": 497,
+      "label": "SIFT for Health Claims",
+      "group": "FRAUD"
+    },
+    {
+      "id": 498,
+      "label": "Health Fraud Policy Reform",
+      "group": "FRAUD"
+    },
+    {
+      "id": 499,
+      "label": "MLM Network Dynamics",
+      "group": "FRAUD"
+    },
+    {
+      "id": 500,
+      "label": "DSHEA Reform Proposals",
+      "group": "FRAUD"
+    }
+  ],
+  "edges": [
+    {
+      "from": 2,
+      "to": 1
+    },
+    {
+      "from": 3,
+      "to": 1
+    },
+    {
+      "from": 4,
+      "to": 1
+    },
+    {
+      "from": 5,
+      "to": 1
+    },
+    {
+      "from": 6,
+      "to": 3
+    },
+    {
+      "from": 6,
+      "to": 5
+    },
+    {
+      "from": 7,
+      "to": 6
+    },
+    {
+      "from": 8,
+      "to": 3
+    },
+    {
+      "from": 8,
+      "to": 7
+    },
+    {
+      "from": 9,
+      "to": 1
+    },
+    {
+      "from": 10,
+      "to": 9
+    },
+    {
+      "from": 11,
+      "to": 9
+    },
+    {
+      "from": 12,
+      "to": 2
+    },
+    {
+      "from": 12,
+      "to": 4
+    },
+    {
+      "from": 13,
+      "to": 12
+    },
+    {
+      "from": 14,
+      "to": 8
+    },
+    {
+      "from": 15,
+      "to": 8
+    },
+    {
+      "from": 15,
+      "to": 14
+    },
+    {
+      "from": 16,
+      "to": 8
+    },
+    {
+      "from": 16,
+      "to": 15
+    },
+    {
+      "from": 17,
+      "to": 8
+    },
+    {
+      "from": 18,
+      "to": 9
+    },
+    {
+      "from": 18,
+      "to": 11
+    },
+    {
+      "from": 19,
+      "to": 1
+    },
+    {
+      "from": 19,
+      "to": 9
+    },
+    {
+      "from": 20,
+      "to": 1
+    },
+    {
+      "from": 20,
+      "to": 2
+    },
+    {
+      "from": 21,
+      "to": 2
+    },
+    {
+      "from": 21,
+      "to": 12
+    },
+    {
+      "from": 22,
+      "to": 21
+    },
+    {
+      "from": 23,
+      "to": 21
+    },
+    {
+      "from": 24,
+      "to": 21
+    },
+    {
+      "from": 25,
+      "to": 24
+    },
+    {
+      "from": 26,
+      "to": 25
+    },
+    {
+      "from": 27,
+      "to": 21
+    },
+    {
+      "from": 27,
+      "to": 22
+    },
+    {
+      "from": 28,
+      "to": 21
+    },
+    {
+      "from": 29,
+      "to": 28
+    },
+    {
+      "from": 30,
+      "to": 24
+    },
+    {
+      "from": 31,
+      "to": 21
+    },
+    {
+      "from": 31,
+      "to": 22
+    },
+    {
+      "from": 32,
+      "to": 31
+    },
+    {
+      "from": 33,
+      "to": 31
+    },
+    {
+      "from": 34,
+      "to": 31
+    },
+    {
+      "from": 35,
+      "to": 34
+    },
+    {
+      "from": 36,
+      "to": 31
+    },
+    {
+      "from": 37,
+      "to": 21
+    },
+    {
+      "from": 37,
+      "to": 22
+    },
+    {
+      "from": 38,
+      "to": 32
+    },
+    {
+      "from": 38,
+      "to": 37
+    },
+    {
+      "from": 39,
+      "to": 31
+    },
+    {
+      "from": 39,
+      "to": 37
+    },
+    {
+      "from": 40,
+      "to": 39
+    },
+    {
+      "from": 41,
+      "to": 21
+    },
+    {
+      "from": 41,
+      "to": 37
+    },
+    {
+      "from": 42,
+      "to": 37
+    },
+    {
+      "from": 43,
+      "to": 31
+    },
+    {
+      "from": 43,
+      "to": 39
+    },
+    {
+      "from": 44,
+      "to": 43
+    },
+    {
+      "from": 45,
+      "to": 43
+    },
+    {
+      "from": 46,
+      "to": 31
+    },
+    {
+      "from": 46,
+      "to": 43
+    },
+    {
+      "from": 47,
+      "to": 38
+    },
+    {
+      "from": 47,
+      "to": 46
+    },
+    {
+      "from": 48,
+      "to": 46
+    },
+    {
+      "from": 49,
+      "to": 31
+    },
+    {
+      "from": 49,
+      "to": 46
+    },
+    {
+      "from": 50,
+      "to": 21
+    },
+    {
+      "from": 50,
+      "to": 2
+    },
+    {
+      "from": 51,
+      "to": 50
+    },
+    {
+      "from": 52,
+      "to": 50
+    },
+    {
+      "from": 53,
+      "to": 50
+    },
+    {
+      "from": 54,
+      "to": 50
+    },
+    {
+      "from": 54,
+      "to": 53
+    },
+    {
+      "from": 55,
+      "to": 50
+    },
+    {
+      "from": 55,
+      "to": 51
+    },
+    {
+      "from": 56,
+      "to": 50
+    },
+    {
+      "from": 56,
+      "to": 28
+    },
+    {
+      "from": 57,
+      "to": 56
+    },
+    {
+      "from": 58,
+      "to": 21
+    },
+    {
+      "from": 58,
+      "to": 56
+    },
+    {
+      "from": 59,
+      "to": 57
+    },
+    {
+      "from": 60,
+      "to": 56
+    },
+    {
+      "from": 60,
+      "to": 38
+    },
+    {
+      "from": 61,
+      "to": 28
+    },
+    {
+      "from": 62,
+      "to": 61
+    },
+    {
+      "from": 63,
+      "to": 61
+    },
+    {
+      "from": 64,
+      "to": 63
+    },
+    {
+      "from": 65,
+      "to": 61
+    },
+    {
+      "from": 66,
+      "to": 22
+    },
+    {
+      "from": 66,
+      "to": 37
+    },
+    {
+      "from": 67,
+      "to": 66
+    },
+    {
+      "from": 68,
+      "to": 66
+    },
+    {
+      "from": 68,
+      "to": 67
+    },
+    {
+      "from": 69,
+      "to": 66
+    },
+    {
+      "from": 69,
+      "to": 67
+    },
+    {
+      "from": 71,
+      "to": 70
+    },
+    {
+      "from": 72,
+      "to": 70
+    },
+    {
+      "from": 73,
+      "to": 72
+    },
+    {
+      "from": 74,
+      "to": 77
+    },
+    {
+      "from": 75,
+      "to": 77
+    },
+    {
+      "from": 75,
+      "to": 74
+    },
+    {
+      "from": 76,
+      "to": 75
+    },
+    {
+      "from": 78,
+      "to": 77
+    },
+    {
+      "from": 79,
+      "to": 78
+    },
+    {
+      "from": 80,
+      "to": 70
+    },
+    {
+      "from": 81,
+      "to": 80
+    },
+    {
+      "from": 82,
+      "to": 81
+    },
+    {
+      "from": 82,
+      "to": 83
+    },
+    {
+      "from": 83,
+      "to": 70
+    },
+    {
+      "from": 83,
+      "to": 77
+    },
+    {
+      "from": 84,
+      "to": 83
+    },
+    {
+      "from": 85,
+      "to": 83
+    },
+    {
+      "from": 86,
+      "to": 83
+    },
+    {
+      "from": 86,
+      "to": 84
+    },
+    {
+      "from": 87,
+      "to": 73
+    },
+    {
+      "from": 87,
+      "to": 86
+    },
+    {
+      "from": 88,
+      "to": 83
+    },
+    {
+      "from": 88,
+      "to": 74
+    },
+    {
+      "from": 89,
+      "to": 88
+    },
+    {
+      "from": 90,
+      "to": 83
+    },
+    {
+      "from": 90,
+      "to": 73
+    },
+    {
+      "from": 91,
+      "to": 90
+    },
+    {
+      "from": 92,
+      "to": 90
+    },
+    {
+      "from": 93,
+      "to": 92
+    },
+    {
+      "from": 94,
+      "to": 87
+    },
+    {
+      "from": 94,
+      "to": 73
+    },
+    {
+      "from": 95,
+      "to": 94
+    },
+    {
+      "from": 95,
+      "to": 77
+    },
+    {
+      "from": 96,
+      "to": 95
+    },
+    {
+      "from": 96,
+      "to": 75
+    },
+    {
+      "from": 97,
+      "to": 94
+    },
+    {
+      "from": 97,
+      "to": 33
+    },
+    {
+      "from": 98,
+      "to": 97
+    },
+    {
+      "from": 99,
+      "to": 40
+    },
+    {
+      "from": 99,
+      "to": 87
+    },
+    {
+      "from": 100,
+      "to": 99
+    },
+    {
+      "from": 100,
+      "to": 87
+    },
+    {
+      "from": 101,
+      "to": 99
+    },
+    {
+      "from": 102,
+      "to": 86
+    },
+    {
+      "from": 103,
+      "to": 30
+    },
+    {
+      "from": 103,
+      "to": 70
+    },
+    {
+      "from": 104,
+      "to": 70
+    },
+    {
+      "from": 104,
+      "to": 80
+    },
+    {
+      "from": 105,
+      "to": 104
+    },
+    {
+      "from": 106,
+      "to": 94
+    },
+    {
+      "from": 107,
+      "to": 24
+    },
+    {
+      "from": 107,
+      "to": 106
+    },
+    {
+      "from": 108,
+      "to": 87
+    },
+    {
+      "from": 109,
+      "to": 99
+    },
+    {
+      "from": 109,
+      "to": 307
+    },
+    {
+      "from": 110,
+      "to": 4
+    },
+    {
+      "from": 110,
+      "to": 1
+    },
+    {
+      "from": 111,
+      "to": 110
+    },
+    {
+      "from": 112,
+      "to": 111
+    },
+    {
+      "from": 113,
+      "to": 111
+    },
+    {
+      "from": 114,
+      "to": 112
+    },
+    {
+      "from": 114,
+      "to": 113
+    },
+    {
+      "from": 115,
+      "to": 110
+    },
+    {
+      "from": 116,
+      "to": 115
+    },
+    {
+      "from": 117,
+      "to": 116
+    },
+    {
+      "from": 118,
+      "to": 116
+    },
+    {
+      "from": 119,
+      "to": 116
+    },
+    {
+      "from": 120,
+      "to": 110
+    },
+    {
+      "from": 121,
+      "to": 120
+    },
+    {
+      "from": 122,
+      "to": 120
+    },
+    {
+      "from": 122,
+      "to": 6
+    },
+    {
+      "from": 123,
+      "to": 120
+    },
+    {
+      "from": 123,
+      "to": 121
+    },
+    {
+      "from": 124,
+      "to": 112
+    },
+    {
+      "from": 125,
+      "to": 124
+    },
+    {
+      "from": 126,
+      "to": 124
+    },
+    {
+      "from": 127,
+      "to": 4
+    },
+    {
+      "from": 127,
+      "to": 2
+    },
+    {
+      "from": 128,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 127
+    },
+    {
+      "from": 129,
+      "to": 4
+    },
+    {
+      "from": 130,
+      "to": 110
+    },
+    {
+      "from": 130,
+      "to": 4
+    },
+    {
+      "from": 131,
+      "to": 130
+    },
+    {
+      "from": 132,
+      "to": 130
+    },
+    {
+      "from": 132,
+      "to": 115
+    },
+    {
+      "from": 133,
+      "to": 110
+    },
+    {
+      "from": 133,
+      "to": 4
+    },
+    {
+      "from": 134,
+      "to": 133
+    },
+    {
+      "from": 134,
+      "to": 113
+    },
+    {
+      "from": 135,
+      "to": 133
+    },
+    {
+      "from": 136,
+      "to": 110
+    },
+    {
+      "from": 136,
+      "to": 133
+    },
+    {
+      "from": 137,
+      "to": 127
+    },
+    {
+      "from": 138,
+      "to": 4
+    },
+    {
+      "from": 138,
+      "to": 1
+    },
+    {
+      "from": 139,
+      "to": 138
+    },
+    {
+      "from": 140,
+      "to": 138
+    },
+    {
+      "from": 141,
+      "to": 138
+    },
+    {
+      "from": 142,
+      "to": 138
+    },
+    {
+      "from": 143,
+      "to": 138
+    },
+    {
+      "from": 144,
+      "to": 143
+    },
+    {
+      "from": 145,
+      "to": 138
+    },
+    {
+      "from": 146,
+      "to": 145
+    },
+    {
+      "from": 147,
+      "to": 138
+    },
+    {
+      "from": 148,
+      "to": 147
+    },
+    {
+      "from": 149,
+      "to": 138
+    },
+    {
+      "from": 149,
+      "to": 4
+    },
+    {
+      "from": 150,
+      "to": 149
+    },
+    {
+      "from": 151,
+      "to": 149
+    },
+    {
+      "from": 152,
+      "to": 151
+    },
+    {
+      "from": 153,
+      "to": 138
+    },
+    {
+      "from": 154,
+      "to": 153
+    },
+    {
+      "from": 155,
+      "to": 154
+    },
+    {
+      "from": 156,
+      "to": 153
+    },
+    {
+      "from": 157,
+      "to": 1
+    },
+    {
+      "from": 157,
+      "to": 4
+    },
+    {
+      "from": 158,
+      "to": 157
+    },
+    {
+      "from": 159,
+      "to": 157
+    },
+    {
+      "from": 160,
+      "to": 157
+    },
+    {
+      "from": 161,
+      "to": 158
+    },
+    {
+      "from": 162,
+      "to": 4
+    },
+    {
+      "from": 162,
+      "to": 1
+    },
+    {
+      "from": 163,
+      "to": 162
+    },
+    {
+      "from": 164,
+      "to": 162
+    },
+    {
+      "from": 164,
+      "to": 150
+    },
+    {
+      "from": 165,
+      "to": 164
+    },
+    {
+      "from": 166,
+      "to": 4
+    },
+    {
+      "from": 166,
+      "to": 149
+    },
+    {
+      "from": 167,
+      "to": 166
+    },
+    {
+      "from": 168,
+      "to": 149
+    },
+    {
+      "from": 168,
+      "to": 150
+    },
+    {
+      "from": 169,
+      "to": 168
+    },
+    {
+      "from": 170,
+      "to": 143
+    },
+    {
+      "from": 170,
+      "to": 168
+    },
+    {
+      "from": 171,
+      "to": 138
+    },
+    {
+      "from": 171,
+      "to": 149
+    },
+    {
+      "from": 172,
+      "to": 138
+    },
+    {
+      "from": 172,
+      "to": 149
+    },
+    {
+      "from": 173,
+      "to": 1
+    },
+    {
+      "from": 173,
+      "to": 9
+    },
+    {
+      "from": 174,
+      "to": 173
+    },
+    {
+      "from": 175,
+      "to": 173
+    },
+    {
+      "from": 176,
+      "to": 173
+    },
+    {
+      "from": 177,
+      "to": 173
+    },
+    {
+      "from": 178,
+      "to": 177
+    },
+    {
+      "from": 179,
+      "to": 1
+    },
+    {
+      "from": 180,
+      "to": 179
+    },
+    {
+      "from": 181,
+      "to": 179
+    },
+    {
+      "from": 181,
+      "to": 180
+    },
+    {
+      "from": 182,
+      "to": 173
+    },
+    {
+      "from": 183,
+      "to": 173
+    },
+    {
+      "from": 184,
+      "to": 173
+    },
+    {
+      "from": 185,
+      "to": 182
+    },
+    {
+      "from": 185,
+      "to": 183
+    },
+    {
+      "from": 185,
+      "to": 184
+    },
+    {
+      "from": 186,
+      "to": 182
+    },
+    {
+      "from": 187,
+      "to": 173
+    },
+    {
+      "from": 187,
+      "to": 1
+    },
+    {
+      "from": 188,
+      "to": 187
+    },
+    {
+      "from": 189,
+      "to": 188
+    },
+    {
+      "from": 190,
+      "to": 187
+    },
+    {
+      "from": 190,
+      "to": 55
+    },
+    {
+      "from": 191,
+      "to": 187
+    },
+    {
+      "from": 192,
+      "to": 173
+    },
+    {
+      "from": 192,
+      "to": 19
+    },
+    {
+      "from": 193,
+      "to": 180
+    },
+    {
+      "from": 194,
+      "to": 193
+    },
+    {
+      "from": 194,
+      "to": 149
+    },
+    {
+      "from": 195,
+      "to": 193
+    },
+    {
+      "from": 195,
+      "to": 173
+    },
+    {
+      "from": 196,
+      "to": 180
+    },
+    {
+      "from": 197,
+      "to": 196
+    },
+    {
+      "from": 198,
+      "to": 196
+    },
+    {
+      "from": 199,
+      "to": 197
+    },
+    {
+      "from": 199,
+      "to": 14
+    },
+    {
+      "from": 200,
+      "to": 180
+    },
+    {
+      "from": 201,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 200
+    },
+    {
+      "from": 202,
+      "to": 193
+    },
+    {
+      "from": 203,
+      "to": 13
+    },
+    {
+      "from": 203,
+      "to": 2
+    },
+    {
+      "from": 204,
+      "to": 203
+    },
+    {
+      "from": 205,
+      "to": 204
+    },
+    {
+      "from": 206,
+      "to": 204
+    },
+    {
+      "from": 207,
+      "to": 13
+    },
+    {
+      "from": 207,
+      "to": 2
+    },
+    {
+      "from": 208,
+      "to": 207
+    },
+    {
+      "from": 209,
+      "to": 207
+    },
+    {
+      "from": 210,
+      "to": 173
+    },
+    {
+      "from": 210,
+      "to": 203
+    },
+    {
+      "from": 211,
+      "to": 210
+    },
+    {
+      "from": 212,
+      "to": 210
+    },
+    {
+      "from": 213,
+      "to": 210
+    },
+    {
+      "from": 214,
+      "to": 210
+    },
+    {
+      "from": 215,
+      "to": 203
+    },
+    {
+      "from": 215,
+      "to": 2
+    },
+    {
+      "from": 216,
+      "to": 1
+    },
+    {
+      "from": 216,
+      "to": 215
+    },
+    {
+      "from": 217,
+      "to": 216
+    },
+    {
+      "from": 218,
+      "to": 216
+    },
+    {
+      "from": 219,
+      "to": 203
+    },
+    {
+      "from": 219,
+      "to": 13
+    },
+    {
+      "from": 220,
+      "to": 219
+    },
+    {
+      "from": 221,
+      "to": 216
+    },
+    {
+      "from": 221,
+      "to": 215
+    },
+    {
+      "from": 222,
+      "to": 221
+    },
+    {
+      "from": 223,
+      "to": 210
+    },
+    {
+      "from": 223,
+      "to": 221
+    },
+    {
+      "from": 224,
+      "to": 221
+    },
+    {
+      "from": 224,
+      "to": 65
+    },
+    {
+      "from": 225,
+      "to": 221
+    },
+    {
+      "from": 226,
+      "to": 221
+    },
+    {
+      "from": 227,
+      "to": 216
+    },
+    {
+      "from": 227,
+      "to": 221
+    },
+    {
+      "from": 228,
+      "to": 1
+    },
+    {
+      "from": 228,
+      "to": 2
+    },
+    {
+      "from": 229,
+      "to": 228
+    },
+    {
+      "from": 230,
+      "to": 4
+    },
+    {
+      "from": 230,
+      "to": 228
+    },
+    {
+      "from": 231,
+      "to": 230
+    },
+    {
+      "from": 232,
+      "to": 230
+    },
+    {
+      "from": 233,
+      "to": 230
+    },
+    {
+      "from": 234,
+      "to": 230
+    },
+    {
+      "from": 235,
+      "to": 230
+    },
+    {
+      "from": 236,
+      "to": 230
+    },
+    {
+      "from": 237,
+      "to": 230
+    },
+    {
+      "from": 238,
+      "to": 230
+    },
+    {
+      "from": 238,
+      "to": 127
+    },
+    {
+      "from": 239,
+      "to": 235
+    },
+    {
+      "from": 239,
+      "to": 236
+    },
+    {
+      "from": 240,
+      "to": 229
+    },
+    {
+      "from": 240,
+      "to": 230
+    },
+    {
+      "from": 241,
+      "to": 240
+    },
+    {
+      "from": 241,
+      "to": 24
+    },
+    {
+      "from": 242,
+      "to": 240
+    },
+    {
+      "from": 242,
+      "to": 24
+    },
+    {
+      "from": 243,
+      "to": 240
+    },
+    {
+      "from": 243,
+      "to": 24
+    },
+    {
+      "from": 244,
+      "to": 240
+    },
+    {
+      "from": 245,
+      "to": 244
+    },
+    {
+      "from": 245,
+      "to": 233
+    },
+    {
+      "from": 246,
+      "to": 228
+    },
+    {
+      "from": 246,
+      "to": 229
+    },
+    {
+      "from": 247,
+      "to": 239
+    },
+    {
+      "from": 247,
+      "to": 230
+    },
+    {
+      "from": 248,
+      "to": 247
+    },
+    {
+      "from": 249,
+      "to": 247
+    },
+    {
+      "from": 250,
+      "to": 180
+    },
+    {
+      "from": 250,
+      "to": 230
+    },
+    {
+      "from": 251,
+      "to": 228
+    },
+    {
+      "from": 251,
+      "to": 2
+    },
+    {
+      "from": 252,
+      "to": 230
+    },
+    {
+      "from": 253,
+      "to": 180
+    },
+    {
+      "from": 253,
+      "to": 250
+    },
+    {
+      "from": 254,
+      "to": 162
+    },
+    {
+      "from": 254,
+      "to": 166
+    },
+    {
+      "from": 255,
+      "to": 239
+    },
+    {
+      "from": 255,
+      "to": 240
+    },
+    {
+      "from": 256,
+      "to": 240
+    },
+    {
+      "from": 257,
+      "to": 229
+    },
+    {
+      "from": 257,
+      "to": 240
+    },
+    {
+      "from": 259,
+      "to": 258
+    },
+    {
+      "from": 260,
+      "to": 258
+    },
+    {
+      "from": 261,
+      "to": 258
+    },
+    {
+      "from": 262,
+      "to": 258
+    },
+    {
+      "from": 263,
+      "to": 262
+    },
+    {
+      "from": 264,
+      "to": 258
+    },
+    {
+      "from": 265,
+      "to": 264
+    },
+    {
+      "from": 266,
+      "to": 264
+    },
+    {
+      "from": 267,
+      "to": 258
+    },
+    {
+      "from": 268,
+      "to": 267
+    },
+    {
+      "from": 268,
+      "to": 259
+    },
+    {
+      "from": 269,
+      "to": 267
+    },
+    {
+      "from": 269,
+      "to": 268
+    },
+    {
+      "from": 270,
+      "to": 259
+    },
+    {
+      "from": 270,
+      "to": 262
+    },
+    {
+      "from": 271,
+      "to": 270
+    },
+    {
+      "from": 272,
+      "to": 258
+    },
+    {
+      "from": 273,
+      "to": 272
+    },
+    {
+      "from": 274,
+      "to": 261
+    },
+    {
+      "from": 275,
+      "to": 261
+    },
+    {
+      "from": 276,
+      "to": 261
+    },
+    {
+      "from": 276,
+      "to": 244
+    },
+    {
+      "from": 277,
+      "to": 258
+    },
+    {
+      "from": 277,
+      "to": 221
+    },
+    {
+      "from": 278,
+      "to": 157
+    },
+    {
+      "from": 279,
+      "to": 278
+    },
+    {
+      "from": 280,
+      "to": 1
+    },
+    {
+      "from": 280,
+      "to": 157
+    },
+    {
+      "from": 281,
+      "to": 280
+    },
+    {
+      "from": 282,
+      "to": 280
+    },
+    {
+      "from": 282,
+      "to": 70
+    },
+    {
+      "from": 283,
+      "to": 280
+    },
+    {
+      "from": 283,
+      "to": 86
+    },
+    {
+      "from": 284,
+      "to": 280
+    },
+    {
+      "from": 285,
+      "to": 284
+    },
+    {
+      "from": 286,
+      "to": 284
+    },
+    {
+      "from": 287,
+      "to": 280
+    },
+    {
+      "from": 288,
+      "to": 287
+    },
+    {
+      "from": 289,
+      "to": 280
+    },
+    {
+      "from": 290,
+      "to": 289
+    },
+    {
+      "from": 290,
+      "to": 50
+    },
+    {
+      "from": 291,
+      "to": 290
+    },
+    {
+      "from": 292,
+      "to": 280
+    },
+    {
+      "from": 293,
+      "to": 292
+    },
+    {
+      "from": 294,
+      "to": 293
+    },
+    {
+      "from": 295,
+      "to": 292
+    },
+    {
+      "from": 296,
+      "to": 287
+    },
+    {
+      "from": 296,
+      "to": 162
+    },
+    {
+      "from": 297,
+      "to": 296
+    },
+    {
+      "from": 298,
+      "to": 280
+    },
+    {
+      "from": 298,
+      "to": 287
+    },
+    {
+      "from": 299,
+      "to": 280
+    },
+    {
+      "from": 299,
+      "to": 138
+    },
+    {
+      "from": 300,
+      "to": 289
+    },
+    {
+      "from": 301,
+      "to": 292
+    },
+    {
+      "from": 301,
+      "to": 284
+    },
+    {
+      "from": 302,
+      "to": 284
+    },
+    {
+      "from": 302,
+      "to": 292
+    },
+    {
+      "from": 303,
+      "to": 14
+    },
+    {
+      "from": 303,
+      "to": 15
+    },
+    {
+      "from": 304,
+      "to": 303
+    },
+    {
+      "from": 305,
+      "to": 303
+    },
+    {
+      "from": 306,
+      "to": 303
+    },
+    {
+      "from": 307,
+      "to": 1
+    },
+    {
+      "from": 307,
+      "to": 70
+    },
+    {
+      "from": 308,
+      "to": 307
+    },
+    {
+      "from": 308,
+      "to": 40
+    },
+    {
+      "from": 309,
+      "to": 308
+    },
+    {
+      "from": 310,
+      "to": 308
+    },
+    {
+      "from": 311,
+      "to": 308
+    },
+    {
+      "from": 312,
+      "to": 65
+    },
+    {
+      "from": 313,
+      "to": 312
+    },
+    {
+      "from": 314,
+      "to": 313
+    },
+    {
+      "from": 315,
+      "to": 313
+    },
+    {
+      "from": 316,
+      "to": 172
+    },
+    {
+      "from": 317,
+      "to": 14
+    },
+    {
+      "from": 317,
+      "to": 168
+    },
+    {
+      "from": 318,
+      "to": 168
+    },
+    {
+      "from": 318,
+      "to": 14
+    },
+    {
+      "from": 319,
+      "to": 311
+    },
+    {
+      "from": 319,
+      "to": 14
+    },
+    {
+      "from": 320,
+      "to": 168
+    },
+    {
+      "from": 321,
+      "to": 14
+    },
+    {
+      "from": 321,
+      "to": 319
+    },
+    {
+      "from": 322,
+      "to": 1
+    },
+    {
+      "from": 322,
+      "to": 14
+    },
+    {
+      "from": 323,
+      "to": 322
+    },
+    {
+      "from": 324,
+      "to": 323
+    },
+    {
+      "from": 325,
+      "to": 14
+    },
+    {
+      "from": 325,
+      "to": 306
+    },
+    {
+      "from": 326,
+      "to": 325
+    },
+    {
+      "from": 327,
+      "to": 325
+    },
+    {
+      "from": 328,
+      "to": 168
+    },
+    {
+      "from": 328,
+      "to": 307
+    },
+    {
+      "from": 329,
+      "to": 307
+    },
+    {
+      "from": 329,
+      "to": 328
+    },
+    {
+      "from": 330,
+      "to": 328
+    },
+    {
+      "from": 331,
+      "to": 170
+    },
+    {
+      "from": 331,
+      "to": 306
+    },
+    {
+      "from": 332,
+      "to": 66
+    },
+    {
+      "from": 332,
+      "to": 67
+    },
+    {
+      "from": 332,
+      "to": 310
+    },
+    {
+      "from": 334,
+      "to": 333
+    },
+    {
+      "from": 335,
+      "to": 334
+    },
+    {
+      "from": 336,
+      "to": 334
+    },
+    {
+      "from": 336,
+      "to": 335
+    },
+    {
+      "from": 337,
+      "to": 336
+    },
+    {
+      "from": 338,
+      "to": 336
+    },
+    {
+      "from": 339,
+      "to": 336
+    },
+    {
+      "from": 340,
+      "to": 336
+    },
+    {
+      "from": 341,
+      "to": 333
+    },
+    {
+      "from": 341,
+      "to": 336
+    },
+    {
+      "from": 342,
+      "to": 333
+    },
+    {
+      "from": 342,
+      "to": 336
+    },
+    {
+      "from": 343,
+      "to": 333
+    },
+    {
+      "from": 343,
+      "to": 336
+    },
+    {
+      "from": 344,
+      "to": 343
+    },
+    {
+      "from": 345,
+      "to": 344
+    },
+    {
+      "from": 346,
+      "to": 345
+    },
+    {
+      "from": 346,
+      "to": 337
+    },
+    {
+      "from": 346,
+      "to": 338
+    },
+    {
+      "from": 347,
+      "to": 346
+    },
+    {
+      "from": 348,
+      "to": 343
+    },
+    {
+      "from": 349,
+      "to": 348
+    },
+    {
+      "from": 349,
+      "to": 338
+    },
+    {
+      "from": 350,
+      "to": 348
+    },
+    {
+      "from": 350,
+      "to": 337
+    },
+    {
+      "from": 351,
+      "to": 348
+    },
+    {
+      "from": 352,
+      "to": 348
+    },
+    {
+      "from": 352,
+      "to": 349
+    },
+    {
+      "from": 353,
+      "to": 337
+    },
+    {
+      "from": 353,
+      "to": 348
+    },
+    {
+      "from": 354,
+      "to": 338
+    },
+    {
+      "from": 354,
+      "to": 348
+    },
+    {
+      "from": 355,
+      "to": 337
+    },
+    {
+      "from": 355,
+      "to": 348
+    },
+    {
+      "from": 356,
+      "to": 350
+    },
+    {
+      "from": 356,
+      "to": 348
+    },
+    {
+      "from": 357,
+      "to": 334
+    },
+    {
+      "from": 357,
+      "to": 335
+    },
+    {
+      "from": 357,
+      "to": 343
+    },
+    {
+      "from": 358,
+      "to": 357
+    },
+    {
+      "from": 359,
+      "to": 357
+    },
+    {
+      "from": 359,
+      "to": 358
+    },
+    {
+      "from": 360,
+      "to": 359
+    },
+    {
+      "from": 361,
+      "to": 357
+    },
+    {
+      "from": 362,
+      "to": 357
+    },
+    {
+      "from": 363,
+      "to": 357
+    },
+    {
+      "from": 364,
+      "to": 357
+    },
+    {
+      "from": 365,
+      "to": 357
+    },
+    {
+      "from": 366,
+      "to": 333
+    },
+    {
+      "from": 367,
+      "to": 334
+    },
+    {
+      "from": 367,
+      "to": 335
+    },
+    {
+      "from": 367,
+      "to": 61
+    },
+    {
+      "from": 368,
+      "to": 367
+    },
+    {
+      "from": 369,
+      "to": 368
+    },
+    {
+      "from": 370,
+      "to": 368
+    },
+    {
+      "from": 370,
+      "to": 65
+    },
+    {
+      "from": 371,
+      "to": 367
+    },
+    {
+      "from": 371,
+      "to": 61
+    },
+    {
+      "from": 372,
+      "to": 367
+    },
+    {
+      "from": 373,
+      "to": 371
+    },
+    {
+      "from": 373,
+      "to": 372
+    },
+    {
+      "from": 374,
+      "to": 367
+    },
+    {
+      "from": 374,
+      "to": 358
+    },
+    {
+      "from": 374,
+      "to": 359
+    },
+    {
+      "from": 375,
+      "to": 367
+    },
+    {
+      "from": 375,
+      "to": 337
+    },
+    {
+      "from": 376,
+      "to": 333
+    },
+    {
+      "from": 376,
+      "to": 341
+    },
+    {
+      "from": 377,
+      "to": 376
+    },
+    {
+      "from": 378,
+      "to": 376
+    },
+    {
+      "from": 379,
+      "to": 376
+    },
+    {
+      "from": 380,
+      "to": 376
+    },
+    {
+      "from": 380,
+      "to": 392
+    },
+    {
+      "from": 381,
+      "to": 343
+    },
+    {
+      "from": 382,
+      "to": 381
+    },
+    {
+      "from": 383,
+      "to": 381
+    },
+    {
+      "from": 383,
+      "to": 382
+    },
+    {
+      "from": 384,
+      "to": 357
+    },
+    {
+      "from": 384,
+      "to": 343
+    },
+    {
+      "from": 385,
+      "to": 384
+    },
+    {
+      "from": 385,
+      "to": 359
+    },
+    {
+      "from": 386,
+      "to": 384
+    },
+    {
+      "from": 387,
+      "to": 343
+    },
+    {
+      "from": 388,
+      "to": 387
+    },
+    {
+      "from": 389,
+      "to": 388
+    },
+    {
+      "from": 389,
+      "to": 333
+    },
+    {
+      "from": 390,
+      "to": 389
+    },
+    {
+      "from": 390,
+      "to": 336
+    },
+    {
+      "from": 391,
+      "to": 333
+    },
+    {
+      "from": 391,
+      "to": 336
+    },
+    {
+      "from": 392,
+      "to": 333
+    },
+    {
+      "from": 392,
+      "to": 2
+    },
+    {
+      "from": 393,
+      "to": 392
+    },
+    {
+      "from": 394,
+      "to": 393
+    },
+    {
+      "from": 395,
+      "to": 393
+    },
+    {
+      "from": 396,
+      "to": 393
+    },
+    {
+      "from": 397,
+      "to": 392
+    },
+    {
+      "from": 397,
+      "to": 393
+    },
+    {
+      "from": 398,
+      "to": 70
+    },
+    {
+      "from": 399,
+      "to": 398
+    },
+    {
+      "from": 400,
+      "to": 399
+    },
+    {
+      "from": 401,
+      "to": 399
+    },
+    {
+      "from": 403,
+      "to": 402
+    },
+    {
+      "from": 404,
+      "to": 402
+    },
+    {
+      "from": 405,
+      "to": 402
+    },
+    {
+      "from": 406,
+      "to": 398
+    },
+    {
+      "from": 406,
+      "to": 402
+    },
+    {
+      "from": 407,
+      "to": 406
+    },
+    {
+      "from": 407,
+      "to": 398
+    },
+    {
+      "from": 408,
+      "to": 406
+    },
+    {
+      "from": 408,
+      "to": 402
+    },
+    {
+      "from": 409,
+      "to": 406
+    },
+    {
+      "from": 410,
+      "to": 409
+    },
+    {
+      "from": 411,
+      "to": 50
+    },
+    {
+      "from": 411,
+      "to": 70
+    },
+    {
+      "from": 412,
+      "to": 80
+    },
+    {
+      "from": 412,
+      "to": 50
+    },
+    {
+      "from": 413,
+      "to": 80
+    },
+    {
+      "from": 414,
+      "to": 50
+    },
+    {
+      "from": 414,
+      "to": 70
+    },
+    {
+      "from": 415,
+      "to": 70
+    },
+    {
+      "from": 416,
+      "to": 50
+    },
+    {
+      "from": 416,
+      "to": 24
+    },
+    {
+      "from": 417,
+      "to": 70
+    },
+    {
+      "from": 417,
+      "to": 80
+    },
+    {
+      "from": 418,
+      "to": 70
+    },
+    {
+      "from": 418,
+      "to": 104
+    },
+    {
+      "from": 419,
+      "to": 104
+    },
+    {
+      "from": 419,
+      "to": 418
+    },
+    {
+      "from": 420,
+      "to": 418
+    },
+    {
+      "from": 421,
+      "to": 70
+    },
+    {
+      "from": 421,
+      "to": 2
+    },
+    {
+      "from": 422,
+      "to": 421
+    },
+    {
+      "from": 423,
+      "to": 421
+    },
+    {
+      "from": 424,
+      "to": 421
+    },
+    {
+      "from": 425,
+      "to": 424
+    },
+    {
+      "from": 426,
+      "to": 424
+    },
+    {
+      "from": 426,
+      "to": 425
+    },
+    {
+      "from": 427,
+      "to": 421
+    },
+    {
+      "from": 428,
+      "to": 421
+    },
+    {
+      "from": 428,
+      "to": 398
+    },
+    {
+      "from": 429,
+      "to": 428
+    },
+    {
+      "from": 429,
+      "to": 398
+    },
+    {
+      "from": 430,
+      "to": 94
+    },
+    {
+      "from": 430,
+      "to": 70
+    },
+    {
+      "from": 431,
+      "to": 94
+    },
+    {
+      "from": 431,
+      "to": 402
+    },
+    {
+      "from": 432,
+      "to": 431
+    },
+    {
+      "from": 433,
+      "to": 432
+    },
+    {
+      "from": 434,
+      "to": 432
+    },
+    {
+      "from": 435,
+      "to": 431
+    },
+    {
+      "from": 435,
+      "to": 82
+    },
+    {
+      "from": 436,
+      "to": 435
+    },
+    {
+      "from": 436,
+      "to": 432
+    },
+    {
+      "from": 437,
+      "to": 431
+    },
+    {
+      "from": 438,
+      "to": 437
+    },
+    {
+      "from": 439,
+      "to": 431
+    },
+    {
+      "from": 439,
+      "to": 289
+    },
+    {
+      "from": 440,
+      "to": 439
+    },
+    {
+      "from": 441,
+      "to": 50
+    },
+    {
+      "from": 441,
+      "to": 421
+    },
+    {
+      "from": 442,
+      "to": 289
+    },
+    {
+      "from": 442,
+      "to": 431
+    },
+    {
+      "from": 443,
+      "to": 333
+    },
+    {
+      "from": 443,
+      "to": 1
+    },
+    {
+      "from": 444,
+      "to": 443
+    },
+    {
+      "from": 445,
+      "to": 443
+    },
+    {
+      "from": 446,
+      "to": 443
+    },
+    {
+      "from": 447,
+      "to": 443
+    },
+    {
+      "from": 447,
+      "to": 392
+    },
+    {
+      "from": 448,
+      "to": 367
+    },
+    {
+      "from": 448,
+      "to": 443
+    },
+    {
+      "from": 448,
+      "to": 444
+    },
+    {
+      "from": 449,
+      "to": 367
+    },
+    {
+      "from": 449,
+      "to": 443
+    },
+    {
+      "from": 450,
+      "to": 58
+    },
+    {
+      "from": 450,
+      "to": 443
+    },
+    {
+      "from": 450,
+      "to": 444
+    },
+    {
+      "from": 451,
+      "to": 343
+    },
+    {
+      "from": 451,
+      "to": 443
+    },
+    {
+      "from": 451,
+      "to": 447
+    },
+    {
+      "from": 452,
+      "to": 230
+    },
+    {
+      "from": 452,
+      "to": 443
+    },
+    {
+      "from": 453,
+      "to": 357
+    },
+    {
+      "from": 453,
+      "to": 362
+    },
+    {
+      "from": 453,
+      "to": 443
+    },
+    {
+      "from": 454,
+      "to": 168
+    },
+    {
+      "from": 454,
+      "to": 443
+    },
+    {
+      "from": 455,
+      "to": 392
+    },
+    {
+      "from": 455,
+      "to": 443
+    },
+    {
+      "from": 455,
+      "to": 447
+    },
+    {
+      "from": 456,
+      "to": 312
+    },
+    {
+      "from": 456,
+      "to": 443
+    },
+    {
+      "from": 457,
+      "to": 112
+    },
+    {
+      "from": 457,
+      "to": 443
+    },
+    {
+      "from": 458,
+      "to": 387
+    },
+    {
+      "from": 458,
+      "to": 443
+    },
+    {
+      "from": 459,
+      "to": 208
+    },
+    {
+      "from": 459,
+      "to": 443
+    },
+    {
+      "from": 460,
+      "to": 313
+    },
+    {
+      "from": 460,
+      "to": 443
+    },
+    {
+      "from": 461,
+      "to": 56
+    },
+    {
+      "from": 461,
+      "to": 443
+    },
+    {
+      "from": 461,
+      "to": 447
+    },
+    {
+      "from": 462,
+      "to": 229
+    },
+    {
+      "from": 462,
+      "to": 443
+    },
+    {
+      "from": 463,
+      "to": 357
+    },
+    {
+      "from": 463,
+      "to": 443
+    },
+    {
+      "from": 464,
+      "to": 113
+    },
+    {
+      "from": 464,
+      "to": 443
+    },
+    {
+      "from": 465,
+      "to": 50
+    },
+    {
+      "from": 465,
+      "to": 6
+    },
+    {
+      "from": 466,
+      "to": 465
+    },
+    {
+      "from": 466,
+      "to": 50
+    },
+    {
+      "from": 467,
+      "to": 466
+    },
+    {
+      "from": 467,
+      "to": 62
+    },
+    {
+      "from": 468,
+      "to": 61
+    },
+    {
+      "from": 468,
+      "to": 62
+    },
+    {
+      "from": 469,
+      "to": 25
+    },
+    {
+      "from": 469,
+      "to": 26
+    },
+    {
+      "from": 470,
+      "to": 107
+    },
+    {
+      "from": 470,
+      "to": 24
+    },
+    {
+      "from": 471,
+      "to": 50
+    },
+    {
+      "from": 471,
+      "to": 173
+    },
+    {
+      "from": 472,
+      "to": 308
+    },
+    {
+      "from": 472,
+      "to": 40
+    },
+    {
+      "from": 473,
+      "to": 472
+    },
+    {
+      "from": 473,
+      "to": 148
+    },
+    {
+      "from": 474,
+      "to": 40
+    },
+    {
+      "from": 474,
+      "to": 191
+    },
+    {
+      "from": 475,
+      "to": 474
+    },
+    {
+      "from": 475,
+      "to": 313
+    },
+    {
+      "from": 476,
+      "to": 229
+    },
+    {
+      "from": 476,
+      "to": 475
+    },
+    {
+      "from": 477,
+      "to": 284
+    },
+    {
+      "from": 477,
+      "to": 292
+    },
+    {
+      "from": 478,
+      "to": 292
+    },
+    {
+      "from": 478,
+      "to": 289
+    },
+    {
+      "from": 479,
+      "to": 22
+    },
+    {
+      "from": 479,
+      "to": 203
+    },
+    {
+      "from": 480,
+      "to": 357
+    },
+    {
+      "from": 480,
+      "to": 367
+    },
+    {
+      "from": 481,
+      "to": 343
+    },
+    {
+      "from": 481,
+      "to": 367
+    },
+    {
+      "from": 481,
+      "to": 480
+    },
+    {
+      "from": 482,
+      "to": 441
+    },
+    {
+      "from": 482,
+      "to": 465
+    },
+    {
+      "from": 483,
+      "to": 367
+    },
+    {
+      "from": 483,
+      "to": 468
+    },
+    {
+      "from": 483,
+      "to": 384
+    },
+    {
+      "from": 484,
+      "to": 216
+    },
+    {
+      "from": 484,
+      "to": 471
+    },
+    {
+      "from": 484,
+      "to": 481
+    },
+    {
+      "from": 485,
+      "to": 187
+    },
+    {
+      "from": 486,
+      "to": 485
+    },
+    {
+      "from": 487,
+      "to": 485
+    },
+    {
+      "from": 487,
+      "to": 187
+    },
+    {
+      "from": 488,
+      "to": 486
+    },
+    {
+      "from": 489,
+      "to": 486
+    },
+    {
+      "from": 490,
+      "to": 289
+    },
+    {
+      "from": 490,
+      "to": 489
+    },
+    {
+      "from": 491,
+      "to": 307
+    },
+    {
+      "from": 491,
+      "to": 308
+    },
+    {
+      "from": 492,
+      "to": 489
+    },
+    {
+      "from": 492,
+      "to": 486
+    },
+    {
+      "from": 493,
+      "to": 488
+    },
+    {
+      "from": 493,
+      "to": 478
+    },
+    {
+      "from": 494,
+      "to": 487
+    },
+    {
+      "from": 494,
+      "to": 485
+    },
+    {
+      "from": 495,
+      "to": 494
+    },
+    {
+      "from": 496,
+      "to": 494
+    },
+    {
+      "from": 497,
+      "to": 295
+    },
+    {
+      "from": 497,
+      "to": 488
+    },
+    {
+      "from": 498,
+      "to": 485
+    },
+    {
+      "from": 498,
+      "to": 487
+    },
+    {
+      "from": 499,
+      "to": 343
+    },
+    {
+      "from": 499,
+      "to": 489
+    },
+    {
+      "from": 500,
+      "to": 485
+    },
+    {
+      "from": 500,
+      "to": 498
+    }
+  ]
+}

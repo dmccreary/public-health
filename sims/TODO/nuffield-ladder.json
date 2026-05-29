@@ -1,0 +1,14 @@
+{
+  "sim_id": "nuffield-ladder",
+  "diagram_name": "Nuffield Council Ladder of Interventions",
+  "chapter_number": 11,
+  "chapter_title": "\"Public Health Ethics\"",
+  "chapter_dir": "11-public-health-ethics",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** nuffield-ladder<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nDraw a vertical ladder with 8 rungs, labeled from bottom (rung 1: Do Nothing) to top (rung 8: Eliminate Choice). Each rung is a colored horizontal bar — color transitions from green (bottom, low coercion) to red (top, high coercion). Rungs are clickable. On click, a side panel displays: (1) rung name and number, (2) a brief definition, (3) a concrete public health example, (4) the level of liberty restriction (low/medium/high), and (5) a justification threshold note. A \"Reset\" button clears the panel. A coercion-o-meter gauge on the right side animates to show increasing restriction as higher rungs are selected. Ladder labels align left of the rungs. Side panel is right of the ladder. Responsive to container width."
+}

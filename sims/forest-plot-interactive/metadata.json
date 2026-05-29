@@ -1,0 +1,21 @@
+{
+  "title": "Interactive Forest Plot",
+  "description": "Students can read a forest plot, identify each study's contribution (effect size, CI, weight), recognize the pooled estimate diamond, and interpret heterogeneity statistics.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "forest-plot-interactive",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "interpret",
+  "completion_status": "scaffold",
+  "chapter_number": 5,
+  "chapter_title": "\"Biostatistics: Regression and Advanced Methods\"",
+  "chapter_dir": "05-biostatistics-regression"
+}

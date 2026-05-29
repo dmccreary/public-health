@@ -1,0 +1,14 @@
+{
+  "sim_id": "haddon-matrix",
+  "diagram_name": "Haddon Matrix Builder",
+  "chapter_number": 13,
+  "chapter_title": "\"Prevention Science\"",
+  "chapter_dir": "13-prevention-science",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** haddon-matrix<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nInteractive 3×3 Haddon Matrix grid. A dropdown lets users select an injury scenario (motor vehicle crash, drowning, fall in elderly, firearm injury, opioid overdose). Clicking each cell of the matrix reveals two example interventions appropriate for that phase/factor combination. A color gradient highlights which cells have strong evidence (green), moderate evidence (yellow), or emerging/limited evidence (gray). A summary panel below the grid shows the total intervention count by phase, illustrating that most injury prevention investment historically went to the event phase (passive protection) while pre-event and post-event cells are often underutilized."
+}

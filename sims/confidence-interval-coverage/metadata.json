@@ -1,0 +1,21 @@
+{
+  "title": "Confidence Interval Coverage from Repeated Sampling",
+  "description": "Students can explain what \"95% confidence\" means by observing that approximately 5% of 95% CIs from repeated random samples fail to contain the true population mean.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "confidence-interval-coverage",
+  "library": "Chart.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "explain",
+  "completion_status": "scaffold",
+  "chapter_number": 4,
+  "chapter_title": "\"Biostatistics: Statistical Foundations\"",
+  "chapter_dir": "04-biostatistics-foundations"
+}

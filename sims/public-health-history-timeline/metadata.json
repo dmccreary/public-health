@@ -1,0 +1,21 @@
+{
+  "title": "Key Milestones in Public Health History",
+  "description": "Students can identify at least six pivotal events in public health history and explain what conceptual shift or institutional development each represented.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "public-health-history-timeline",
+  "library": "vis-timeline",
+  "bloomLevel": "Remember (L1)",
+  "bloomVerb": "identify",
+  "completion_status": "scaffold",
+  "chapter_number": 1,
+  "chapter_title": "Public Health Foundations",
+  "chapter_dir": "01-foundations"
+}

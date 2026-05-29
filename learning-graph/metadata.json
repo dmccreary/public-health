@@ -1,0 +1,10 @@
+{
+  "title": "Introduction to Public Health",
+  "description": "An interactive intelligent textbook covering core public health concepts, competencies, and frameworks as defined by CEPH, CDC, and WHO, spanning epidemiology, biostatistics, environmental health, health policy, systems thinking, data science, and COVID-19 case studies.",
+  "creator": "Dan McCreary",
+  "date": "2026-05-28",
+  "version": "1.0",
+  "format": "Learning Graph JSON v1.0",
+  "schema": "https://raw.githubusercontent.com/dmccreary/learning-graphs/refs/heads/main/src/schema/learning-graph-schema.json",
+  "license": "CC BY-NC-SA 4.0 DEED"
+}

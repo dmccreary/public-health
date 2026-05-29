@@ -1,0 +1,21 @@
+{
+  "title": "Incidence vs. Prevalence Explorer",
+  "description": "Apply (L3) the relationship between incidence rate, disease duration, and prevalence proportion by adjusting simulation parameters and observing how the prevalence pool fills and drains.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "incidence-prevalence-explorer",
+  "library": "p5.js",
+  "bloomLevel": "Apply — learners manipulate incidence rate and duration sliders and predict how prevalence changes, then verify their prediction against the simulation output.",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 2,
+  "chapter_title": "\"Epidemiology: Disease Measurement\"",
+  "chapter_dir": "02-epidemiology-disease-measurement"
+}

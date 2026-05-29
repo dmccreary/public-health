@@ -1,0 +1,14 @@
+{
+  "sim_id": "health-belief-model",
+  "diagram_name": "Health Belief Model — Interactive Concept Map",
+  "chapter_number": 7,
+  "chapter_title": "\"Social and Behavioral Health\"",
+  "chapter_dir": "07-social-behavioral-health",
+  "library": "vis-network",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** health-belief-model<br/>\n**Library:** vis-network<br/>\n**Status:** Specified\n\nA vis-network directed graph showing the Health Belief Model. Central node: \"Health Protective Behavior\" (large, dark teal). Nodes feeding into it: \"Perceived Susceptibility\" (blue), \"Perceived Severity\" (blue), \"Perceived Benefits\" (green), \"Perceived Barriers\" (orange, with a minus-sign edge indicating it reduces likelihood), \"Self-Efficacy\" (purple), \"Cue to Action\" (yellow). A \"Modifying Factors\" node (gray) connects via dashed edges to the four perceptual nodes. Clicking any node opens a side panel with: (1) the construct's one-sentence definition, (2) an example from COVID-19 vaccine uptake, (3) an example from physical activity behavior. Edges are labeled with their relationship type (\"increases\", \"reduces\", \"triggers\"). Layout is force-directed with the central node anchored. A reset-view button restores default layout."
+}

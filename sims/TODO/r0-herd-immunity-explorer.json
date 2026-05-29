@@ -1,0 +1,14 @@
+{
+  "sim_id": "r0-herd-immunity-explorer",
+  "diagram_name": "R₀ and Herd Immunity Explorer",
+  "chapter_number": 3,
+  "chapter_title": "\"Epidemiology: Study Design and Causal Inference\"",
+  "chapter_dir": "03-epidemiology-study-design",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "Apply (L3) the relationship between R₀ and the herd immunity threshold by adjusting R₀ values for different pathogens and calculating the required vaccination coverage.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** r0-herd-immunity-explorer<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning objective: Apply (L3) the relationship between R₀ and the herd immunity threshold by adjusting R₀ values for different pathogens and calculating the required vaccination coverage.\n\nCanvas layout:\n- Left (60%): main drawing area with branching tree showing transmission chains from one index case\n- Right (40%): control panel and numeric displays\n\nDrawing area:\n- Show 3 generations of transmission from one index case (index case to R₀ secondaries to R₀-squared tertiaries)\n- Circle nodes: susceptible (white), infected (red), immune (gray, with X mark)\n- When immunity proportion slider moves, randomly gray out that proportion of nodes across all generations\n- Highlight Rₜ = R₀ × (1 - immunity proportion) in real time\n\nInteractive controls:\n- Slider: R₀ (1.0 to 18.0, step 0.1). Preset buttons for: Seasonal Flu (1.3), COVID-19 original (3.0), COVID-19 Omicron (12.0), Measles (15.0)\n- Slider: Current immune proportion (0% to 100%)\n- Display: R₀ value, HIT = 1 - 1/R₀, Current Rₜ, Status (Growing / Declining)\n\nStatus display:\n- When Rₜ > 1.0: status bar shown in red, text \"Epidemic growing\"\n- When Rₜ = 1.0: yellow, \"Endemic equilibrium\"\n- When Rₜ < 1.0: green, \"Epidemic declining\"\n\nFormula panel: shows HIT formula and Rₜ = R₀ × S with current numbers substituted.\n\nResponsive: updateCanvasSize() called in setup(). Canvas scales to container width.\n\nInstructional rationale: Parameter exploration is appropriate for this Apply/L3 objective — learners must manipulate R₀ and vaccination coverage to find the HIT, reinforcing the mathematical relationship through discovery rather than observation."
+}

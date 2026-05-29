@@ -1,0 +1,14 @@
+{
+  "sim_id": "dshea-regulatory-gap",
+  "diagram_name": "Pharmaceutical vs. Supplement Pre-Market Requirements",
+  "chapter_number": 20,
+  "chapter_title": "\"Health Fraud, Nutritional Misinformation, and the Supplement Industry\"",
+  "chapter_dir": "20-health-fraud-misinformation",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** dshea-regulatory-gap<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nSide-by-side interactive comparison diagram. Left panel: \"Pharmaceutical Drug Path to Market\" — vertical flowchart with clickable steps: Preclinical Research → Phase I Safety Trial → Phase II Efficacy Trial → Phase III Large-Scale Trial → FDA NDA Review → Approval → Post-Market Surveillance. Each step shows typical cost range and duration. Right panel: \"Dietary Supplement Path to Market\" — vertical flowchart with clickable steps: Formulate Product → Manufacturer Self-Certifies Safety → Submit 75-Day New Dietary Ingredient Notification (if new ingredient only) → Market Product → FDA Monitors Post-Market Complaints. Steps that are required for drugs but not supplements are highlighted in orange with label \"NOT REQUIRED for supplements.\" Clicking any step on either side shows a popup with 2–3 sentences describing what that step involves and what protection it provides (or what gap exists). Bottom panel shows a comparison summary: average drug approval timeline (~12 years), average supplement time to market (~months). Canvas: 800×480px."
+}

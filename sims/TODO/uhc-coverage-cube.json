@@ -1,0 +1,14 @@
+{
+  "sim_id": "uhc-coverage-cube",
+  "diagram_name": "Universal Health Coverage Cube",
+  "chapter_number": 9,
+  "chapter_title": "\"Global Health\"",
+  "chapter_dir": "09-global-health",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** uhc-coverage-cube<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nThree-dimensional wireframe cube rendered in 2.5D perspective (isometric projection) representing the WHO UHC three-dimension model. The three axes are: Population covered (Who — from 0% to 100% of population), Services included (What — from narrow emergency care to comprehensive care), and Direct costs (How much — from 100% out-of-pocket to fully subsidized). An interactive slider controls the size of the shaded volume representing current coverage; the default fills roughly 50% of the cube to represent a middle-income country. Three buttons cycle through preset country profiles: \"Low-income country,\" \"Middle-income country,\" and \"High-income country,\" each adjusting the shaded volume dimensions. Clicking any face of the cube opens an annotation panel explaining that dimension (population coverage, service range, financial protection). A tooltip on hover shows the numerical value for the selected country profile on each axis."
+}

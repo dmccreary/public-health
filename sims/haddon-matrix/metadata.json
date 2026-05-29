@@ -1,0 +1,21 @@
+{
+  "title": "Haddon Matrix Builder",
+  "description": "Haddon Matrix Builder",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "haddon-matrix",
+  "library": "p5.js",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 13,
+  "chapter_title": "\"Prevention Science\"",
+  "chapter_dir": "13-prevention-science"
+}

@@ -1,0 +1,21 @@
+{
+  "title": "Health Belief Model — Interactive Concept Map",
+  "description": "Health Belief Model — Interactive Concept Map",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "health-belief-model",
+  "library": "vis-network",
+  "bloomLevel": "TBD",
+  "bloomVerb": "TBD",
+  "completion_status": "scaffold",
+  "chapter_number": 7,
+  "chapter_title": "\"Social and Behavioral Health\"",
+  "chapter_dir": "07-social-behavioral-health"
+}

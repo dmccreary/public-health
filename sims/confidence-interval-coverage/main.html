@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Confidence Interval Coverage from Repeated Sampling</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { width: 100%; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #ffffff;
+            color: #212529;
+        }
+        main {
+            width: 100%;
+            padding: 8px 12px 12px 12px;
+        }
+        h1 {
+            font-size: 16px;
+            color: #1a3a6c;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+        #chart-wrap {
+            position: relative;
+            width: 100%;
+            height: 480px;
+        }
+        #controls {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0 4px 0;
+            font-size: 13px;
+        }
+        #controls label { font-weight: 600; color: #495057; }
+        #controls button {
+            background: #1a3a6c; color: white; border: none;
+            padding: 6px 12px; border-radius: 4px; cursor: pointer; font-size: 13px;
+        }
+        #controls button:hover { background: #2a5a9c; }
+        #controls select, #controls input[type=range] { vertical-align: middle; }
+        #coverage {
+            font-weight: 600; color: #1a3a6c; padding: 4px 8px;
+            background: #eaf4ff; border-radius: 4px;
+        }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Confidence Interval Coverage from Repeated Sampling</h1>
+    <div id="chart-wrap"><canvas id="ciChart"></canvas></div>
+    <div id="controls">
+        <button id="redraw">Draw New Samples</button>
+        <label>Confidence:
+            <select id="conf">
+                <option value="0.90">90%</option>
+                <option value="0.95" selected>95%</option>
+                <option value="0.99">99%</option>
+            </select>
+        </label>
+        <label>Sample size n:
+            <select id="nSize">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30" selected>30</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+        </label>
+        <span id="coverage">— of 50 CIs contain the true mean</span>
+    </div>
+</main>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+<script src="confidence-interval-coverage.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "sim_id": "covid-excess-mortality",
+  "diagram_name": "COVID-19 Excess Mortality by Demographic Group",
+  "chapter_number": 19,
+  "chapter_title": "\"COVID-19 as a Public Health Master Case Study\"",
+  "chapter_dir": "19-covid-case-study",
+  "library": "Chart.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** covid-excess-mortality<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nInteractive grouped bar chart showing COVID-19 excess mortality rates per 100,000 population, broken out by age group (18–44, 45–64, 65–74, 75–84, 85+) and by race/ethnicity (White non-Hispanic, Black non-Hispanic, Hispanic, Asian, American Indian/Alaska Native). Data period: 2020–2022 US CDC estimates. Hovering over any bar displays: (1) excess mortality rate per 100,000, (2) 95% confidence interval, (3) ratio compared to White non-Hispanic baseline in that age group. Toggle buttons at top allow switching between \"By Age Group\" and \"By Race/Ethnicity\" views. Color palette is accessibility-safe. Source citation shown below chart. Note in chart description states: \"These data reflect documented disparities in mortality burden. They are presented to support evidence-based understanding of structural inequity, not for comparison of population value.\""
+}

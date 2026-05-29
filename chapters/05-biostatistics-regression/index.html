@@ -1,0 +1,2211 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Regression methods for public health including linear, logistic, Poisson, and Cox models; survival analysis; meta-analysis and systematic review methods; multiple comparisons, missing data, interrupted time-series, and excess mortality estimation.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/public-health/chapters/05-biostatistics-regression/">
+      
+      
+        <link rel="prev" href="../04-biostatistics-foundations/">
+      
+      
+        <link rel="next" href="../06-environmental-health/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Biostatistics: Regression and Advanced Methods - Introduction to Public Health</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Biostatistics: Regression and Advanced Methods - Introduction to Public Health">
+      
+        <meta property="og:description" content="Regression methods for public health including linear, logistic, Poisson, and Cox models; survival analysis; meta-analysis and systematic review methods; multiple comparisons, missing data, interrupted time-series, and excess mortality estimation.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/05-biostatistics-regression/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/public-health/chapters/05-biostatistics-regression/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Biostatistics: Regression and Advanced Methods - Introduction to Public Health">
+      
+        <meta name="twitter:description" content="Regression methods for public health including linear, logistic, Poisson, and Cox models; survival analysis; meta-analysis and systematic review methods; multiple comparisons, missing data, interrupted time-series, and excess mortality estimation.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/05-biostatistics-regression/index.png">
+      
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#biostatistics-regression-and-advanced-methods" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Public Health" class="md-header__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Public Health
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Biostatistics: Regression and Advanced Methods
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Public Health" class="md-nav__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Introduction to Public Health
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-epidemiology-disease-measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Epi - Disease Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../03-epidemiology-study-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    3. Epi - Study Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-biostatistics-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Biostatistics - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    5. Biostatistics - Regression
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    5. Biostatistics - Regression
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression-models-and-when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regression Models and When to Use Each
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regression Models and When to Use Each">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Regression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logistic-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logistic Regression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poisson-regression-for-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poisson Regression for Rates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cox-proportional-hazards-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cox Proportional Hazards Regression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#survival-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Survival Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Survival Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-kaplan-meier-survival-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Kaplan-Meier Survival Curve
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Kaplan-Meier Survival Curve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-kaplan-meier-survival-curve-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Kaplan-Meier Survival Curve Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synthesizing-evidence-meta-analysis-and-systematic-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synthesizing Evidence: Meta-Analysis and Systematic Reviews
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Synthesizing Evidence: Meta-Analysis and Systematic Reviews">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-analysis-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta-Analysis Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forest-plot-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forest Plot Interpretation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forest Plot Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-forest-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Forest Plot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heterogeneity-in-meta-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heterogeneity in Meta-Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytical Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytical Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-comparisons-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Comparisons Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standardization-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standardization Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-data-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Data Mechanisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-imputation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Imputation Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensitivity-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensitivity Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applied-methods-interrupted-time-series-and-excess-mortality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applied Methods: Interrupted Time-Series and Excess Mortality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applied Methods: Interrupted Time-Series and Excess Mortality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interrupted-time-series-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interrupted Time-Series Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interrupted Time-Series Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interrupted-time-series-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interrupted Time-Series Analysis Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excess-mortality-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excess Mortality Estimation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-environmental-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Environmental Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-social-behavioral-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Social and Behavioral Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-health-policy-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Health Policy and Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-global-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Global Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-health-equity-sdoh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Health Equity and SDOH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-public-health-ethics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Public Health Ethics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-public-health-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Public Health Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-prevention-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Prevention Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-systems-thinking-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Systems Thinking - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-systems-thinking-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Systems Thinking - Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-science-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Science - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-science-advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Science - Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-simulation-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Simulation Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-covid-case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. COVID-19 Case Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fraud-misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Health Fraud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#regression-models-and-when-to-use-each" class="md-nav__link">
+    <span class="md-ellipsis">
+      Regression Models and When to Use Each
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Regression Models and When to Use Each">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linear Regression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#logistic-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Logistic Regression
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#poisson-regression-for-rates" class="md-nav__link">
+    <span class="md-ellipsis">
+      Poisson Regression for Rates
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cox-proportional-hazards-regression" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cox Proportional Hazards Regression
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#survival-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Survival Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Survival Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#the-kaplan-meier-survival-curve" class="md-nav__link">
+    <span class="md-ellipsis">
+      The Kaplan-Meier Survival Curve
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="The Kaplan-Meier Survival Curve">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-kaplan-meier-survival-curve-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Kaplan-Meier Survival Curve Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#synthesizing-evidence-meta-analysis-and-systematic-reviews" class="md-nav__link">
+    <span class="md-ellipsis">
+      Synthesizing Evidence: Meta-Analysis and Systematic Reviews
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Synthesizing Evidence: Meta-Analysis and Systematic Reviews">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#meta-analysis-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Meta-Analysis Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forest-plot-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forest Plot Interpretation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Forest Plot Interpretation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interactive-forest-plot" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interactive Forest Plot
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#heterogeneity-in-meta-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Heterogeneity in Meta-Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#analytical-challenges" class="md-nav__link">
+    <span class="md-ellipsis">
+      Analytical Challenges
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Analytical Challenges">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multiple-comparisons-problem" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Comparisons Problem
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#standardization-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Standardization Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#missing-data-mechanisms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Missing Data Mechanisms
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#multiple-imputation-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multiple Imputation Methods
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sensitivity-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sensitivity Analysis
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#applied-methods-interrupted-time-series-and-excess-mortality" class="md-nav__link">
+    <span class="md-ellipsis">
+      Applied Methods: Interrupted Time-Series and Excess Mortality
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Applied Methods: Interrupted Time-Series and Excess Mortality">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interrupted-time-series-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Interrupted Time-Series Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Interrupted Time-Series Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-interrupted-time-series-analysis-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Interrupted Time-Series Analysis Workflow
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#excess-mortality-estimation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Excess Mortality Estimation
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#further-reading" class="md-nav__link">
+    <span class="md-ellipsis">
+      Further Reading
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/public-health/blob/main/docs/chapters/05-biostatistics-regression/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="biostatistics-regression-and-advanced-methods">Biostatistics: Regression and Advanced Methods<a class="headerlink" href="#biostatistics-regression-and-advanced-methods" title="Permanent link">¶</a></h1>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<p>This chapter extends biostatistical foundations into the regression and advanced analysis methods that dominate the public health research literature. Students learn to match regression type to data structure — continuous outcomes → linear; binary → logistic; count rates → Poisson; time-to-event → Cox — interpret survival curves, pool evidence across studies through meta-analysis, and handle the common analytical challenges of multiple comparisons, missing data, interrupted time series for policy evaluation, and excess mortality estimation.</p>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../02-epidemiology-disease-measurement/">Chapter 2: Epidemiology: Disease Measurement</a></li>
+<li><a href="../03-epidemiology-study-design/">Chapter 3: Epidemiology: Study Design and Causal Inference</a></li>
+<li><a href="../04-biostatistics-foundations/">Chapter 4: Biostatistics: Statistical Foundations</a></li>
+</ul>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
+<p>This chapter covers the following 15 concepts from the learning graph:</p>
+<ol>
+<li>Linear Regression</li>
+<li>Logistic Regression</li>
+<li>Poisson Regression for Rates</li>
+<li>Cox Proportional Hazards</li>
+<li>Kaplan-Meier Survival Curve</li>
+<li>Meta-Analysis Methods</li>
+<li>Forest Plot Interpretation</li>
+<li>Heterogeneity in Meta-Analysis</li>
+<li>Multiple Comparisons Problem</li>
+<li>Standardization Methods</li>
+<li>Missing Data Mechanisms</li>
+<li>Multiple Imputation Methods</li>
+<li>Interrupted Time-Series Analysis</li>
+<li>Excess Mortality Estimation</li>
+<li>Sensitivity Analysis Stats</li>
+</ol>
+<hr>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From Single Numbers to Models</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Sage waves welcome">
+Chapter 4 gave you the vocabulary of individual statistical tests. This chapter gives you the grammar — the multivariate regression and advanced analytical methods that let public health researchers model complex relationships, control for confounders, synthesize evidence across dozens of studies, and evaluate the population-level effects of policies. Every major public health finding you have ever read — a vaccine efficacy number, a hazard ratio from a survival study, a pooled effect size from a meta-analysis — emerged from one of the methods in this chapter. <em>What does the evidence show?</em> This chapter teaches you how those numbers are built.</p>
+</div>
+<hr>
+<h2 id="regression-models-and-when-to-use-each">Regression Models and When to Use Each<a class="headerlink" href="#regression-models-and-when-to-use-each" title="Permanent link">¶</a></h2>
+<p>Regression analysis is the foundational tool for examining associations between an outcome and one or more predictor variables while accounting for other covariates. The choice of regression model is determined primarily by the nature of the outcome variable. Using the wrong regression model is a footgun: the analysis runs without errors, the output looks plausible, and the estimates are systematically biased in ways that may not be obvious from the residual plots.</p>
+<p>The four regression models covered in this chapter — linear, logistic, Poisson, and Cox — share a common mathematical structure: the <strong>generalized linear model (GLM)</strong> framework, in which a <em>link function</em> connects the linear predictor to the expected outcome. Each model uses a different link function matched to the distributional family of the outcome.</p>
+<h3 id="linear-regression">Linear Regression<a class="headerlink" href="#linear-regression" title="Permanent link">¶</a></h3>
+<p><strong>Linear regression</strong> models a continuous, approximately normally distributed outcome as a linear function of predictor variables. The multiple linear regression equation is:</p>
+<div class="arithmatex">\[
+Y_i = \beta_0 + \beta_1 X_{1i} + \beta_2 X_{2i} + \cdots + \beta_p X_{pi} + \varepsilon_i
+\]</div>
+<p>Where <span class="arithmatex">\( Y_i \)</span> is the outcome for individual i, <span class="arithmatex">\( \beta_0 \)</span> is the intercept, <span class="arithmatex">\( \beta_j \)</span> are slope coefficients for each predictor <span class="arithmatex">\( X_j \)</span>, and <span class="arithmatex">\( \varepsilon_i \)</span> is the residual error term assumed to be normally distributed with mean 0 and constant variance.</p>
+<p>The coefficient <span class="arithmatex">\( \beta_j \)</span> is interpreted as the expected change in Y for a one-unit increase in <span class="arithmatex">\( X_j \)</span>, holding all other predictors constant. This "holding constant" operation is how regression controls for confounders — a major advantage over simple bivariate comparisons.</p>
+<p>Key assumptions of linear regression: linearity between predictors and outcome; independence of observations; constant residual variance (homoscedasticity); normally distributed residuals (especially important for small samples); and no severe multicollinearity among predictors. Residual diagnostic plots (residuals vs. fitted values, Q-Q plots) are always required before trusting model output.</p>
+<p>Public health applications include: modeling the association between air pollution concentration and systolic blood pressure; predicting hospital length of stay from patient characteristics; estimating the dose-response relationship between sodium intake and blood pressure change.</p>
+<h3 id="logistic-regression">Logistic Regression<a class="headerlink" href="#logistic-regression" title="Permanent link">¶</a></h3>
+<p><strong>Logistic regression</strong> is used when the outcome is binary — disease/no disease, died/survived, vaccinated/unvaccinated. Because probabilities are bounded between 0 and 1, ordinary linear regression is inappropriate (it can predict probabilities outside [0,1] and assumes constant additive effects that are unrealistic for binary outcomes). Logistic regression uses the <strong>logit link function</strong>, modeling the log-odds of the outcome:</p>
+<div class="arithmatex">\[
+\log\left(\frac{P(Y=1)}{1-P(Y=1)}\right) = \beta_0 + \beta_1 X_1 + \beta_2 X_2 + \cdots
+\]</div>
+<p>Exponentiating a logistic regression coefficient gives the <strong>odds ratio (OR)</strong>: <span class="arithmatex">\( e^{\beta_j} \)</span> is the OR for the outcome associated with a one-unit increase in <span class="arithmatex">\( X_j \)</span>, holding other predictors constant. For rare outcomes (disease prevalence &lt; 10%), the OR approximates the relative risk; for common outcomes, OR and RR diverge substantially, and interpreting ORs as if they were RRs overstates the association — a common error in the published literature.</p>
+<p>Logistic regression assumptions: the log-odds of the outcome has a linear relationship with continuous predictors; observations are independent; there is no severe multicollinearity. Unlike linear regression, residuals from logistic regression are not normally distributed, so model fit is assessed through the Hosmer-Lemeshow test, calibration curves, and discrimination metrics (area under the ROC curve, C-statistic).</p>
+<p>Public health applications include: modeling the probability of COVID-19 hospitalization as a function of age, vaccination status, and comorbidities; estimating the odds of low birth weight as a function of maternal smoking and prenatal care; identifying predictors of obesity in national survey data.</p>
+<h3 id="poisson-regression-for-rates">Poisson Regression for Rates<a class="headerlink" href="#poisson-regression-for-rates" title="Permanent link">¶</a></h3>
+<p>When the outcome is a <strong>count</strong> — number of cases, number of deaths, number of hospitalizations — and it follows a Poisson distribution, <strong>Poisson regression</strong> is the appropriate model. Poisson regression models the log of the expected count as a linear function of predictors:</p>
+<div class="arithmatex">\[
+\log(E[Y_i]) = \beta_0 + \beta_1 X_{1i} + \cdots + \log(t_i)
+\]</div>
+<p>The <span class="arithmatex">\( \log(t_i) \)</span> term is an <strong>offset</strong> — a covariate with coefficient fixed at 1 that converts a count model into a rate model. Including <span class="arithmatex">\( \log(\text{person-time}) \)</span> as an offset allows the model to compare incidence rates across groups with different amounts of follow-up time. Exponentiating a Poisson regression coefficient gives the <strong>incidence rate ratio (IRR)</strong>: the expected multiplicative change in the rate per one-unit increase in the predictor.</p>
+<p>A critical assumption is that the variance equals the mean (equidispersion). In most real public health datasets, count outcomes are <strong>overdispersed</strong>: the observed variance exceeds the mean, violating the Poisson assumption. Symptoms of overdispersion include inflated coefficient standard errors and poor model fit. Remedies include the <strong>negative binomial regression model</strong> (which adds a dispersion parameter) or using robust "sandwich" standard errors. Using standard Poisson regression on overdispersed data is another footgun: the point estimates are unbiased, but the standard errors are too small, producing falsely narrow confidence intervals and p-values that are too small.</p>
+<p>Public health applications include: modeling influenza case counts by week adjusting for population size and vaccination coverage; estimating injury rates per work-hour by industry sector; analyzing cancer mortality rates across counties after controlling for age distribution.</p>
+<h3 id="cox-proportional-hazards-regression">Cox Proportional Hazards Regression<a class="headerlink" href="#cox-proportional-hazards-regression" title="Permanent link">¶</a></h3>
+<p>When the outcome is <strong>time to an event</strong> — time to death, time to disease onset, time to hospital discharge — the appropriate regression model is the <strong>Cox proportional hazards model</strong>. Survival outcomes require specialized methods because of <strong>censoring</strong>: some participants have not experienced the event by the end of the study period, so their exact event time is unknown but their follow-up time provides partial information.</p>
+<p>The Cox model estimates the <strong>hazard ratio (HR)</strong> — the multiplicative effect of a predictor on the instantaneous rate of event occurrence at any given time:</p>
+<div class="arithmatex">\[
+h(t | X) = h_0(t) \cdot e^{\beta_1 X_1 + \beta_2 X_2 + \cdots}
+\]</div>
+<p>Where <span class="arithmatex">\( h_0(t) \)</span> is the baseline hazard function (the hazard when all predictors are 0), and the exponential term scales the baseline hazard multiplicatively based on the predictors. Crucially, the Cox model does not assume any specific shape for <span class="arithmatex">\( h_0(t) \)</span> — it is estimated nonparametrically from the data — making it a <strong>semi-parametric</strong> method. This flexibility is why the Cox model is by far the most commonly used survival regression in the medical and public health literature.</p>
+<p>The <strong>proportional hazards assumption</strong> — that the hazard ratio between any two groups remains constant over time — must be verified. Violations (for example, where the treatment benefit decreases over time as populations age differentially) require time-varying covariate models or stratified Cox models.</p>
+<p>The table below synthesizes the regression selection framework for all four models. All four models have been described in full above; this table serves as a reference summary for matching data structure to method.</p>
+<table>
+<thead>
+<tr>
+<th>Outcome Type</th>
+<th>Link Function</th>
+<th>Model</th>
+<th>Key Output</th>
+<th>Public Health Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Continuous (normal)</td>
+<td>Identity</td>
+<td><strong>Linear Regression</strong></td>
+<td>β coefficient (mean difference)</td>
+<td>Blood pressure change per SD of salt intake</td>
+</tr>
+<tr>
+<td>Binary (0/1)</td>
+<td>Logit</td>
+<td><strong>Logistic Regression</strong></td>
+<td>Odds Ratio (e^β)</td>
+<td>OR of hospitalization by vaccination status</td>
+</tr>
+<tr>
+<td>Count / rate (Poisson)</td>
+<td>Log + offset</td>
+<td><strong>Poisson Regression</strong></td>
+<td>Incidence Rate Ratio (e^β)</td>
+<td>Weekly influenza rate ratio by county</td>
+</tr>
+<tr>
+<td>Time-to-event (survival)</td>
+<td>Log (semi-parametric)</td>
+<td><strong>Cox Proportional Hazards</strong></td>
+<td>Hazard Ratio (e^β)</td>
+<td>HR of mortality by smoking status</td>
+</tr>
+</tbody>
+</table>
+<h2 id="survival-analysis">Survival Analysis<a class="headerlink" href="#survival-analysis" title="Permanent link">¶</a></h2>
+<h3 id="the-kaplan-meier-survival-curve">The Kaplan-Meier Survival Curve<a class="headerlink" href="#the-kaplan-meier-survival-curve" title="Permanent link">¶</a></h3>
+<p>Before fitting the Cox regression model, analysts typically <strong>describe</strong> survival data graphically using the <strong>Kaplan-Meier (KM) survival curve</strong> — a nonparametric estimate of the probability of surviving (or remaining event-free) past each observed event time.</p>
+<p>The KM estimator is computed as:</p>
+<div class="arithmatex">\[
+\hat{S}(t) = \prod_{t_i \leq t} \left(1 - \frac{d_i}{n_i}\right)
+\]</div>
+<p>Where at each event time <span class="arithmatex">\( t_i \)</span>, <span class="arithmatex">\( d_i \)</span> individuals experience the event and <span class="arithmatex">\( n_i \)</span> are at risk (still alive and uncensored). The KM curve is a step function that drops at each event time; censored observations are often shown as tick marks on the curve.</p>
+<p>The <strong>log-rank test</strong> is the standard nonparametric test for comparing two or more KM curves. It tests whether the survival functions differ significantly across groups by comparing observed and expected numbers of events at each event time, assuming the null hypothesis that the survival curves are identical. For comparing survival by multiple categorical groups (for example, treatment arm, disease stage, vaccine type), the log-rank test is the appropriate starting point before formal Cox regression.</p>
+<p>Interpreting KM curves requires attention to:</p>
+<ul>
+<li><strong>Crossing curves</strong> — curves that cross early suggest non-proportional hazards, violating the key assumption of the log-rank test and Cox model</li>
+<li><strong>Tail behavior</strong> — survival estimates become unreliable when few individuals remain at risk, typically shown by widening confidence bands</li>
+<li><strong>Median survival</strong> — the time at which the estimated survival probability crosses 50%; reported when the outcome of interest is time-to-death or time-to-recovery</li>
+</ul>
+<p>The interactive explorer below allows you to examine Kaplan-Meier curves for two comparison groups with adjustable parameters, observe the effect of censoring, and run the log-rank test.</p>
+<h4 id="diagram-kaplan-meier-survival-curve-explorer">Diagram: Kaplan-Meier Survival Curve Explorer<a class="headerlink" href="#diagram-kaplan-meier-survival-curve-explorer" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/kaplan-meier-explorer/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Kaplan-Meier Survival Curve Explorer — Interactive MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> kaplan-meier-explorer<br>
+<strong>Library:</strong> Chart.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Analyze (L4)
+Bloom Verb: compare
+Learning Objective: Students can interpret a Kaplan-Meier survival curve, identify median survival for each group, recognize the effect of censoring, and interpret the log-rank test result comparing two groups.</p>
+<p>Purpose: Provide an interactive survival curve visualization that makes key interpretation concepts (step function, censoring tick marks, group comparison, log-rank test) explicit and manipulable.</p>
+<p>Layout: Main canvas area (top 70%): Chart.js line chart showing two KM step-function curves — Group A (teal) and Group B (orange), with 95% confidence band shading. Tick marks indicate censored observations. Dashed horizontal line at survival = 0.5 with vertical drop lines to the x-axis marking median survival for each group. Bottom 30%: controls and output panel.</p>
+<p>Controls:
+- Group A median survival slider: range 6 to 60 months, step 1, default 24 months. Changes the simulated event distribution for Group A.
+- Group B median survival slider: range 6 to 60 months, step 1, default 36 months.
+- Censoring rate slider: range 0% to 50%, step 5%, default 20%. Adds censored observations (tick marks) to both curves.
+- Sample size per group: 20, 50, 100, 200 (dropdown). Larger n narrows the confidence bands.
+- "Draw New Simulation" button: redraws curves with fresh random samples using current parameters.</p>
+<p>Output panel (updates live):
+- Group A median survival (months) with 95% CI
+- Group B median survival (months) with 95% CI
+- Log-rank test statistic and p-value
+- Plain-language interpretation: "Group A has significantly longer survival than Group B (p = 0.02)." or "No significant difference in survival between groups (p = 0.31)."</p>
+<p>Interactive behavior:
+- Hovering a point on either curve: shows tooltip with time, estimated survival probability, number at risk, and number of events to that point.
+- Checkbox: "Show confidence bands" — toggles shaded 95% CI around each curve.
+- Checkbox: "Show number at risk table" — shows a small table below the x-axis with n at risk at 0, 6, 12, 24, 36 months for each group.</p>
+<p>Visual style: Clean Chart.js style; teal = Group A, orange = Group B; confidence bands semi-transparent; step-function curves; tick marks for censored observations.</p>
+<p>Canvas: Responsive full container width, 500px height.</p>
+<p>Instructional Rationale: Adjusting median survival and censoring rate in real time builds direct intuition for how censoring affects curve shape and how the log-rank test responds to the magnitude of group differences and sample size.</p>
+</details>
+<h2 id="synthesizing-evidence-meta-analysis-and-systematic-reviews">Synthesizing Evidence: Meta-Analysis and Systematic Reviews<a class="headerlink" href="#synthesizing-evidence-meta-analysis-and-systematic-reviews" title="Permanent link">¶</a></h2>
+<h3 id="meta-analysis-methods">Meta-Analysis Methods<a class="headerlink" href="#meta-analysis-methods" title="Permanent link">¶</a></h3>
+<p>Individual studies are rarely large enough to provide definitive evidence on their own, and the results of multiple studies addressing the same question often differ. <strong>Meta-analysis</strong> is a set of statistical methods for quantitatively synthesizing the results of two or more independent studies addressing the same research question, producing a single pooled effect size estimate.</p>
+<p>The standard meta-analysis procedure involves:</p>
+<ol>
+<li><strong>Systematic search and selection</strong> — identifying all studies meeting pre-specified eligibility criteria, documented in a PRISMA flow diagram</li>
+<li><strong>Data extraction</strong> — recording the effect size and its standard error (or CI) from each study</li>
+<li><strong>Pooling</strong> — computing a weighted average of effect sizes, where weights reflect the precision of each study</li>
+<li><strong>Assessing heterogeneity</strong> — testing whether the studies estimate a common effect or whether their true effects vary</li>
+</ol>
+<p>The two fundamental meta-analysis models are:</p>
+<ul>
+<li><strong>Fixed-effects model</strong>: assumes all studies estimate the same underlying true effect size, and that observed differences reflect only sampling error. Studies are weighted by the inverse of their variance (larger, more precise studies get more weight). Appropriate when studies are closely similar in population, intervention, and outcome.</li>
+<li><strong>Random-effects model</strong> (DerSimonian-Laird): assumes that the true effect size varies across studies due to genuine differences in population, dose, follow-up, or context. Adds a between-study variance component <span class="arithmatex">\( \tau^2 \)</span> to the weights. Produces wider CIs than fixed-effects models, reflecting the additional uncertainty from between-study heterogeneity. More commonly appropriate in public health where studies differ meaningfully in design.</li>
+</ul>
+<p>The pooled effect size from a random-effects model is the estimated mean of the distribution of true effects across similar studies — a statement about the average effect that can be expected in a new, similar study.</p>
+<h3 id="forest-plot-interpretation">Forest Plot Interpretation<a class="headerlink" href="#forest-plot-interpretation" title="Permanent link">¶</a></h3>
+<p>The standard display for meta-analysis results is the <strong>forest plot</strong> — a graphical summary showing the effect size and confidence interval for each individual study alongside the pooled estimate. Reading a forest plot:</p>
+<ul>
+<li>Each horizontal line represents one study. The center point (square) is the study's effect size; the width of the line represents the 95% CI; the area of the square is proportional to the study's statistical weight.</li>
+<li>The vertical reference line typically marks the null value (OR = 1.0 for odds ratios, mean difference = 0 for continuous outcomes). Studies whose CI crosses this line have non-significant individual findings.</li>
+<li>The <strong>diamond</strong> at the bottom represents the pooled estimate. Its horizontal width is the 95% CI of the pooled effect. A diamond that does not cross the null line indicates a statistically significant pooled result.</li>
+<li>Below the diamond: the pooled effect size with CI, the test of overall effect (Z-statistic and p-value), and the heterogeneity statistics.</li>
+</ul>
+<p>The interactive forest plot below demonstrates how to read individual study contributions, identify outliers, and interpret the pooled estimate across a simulated meta-analysis.</p>
+<h4 id="diagram-interactive-forest-plot">Diagram: Interactive Forest Plot<a class="headerlink" href="#diagram-interactive-forest-plot" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/forest-plot-interactive/main.html" width="100%" height="520px" scrolling="no"></iframe>
+
+<details>
+<summary>Interactive Forest Plot — MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> forest-plot-interactive<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Analyze (L4)
+Bloom Verb: interpret
+Learning Objective: Students can read a forest plot, identify each study's contribution (effect size, CI, weight), recognize the pooled estimate diamond, and interpret heterogeneity statistics.</p>
+<p>Purpose: Teach forest plot literacy — the ability to extract information from the most common summary graphic in systematic review literature — through direct interaction with each component.</p>
+<p>Layout: Classic forest plot layout. Left column (30%): study names and year (8–12 simulated studies). Center area (50%): horizontal lines with squares. Right column (20%): numerical summary (OR, 95% CI, weight %). Bottom row: diamond for pooled estimate, heterogeneity statistics (I², τ², Cochran's Q, p for heterogeneity).</p>
+<p>Simulated studies: 10 hypothetical studies with plausible ORs ranging from ~0.5 to ~2.5, varying sample sizes (n = 50 to 2000), and corresponding CIs. Weights vary with precision. True pooled OR approximately 1.25.</p>
+<p>Interactive features:
+- Hovering any study row: that row highlights (background turns light yellow), and an info panel on the right side of the canvas shows: study name, year, n, OR, 95% CI, weight, and a one-sentence description of the simulated study design.
+- Hovering the diamond: info panel shows pooled OR, 95% CI, Z-statistic, and p-value in plain language: "The pooled odds ratio of X.XX (95% CI Y–Z) suggests a moderate positive association. The result is statistically significant (p = 0.01)."
+- Toggle button "Fixed Effects / Random Effects": switches between fixed-effects and random-effects pooling. The diamond position and width change; weights update. A note appears: "Random-effects model used because I² &gt; 50%."
+- Heterogeneity panel: shows I² (the percentage of total variation attributable to between-study differences, rather than chance), τ², and Cochran's Q p-value, with traffic-light color coding: I² &lt; 25% = green (low heterogeneity), 25–75% = yellow (moderate), &gt; 75% = red (high).</p>
+<p>Visual style: Classic forest plot aesthetic. Black squares (size proportional to weight), horizontal CI lines, vertical null line (OR = 1.0 in red), diamond in teal. Column headers at top: Study, OR (95% CI), Weight.</p>
+<p>Canvas: Responsive full container width, 520px height.</p>
+<p>Instructional Rationale: Forest plots are the single most important graphic in evidence synthesis, and students cannot learn to read them from a static textbook image. Hovering each study row to see its details connects the visual element to its meaning, while the fixed/random toggle demonstrates why heterogeneity changes the pooled estimate.</p>
+</details>
+<h3 id="heterogeneity-in-meta-analysis">Heterogeneity in Meta-Analysis<a class="headerlink" href="#heterogeneity-in-meta-analysis" title="Permanent link">¶</a></h3>
+<p><strong>Heterogeneity</strong> in meta-analysis refers to genuine variability in effect sizes across studies, beyond what is expected from sampling error alone. It is quantified by:</p>
+<ul>
+<li><strong>Cochran's Q</strong>: tests whether observed variation exceeds what is expected by chance. Significant Q (p &lt; 0.10 conventionally) suggests real between-study differences. Low power limits its utility in small meta-analyses.</li>
+<li><strong>I²</strong>: the percentage of total variance attributable to between-study heterogeneity. Ranges 0–100%: values of 0–25% are typically "low," 25–75% are "moderate," and &gt;75% are "high." I² is more interpretable than Q because it does not depend on the number of studies.</li>
+<li><strong>τ²</strong>: the estimated between-study variance. Used to quantify the absolute magnitude of heterogeneity on the effect size scale.</li>
+</ul>
+<p>High heterogeneity calls for <strong>subgroup analyses</strong> and <strong>meta-regression</strong> to explain it. For example, if a pooled OR for a vaccine's efficacy shows I² = 70%, analysts might examine whether trials in high-income versus low-income countries, or those using different adjuvants, explain the variation. Unexplained high heterogeneity weakens the clinical and policy utility of the pooled estimate — a single number may misrepresent a genuinely heterogeneous literature.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">Why do two studies of the same intervention produce such different results?</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Sage holds clipboard and looks thoughtful">
+Real-world studies differ in population age and comorbidity profiles, intervention dose and duration, length of follow-up, concomitant treatments, background disease prevalence, and measurement instruments. All of these create genuine differences in the true effect — what epidemiologists call "clinical heterogeneity" and "methodological heterogeneity." Statistical heterogeneity (high I²) is usually a symptom of these underlying differences, not a problem in itself. The solution is not to average everything together and report a single number; it is to investigate <em>why</em> the effects differ and report the distribution of effects across contexts, not just the mean.</p>
+</div>
+<h2 id="analytical-challenges">Analytical Challenges<a class="headerlink" href="#analytical-challenges" title="Permanent link">¶</a></h2>
+<h3 id="multiple-comparisons-problem">Multiple Comparisons Problem<a class="headerlink" href="#multiple-comparisons-problem" title="Permanent link">¶</a></h3>
+<p>The <strong>multiple comparisons problem</strong> arises when a study performs many hypothesis tests simultaneously. With each test set at α = 0.05, the probability of at least one false positive among k independent tests is <span class="arithmatex">\( 1 - (1 - 0.05)^k \)</span>. For k = 20 tests, the probability of at least one false positive exceeds 64% even when every null hypothesis is true. This is why analyses of large genomic datasets or metabolomic screens routinely produce dozens of "significant" associations that fail to replicate.</p>
+<p>Solutions include:</p>
+<ul>
+<li><strong>Bonferroni correction</strong>: divide α by the number of tests (α* = 0.05/k). The most conservative approach; appropriate when the family of tests is small and independence is approximately met.</li>
+<li><strong>False Discovery Rate (FDR) control</strong> (Benjamini-Hochberg procedure): controls the expected proportion of rejected hypotheses that are false positives, rather than the probability of any false positive. Less conservative than Bonferroni and preferred for large exploratory analyses.</li>
+<li><strong>Pre-specification</strong>: pre-registering the primary outcome and analysis plan before data collection eliminates post-hoc p-hacking and eliminates the need for correction because the number of pre-specified tests is small and justified.</li>
+</ul>
+<p>In public health surveillance and outbreak investigations, multiple comparisons arise when testing for geographic, temporal, or demographic clusters. Spatial scan statistics (SaTScan) use permutation-based methods to correct for the many possible window sizes and locations tested.</p>
+<h3 id="standardization-methods">Standardization Methods<a class="headerlink" href="#standardization-methods" title="Permanent link">¶</a></h3>
+<p>When comparing mortality rates or disease rates across populations with different age distributions, raw rates are misleading. Older populations have higher mortality simply because of their age structure, not because their healthcare is worse. <strong>Standardization methods</strong> remove the effect of confounders like age, sex, or race from rate comparisons.</p>
+<p><strong>Direct standardization</strong> applies the age-specific rates from each population to a common standard population (for example, the 2000 US census population), computing a weighted average rate as if both populations had the same age structure. The resulting <strong>age-standardized rate</strong> reflects each population's true risk experience independent of its demographic composition.</p>
+<p><strong>Indirect standardization</strong> applies the age-specific rates from a reference population to the study population's actual age distribution, computing the expected number of events. The <strong>Standardized Mortality Ratio (SMR)</strong> is the observed deaths divided by expected deaths:</p>
+<div class="arithmatex">\[
+SMR = \frac{\text{Observed deaths}}{\text{Expected deaths}}
+\]</div>
+<p>An SMR &gt; 1 indicates excess mortality in the study population compared to the reference; SMR &lt; 1 indicates lower mortality. Indirect standardization is used when age-specific rates in the study population are unreliable due to small numbers — a common situation in occupational epidemiology where industry-specific disease rates are compared to general population rates.</p>
+<h3 id="missing-data-mechanisms">Missing Data Mechanisms<a class="headerlink" href="#missing-data-mechanisms" title="Permanent link">¶</a></h3>
+<p>Nearly every public health dataset has missing values. The appropriate analytical response depends entirely on the <strong>mechanism</strong> by which data are missing — a classification that determines whether missingness is ignorable (safe to work around) or informative (potentially biasing).</p>
+<p>Three missing data mechanisms are recognized:</p>
+<ul>
+<li><strong>Missing Completely at Random (MCAR)</strong>: the probability of a value being missing is unrelated to both the observed and unobserved data. Rare in practice; complete-case analysis (deleting rows with any missing values) produces unbiased estimates when MCAR holds, though it reduces power.</li>
+<li><strong>Missing at Random (MAR)</strong>: the probability of missingness depends on observed variables in the dataset but not on the unobserved value itself, conditional on those observed variables. Example: older participants are more likely to skip a survey item about digital health use, but conditional on age, the missing values are random. MAR is the standard assumption under which modern imputation methods are valid.</li>
+<li><strong>Missing Not at Random (MNAR)</strong>: the probability of missingness depends on the missing value itself. Example: participants with high alcohol consumption are more likely to skip questions about alcohol intake. MNAR is the most problematic mechanism; standard imputation methods are biased, and sensitivity analyses are required to bound the conclusions.</li>
+</ul>
+<p>The table below defines all three mechanisms and their analytical consequences. Each has been described above; the table provides a direct comparison.</p>
+<table>
+<thead>
+<tr>
+<th>Mechanism</th>
+<th>Definition</th>
+<th>Missing Depends On</th>
+<th>Complete-Case Analysis</th>
+<th>Imputation Valid?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>MCAR</strong></td>
+<td>Missing completely at random</td>
+<td>Neither observed nor missing data</td>
+<td>Unbiased (reduced power)</td>
+<td>Yes, but unnecessary</td>
+</tr>
+<tr>
+<td><strong>MAR</strong></td>
+<td>Missing at random</td>
+<td>Observed data only</td>
+<td>Biased if missingness related to outcome</td>
+<td>Yes (multiple imputation)</td>
+</tr>
+<tr>
+<td><strong>MNAR</strong></td>
+<td>Missing not at random</td>
+<td>The missing value itself</td>
+<td>Biased</td>
+<td>No — requires sensitivity analysis</td>
+</tr>
+</tbody>
+</table>
+<h3 id="multiple-imputation-methods">Multiple Imputation Methods<a class="headerlink" href="#multiple-imputation-methods" title="Permanent link">¶</a></h3>
+<p><strong>Multiple imputation (MI)</strong> is the recommended method for handling missing data when MAR is plausible. The procedure has three stages:</p>
+<ol>
+<li><strong>Imputation</strong>: create M complete datasets (typically M = 5–20) by replacing each missing value with a draw from the predictive distribution of that value given all observed data in the dataset. Each imputed dataset is slightly different because the imputed values are random draws, not single point estimates.</li>
+<li><strong>Analysis</strong>: run the substantive statistical analysis (regression, t-test, etc.) independently on each of the M complete datasets, obtaining M sets of results.</li>
+<li><strong>Pooling</strong> (Rubin's Rules): combine the M analyses by averaging the point estimates; the standard errors incorporate both within-imputation variability and between-imputation variability (which captures uncertainty about the true missing values).</li>
+</ol>
+<p>Multiple imputation produces unbiased estimates and correctly calibrated standard errors when the MAR assumption holds and the imputation model includes all relevant predictors of the missing data mechanism and the outcome. A common error is to include only the predictors from the substantive model in the imputation — the imputation model should be richer, including the outcome variable and any auxiliary variables correlated with missingness.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Never use single imputation (mean imputation) in a research analysis.</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Sage holds up a cautionary claw">
+Mean imputation — replacing all missing values with the variable's observed mean — produces biased standard errors regardless of the missing data mechanism. It artificially reduces the variance of the imputed variable (because all missing values are set to the same number), producing standard errors that are too small and p-values that are too significant. It also distorts the correlation structure between variables. Mean imputation is easy to implement and silently destroys the calibration of every statistical test that uses the imputed variable. Use multiple imputation. The software overhead is modest and the difference in validity is substantial.</p>
+</div>
+<h3 id="sensitivity-analysis">Sensitivity Analysis<a class="headerlink" href="#sensitivity-analysis" title="Permanent link">¶</a></h3>
+<p><strong>Sensitivity analysis</strong> in statistics refers to a family of methods that test how robust a study's conclusions are to specific analytical assumptions. A result is robust if its direction and magnitude are preserved across plausible variations in model specification, covariate inclusion, and data handling.</p>
+<p>Common forms of sensitivity analysis in public health research include:</p>
+<ul>
+<li><strong>Assumption sensitivity</strong>: fitting alternative model specifications (for example, a Poisson regression instead of a negative binomial) and checking whether conclusions change</li>
+<li><strong>E-value analysis</strong>: calculating the minimum strength of association an unmeasured confounder would need to have with both exposure and outcome to explain away the observed association completely — a standardized way to assess unmeasured confounding</li>
+<li><strong>Tipping-point analysis for missing data</strong>: determining what proportion of missing values, if they all had the opposite outcome, would change the study conclusion from significant to non-significant</li>
+<li><strong>Influential observations analysis</strong>: identifying specific observations whose removal would substantially change model estimates (Cook's distance, DFBETAS)</li>
+</ul>
+<p>A study that reports only primary analysis results and no sensitivity analyses is a study whose results the reader cannot fully trust. The absence of sensitivity analyses does not mean the findings are wrong — it means the robustness of the findings is unknown.</p>
+<h2 id="applied-methods-interrupted-time-series-and-excess-mortality">Applied Methods: Interrupted Time-Series and Excess Mortality<a class="headerlink" href="#applied-methods-interrupted-time-series-and-excess-mortality" title="Permanent link">¶</a></h2>
+<h3 id="interrupted-time-series-analysis">Interrupted Time-Series Analysis<a class="headerlink" href="#interrupted-time-series-analysis" title="Permanent link">¶</a></h3>
+<p>When a policy intervention or exposure event is applied to an entire population at a known point in time, a <strong>randomized controlled trial is impossible</strong> — there is only one policy, one country, one time. The <strong>interrupted time-series (ITS) analysis</strong> is the most rigorous quasi-experimental design available in this situation. It uses the pre-intervention time series as the counterfactual (what outcomes would have looked like had the intervention not occurred) to estimate the intervention's impact on the level and slope of the outcome trend.</p>
+<p>The standard ITS segmented regression model is:</p>
+<div class="arithmatex">\[
+Y_t = \beta_0 + \beta_1 \cdot \text{Time}_t + \beta_2 \cdot \text{Intervention}_t + \beta_3 \cdot (\text{Time}_t \times \text{Intervention}_t) + \varepsilon_t
+\]</div>
+<p>Where:</p>
+<ul>
+<li><span class="arithmatex">\( \beta_0 \)</span>: baseline level at time 0</li>
+<li><span class="arithmatex">\( \beta_1 \)</span>: pre-intervention slope (underlying trend)</li>
+<li><span class="arithmatex">\( \beta_2 \)</span>: immediate change in level at the intervention point</li>
+<li><span class="arithmatex">\( \beta_3 \)</span>: change in slope after the intervention (difference between post- and pre-intervention slopes)</li>
+</ul>
+<p>Public health examples of ITS applications include: evaluating the effect of indoor smoking bans on heart attack admissions (Scotland's 2006 smoking ban reduced acute myocardial infarction admissions by 17% in the first year); assessing the impact of sugar-sweetened beverage taxes on purchasing behavior; measuring the effect of opioid prescribing guidelines on dispensing rates.</p>
+<p>Threats to ITS validity include: <strong>co-interventions</strong> (other changes occurring simultaneously that could explain the trend change); <strong>autocorrelation</strong> in the time series (consecutive time points are correlated, violating the independence assumption of ordinary least squares); <strong>secular trends</strong> (pre-existing trends that could produce apparent effects regardless of the intervention). Correcting for autocorrelation using ARIMA models or Newey-West standard errors is standard practice.</p>
+<p>The diagram below illustrates the ITS workflow from data assembly through interpretation, making each analytical step and decision point interactive.</p>
+<h4 id="diagram-interrupted-time-series-analysis-workflow">Diagram: Interrupted Time-Series Analysis Workflow<a class="headerlink" href="#diagram-interrupted-time-series-analysis-workflow" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/its-analysis-workflow/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Interrupted Time-Series Workflow — Interactive Diagram</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> its-analysis-workflow<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Bloom Level: Apply (L3)
+Bloom Verb: apply
+Learning Objective: Students can describe each step of an interrupted time-series analysis, identify the four regression coefficients and their interpretations, and recognize threats to validity such as co-interventions and autocorrelation.</p>
+<p>Purpose: Make the ITS analytical workflow concrete and navigable through a clickable step-by-step diagram with embedded visualizations at each step.</p>
+<p>Layout: Vertical flowchart of 6 steps on the left 40% of canvas. Each step is a rounded rectangle node with a step number, short title, and brief description. On click, the right 60% updates with:
+- Step 1 "Assemble time series data": a scatter plot showing monthly outcome data over 36 months, with the intervention point marked as a vertical red dashed line
+- Step 2 "Fit pre-intervention trend": same scatter plot with a linear regression line for the pre-intervention period only
+- Step 3 "Extend counterfactual": the pre-intervention trend line projected forward past the intervention as a dashed line (what would have happened without intervention)
+- Step 4 "Fit ITS segmented regression": both segments fitted with solid lines; coefficients β0, β1, β2, β3 labeled with arrows and plain-language interpretations
+- Step 5 "Check autocorrelation": autocorrelation function (ACF) plot of residuals; note about Durbin-Watson test
+- Step 6 "Interpret and report": table showing β0–β3 estimates, SEs, p-values, and a two-sentence plain-language interpretation of the intervention's level and slope effects</p>
+<p>Step nodes:
+1. Assemble Time Series Data
+2. Fit Pre-Intervention Trend
+3. Extend the Counterfactual Trend
+4. Fit Segmented Regression (Level + Slope Change)
+5. Check Autocorrelation in Residuals
+6. Interpret Level Change (β2) and Slope Change (β3)</p>
+<p>Active node (most recently clicked): teal fill, white text. Inactive nodes: light gray fill, dark text. Arrows between nodes: dark gray.</p>
+<p>Simulated dataset: 36 monthly observations; pre-intervention (months 1–18) with gentle upward trend; intervention at month 18; post-intervention period (months 19–36) with lower level and steeper downward slope. Outcome: "Monthly acute myocardial infarction admissions per 100,000."</p>
+<p>Canvas: Responsive full container width, 500px height.</p>
+<p>Instructional Rationale: ITS analysis is difficult to teach with equations alone because the visual logic of segmented regression — the gap at the intervention point and the slope change — is more intuitive than the algebra. Walking through the workflow step by step with the visualization updating at each step builds procedural understanding that transfers to evaluating published ITS studies.</p>
+</details>
+<h3 id="excess-mortality-estimation">Excess Mortality Estimation<a class="headerlink" href="#excess-mortality-estimation" title="Permanent link">¶</a></h3>
+<p><strong>Excess mortality</strong> is the difference between observed deaths during a period of crisis and the number of deaths that would have been expected in the absence of that crisis, based on historical trends. It has become one of the most important tools for estimating the total mortality burden of major events — pandemics, extreme weather events, wars — that affect reporting systems themselves, often producing systematic undercounts of cause-specific deaths.</p>
+<p>The general framework is:</p>
+<div class="arithmatex">\[
+\text{Excess Deaths} = \text{Observed Deaths} - \text{Expected Deaths}
+\]</div>
+<p>Expected deaths are estimated from historical data (typically 5 years preceding the crisis), accounting for long-term trends, seasonality, and population growth. Methods range from simple averaging of historical weekly deaths to sophisticated time-series models (Poisson regression with spline terms for trend and seasonal sine-cosine terms for cyclical patterns).</p>
+<p>During the COVID-19 pandemic, excess mortality became critical because cause-specific COVID-19 death counts were systematically undercounted (through incomplete testing, reporting delays, and miscoding). National excess mortality estimates from the Economist and the Institute for Health Metrics and Evaluation (IHME) suggested global COVID-19 excess deaths of 15–21 million through 2021 — three to four times the official COVID-19 death count. In countries with weak vital registration systems, excess mortality may be the only reliable estimate of pandemic mortality.</p>
+<p>Beyond pandemics, excess mortality estimation is used to quantify deaths from heat waves (the 2003 European heat wave killed an estimated 70,000 more than baseline, far exceeding initial counts), air quality episodes (the 2018 California Camp Fire produced measurable excess cardiovascular mortality beyond direct fire deaths), and the healthcare disruption effects of crises on non-COVID mortality.</p>
+<p>Uncertainty quantification is essential in excess mortality work. Prediction intervals around the expected baseline — not just point estimates — determine whether observed deaths are statistically distinguishable from normal variation. A week with 200 observed deaths versus an expected 190 may fall well within the prediction interval; 200 versus an expected 150 with a tight prediction interval represents genuine excess.</p>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
+<p>This chapter has extended the statistical toolkit from foundational tests to the multivariate, synthesis, and applied methods that power modern public health research:</p>
+<ul>
+<li><strong>Linear regression</strong> models continuous outcomes and estimates mean differences; <strong>logistic regression</strong> models binary outcomes and estimates odds ratios; <strong>Poisson regression</strong> models count rates and estimates incidence rate ratios; <strong>Cox regression</strong> models time-to-event outcomes and estimates hazard ratios. Match the model to the outcome type.</li>
+<li><strong>Kaplan-Meier curves</strong> describe survival data nonparametrically; the <strong>log-rank test</strong> compares survival functions between groups; the <strong>Cox model</strong> estimates the multivariate-adjusted hazard ratio.</li>
+<li><strong>Meta-analysis</strong> pools effect sizes across studies; the <strong>forest plot</strong> displays individual and pooled results; <strong>heterogeneity</strong> (I²) quantifies whether studies estimate a common effect or a distribution of effects.</li>
+<li>The <strong>multiple comparisons problem</strong> inflates Type I error when many tests are performed; Bonferroni correction and FDR control are standard remedies.</li>
+<li><strong>Standardization</strong> (direct and indirect, producing SMRs) removes demographic confounding from rate comparisons across populations.</li>
+<li><strong>Missing data mechanisms</strong> (MCAR, MAR, MNAR) determine appropriate analytical responses; <strong>multiple imputation</strong> is the recommended approach when MAR holds.</li>
+<li><strong>Interrupted time-series analysis</strong> is the leading quasi-experimental design for evaluating population-level policy impacts when RCTs are impossible.</li>
+<li><strong>Excess mortality</strong> estimates total crisis mortality by comparing observed deaths to modeled baselines, correcting for systematic undercount of cause-specific deaths.</li>
+<li><strong>Sensitivity analyses</strong> are required in any rigorous publication to test the robustness of conclusions to key assumptions.</li>
+</ul>
+<details class="question">
+<summary>Self-Check: Can you match the method to the question? — Click to check your answers</summary>
+<p><strong>Question 1:</strong> A study measures time from HIV diagnosis to AIDS-defining illness in patients on two antiretroviral regimens. What analysis? → Cox proportional hazards regression (time-to-event outcome with censoring); supplement with Kaplan-Meier curves and log-rank test.</p>
+<p><strong>Question 2:</strong> A systematic review of 15 RCTs finds I² = 72% for the pooled OR of a vaccine's efficacy. What does this mean? → High heterogeneity — 72% of variance in effect sizes is between studies, not within. A single pooled estimate is misleading; subgroup analyses or meta-regression are needed to explain the variation.</p>
+<p><strong>Question 3:</strong> A dataset on emergency department visits has 18% missing values for insurance status. Analysts delete rows with missing values. Under what condition is this unbiased? → Only if insurance status is MCAR — the probability of it being missing is unrelated to both the observed and missing data. Under MAR or MNAR, complete-case analysis is biased.</p>
+<p><strong>Question 4:</strong> A city evaluates a new bicycle safety ordinance using monthly injury counts. The policy was implemented citywide overnight. What design? → Interrupted time-series analysis. Pre-intervention counts establish the counterfactual trend; the ITS segmented regression estimates the level change (β2) and slope change (β3).</p>
+<p><strong>Question 5:</strong> A county's crude mortality rate is higher than a neighboring county, but its age-standardized rate is lower. What explains this? → The first county has an older population. Direct age-standardization removes the confounding effect of age structure, revealing that the age-specific mortality rates in the first county are actually lower.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 5 complete — you can now build and evaluate the evidence.</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Sage raises a wing in celebration">
+You have now completed the two-chapter biostatistics sequence that underpins virtually every quantitative finding in public health. Regression models, survival analysis, meta-analysis, missing data, interrupted time-series, excess mortality — these are the methods behind the headlines, the policy recommendations, and the clinical guidelines. The next chapters apply these tools to specific domains: environmental health, social and behavioral sciences, health policy, and global health. Every association you will encounter there — every OR, HR, pooled RR, and excess death estimate — was produced by methods you now understand. <em>Let's look at the data together.</em></p>
+</div>
+<hr>
+<h2 id="further-reading">Further Reading<a class="headerlink" href="#further-reading" title="Permanent link">¶</a></h2>
+<ul>
+<li>Hosmer, D. W., Lemeshow, S., &amp; Sturdivant, R. X. (2013). <em>Applied Logistic Regression</em> (3rd ed.). Wiley.</li>
+<li>Borenstein, M., Hedges, L. V., Higgins, J. P. T., &amp; Rothstein, H. R. (2021). <em>Introduction to Meta-Analysis</em> (2nd ed.). Wiley.</li>
+<li>Sterne, J. A. C., et al. (2009). Multiple imputation for missing data in epidemiological and clinical research. <em>BMJ</em>, 338, b2393.</li>
+<li>Kontopantelis, E., Doran, T., Springate, D. A., Buchan, I., &amp; Reeves, D. (2015). Regression based quasi-experimental approach when randomisation is not an option. <em>BMJ</em>, 350, h2750.</li>
+<li>Excess mortality during the COVID-19 pandemic: Economist Intelligence Unit. (2021). The pandemic's true death toll. <em>The Economist</em>. economist.com/graphic-detail/coronavirus-excess-deaths</li>
+</ul>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../04-biostatistics-foundations/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 4. Biostatistics - Foundations">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                4. Biostatistics - Foundations
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../06-environmental-health/" class="md-footer__link md-footer__link--next" aria-label="Next: 6. Environmental Health">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                6. Environmental Health
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

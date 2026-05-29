@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="schema" content="https://dmccreary.github.io/intelligent-textbooks/ns/microsim/v1">
+    <title>Key Milestones in Public Health History</title>
+    <script src="https://unpkg.com/vis-timeline@7.7.3/standalone/umd/vis-timeline-graph2d.min.js"></script>
+    <link href="https://unpkg.com/vis-timeline@7.7.3/styles/vis-timeline-graph2d.min.css" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #fff; color: #212529; }
+        main { padding: 8px 12px; }
+        h1 { font-size: 16px; color: #1a3a6c; text-align: center; margin-bottom: 4px; }
+        #filters { display: flex; justify-content: center; gap: 6px; margin-bottom: 6px; flex-wrap: wrap; }
+        #filters button {
+            background: #e9ecef; color: #495057; border: 1px solid #ced4da;
+            padding: 4px 10px; font-size: 11.5px; border-radius: 12px; cursor: pointer;
+        }
+        #filters button.active { background: #1a3a6c; color: white; border-color: #1a3a6c; }
+        #row { display: flex; gap: 10px; }
+        #tl { flex: 1; border: 1px solid #dee2e6; border-radius: 4px; }
+        #panel {
+            flex: 0 0 30%; padding: 10px; font-size: 12.5px; line-height: 1.45;
+            background: #f4f7fb; border-radius: 4px; border-left: 4px solid #1a3a6c;
+            max-height: 360px; overflow-y: auto;
+        }
+        #panel h3 { font-size: 13.5px; color: #1a3a6c; margin-bottom: 4px; }
+        #panel .tag {
+            display: inline-block; font-size: 10.5px; padding: 1px 6px;
+            border-radius: 8px; background: #1a3a6c; color: white;
+            margin-top: 4px;
+        }
+        /* Era-tinted timeline items */
+        .vis-item.era-san  { background-color: #d7c4a3; border-color: #8d6e3b; color: #3a2a14; }
+        .vis-item.era-germ { background-color: #bbdefb; border-color: #1976d2; color: #0d2c4d; }
+        .vis-item.era-inst { background-color: #80cbc4; border-color: #00695c; color: #003832; }
+        .vis-item.era-evid { background-color: #a5d6a7; border-color: #2e7d32; color: #14361a; }
+        .vis-item { font-size: 11px; padding: 2px 4px; }
+        #legend {
+            font-size: 11px; color: #555; text-align: center; margin-top: 4px;
+        }
+        #legend span { display: inline-block; padding: 1px 8px; margin: 0 4px; border-radius: 8px; }
+        #legend .era-san  { background:#d7c4a3; color:#3a2a14; }
+        #legend .era-germ { background:#bbdefb; color:#0d2c4d; }
+        #legend .era-inst { background:#80cbc4; color:#003832; }
+        #legend .era-evid { background:#a5d6a7; color:#14361a; }
+    </style>
+</head>
+<body>
+<main>
+    <h1>Key Milestones in Public Health History (1750–2010)</h1>
+    <div id="filters">
+        <button data-cat="all" class="active">All</button>
+        <button data-cat="Epidemiology">Epidemiology</button>
+        <button data-cat="Sanitation">Sanitation</button>
+        <button data-cat="Institutions">Institutions</button>
+        <button data-cat="Vaccines">Vaccines</button>
+        <button data-cat="Policy">Policy</button>
+    </div>
+    <div id="row">
+        <div id="tl" style="height: 320px;"></div>
+        <div id="panel">
+            <h3>Click any milestone.</h3>
+            <p>Each marker is a turning point — a discovery, a law, an
+            institution. The era colors track how the field's
+            framing changed across two and a half centuries.</p>
+        </div>
+    </div>
+    <div id="legend">
+        <span class="era-san">Sanitation era (1750–1870)</span>
+        <span class="era-germ">Germ-theory era (1870–1930)</span>
+        <span class="era-inst">Institutional era (1930–1980)</span>
+        <span class="era-evid">Evidence-based era (1980–)</span>
+    </div>
+</main>
+<script src="public-health-history-timeline.js"></script>
+</body>
+</html>

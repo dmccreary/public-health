@@ -1,0 +1,14 @@
+{
+  "sim_id": "health-disparities-bar-chart",
+  "diagram_name": "Life Expectancy and Infant Mortality by Race and Income",
+  "chapter_number": 10,
+  "chapter_title": "\"Health Equity and Social Determinants of Health\"",
+  "chapter_dir": "10-health-equity-sdoh",
+  "library": "Chart.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** health-disparities-bar-chart<br/>\n**Library:** Chart.js<br/>\n**Status:** Specified\n\nGrouped bar chart with two panels side-by-side. Panel 1 (Life Expectancy): grouped bars showing life expectancy at birth for white, Black, Hispanic, and Asian Americans for years 2010, 2015, 2019, and 2021, with COVID dip visible. Panel 2 (Infant Mortality): grouped bars for white and Black Americans 2000–2021, showing the persistent 2:1 ratio. Both panels have a dropdown to switch between \"By Race\" and \"By Income Quartile\" views. Tooltip shows exact values on hover. Color palette is accessible (colorblind-safe). Data sourced from CDC WONDER and NCHS. Chart title, axis labels, source attribution all rendered. Legend displayed below each chart."
+}

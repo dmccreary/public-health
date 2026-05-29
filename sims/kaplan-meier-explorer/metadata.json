@@ -1,0 +1,21 @@
+{
+  "title": "Kaplan-Meier Survival Curve Explorer",
+  "description": "Students can interpret a Kaplan-Meier survival curve, identify median survival for each group, recognize the effect of censoring, and interpret the log-rank test result comparing two groups.",
+  "creator": "Dementia Education Project",
+  "date": "2026-05-28",
+  "subject": [
+    "dementia"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY 4.0",
+  "identifier": "kaplan-meier-explorer",
+  "library": "Chart.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "compare",
+  "completion_status": "scaffold",
+  "chapter_number": 5,
+  "chapter_title": "\"Biostatistics: Regression and Advanced Methods\"",
+  "chapter_dir": "05-biostatistics-regression"
+}

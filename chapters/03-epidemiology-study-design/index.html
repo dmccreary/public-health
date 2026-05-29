@@ -1,0 +1,2150 @@
+<!DOCTYPE html><html lang="en" class="no-js"><head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Threats to validity including bias and confounding, surveillance system design, outbreak investigation methods, epidemic dynamics including R₀ and herd immunity, and screening test performance metrics.">
+      
+      
+        <meta name="author" content="Dan McCreary">
+      
+      
+        <link rel="canonical" href="https://dmccreary.github.io/public-health/chapters/03-epidemiology-study-design/">
+      
+      
+        <link rel="prev" href="../02-epidemiology-disease-measurement/">
+      
+      
+        <link rel="next" href="../04-biostatistics-foundations/">
+      
+      
+      <link rel="icon" href="../../img/favicon.ico">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.43">
+    
+    
+      
+        <title>Epidemiology: Study Design and Causal Inference - Introduction to Public Health</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.0253249f.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&amp;display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/extra.css">
+    
+      <link rel="stylesheet" href="../../css/mascot.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+      
+        <meta property="og:type" content="website">
+      
+        <meta property="og:title" content="Epidemiology: Study Design and Causal Inference - Introduction to Public Health">
+      
+        <meta property="og:description" content="Threats to validity including bias and confounding, surveillance system design, outbreak investigation methods, epidemic dynamics including R₀ and herd immunity, and screening test performance metrics.">
+      
+        <meta property="og:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/03-epidemiology-study-design/index.png">
+      
+        <meta property="og:image:type" content="image/png">
+      
+        <meta property="og:image:width" content="1200">
+      
+        <meta property="og:image:height" content="630">
+      
+        <meta property="og:url" content="https://dmccreary.github.io/public-health/chapters/03-epidemiology-study-design/">
+      
+        <meta name="twitter:card" content="summary_large_image">
+      
+        <meta name="twitter:title" content="Epidemiology: Study Design and Causal Inference - Introduction to Public Health">
+      
+        <meta name="twitter:description" content="Threats to validity including bias and confounding, surveillance system design, outbreak investigation methods, epidemic dynamics including R₀ and herd immunity, and screening test performance metrics.">
+      
+        <meta name="twitter:image" content="https://dmccreary.github.io/public-health/assets/images/social/chapters/03-epidemiology-study-design/index.png">
+      
+    
+    
+  <link href="../../assets/stylesheets/glightbox.min.css" rel="stylesheet"><script src="../../assets/javascripts/glightbox.min.js"></script><style id="glightbox-style">
+            html.glightbox-open { overflow: initial; height: 100%; }
+            .gslide-title { margin-top: 0px; user-select: text; }
+            .gslide-desc { color: #666; user-select: text; }
+            .gslide-image img { background: white; }
+            .gscrollbar-fixer { padding-right: 15px; }
+            .gdesc-inner { font-size: 0.75rem; }
+            body[data-md-color-scheme="slate"] .gdesc-inner { background: var(--md-default-bg-color); }
+            body[data-md-color-scheme="slate"] .gslide-title { color: var(--md-default-fg-color); }
+            body[data-md-color-scheme="slate"] .gslide-desc { color: var(--md-default-fg-color); }
+        </style></head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="teal" data-md-color-accent="orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#epidemiology-study-design-and-causal-inference" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Introduction to Public Health" class="md-header__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"></path></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Introduction to Public Health
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Epidemiology: Study Design and Causal Inference
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"></path></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Share" aria-label="Share" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"></path></svg>
+          </a>
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"></path></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Introduction to Public Health" class="md-nav__button md-logo" aria-label="Introduction to Public Health" data-md-component="logo">
+      
+  <img src="../../img/mascot/neutral.png" alt="logo">
+
+    </a>
+    Introduction to Public Health
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/dmccreary/public-health" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"></path></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repo
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../about/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    About
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../course-description/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Course Description
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          
+          <div class="md-nav__link md-nav__container">
+            <a href="../" class="md-nav__link ">
+              
+  
+  <span class="md-ellipsis">
+    Chapters
+  </span>
+  
+
+            </a>
+            
+              
+              <label class="md-nav__link " for="__nav_4" id="__nav_4_label" tabindex="0">
+                <span class="md-nav__icon md-icon"></span>
+              </label>
+            
+          </div>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            Chapters
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1. Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-epidemiology-disease-measurement/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    2. Epi - Disease Measurement
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    3. Epi - Study Design
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    3. Epi - Study Design
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threats-to-validity-bias-confounding-and-effect-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threats to Validity: Bias, Confounding, and Effect Modification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Threats to Validity: Bias, Confounding, and Effect Modification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confounding-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confounding Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection Bias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Bias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effect Modification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disease-surveillance-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease Surveillance Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disease Surveillance Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passive-and-active-surveillance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passive and Active Surveillance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sentinel-syndromic-and-reportable-condition-surveillance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sentinel, Syndromic, and Reportable Condition Surveillance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outbreak-investigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outbreak Investigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outbreak Investigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-case-identification-and-epidemic-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Case Identification and Epidemic Curves
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Index Case Identification and Epidemic Curves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-epidemic-curve-shape-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Epidemic Curve Shape Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-hypothesis-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Hypothesis Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epidemic-dynamics-r0-rt-and-herd-immunity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epidemic Dynamics: R₀, Rₜ, and Herd Immunity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epidemic Dynamics: R₀, Rₜ, and Herd Immunity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r0-the-basic-reproduction-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      R₀: The Basic Reproduction Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-the-effective-reproduction-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rₜ: The Effective Reproduction Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-interval-and-generation-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serial Interval and Generation Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herd-immunity-threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herd Immunity Threshold
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herd Immunity Threshold">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-r0-and-herd-immunity-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: R₀ and Herd Immunity Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screening-test-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screening Test Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screening Test Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-screening-test-performance-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Screening Test Performance Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../04-biostatistics-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    4. Biostatistics - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../05-biostatistics-regression/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    5. Biostatistics - Regression
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../06-environmental-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    6. Environmental Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../07-social-behavioral-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    7. Social and Behavioral Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../08-health-policy-management/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    8. Health Policy and Management
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../09-global-health/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    9. Global Health
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../10-health-equity-sdoh/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    10. Health Equity and SDOH
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../11-public-health-ethics/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    11. Public Health Ethics
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../12-public-health-communication/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    12. Public Health Communication
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../13-prevention-science/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    13. Prevention Science
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../14-systems-thinking-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    14. Systems Thinking - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../15-systems-thinking-modeling/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    15. Systems Thinking - Modeling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../16-data-science-foundations/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    16. Data Science - Foundations
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../17-data-science-advanced/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    17. Data Science - Advanced
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../18-simulation-design/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    18. Simulation Design
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../19-covid-case-study/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    19. COVID-19 Case Study
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../20-health-fraud-misinformation/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    20. Health Fraud
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../learning-graph/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    Learning Graph
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+      
+        
+          
+        
+      
+        
+          
+        
+      
+    
+    
+    
+      
+        
+        
+      
+    
+    <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
+      
+        
+  
+  
+    <a href="../../sims/" class="md-nav__link">
+      
+  
+  <span class="md-ellipsis">
+    MicroSims
+  </span>
+  
+
+      
+        <span class="md-nav__icon md-icon"></span>
+      
+    </a>
+  
+
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../license/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    License
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../contact/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Contact
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#concepts-covered" class="md-nav__link">
+    <span class="md-ellipsis">
+      Concepts Covered
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#threats-to-validity-bias-confounding-and-effect-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Threats to Validity: Bias, Confounding, and Effect Modification
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Threats to Validity: Bias, Confounding, and Effect Modification">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confounding-variable" class="md-nav__link">
+    <span class="md-ellipsis">
+      Confounding Variable
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#selection-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Selection Bias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#information-bias" class="md-nav__link">
+    <span class="md-ellipsis">
+      Information Bias
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#effect-modification" class="md-nav__link">
+    <span class="md-ellipsis">
+      Effect Modification
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#disease-surveillance-systems" class="md-nav__link">
+    <span class="md-ellipsis">
+      Disease Surveillance Systems
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Disease Surveillance Systems">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passive-and-active-surveillance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Passive and Active Surveillance
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sentinel-syndromic-and-reportable-condition-surveillance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sentinel, Syndromic, and Reportable Condition Surveillance
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#outbreak-investigation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Outbreak Investigation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Outbreak Investigation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#case-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Case Definition
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#index-case-identification-and-epidemic-curves" class="md-nav__link">
+    <span class="md-ellipsis">
+      Index Case Identification and Epidemic Curves
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Index Case Identification and Epidemic Curves">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-epidemic-curve-shape-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Epidemic Curve Shape Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#source-hypothesis-testing" class="md-nav__link">
+    <span class="md-ellipsis">
+      Source Hypothesis Testing
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#epidemic-dynamics-r0-rt-and-herd-immunity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Epidemic Dynamics: R₀, Rₜ, and Herd Immunity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Epidemic Dynamics: R₀, Rₜ, and Herd Immunity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#r0-the-basic-reproduction-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      R₀: The Basic Reproduction Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rt-the-effective-reproduction-number" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rₜ: The Effective Reproduction Number
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#serial-interval-and-generation-time" class="md-nav__link">
+    <span class="md-ellipsis">
+      Serial Interval and Generation Time
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#herd-immunity-threshold" class="md-nav__link">
+    <span class="md-ellipsis">
+      Herd Immunity Threshold
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Herd Immunity Threshold">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-r0-and-herd-immunity-explorer" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: R₀ and Herd Immunity Explorer
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screening-test-performance" class="md-nav__link">
+    <span class="md-ellipsis">
+      Screening Test Performance
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Screening Test Performance">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#diagram-screening-test-performance-calculator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Diagram: Screening Test Performance Calculator
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/dmccreary/public-health/blob/main/docs/chapters/03-epidemiology-study-design/index.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"></path></svg>
+    </a>
+  
+  
+
+
+<h1 id="epidemiology-study-design-and-causal-inference">Epidemiology: Study Design and Causal Inference<a class="headerlink" href="#epidemiology-study-design-and-causal-inference" title="Permanent link">¶</a></h1>
+<div class="admonition mascot-welcome">
+<p class="admonition-title">From Measurement to Inference</p>
+<p><img src="../../img/mascot/welcome.png" class="mascot-admonition-img" alt="Sage waves welcome">
+Measuring disease accurately is necessary — but it is not sufficient. This chapter asks the harder questions: When does an observed association reflect a true relationship? How do surveillance systems detect outbreaks before they become disasters? What does it actually mean for a pathogen to be "contained"? Let's look at the data together.</p>
+</div>
+<h2 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">¶</a></h2>
+<p>This chapter extends epidemiological foundations into the critical evaluation of evidence and applied outbreak science. Students learn the three major categories of error that can corrupt an epidemiological study (confounding, selection bias, information bias), how public health surveillance systems are designed and operated, how outbreak investigations are structured from case definition to source identification, and the mathematical principles governing epidemic spread including the reproduction number and herd immunity threshold. Screening test metrics (sensitivity, specificity, predictive values) complete the chapter.</p>
+<p>This chapter builds on concepts from:</p>
+<ul>
+<li><a href="../01-foundations/">Chapter 1: Public Health Foundations</a></li>
+<li><a href="../02-epidemiology-disease-measurement/">Chapter 2: Epidemiology: Disease Measurement</a></li>
+</ul>
+<h2 id="concepts-covered">Concepts Covered<a class="headerlink" href="#concepts-covered" title="Permanent link">¶</a></h2>
+<p>This chapter covers the following 24 concepts from the learning graph:</p>
+<ol>
+<li>Confounding Variable</li>
+<li>Selection Bias</li>
+<li>Information Bias</li>
+<li>Effect Modification</li>
+<li>Surveillance System Design</li>
+<li>Passive Surveillance</li>
+<li>Active Surveillance</li>
+<li>Sentinel Surveillance</li>
+<li>Syndromic Surveillance</li>
+<li>Reportable Conditions</li>
+<li>Outbreak Investigation</li>
+<li>Case Definition</li>
+<li>Epidemic Curve</li>
+<li>Index Case Identification</li>
+<li>Source Hypothesis Testing</li>
+<li>R0 Basic Reproduction Number</li>
+<li>Effective Reproduction Rt</li>
+<li>Serial Interval</li>
+<li>Generation Time</li>
+<li>Herd Immunity Threshold</li>
+<li>Screening Sensitivity</li>
+<li>Screening Specificity</li>
+<li>Positive Predictive Value</li>
+<li>Negative Predictive Value</li>
+</ol>
+<hr>
+<h2 id="threats-to-validity-bias-confounding-and-effect-modification">Threats to Validity: Bias, Confounding, and Effect Modification<a class="headerlink" href="#threats-to-validity-bias-confounding-and-effect-modification" title="Permanent link">¶</a></h2>
+<p>An epidemiological study can produce a precise, statistically significant result that is nonetheless completely wrong. Understanding how this happens — and how to prevent it — is the core of critical appraisal. Three categories of error threaten the validity of observational studies: confounding, selection bias, and information bias. A fourth concept, effect modification, is not a form of bias but a real feature of nature that must be reported rather than removed.</p>
+<h3 id="confounding-variable">Confounding Variable<a class="headerlink" href="#confounding-variable" title="Permanent link">¶</a></h3>
+<p>A <strong>confounding variable</strong> (or confounder) is a variable that is associated with both the exposure and the outcome, is not an intermediate step on the causal pathway between them, and thereby distorts the apparent exposure-outcome relationship. The three criteria matter: if the third variable is caused by the exposure (making it a mediator or collider), adjusting for it is inappropriate and will induce bias.</p>
+<p>The classic example is the apparent association between coffee drinking and lung cancer in early studies. Coffee drinkers were more likely to smoke, and smoking causes lung cancer. Smoking was a confounder — associated with the exposure (coffee drinking) and independently causing the outcome (lung cancer). Once smoking was adjusted for, the coffee-cancer association disappeared.</p>
+<p>Confounding can be controlled in the design phase (randomization, restriction, matching) or in the analysis phase (stratification, multivariable regression, propensity score methods). The key principle: you must know about a confounder to control for it. Unknown and unmeasured confounders remain a permanent limitation of observational epidemiology.</p>
+<h3 id="selection-bias">Selection Bias<a class="headerlink" href="#selection-bias" title="Permanent link">¶</a></h3>
+<p><strong>Selection bias</strong> arises when the study participants are not representative of the target population in a way that distorts the exposure-outcome relationship. It occurs when the probability of being included in the study depends on both exposure and outcome status simultaneously. Two subtypes are especially common in public health:</p>
+<ul>
+<li>
+<p><strong>Healthy worker effect</strong>: Occupational cohort studies that use the general population as a comparison group often find that workers appear healthier than expected. Workers are, by definition, healthy enough to be employed — excluding the sickest members of the general population. This biases occupational risk estimates toward the null.</p>
+</li>
+<li>
+<p><strong>Loss to follow-up bias</strong>: In cohort studies, if participants who drop out differ from those who remain in their exposure and outcome status, the sample at follow-up no longer represents the original cohort. If sicker smokers drop out preferentially, the RR for smoking will be underestimated.</p>
+</li>
+</ul>
+<p>Selection bias is primarily a design problem and is difficult to correct in analysis. It is best prevented by careful sampling, high response rates, and retention strategies in longitudinal studies.</p>
+<h3 id="information-bias">Information Bias<a class="headerlink" href="#information-bias" title="Permanent link">¶</a></h3>
+<p><strong>Information bias</strong> (also called measurement bias or misclassification bias) arises from inaccurate measurement of exposure, outcome, or confounders. It has two subtypes:</p>
+<ul>
+<li>
+<p><strong>Differential misclassification</strong>: The misclassification is not random — it occurs at different rates in cases versus controls (or in exposed versus unexposed groups). The most common form is <strong>recall bias</strong> in case-control studies: cases who have experienced a serious illness may recall and report past exposures more thoroughly than controls, especially if they have been thinking about why they got sick. Differential misclassification can bias results in either direction.</p>
+</li>
+<li>
+<p><strong>Non-differential misclassification</strong>: The misclassification is random and occurs equally in all groups (e.g., a poorly calibrated measurement instrument used the same way for everyone). Non-differential misclassification typically biases results toward the null — it dilutes associations and makes true effects harder to detect.</p>
+</li>
+</ul>
+<p>The following table summarizes all three bias types along with effect modification:</p>
+<table>
+<thead>
+<tr>
+<th>Error Type</th>
+<th>Definition</th>
+<th>Primary Design Prevention</th>
+<th>Consequence if Unaddressed</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Confounding</td>
+<td>Third variable causes both exposure and outcome</td>
+<td>Randomization; adjustment</td>
+<td>Association may be spurious or masked</td>
+</tr>
+<tr>
+<td>Selection Bias</td>
+<td>Inclusion probability depends on E and O jointly</td>
+<td>Representative sampling; retention</td>
+<td>External or internal validity threatened</td>
+</tr>
+<tr>
+<td>Information Bias (differential)</td>
+<td>Misclassification rates differ by group</td>
+<td>Blinding; validated instruments</td>
+<td>Bias in any direction</td>
+</tr>
+<tr>
+<td>Information Bias (non-differential)</td>
+<td>Random misclassification across groups</td>
+<td>Reliable measurement</td>
+<td>Bias toward null</td>
+</tr>
+<tr>
+<td>Effect Modification</td>
+<td>True heterogeneity of effect by subgroup</td>
+<td>Report stratified estimates</td>
+<td>Pooled estimate masks important subgroup differences</td>
+</tr>
+</tbody>
+</table>
+<h3 id="effect-modification">Effect Modification<a class="headerlink" href="#effect-modification" title="Permanent link">¶</a></h3>
+<p><strong>Effect modification</strong> (also called statistical interaction) occurs when the association between an exposure and an outcome differs across levels of a third variable. This third variable is called an <strong>effect modifier</strong>. Unlike confounding, effect modification is not a bias — it reflects a real feature of biology, society, or context that should be reported, not removed.</p>
+<p>For example, the association between aspirin use and cardiovascular disease risk is modified by sex: aspirin's protective effect on stroke differs between men and women. In the COVID-19 context, age is a powerful effect modifier of the relationship between infection and mortality — the same pathogen produces very different case fatality ratios in people under 40 versus those over 80.</p>
+<p>Effect modification is assessed by calculating the measure of association separately within strata defined by the potential modifier, then testing whether the stratum-specific estimates differ meaningfully. Reporting effect modification requires reporting stratified estimates, not a single pooled estimate.</p>
+<div class="admonition mascot-thinking">
+<p class="admonition-title">What does the evidence show?</p>
+<p><img src="../../img/mascot/thinking.png" class="mascot-admonition-img" alt="Sage thinking">
+Confounding and effect modification are often confused because both involve a "third variable." The key distinction: a confounder is something you want to eliminate from the analysis (it distorts the exposure-outcome relationship); an effect modifier is something you want to report within the analysis (it reveals how the relationship changes across groups). Adjusting for an effect modifier hides scientifically important information.</p>
+</div>
+<hr>
+<h2 id="disease-surveillance-systems">Disease Surveillance Systems<a class="headerlink" href="#disease-surveillance-systems" title="Permanent link">¶</a></h2>
+<p><strong>Surveillance</strong> is defined by the CDC as the ongoing, systematic collection, analysis, interpretation, and dissemination of data about a health-related event for use in public health action. The word "ongoing" is critical — surveillance is not a one-time study but a continuous monitoring function that provides the early warning infrastructure for public health response.</p>
+<p>The design of a surveillance system involves explicit choices about five dimensions: (1) what health events to monitor, (2) who reports (clinicians, laboratories, patients), (3) when reports are required (immediately, weekly, annually), (4) how data flow (paper, electronic, passive, active), and (5) how data are analyzed and disseminated. These choices determine a system's sensitivity, timeliness, simplicity, and cost.</p>
+<h3 id="passive-and-active-surveillance">Passive and Active Surveillance<a class="headerlink" href="#passive-and-active-surveillance" title="Permanent link">¶</a></h3>
+<p><strong>Passive surveillance</strong> relies on health providers and laboratories to voluntarily report cases of specified conditions to health authorities. The reporting burden is on the reporter, not the surveillance system. Most notifiable disease surveillance in the United States is passive — providers submit reports through standard workflows, and state and local health departments aggregate and forward data to the CDC.</p>
+<p>Passive surveillance is inexpensive and scalable to a national level, but systematically undercounts disease burden. Providers may not recognize reportable conditions, may be too busy to report, or may have no easy mechanism to do so. Ascertainment rates for passive surveillance of reportable conditions often fall below 50% of true cases.</p>
+<p><strong>Active surveillance</strong> has the surveillance system proactively searching for cases, rather than waiting for reports. This may involve regular telephone calls to healthcare providers, systematic review of hospital records, or active case-finding in communities. Active surveillance is more resource-intensive but substantially more complete. It is used when complete case ascertainment is critical — during outbreak investigations, for rare but serious conditions, and for evaluation of vaccination programs.</p>
+<h3 id="sentinel-syndromic-and-reportable-condition-surveillance">Sentinel, Syndromic, and Reportable Condition Surveillance<a class="headerlink" href="#sentinel-syndromic-and-reportable-condition-surveillance" title="Permanent link">¶</a></h3>
+<p><strong>Sentinel surveillance</strong> uses a sample of strategically selected reporting sites (hospitals, clinics, laboratories) that provide detailed, high-quality data on a subset of cases, rather than trying to capture every case. The CDC's FluView system relies on a sentinel network of clinicians who report influenza-like illness (ILI) rates each week during flu season. Sentinel data sacrifice completeness for quality and speed.</p>
+<p><strong>Syndromic surveillance</strong> monitors pre-diagnosis clinical data — emergency department chief complaints, over-the-counter medication sales, nurse hotline calls, school absenteeism, or search engine query trends — to detect unusual health events before confirmed diagnoses are available. The BioSense Platform is the CDC's national syndromic surveillance system. Syndromic systems can detect unusual clustering of symptoms days before laboratory-confirmed cases appear, enabling faster outbreak response. Their primary challenge is low specificity: most unusual surges in "flu-like illness" are ordinary seasonal disease variation, not novel threats.</p>
+<p><strong>Reportable conditions</strong> (also called notifiable diseases) are a legally defined list of conditions that healthcare providers, hospitals, and laboratories are required to report to health authorities within specified timeframes. Timeframes range from immediate notification (for conditions like botulism, hemorrhagic fever, novel influenza A, plague) to weekly or monthly reporting (for conditions like gonorrhea, HIV, tuberculosis). In the United States, reportable condition lists are set by each state; the CDC requests voluntary data sharing from states through the National Notifiable Diseases Surveillance System (NNDSS).</p>
+<p>The following table compares the four surveillance types:</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Who Reports</th>
+<th>Case Completeness</th>
+<th>Speed</th>
+<th>Primary Use</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Passive</td>
+<td>Providers (voluntary)</td>
+<td>Low (&lt; 50%)</td>
+<td>Variable (days to weeks)</td>
+<td>Population-level trend monitoring</td>
+</tr>
+<tr>
+<td>Active</td>
+<td>Surveillance staff (proactive)</td>
+<td>High (&gt; 80%)</td>
+<td>Fast</td>
+<td>Outbreak investigation, program evaluation</td>
+</tr>
+<tr>
+<td>Sentinel</td>
+<td>Selected sentinel sites</td>
+<td>Sample only</td>
+<td>Fast</td>
+<td>Severity estimation, trend detection</td>
+</tr>
+<tr>
+<td>Syndromic</td>
+<td>Automated data streams</td>
+<td>Pre-diagnostic</td>
+<td>Very fast (hours)</td>
+<td>Early warning, anomaly detection</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="outbreak-investigation">Outbreak Investigation<a class="headerlink" href="#outbreak-investigation" title="Permanent link">¶</a></h2>
+<p>An outbreak is defined as a greater-than-expected number of cases of a disease in a given time and place. An <strong>epidemic</strong> is the same concept at a larger geographic scale; in common usage the terms are often interchangeable. The investigation of an outbreak follows a structured sequence that serves both the scientific goal of identifying cause and the operational goal of stopping transmission.</p>
+<h3 id="case-definition">Case Definition<a class="headerlink" href="#case-definition" title="Permanent link">¶</a></h3>
+<p>Before counting cases, investigators must agree on what a case is. A <strong>case definition</strong> specifies the clinical, laboratory, epidemiological, and temporal criteria that must be met for an individual to be counted as a case. Case definitions have two dimensions:</p>
+<ul>
+<li>
+<p><strong>Specificity/sensitivity tradeoff</strong>: A narrow case definition (requiring laboratory confirmation plus specific symptoms) is highly specific but may miss many true cases and delay identification of the outbreak source. A broad case definition (requiring only one or two symptoms in the affected time-place window) is sensitive but will include false positives.</p>
+</li>
+<li>
+<p><strong>Classification levels</strong>: Many outbreak investigations use tiered case definitions — <strong>confirmed</strong> cases (meet laboratory and clinical criteria), <strong>probable</strong> cases (clinical and epidemiological criteria without laboratory confirmation), and <strong>suspected</strong> cases (some compatible features but insufficient for confirmation).</p>
+</li>
+</ul>
+<p>Case definitions are not fixed — they may be deliberately broadened early in an investigation to ensure no cases are missed, then narrowed as the outbreak source becomes clearer.</p>
+<h3 id="index-case-identification-and-epidemic-curves">Index Case Identification and Epidemic Curves<a class="headerlink" href="#index-case-identification-and-epidemic-curves" title="Permanent link">¶</a></h3>
+<p>The <strong>index case</strong> is the first identified case of the disease in the outbreak. The index case is not necessarily the first person infected (that is the <strong>primary case</strong>) — it is simply the first case brought to public health attention. Identifying the index case and reconstructing the exposure history around that individual is often the entry point for outbreak investigation.</p>
+<p>An <strong>epidemic curve</strong> (epi curve) is a histogram that plots the number of cases by date (or time) of illness onset. The shape of an epidemic curve is one of the most diagnostic tools in outbreak investigation. Two primary shapes emerge from two transmission patterns:</p>
+<ul>
+<li>
+<p><strong>Common source, point exposure</strong>: A sharp, narrow peak followed by rapid decline, with a width approximately equal to the incubation period of the disease. Classic example: a single meal at a wedding where the potato salad was contaminated. All cases develop within one incubation period of the exposure event.</p>
+</li>
+<li>
+<p><strong>Propagated (person-to-person)</strong>: A series of successive peaks, each spaced approximately one serial interval apart, with cases increasing over multiple generations of transmission. Classic example: measles spreading through an unvaccinated school population.</p>
+</li>
+</ul>
+<p>Mixed patterns occur when an initial common source exposure seeds ongoing person-to-person transmission.</p>
+<h4 id="diagram-epidemic-curve-shape-explorer">Diagram: Epidemic Curve Shape Explorer<a class="headerlink" href="#diagram-epidemic-curve-shape-explorer" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/epidemic-curve-explorer/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>Epidemic Curve Shape Explorer MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> epidemic-curve-explorer<br>
+<strong>Library:</strong> Chart.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Identify (L1) and interpret (L2) epidemic curve shapes to distinguish common-source point exposure outbreaks from propagated person-to-person outbreaks.</p>
+<p>Canvas layout:
+- Top: radio button selector for outbreak type (Point Source / Propagated / Mixed)
+- Main chart: bar chart showing cases by day of onset (x-axis: days, y-axis: number of cases)
+- Bottom panel: infobox explaining the selected curve type, its diagnostic characteristics, and a real-world example</p>
+<p>Three dataset modes:
+1. Point Source: Gaussian-shaped peak centered at day 7, width approximately 3 days (incubation period 2-3 days), total 60 cases. Represents a foodborne outbreak.
+2. Propagated: Three successive peaks at days 5, 19, and 33 (serial interval approximately 14 days), each larger than the last. Represents measles in a school.
+3. Mixed: Point-source peak at day 7 followed by smaller propagated peaks at days 14 and 21.</p>
+<p>Interactive behavior:
+- Selecting a radio button updates the bar chart with animation (Chart.js transition)
+- Hovering a bar shows: day, case count, "Day of onset: X, Cases: Y"
+- Clicking a bar highlights the bar and updates the infobox with the specific context for that day</p>
+<p>Annotations on chart:
+- Point source mode: annotation marking "Exposure event (Day 0)" and bracket showing incubation period width
+- Propagated mode: annotations marking "Generation 1", "Generation 2", "Generation 3"
+- Serial interval annotation: double-headed arrow between peaks labeled "Serial Interval (~14 days)"</p>
+<p>Colors: Point source bars = #2196F3 (blue); Propagated bars = #FF9800 (orange); Mixed = #9C27B0 (purple)</p>
+<p>Responsive: chart fills 100% of container width; height 350px. Resizes on window resize.</p>
+</details>
+<h3 id="source-hypothesis-testing">Source Hypothesis Testing<a class="headerlink" href="#source-hypothesis-testing" title="Permanent link">¶</a></h3>
+<p>After the epidemic curve and descriptive epidemiology identify potential vehicles of transmission, <strong>source hypothesis testing</strong> generates and tests a specific hypothesis about what caused the outbreak. In a foodborne outbreak, investigators compare the attack rate among people who ate each specific food item to the attack rate among those who did not eat that item:</p>
+<div class="arithmatex">\[ \text{Relative Risk of food X} = \frac{\text{Attack rate among those who ate food X}}{\text{Attack rate among those who did not eat food X}} \]</div>
+<p>The food item with the highest relative risk, the highest attributable fraction, and a statistically significant association is the candidate vehicle. An analytic study (usually a cohort study if all exposed people can be identified, or a case-control study if only cases are identifiable) is then conducted to test the hypothesis with formal statistical methods.</p>
+<p>The ten-step outbreak investigation framework, as used by the CDC, integrates all the steps above:</p>
+<ol>
+<li>Prepare for fieldwork</li>
+<li>Establish existence of an outbreak</li>
+<li>Verify the diagnosis</li>
+<li>Define and identify cases</li>
+<li>Describe the outbreak by person, place, and time</li>
+<li>Develop hypotheses</li>
+<li>Evaluate hypotheses (analytic epidemiology)</li>
+<li>Refine hypotheses and carry out additional studies</li>
+<li>Implement control and prevention measures</li>
+<li>Communicate findings</li>
+</ol>
+<hr>
+<h2 id="epidemic-dynamics-r0-rt-and-herd-immunity">Epidemic Dynamics: R₀, Rₜ, and Herd Immunity<a class="headerlink" href="#epidemic-dynamics-r0-rt-and-herd-immunity" title="Permanent link">¶</a></h2>
+<p>Understanding how infectious disease spreads through a population requires a mathematical framework. The four parameters covered in this section form the core vocabulary of infectious disease epidemiology and were used daily during the COVID-19 pandemic — often incorrectly in public discourse.</p>
+<h3 id="r0-the-basic-reproduction-number">R₀: The Basic Reproduction Number<a class="headerlink" href="#r0-the-basic-reproduction-number" title="Permanent link">¶</a></h3>
+<p>The <strong>basic reproduction number (R₀)</strong>, pronounced "R-naught," is defined as the average number of secondary infections produced by a single infectious individual in a completely susceptible population. Two conditions are critical to this definition: (1) "basic" means no immunity exists — the population is fully susceptible; (2) no interventions are in place.</p>
+<p>R₀ is a property of the pathogen-host-environment combination, not of the pathogen alone. The same pathogen can have very different R₀ values in different settings — in dense urban populations versus rural communities, in winter versus summer, in populations with prior immunity from related strains versus fully naive populations.</p>
+<p>R₀ determines the epidemic potential of a pathogen:</p>
+<ul>
+<li>If R₀ &lt; 1: on average, each case produces less than one new case; the outbreak dies out.</li>
+<li>If R₀ = 1: endemic equilibrium — the pathogen persists but does not grow.</li>
+<li>If R₀ &gt; 1: each case produces more than one new case; the outbreak will grow exponentially unless interventions reduce transmission.</li>
+</ul>
+<p>Representative R₀ values include: seasonal influenza (1.2–1.4), COVID-19 ancestral strain (2.5–3.5), COVID-19 Omicron (8–15), measles (12–18).</p>
+<h3 id="rt-the-effective-reproduction-number">Rₜ: The Effective Reproduction Number<a class="headerlink" href="#rt-the-effective-reproduction-number" title="Permanent link">¶</a></h3>
+<p>The <strong>effective reproduction number (Rₜ)</strong> measures the same quantity as R₀ but in a real population at time t — accounting for the proportion of the population that is immune (through natural infection or vaccination), behavioral interventions, and other changes. The relationship is:</p>
+<div class="arithmatex">\[ R_t = R_0 \times S_t \]</div>
+<p>where <span class="arithmatex">\( S_t \)</span> is the proportion of the population still susceptible at time t. As an epidemic progresses and immunity accumulates, <span class="arithmatex">\( S_t \)</span> falls and Rₜ declines. When Rₜ falls below 1.0, the epidemic begins to recede.</p>
+<p>Rₜ estimation in real time became a critical tool during COVID-19. The Rt.live platform and similar tools estimated Rₜ daily from case count data for each US state. When Rₜ rose above 1.0, it signaled accelerating transmission; when it fell below 1.0, it signaled that interventions were working. The challenge: because case counts reflect infections that occurred 7–14 days earlier (due to incubation period and testing delays), Rₜ estimates always lag the true transmission situation by one to two weeks.</p>
+<h3 id="serial-interval-and-generation-time">Serial Interval and Generation Time<a class="headerlink" href="#serial-interval-and-generation-time" title="Permanent link">¶</a></h3>
+<p>Two related time-based parameters describe the pace of transmission:</p>
+<p><strong>Serial interval</strong>: The time between the onset of symptoms in a primary case and the onset of symptoms in a secondary case they infected. Serial interval is observable from linked case pairs in outbreak investigations. For COVID-19 (original strain), the serial interval was approximately 4–7 days.</p>
+<p><strong>Generation time</strong> (or generation interval): The time between infection of a primary case and infection of a secondary case they produce. Unlike serial interval, generation time is measured from infection to infection, not from symptom onset to symptom onset. Because the exact moment of infection is difficult to observe directly, generation time is harder to measure than serial interval.</p>
+<p>The distinction matters when pre-symptomatic transmission is common. If an infectious person transmits before they develop symptoms — as occurred frequently with COVID-19 — then the serial interval can be shorter than the generation time, and cases may appear to have been infected before their infector became symptomatic (negative serial intervals). This feature was an early signal that COVID-19 would be particularly difficult to control with symptom-based interventions alone.</p>
+<h3 id="herd-immunity-threshold">Herd Immunity Threshold<a class="headerlink" href="#herd-immunity-threshold" title="Permanent link">¶</a></h3>
+<p>The <strong>herd immunity threshold (HIT)</strong> is the proportion of a population that must be immune (through vaccination or prior infection) to cause Rₜ to fall below 1.0 and bring an epidemic to natural decline. It is derived directly from R₀:</p>
+<div class="arithmatex">\[ \text{HIT} = 1 - \frac{1}{R_0} \]</div>
+<p>For measles (R₀ ≈ 15), the HIT is approximately 93%. For COVID-19 (R₀ ≈ 3), it is approximately 67%. For COVID-19 Omicron (R₀ ≈ 12), it exceeds 90%.</p>
+<div class="admonition mascot-warning">
+<p class="admonition-title">Herd immunity is not a fixed finish line</p>
+<p><img src="../../img/mascot/warning.png" class="mascot-admonition-img" alt="Sage warning">
+The herd immunity threshold assumes a homogeneous, well-mixed population — a simplification that does not hold in reality. Geographic clustering of unvaccinated individuals (vaccine-hesitant communities) means that local herd immunity may fail even when national vaccination coverage exceeds the HIT. Measles outbreaks regularly occur in the US despite overall vaccination coverage above 90% because of concentrated pockets of unvaccinated children. The HIT is a population average; local clustering can sustain transmission far above that threshold.</p>
+</div>
+<h4 id="diagram-r0-and-herd-immunity-explorer">Diagram: R₀ and Herd Immunity Explorer<a class="headerlink" href="#diagram-r0-and-herd-immunity-explorer" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/r0-herd-immunity-explorer/main.html" width="100%" height="480px" scrolling="no"></iframe>
+
+<details>
+<summary>R₀ and Herd Immunity Threshold Interactive Explorer</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> r0-herd-immunity-explorer<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Apply (L3) the relationship between R₀ and the herd immunity threshold by adjusting R₀ values for different pathogens and calculating the required vaccination coverage.</p>
+<p>Canvas layout:
+- Left (60%): main drawing area with branching tree showing transmission chains from one index case
+- Right (40%): control panel and numeric displays</p>
+<p>Drawing area:
+- Show 3 generations of transmission from one index case (index case to R₀ secondaries to R₀-squared tertiaries)
+- Circle nodes: susceptible (white), infected (red), immune (gray, with X mark)
+- When immunity proportion slider moves, randomly gray out that proportion of nodes across all generations
+- Highlight Rₜ = R₀ × (1 - immunity proportion) in real time</p>
+<p>Interactive controls:
+- Slider: R₀ (1.0 to 18.0, step 0.1). Preset buttons for: Seasonal Flu (1.3), COVID-19 original (3.0), COVID-19 Omicron (12.0), Measles (15.0)
+- Slider: Current immune proportion (0% to 100%)
+- Display: R₀ value, HIT = 1 - 1/R₀, Current Rₜ, Status (Growing / Declining)</p>
+<p>Status display:
+- When Rₜ &gt; 1.0: status bar shown in red, text "Epidemic growing"
+- When Rₜ = 1.0: yellow, "Endemic equilibrium"
+- When Rₜ &lt; 1.0: green, "Epidemic declining"</p>
+<p>Formula panel: shows HIT formula and Rₜ = R₀ × S with current numbers substituted.</p>
+<p>Responsive: updateCanvasSize() called in setup(). Canvas scales to container width.</p>
+<p>Instructional rationale: Parameter exploration is appropriate for this Apply/L3 objective — learners must manipulate R₀ and vaccination coverage to find the HIT, reinforcing the mathematical relationship through discovery rather than observation.</p>
+</details>
+<hr>
+<h2 id="screening-test-performance">Screening Test Performance<a class="headerlink" href="#screening-test-performance" title="Permanent link">¶</a></h2>
+<p>Screening programs are designed to detect disease in asymptomatic individuals before clinical symptoms appear, allowing earlier treatment. The performance of any screening test is characterized by four metrics derived from comparing test results to the true disease status (established by a gold standard reference test). Two building blocks define the 2×2 structure:</p>
+<ul>
+<li><strong>True positive (TP)</strong>: test positive, person truly has disease</li>
+<li><strong>False positive (FP)</strong>: test positive, person does not have disease</li>
+<li><strong>True negative (TN)</strong>: test negative, person truly does not have disease</li>
+<li><strong>False negative (FN)</strong>: test negative, person actually has disease</li>
+</ul>
+<p>From these four cells, four performance metrics are calculated. Before we examine the formulas, note which comparisons each metric makes: sensitivity and specificity are calculated down columns (within disease status); PPV and NPV are calculated across rows (within test result).</p>
+<p><strong>Sensitivity</strong> is the probability that the test correctly identifies a person who has the disease:</p>
+<div class="arithmatex">\[ \text{Sensitivity} = \frac{TP}{TP + FN} \]</div>
+<p>A highly sensitive test misses few true cases (low false negative rate). Sensitivity is the appropriate priority when the cost of missing a case is high — for example, in early HIV screening or initial cancer screening.</p>
+<p><strong>Specificity</strong> is the probability that the test correctly identifies a person who does not have the disease:</p>
+<div class="arithmatex">\[ \text{Specificity} = \frac{TN}{TN + FP} \]</div>
+<p>A highly specific test rarely labels healthy people as diseased (low false positive rate). Specificity is the priority when false positives are costly — when further testing is invasive, expensive, or psychologically burdensome.</p>
+<p><strong>Positive predictive value (PPV)</strong> is the probability that a person with a positive test result actually has the disease:</p>
+<div class="arithmatex">\[ PPV = \frac{TP}{TP + FP} \]</div>
+<p><strong>Negative predictive value (NPV)</strong> is the probability that a person with a negative test result truly does not have the disease:</p>
+<div class="arithmatex">\[ NPV = \frac{TN}{TN + FN} \]</div>
+<p>Unlike sensitivity and specificity, which are properties of the test itself, PPV and NPV depend heavily on <strong>disease prevalence</strong> (pretest probability). When prevalence is low, even a highly specific test will generate many false positives in a large screened population, driving down PPV. This is why screening programs are targeted to high-prevalence subpopulations rather than applied universally.</p>
+<h4 id="diagram-screening-test-performance-calculator">Diagram: Screening Test Performance Calculator<a class="headerlink" href="#diagram-screening-test-performance-calculator" title="Permanent link">¶</a></h4>
+<iframe src="../../sims/screening-test-calculator/main.html" width="100%" height="500px" scrolling="no"></iframe>
+
+<details>
+<summary>Screening Test Performance Calculator MicroSim</summary>
+<p>Type: microsim
+<strong>sim-id:</strong> screening-test-calculator<br>
+<strong>Library:</strong> p5.js<br>
+<strong>Status:</strong> Specified</p>
+<p>Learning objective: Apply (L3) sensitivity, specificity, PPV, and NPV calculations by adjusting sensitivity, specificity, and disease prevalence sliders and observing how each metric changes.</p>
+<p>Canvas layout:
+- Left (50%): 2x2 table visualization showing TP, FP, FN, TN counts as proportional colored boxes
+- Right (50%): sliders on top, calculated metric display below</p>
+<p>Sliders (p5.js createSlider):
+- Sensitivity: 0.50 to 0.99 (default 0.90)
+- Specificity: 0.50 to 0.99 (default 0.90)
+- Disease Prevalence: 0.1% to 50% (default 5%)
+- Population size: 1,000 to 100,000 (default 10,000, affects absolute numbers but not ratios)</p>
+<p>2x2 table display (visual, not static text):
+- Four quadrants colored by type: TP (green), FP (orange), FN (red), TN (blue)
+- Each quadrant shows the calculated count given current slider values
+- Quadrant area proportional to count (treemap-style layout within fixed box)</p>
+<p>Metric display (right panel, updates in real time):
+- Sensitivity (with formula and current values substituted)
+- Specificity (with formula and current values substituted)
+- PPV (with formula and current values substituted)
+- NPV (with formula and current values substituted)
+- Interpretation line: "At current prevalence: 1 in X positive tests is a true positive"</p>
+<p>Key educational behavior: When prevalence slider drops below approximately 2%, PPV drops dramatically even as sensitivity and specificity stay high — this is the key lesson about screening in low-prevalence populations. The visual area change in the 2x2 table makes this concrete.</p>
+<p>Instructional rationale: Parameter manipulation with concurrent formula display is appropriate for L3 Apply objectives. The simultaneous table and metric display enforces data visibility — learners see the calculation, not just the result.</p>
+<p>Responsive: updateCanvasSize() in setup(). Canvas fills container width.</p>
+</details>
+<div class="admonition mascot-encourage">
+<p class="admonition-title">This math is worth the effort</p>
+<p><img src="../../img/mascot/encouraging.png" class="mascot-admonition-img" alt="Sage encouraging">
+PPV and NPV are among the most misunderstood concepts in clinical and public health practice. Clinicians routinely over-interpret positive test results in low-prevalence settings, and public health officials regularly underestimate the false positive burden of mass screening programs. Investigators who can fluently calculate and communicate these metrics are genuinely rare — and genuinely valuable.</p>
+</div>
+<hr>
+<h2 id="key-takeaways">Key Takeaways<a class="headerlink" href="#key-takeaways" title="Permanent link">¶</a></h2>
+<p><strong>Validity and Bias:</strong></p>
+<ul>
+<li>Confounders distort exposure-outcome relationships and should be controlled; effect modifiers reveal true heterogeneity and should be reported.</li>
+<li>Selection bias and information bias are primarily design problems, not fixable in analysis.</li>
+<li>Non-differential misclassification biases toward the null; differential misclassification can bias in any direction.</li>
+</ul>
+<p><strong>Surveillance:</strong></p>
+<ul>
+<li>Passive surveillance is scalable but undercounts; active surveillance is complete but resource-intensive.</li>
+<li>Syndromic surveillance provides early warning using pre-diagnostic data streams; its primary weakness is low specificity.</li>
+<li>Reportable conditions are legally mandated; timeliness requirements range from immediate (for priority pathogens) to monthly.</li>
+</ul>
+<p><strong>Outbreak Investigation:</strong></p>
+<ul>
+<li>Case definitions balance sensitivity and specificity; tiered definitions (confirmed/probable/suspected) allow flexible investigation.</li>
+<li>Epidemic curve shape distinguishes point-source from propagated outbreaks.</li>
+<li>Source hypothesis testing compares attack rates by food or exposure item.</li>
+</ul>
+<p><strong>Epidemic Dynamics:</strong></p>
+<ul>
+<li>R₀ describes theoretical epidemic potential; Rₜ describes real-time transmission accounting for immunity and interventions.</li>
+<li>HIT = 1 − 1/R₀; geographic clustering of susceptible individuals can sustain transmission even when national coverage exceeds the HIT.</li>
+</ul>
+<p><strong>Screening:</strong></p>
+<ul>
+<li>Sensitivity and specificity are properties of the test; PPV and NPV depend on disease prevalence.</li>
+<li>In low-prevalence settings, even highly specific tests produce predominantly false positives.</li>
+</ul>
+<details class="question">
+<summary>Self-Check: PPV and prevalence</summary>
+<p>A test for a rare genetic condition has sensitivity = 99% and specificity = 99%. In a population where 1 in 1,000 people has the condition, what is the approximate PPV of a positive test result?</p>
+<p><strong>Answer:</strong> In 100,000 people: 100 truly have the condition (1 in 1,000). Of these, 99% × 100 = 99 will test positive (true positives). Of the 99,900 who do not have the condition, 1% × 99,900 ≈ 999 will falsely test positive. PPV = 99 / (99 + 999) ≈ 99/1,098 ≈ <strong>9%</strong>. Only 1 in 11 positive tests is a true positive — despite excellent sensitivity and specificity. This is why screening programs target high-prevalence subgroups.</p>
+</details>
+<div class="admonition mascot-celebration">
+<p class="admonition-title">Chapter 3 complete!</p>
+<p><img src="../../img/mascot/celebration.png" class="mascot-admonition-img" alt="Sage celebrating">
+Bias, surveillance, outbreak investigation, and epidemic dynamics: this chapter gave you the critical lens that separates careful epidemiological reasoning from the loose talk that polluted public health discourse during COVID-19. The tools here — R₀, Rₜ, PPV, epidemic curves — will return in nearly every applied chapter that follows.</p>
+</div>
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"></path></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer">
+        
+          
+          <a href="../02-epidemiology-disease-measurement/" class="md-footer__link md-footer__link--prev" aria-label="Previous: 2. Epi - Disease Measurement">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"></path></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                2. Epi - Disease Measurement
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../04-biostatistics-foundations/" class="md-footer__link md-footer__link--next" aria-label="Next: 4. Biostatistics - Foundations">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                4. Biostatistics - Foundations
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"></path></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Copyright © 2026 Dan McCreary. Licensed under <a href="license/">CC BY-NC-SA 4.0</a> for non-commercial use.
+    </div>
+  
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy", "content.action.edit", "navigation.expand", "navigation.path", "navigation.prune", "navigation.indexes", "navigation.top", "navigation.footer", "toc.follow", "search.suggest", "search.highlight", "search.share"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.83f73b43.min.js"></script>
+      
+    
+  
+<script id="init-glightbox">const lightbox = GLightbox({"touchNavigation": true, "loop": false, "zoomable": true, "draggable": true, "openEffect": "zoom", "closeEffect": "zoom", "slideEffect": "slide"});
+document$.subscribe(()=>{ lightbox.reload(); });
+</script></body></html>

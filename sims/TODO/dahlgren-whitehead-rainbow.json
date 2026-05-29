@@ -1,0 +1,14 @@
+{
+  "sim_id": "dahlgren-whitehead-rainbow",
+  "diagram_name": "Dahlgren-Whitehead Rainbow Model",
+  "chapter_number": 10,
+  "chapter_title": "\"Health Equity and Social Determinants of Health\"",
+  "chapter_dir": "10-health-equity-sdoh",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": null,
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** dahlgren-whitehead-rainbow<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nDraw six concentric arc bands (upper hemisphere) representing, from innermost to outermost: (1) Age, Sex, Heredity [dark blue], (2) Individual Lifestyle Factors [orange], (3) Social and Community Networks [green], (4) Living and Working Conditions [teal], (5) General Socioeconomic, Cultural & Environmental Conditions [purple], (6) a label ring with the layer name. Each band is clickable. On hover, the band brightens and shows a tooltip with the layer name. On click, a panel to the right of the arc displays: the layer name as heading, a 2-sentence definition, and three concrete public health examples. A \"Reset\" button clears the panel. Responsive to container width."
+}

@@ -1,0 +1,14 @@
+{
+  "sim_id": "screening-test-calculator",
+  "diagram_name": "Screening Test Performance Calculator",
+  "chapter_number": 3,
+  "chapter_title": "\"Epidemiology: Study Design and Causal Inference\"",
+  "chapter_dir": "03-epidemiology-study-design",
+  "library": "p5.js",
+  "bloom_level": null,
+  "bloom_verb": null,
+  "learning_objective": "Apply (L3) sensitivity, specificity, PPV, and NPV calculations by adjusting sensitivity, specificity, and disease prevalence sliders and observing how each metric changes.",
+  "completion_status": "specified",
+  "extracted_date": "2026-05-28",
+  "specification": "Type: microsim\n**sim-id:** screening-test-calculator<br/>\n**Library:** p5.js<br/>\n**Status:** Specified\n\nLearning objective: Apply (L3) sensitivity, specificity, PPV, and NPV calculations by adjusting sensitivity, specificity, and disease prevalence sliders and observing how each metric changes.\n\nCanvas layout:\n- Left (50%): 2x2 table visualization showing TP, FP, FN, TN counts as proportional colored boxes\n- Right (50%): sliders on top, calculated metric display below\n\nSliders (p5.js createSlider):\n- Sensitivity: 0.50 to 0.99 (default 0.90)\n- Specificity: 0.50 to 0.99 (default 0.90)\n- Disease Prevalence: 0.1% to 50% (default 5%)\n- Population size: 1,000 to 100,000 (default 10,000, affects absolute numbers but not ratios)\n\n2x2 table display (visual, not static text):\n- Four quadrants colored by type: TP (green), FP (orange), FN (red), TN (blue)\n- Each quadrant shows the calculated count given current slider values\n- Quadrant area proportional to count (treemap-style layout within fixed box)\n\nMetric display (right panel, updates in real time):\n- Sensitivity (with formula and current values substituted)\n- Specificity (with formula and current values substituted)\n- PPV (with formula and current values substituted)\n- NPV (with formula and current values substituted)\n- Interpretation line: \"At current prevalence: 1 in X positive tests is a true positive\"\n\nKey educational behavior: When prevalence slider drops below approximately 2%, PPV drops dramatically even as sensitivity and specificity stay high — this is the key lesson about screening in low-prevalence populations. The visual area change in the 2x2 table makes this concrete.\n\nInstructional rationale: Parameter manipulation with concurrent formula display is appropriate for L3 Apply objectives. The simultaneous table and metric display enforces data visibility — learners see the calculation, not just the result.\n\nResponsive: updateCanvasSize() in setup(). Canvas fills container width."
+}

@@ -1,0 +1,30 @@
+{
+  "title": "COVID-19 SEIR Wave Simulator",
+  "description": "Interactive SEIR compartmental model for COVID-19 with controls for transmission rate, vaccination coverage, variant R0, and waning immunity. Overlays Delta vs Omicron at matched vaccination coverage.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "epidemiology",
+    "infectious disease modeling",
+    "COVID-19",
+    "SEIR model",
+    "compartmental model"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "covid-seir",
+  "sim_id": "covid-seir",
+  "library": "p5.js",
+  "bloom_level": "Analyze",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "analyze",
+  "learning_objective": "Analyze how transmission rate, vaccination coverage, variant R0, and waning immunity interact to shape COVID-19 wave dynamics, and explain why early single-scenario projections systematically diverged from observed multi-wave outcomes.",
+  "status": "implemented",
+  "completion_status": "implemented",
+  "chapter_number": 19,
+  "chapter_title": "COVID-19 Case Study",
+  "chapter_dir": "19-covid-case-study"
+}

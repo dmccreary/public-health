@@ -38,26 +38,66 @@ nav:
 
   - Chapters:
       - List of Chapters: chapters/index.md
-      - 1. Foundations: chapters/01-foundations/index.md
-      - 2. Epi - Disease Measurement: chapters/02-epidemiology-disease-measurement/index.md
-      - 3. Epi - Study Design: chapters/03-epidemiology-study-design/index.md
-      - 4. Biostatistics - Foundations: chapters/04-biostatistics-foundations/index.md
-      - 5. Biostatistics - Regression: chapters/05-biostatistics-regression/index.md
-      - 6. Environmental Health: chapters/06-environmental-health/index.md
-      - 7. Social and Behavioral Health: chapters/07-social-behavioral-health/index.md
-      - 8. Health Policy and Management: chapters/08-health-policy-management/index.md
-      - 9. Global Health: chapters/09-global-health/index.md
-      - 10. Health Equity and SDOH: chapters/10-health-equity-sdoh/index.md
-      - 11. Public Health Ethics: chapters/11-public-health-ethics/index.md
-      - 12. Public Health Communication: chapters/12-public-health-communication/index.md
-      - 13. Prevention Science: chapters/13-prevention-science/index.md
-      - 14. Systems Thinking - Foundations: chapters/14-systems-thinking-foundations/index.md
-      - 15. Systems Thinking - Modeling: chapters/15-systems-thinking-modeling/index.md
-      - 16. Data Science - Foundations: chapters/16-data-science-foundations/index.md
-      - 17. Data Science - Advanced: chapters/17-data-science-advanced/index.md
-      - 18. Simulation Design: chapters/18-simulation-design/index.md
-      - 19. COVID-19 Case Study: chapters/19-covid-case-study/index.md
-      - 20. Health Fraud: chapters/20-health-fraud-misinformation/index.md
+      - 1. Foundations:
+          - Content: chapters/01-foundations/index.md
+          - Quiz: chapters/01-foundations/quiz.md
+      - 2. Epi - Disease Measurement:
+          - Content: chapters/02-epidemiology-disease-measurement/index.md
+          - Quiz: chapters/02-epidemiology-disease-measurement/quiz.md
+      - 3. Epi - Study Design:
+          - Content: chapters/03-epidemiology-study-design/index.md
+          - Quiz: chapters/03-epidemiology-study-design/quiz.md
+      - 4. Biostatistics - Foundations:
+          - Content: chapters/04-biostatistics-foundations/index.md
+          - Quiz: chapters/04-biostatistics-foundations/quiz.md
+      - 5. Biostatistics - Regression:
+          - Content: chapters/05-biostatistics-regression/index.md
+          - Quiz: chapters/05-biostatistics-regression/quiz.md
+      - 6. Environmental Health:
+          - Content: chapters/06-environmental-health/index.md
+          - Quiz: chapters/06-environmental-health/quiz.md
+      - 7. Social and Behavioral Health:
+          - Content: chapters/07-social-behavioral-health/index.md
+          - Quiz: chapters/07-social-behavioral-health/quiz.md
+      - 8. Health Policy and Management:
+          - Content: chapters/08-health-policy-management/index.md
+          - Quiz: chapters/08-health-policy-management/quiz.md
+      - 9. Global Health:
+          - Content: chapters/09-global-health/index.md
+          - Quiz: chapters/09-global-health/quiz.md
+      - 10. Health Equity and SDOH:
+          - Content: chapters/10-health-equity-sdoh/index.md
+          - Quiz: chapters/10-health-equity-sdoh/quiz.md
+      - 11. Public Health Ethics:
+          - Content: chapters/11-public-health-ethics/index.md
+          - Quiz: chapters/11-public-health-ethics/quiz.md
+      - 12. Public Health Communication:
+          - Content: chapters/12-public-health-communication/index.md
+          - Quiz: chapters/12-public-health-communication/quiz.md
+      - 13. Prevention Science:
+          - Content: chapters/13-prevention-science/index.md
+          - Quiz: chapters/13-prevention-science/quiz.md
+      - 14. Systems Thinking - Foundations:
+          - Content: chapters/14-systems-thinking-foundations/index.md
+          - Quiz: chapters/14-systems-thinking-foundations/quiz.md
+      - 15. Systems Thinking - Modeling:
+          - Content: chapters/15-systems-thinking-modeling/index.md
+          - Quiz: chapters/15-systems-thinking-modeling/quiz.md
+      - 16. Data Science - Foundations:
+          - Content: chapters/16-data-science-foundations/index.md
+          - Quiz: chapters/16-data-science-foundations/quiz.md
+      - 17. Data Science - Advanced:
+          - Content: chapters/17-data-science-advanced/index.md
+          - Quiz: chapters/17-data-science-advanced/quiz.md
+      - 18. Simulation Design:
+          - Content: chapters/18-simulation-design/index.md
+          - Quiz: chapters/18-simulation-design/quiz.md
+      - 19. COVID-19 Case Study:
+          - Content: chapters/19-covid-case-study/index.md
+          - Quiz: chapters/19-covid-case-study/quiz.md
+      - 20. Health Fraud:
+          - Content: chapters/20-health-fraud-misinformation/index.md
+          - Quiz: chapters/20-health-fraud-misinformation/quiz.md
 
   - Learning Graph:
       - Introduction: learning-graph/index.md
@@ -67,6 +107,7 @@ nav:
       - Graph Quality Analysis: learning-graph/quality-metrics.md
       - Taxonomy Distribution: learning-graph/taxonomy-distribution.md
       - Mascot Style Guide: learning-graph/mascot-test.md
+      - Quiz Generation Report: learning-graph/quiz-generation-report.md
 
   - MicroSims:
       - List of MicroSims: sims/index.md
@@ -75,26 +116,38 @@ nav:
       - Confidence Interval Coverage: sims/confidence-interval-coverage/index.md
       - COVID-19 Excess Mortality: sims/covid-excess-mortality/index.md
       - COVID-19 Key Events Timeline: sims/covid-timeline/index.md
+      - COVID-19 SEIR Wave Simulator: sims/covid-seir/index.md
       - COVID-19 Systems Causal Loop Map: sims/covid-systems-map/index.md
       - DAG Variable Structures Explorer: sims/dag-variable-structures/index.md
       - Dahlgren-Whitehead Rainbow Model: sims/dahlgren-whitehead-rainbow/index.md
       - Determinants of Health Layers: sims/determinants-of-health-layers/index.md
+      - Dose-Response Curve Explorer: sims/dose-response-explorer/index.md
       - Eight Archetypes Reference Card: sims/system-archetypes/index.md
+      - Environmental Justice Cumulative Burden Explorer: sims/ej-cumulative-burden/index.md
       - Epidemic Curve Shape Explorer: sims/epidemic-curve-explorer/index.md
       - EPIS Implementation Stages: sims/epis-stages/index.md
       - Four-Step Risk Assessment Framework: sims/risk-assessment-framework/index.md
+      - Global Burden of Disease by Cause and Income Group: sims/gbd-burden-chart/index.md
       - Haddon Matrix Builder: sims/haddon-matrix/index.md
       - Health Belief Model: sims/health-belief-model/index.md
+      - ICU Surge Capacity Model: sims/icu-surge-capacity/index.md
+      - IHR Evolution and PHEIC Declarations Timeline: sims/ihr-pheic-timeline/index.md
       - IOM Prevention Spectrum: sims/prevention-spectrum/index.md
       - Incidence vs. Prevalence Explorer: sims/incidence-prevalence-explorer/index.md
+      - Inoculation Theory Visualizer: sims/inoculation-theory-sim/index.md
       - Interactive Forest Plot: sims/forest-plot-interactive/index.md
       - Interrupted Time-Series Workflow: sims/its-analysis-workflow/index.md
       - Kaplan-Meier Survival Curve Explorer: sims/kaplan-meier-explorer/index.md
       - Key Milestones in Public Health History: sims/public-health-history-timeline/index.md
       - Kingdon's Three Streams Model: sims/kingdons-three-streams/index.md
       - Life Expectancy and Infant Mortality: sims/health-disparities-bar-chart/index.md
+      - Logic Model Builder: sims/logic-model-builder/index.md
       - Meadows Leverage Points Hierarchy: sims/meadows-leverage/index.md
       - MicroSim Design Process: sims/microsim-design-process/index.md
+      - Missing Data Mechanisms Visualizer: sims/missing-data-mechanisms/index.md
+      - MLM Recruitment Network Dynamics: sims/mlm-network/index.md
+      - Moran's I Spatial Autocorrelation Visualizer: sims/morans-i-visualizer/index.md
+      - Neglected Tropical Disease Geographic Distribution: sims/ntd-geographic-map/index.md
       - Normal Distribution Explorer: sims/normal-distribution-explorer/index.md
       - Nuffield Council Ladder of Interventions: sims/nuffield-ladder/index.md
       - p5.js MicroSim Anatomy: sims/p5-microsim-anatomy/index.md
@@ -110,6 +163,7 @@ nav:
       - SIR Model Compartment Flow: sims/sir-compartments/index.md
       - Social-Ecological Model: sims/social-ecological-model/index.md
       - Spatial Analysis Workflow: sims/spatial-analysis-workflow/index.md
+      - Stock-and-Flow Bathtub Model: sims/bathtub-model/index.md
       - Study Design Evidence Hierarchy: sims/study-design-hierarchy/index.md
       - The 10 Essential Public Health Services: sims/essential-public-health-services/index.md
       - Type I/II Error and Power Visualizer: sims/hypothesis-error-power/index.md

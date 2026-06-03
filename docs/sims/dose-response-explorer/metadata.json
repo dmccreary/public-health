@@ -1,0 +1,27 @@
+{
+  "sim_id": "dose-response-explorer",
+  "title": "Dose-Response Curve Explorer",
+  "description": "Students can analyze how slope (Hill coefficient), EC50 position, and model choice (threshold vs. linear-no-threshold) determine landmark regulatory doses (NOAEL, LOAEL, Reference Dose) on a dose-response curve.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "environmental health",
+    "toxicology"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "dose-response-explorer",
+  "library": "p5.js",
+  "bloom_level": "Analyze (L4)",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "analyze",
+  "learning_objective": "Students can analyze how slope (Hill coefficient), EC50 position, and model choice (threshold vs. linear-no-threshold) determine landmark regulatory doses (NOAEL, LOAEL, Reference Dose) on a dose-response curve.",
+  "status": "implemented",
+  "completion_status": "implemented",
+  "chapter_number": 6,
+  "chapter_title": "Environmental Health, Toxicology, and Climate",
+  "chapter_dir": "06-environmental-health"
+}

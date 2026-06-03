@@ -1,0 +1,25 @@
+{
+  "title": "IHR Evolution and PHEIC Declarations Timeline",
+  "description": "Interactive horizontal timeline of the International Health Regulations and every Public Health Emergency of International Concern declared by WHO from 1969 through 2024, with a zoomable 2019–2024 cluster and a response-time comparison overlay for H1N1, Ebola 2014, and COVID-19.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "global health",
+    "International Health Regulations",
+    "PHEIC",
+    "pandemic preparedness",
+    "WHO"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "ihr-pheic-timeline",
+  "library": "p5.js",
+  "bloomLevel": "Understand (L2)",
+  "bloomVerb": "explain",
+  "completion_status": "implemented",
+  "chapter_number": 9,
+  "chapter_title": "Global Health",
+  "chapter_dir": "09-global-health"
+}

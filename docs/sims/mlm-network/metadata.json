@@ -1,0 +1,25 @@
+{
+  "title": "MLM Recruitment Network Dynamics",
+  "description": "Interactive network visualization of multi-level marketing distributor recruitment, claim propagation, and upward income flow with FTC-modeled tier income distribution.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "health fraud",
+    "misinformation",
+    "multi-level marketing",
+    "network dynamics"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "mlm-network",
+  "library": "vis-network",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "Analyze",
+  "completion_status": "implemented",
+  "chapter_number": 20,
+  "chapter_title": "Health Fraud and Misinformation",
+  "chapter_dir": "20-health-fraud-misinformation"
+}

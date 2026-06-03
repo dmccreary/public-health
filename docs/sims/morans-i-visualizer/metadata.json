@@ -1,0 +1,24 @@
+{
+  "title": "Moran's I Spatial Autocorrelation Visualizer",
+  "description": "Interactive 10x10 grid of simulated county disease rates with sliders for clustering strength, spatial dispersion, and outlier injection, showing real-time global Moran's I and a Moran's scatter plot.",
+  "creator": "Introduction to Public Health",
+  "date": "2026-05-28",
+  "subject": [
+    "public health",
+    "spatial epidemiology",
+    "GIS",
+    "spatial autocorrelation"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "morans-i-visualizer",
+  "library": "p5.js",
+  "bloomLevel": "Analyze (L4)",
+  "bloomVerb": "interpret",
+  "completion_status": "implemented",
+  "chapter_number": 17,
+  "chapter_title": "Data Science: Advanced Methods",
+  "chapter_dir": "17-data-science-advanced"
+}

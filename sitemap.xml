@@ -2,386 +2,478 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://dmccreary.github.io/public-health/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/about/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/contact/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/course-description/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/license/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/01-foundations/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/01-foundations/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/02-epidemiology-disease-measurement/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/02-epidemiology-disease-measurement/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/03-epidemiology-study-design/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/03-epidemiology-study-design/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/04-biostatistics-foundations/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/04-biostatistics-foundations/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/05-biostatistics-regression/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/05-biostatistics-regression/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/06-environmental-health/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/06-environmental-health/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/07-social-behavioral-health/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/07-social-behavioral-health/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/08-health-policy-management/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/08-health-policy-management/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/09-global-health/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/09-global-health/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/10-health-equity-sdoh/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/10-health-equity-sdoh/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/11-public-health-ethics/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/11-public-health-ethics/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/12-public-health-communication/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/12-public-health-communication/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/13-prevention-science/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/13-prevention-science/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/14-systems-thinking-foundations/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/14-systems-thinking-foundations/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/15-systems-thinking-modeling/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/15-systems-thinking-modeling/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/16-data-science-foundations/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/16-data-science-foundations/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/17-data-science-advanced/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/17-data-science-advanced/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/18-simulation-design/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/18-simulation-design/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/19-covid-case-study/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/19-covid-case-study/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/chapters/20-health-fraud-misinformation/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/chapters/20-health-fraud-misinformation/quiz/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/img/cover-image-prompt/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/img/mascot/character-sheet/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/learning-graph/book-metrics/</loc>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/learning-graph/chapter-metrics/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/concept-list-authorities/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/concept-list/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/concept-taxonomy/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/course-description-assessment/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/mascot-test/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/quality-metrics/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
+    </url>
+    <url>
+         <loc>https://dmccreary.github.io/public-health/learning-graph/quiz-generation-report/</loc>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/learning-graph/taxonomy-distribution/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/bathtub-model/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/cerc-stages-timeline/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/confidence-interval-coverage/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/covid-excess-mortality/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/covid-seir/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/covid-systems-map/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/covid-timeline/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/dag-variable-structures/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/dahlgren-whitehead-rainbow/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/determinants-of-health-layers/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/dose-response-explorer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/dshea-regulatory-gap/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/ej-cumulative-burden/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/epidemic-curve-explorer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/epis-stages/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/essential-public-health-services/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/feedback-loops-compare/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/forest-plot-interactive/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/gbd-burden-chart/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/graph-viewer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/haddon-matrix/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/health-belief-model/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/health-disparities-bar-chart/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/hypothesis-error-power/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/icu-surge-capacity/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/ihr-pheic-timeline/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/incidence-prevalence-explorer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/inoculation-theory-sim/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/its-analysis-workflow/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/kaplan-meier-explorer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/kingdons-three-streams/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/logic-model-builder/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/meadows-leverage/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/microsim-design-process/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/missing-data-mechanisms/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/mlm-network/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/morans-i-visualizer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/normal-distribution-explorer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/ntd-geographic-map/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/nuffield-ladder/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/p5-microsim-anatomy/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/prevention-natural-history/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/prevention-spectrum/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/public-health-history-timeline/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/r0-herd-immunity-explorer/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/record-linkage-process/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/reproducible-research-workflow/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/risk-assessment-framework/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/screening-test-calculator/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/sift-flowchart/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/sift-supplement/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/sir-compartments/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/social-ecological-model/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/spatial-analysis-workflow/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/study-design-hierarchy/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/system-archetypes/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/uhc-coverage-cube/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/us-health-system-structure/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
     <url>
          <loc>https://dmccreary.github.io/public-health/sims/wastewater-epi-pipeline/</loc>
-         <lastmod>2026-05-29</lastmod>
+         <lastmod>2026-06-04</lastmod>
     </url>
 </urlset>

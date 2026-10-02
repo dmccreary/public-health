@@ -1,0 +1,130 @@
+{
+  "title": "Upstream vs. Downstream Intervention Visualizer",
+  "description": "An animated version of the public health river metaphor. A cohort of 60 people walks a riverbank and some fall in (become ill). Students switch on an upstream housing policy, a midstream smoking cessation program, and expanded downstream hospital capacity, then compare people ill, people treated, and burden remaining across runs. Illustrative model, not real data.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-10-01",
+  "subject": [
+    "public health",
+    "social determinants of health",
+    "upstream interventions",
+    "downstream interventions",
+    "river metaphor",
+    "prevention"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "upstream-downstream-river",
+  "sim_id": "upstream-downstream-river",
+  "library": "p5.js",
+  "bloomLevel": "Analyze",
+  "bloomVerb": "compare",
+  "learning_objective": "Compare upstream, midstream, and downstream interventions by analyzing how each lever changes the number of people who become ill, are treated, and are left untreated.",
+  "completion_status": "implemented",
+  "chapter_number": 10,
+  "chapter_title": "Health Equity and Social Determinants of Health",
+  "chapter_dir": "10-health-equity-sdoh",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate"
+    ],
+    "subjectArea": "Public Health",
+    "topic": "Upstream, midstream, and downstream interventions",
+    "learningObjectives": [
+      "Classify an intervention as upstream, midstream, or downstream",
+      "Compare how each type of intervention changes illness, treatment, and untreated burden",
+      "Explain why upstream action lowers the load on downstream services"
+    ],
+    "bloomsTaxonomy": "Analyze",
+    "duration": "15 minutes",
+    "prerequisites": [
+      "Social determinants of health",
+      "Prevention versus treatment"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.9.4",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 525
+    },
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.9.4 (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "button",
+        "label": "Start / Pause / Resume / New Run",
+        "description": "Starts a run of 60 people, pauses it, or starts the next run. The simulation starts paused."
+      },
+      {
+        "type": "button",
+        "label": "Reset",
+        "description": "Clears the completed runs table and turns all levers off."
+      },
+      {
+        "type": "checkbox",
+        "label": "Housing policy (U)",
+        "description": "Upstream lever. Lowers the share of people who fall in from 50% to 20%."
+      },
+      {
+        "type": "checkbox",
+        "label": "Smoking cessation (M)",
+        "description": "Midstream lever. Pulls 40% of people in the water back to shore."
+      },
+      {
+        "type": "checkbox",
+        "label": "Expand hospital (D)",
+        "description": "Downstream lever. Shortens the hospital's time per patient."
+      }
+    ]
+  },
+  "simulation": {
+    "modelType": "Deterministic agent flow (illustrative, not calibrated to real data)",
+    "variables": [
+      "people ill",
+      "rescued midstream",
+      "people treated",
+      "burden remaining"
+    ],
+    "assumptions": [
+      "60 people per run",
+      "50% fall in at baseline, 20% with the housing policy",
+      "40% of people in the water are rescued when the midstream lever is on",
+      "The hospital treats one person at a time; expanding it shortens service time"
+    ],
+    "limitations": [
+      "Rates are teaching parameters, not estimates of real program effects",
+      "Cost and cost-effectiveness are not modeled",
+      "The time lag before an upstream policy takes effect is not modeled"
+    ]
+  },
+  "pedagogical": {
+    "teachingStrategy": "Predict, run, and compare",
+    "interactionPattern": "Comparison tool with a completed-runs table",
+    "keyQuestions": [
+      "Which lever is the only one that lowers the number of people who become ill?",
+      "Why does the hospital treat a larger share of ill people when the housing policy is on?"
+    ],
+    "commonMisconceptions": [
+      "More hospital capacity is the main way to improve population health",
+      "Upstream interventions are not health interventions"
+    ],
+    "assessmentOpportunities": [
+      "Classify a new intervention as upstream, midstream, or downstream",
+      "State one limitation of the river metaphor"
+    ]
+  },
+  "chapter": "10-health-equity-sdoh"
+}

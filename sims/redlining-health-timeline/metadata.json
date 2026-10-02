@@ -1,0 +1,105 @@
+{
+  "title": "Redlining and Health Timeline",
+  "description": "Interactive timeline from 1933 to the present. Eight housing policy events sit above the axis (HOLC, FHA, GI Bill, Fair Housing Act, Community Reinvestment Act, deregulation and subprime lending, the foreclosure crisis, repeal of the fair housing rule) and six health research events sit below it (Heckler Report, weathering hypothesis, segregation as a fundamental cause, Mapping Inequality, redlining and asthma, redlining and urban heat). Each event has a three-sentence summary and a key fact.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-10-01",
+  "subject": [
+    "public health",
+    "health equity",
+    "redlining",
+    "residential segregation",
+    "social determinants of health",
+    "housing policy"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "redlining-health-timeline",
+  "sim_id": "redlining-health-timeline",
+  "library": "p5.js",
+  "bloomLevel": "Understand",
+  "bloomVerb": "explain",
+  "learning_objective": "Explain how federal housing policy from the 1930s onward produced health consequences that researchers can still measure today.",
+  "completion_status": "implemented",
+  "chapter_number": 10,
+  "chapter_title": "Health Equity and Social Determinants of Health",
+  "chapter_dir": "10-health-equity-sdoh",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate"
+    ],
+    "subjectArea": "Public Health",
+    "topic": "Redlining and its health effects",
+    "learningObjectives": [
+      "Place major housing policy events and health research findings in date order",
+      "Explain how a housing policy can become a health outcome decades later",
+      "Explain why ending a discriminatory policy does not by itself end its health effects"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "15-20 minutes",
+    "prerequisites": [
+      "Social determinants of health",
+      "Health equity and health disparities"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.9.4",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 580
+    },
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.9.4 (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "button",
+        "label": "← Previous",
+        "description": "Selects the previous event in date order."
+      },
+      {
+        "type": "button",
+        "label": "Next →",
+        "description": "Selects the next event in date order."
+      },
+      {
+        "type": "button",
+        "label": "Reset",
+        "description": "Clears the selection and shows the opening panel."
+      },
+      {
+        "type": "canvas click",
+        "label": "Year markers",
+        "description": "Click a year marker to select that event. Hover to see its name."
+      }
+    ]
+  },
+  "pedagogical": {
+    "teachingStrategy": "Step-through reading with a connect-the-events activity",
+    "interactionPattern": "Step-through timeline with concrete event detail",
+    "keyQuestions": [
+      "Why do 2020 studies still find differences between neighborhoods graded A and D in the 1930s?",
+      "Which mechanisms connect a mortgage policy to asthma or heat exposure?"
+    ],
+    "commonMisconceptions": [
+      "Redlining ended in 1968, so its effects ended then too",
+      "Health disparities between neighborhoods are mainly the result of individual choices"
+    ],
+    "assessmentOpportunities": [
+      "Order shuffled events and classify each one",
+      "Trace one research finding back to two policy events"
+    ]
+  },
+  "chapter": "10-health-equity-sdoh"
+}

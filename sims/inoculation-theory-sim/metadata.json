@@ -24,5 +24,8 @@
   "completion_status": "implemented",
   "chapter_number": 12,
   "chapter_title": "Public Health Communication and Health Literacy",
-  "chapter_dir": "12-public-health-communication"
+  "chapter_dir": "12-public-health-communication",
+  "search": {
+    "showcase": true
+  }
 }

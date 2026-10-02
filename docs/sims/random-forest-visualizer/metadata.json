@@ -1,0 +1,117 @@
+{
+  "title": "Random Forest Decision Tree Visualizer",
+  "description": "Set a hypothetical patient profile (age, BMI, smoking status, hypertension, physical activity) and see how one decision tree classifies it, how 20 trees trained on bootstrap samples vote, and how the majority vote becomes the forest prediction. Includes a ROC curve for the forest. Trained in the browser on synthetic data; not a clinical risk model.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-10-01",
+  "subject": [
+    "public health",
+    "data science",
+    "machine learning",
+    "random forest",
+    "decision tree",
+    "risk prediction",
+    "ROC curve"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "random-forest-visualizer",
+  "sim_id": "random-forest-visualizer",
+  "library": "p5.js",
+  "bloomLevel": "Understand",
+  "bloomVerb": "explain",
+  "learning_objective": "Explain how a random forest turns the votes of many different decision trees into one prediction, and why the forest's answer is more stable than the answer of any single tree.",
+  "completion_status": "implemented",
+  "chapter_number": 17,
+  "chapter_title": "Data Science Advanced: Spatial Analysis and Machine Learning",
+  "chapter_dir": "17-data-science-advanced",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate"
+    ],
+    "subjectArea": "Public Health",
+    "topic": "Random forests for disease risk prediction",
+    "learningObjectives": [
+      "Trace a patient's path through a decision tree",
+      "Explain bootstrap sampling and random feature selection",
+      "Explain how majority voting produces the forest prediction",
+      "Relate a vote threshold to a point on the ROC curve"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "15 minutes",
+    "prerequisites": [
+      "Classification, sensitivity, and specificity",
+      "Decision trees as yes or no questions"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.9.4",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 600
+    },
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.9.4 (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "userInterface": {
+    "controls": [
+      { "type": "slider", "label": "Age", "min": 30, "max": 80, "step": 1, "default": 62 },
+      { "type": "slider", "label": "BMI", "min": 18, "max": 45, "step": 1, "default": 31 },
+      { "type": "select", "label": "Smoking", "options": ["never", "former", "current"], "default": "former" },
+      { "type": "checkbox", "label": "Hypertension", "default": true },
+      { "type": "checkbox", "label": "Physically active", "default": true },
+      { "type": "button", "label": "Show Another Tree", "description": "Shows the next of the 20 trees in the left panel." },
+      { "type": "canvas click", "label": "Tree icons", "description": "Click a tree in the forest grid to show it in the left panel." }
+    ]
+  },
+  "simulation": {
+    "modelType": "Random forest classifier trained in the browser on synthetic data",
+    "parameters": {
+      "trees": 20,
+      "treeDepth": "two levels of splits, four leaves",
+      "trainingPatients": 600,
+      "testPatients": 1500,
+      "featuresPerSplit": 2,
+      "splitCriterion": "Gini impurity",
+      "randomSeed": "fixed, so every reader sees the same forest"
+    },
+    "assumptions": [
+      "Synthetic outcome generated from an invented logistic model of age, BMI, smoking, hypertension, and inactivity",
+      "A tree votes high risk when its leaf probability is at least 50%",
+      "The forest predicts high risk when at least 10 of 20 trees vote high risk"
+    ],
+    "limitations": [
+      "Not a clinical risk model and not based on real patient data",
+      "Trees are much shallower and fewer than in a real random forest"
+    ]
+  },
+  "pedagogical": {
+    "teachingStrategy": "Trace, compare, and explain",
+    "interactionPattern": "Concrete worked example that updates instantly, with no timed animation",
+    "keyQuestions": [
+      "Why do trees trained on the same kind of data ask different questions?",
+      "Why is the forest's answer more stable than one tree's answer?",
+      "What changes if the vote threshold is made stricter?"
+    ],
+    "commonMisconceptions": [
+      "A random forest is one large decision tree",
+      "Every tree in the forest sees the same data and the same features",
+      "The 50% majority rule is the only possible threshold"
+    ],
+    "assessmentOpportunities": [
+      "Explain bootstrap sampling and random feature selection",
+      "State the forest prediction for a given vote count under two different thresholds"
+    ]
+  },
+  "chapter": "17-data-science-advanced"
+}

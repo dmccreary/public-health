@@ -134,7 +134,7 @@ where ν is the vaccination rate (fraction of susceptibles vaccinated per day). 
 
 #### MicroSim: Interactive SIR/SEIR Simulator
 
-<iframe src="../../sims/sir-seir-simulator/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/sir-seir-simulator/main.html" width="100%" height="627px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Interactive SIR/SEIR Epidemic Simulator Details</summary>

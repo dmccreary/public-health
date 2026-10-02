@@ -1,0 +1,124 @@
+{
+  "title": "Interactive SIR/SEIR Epidemic Simulator",
+  "description": "Solves the SIR, SEIR, SEIRD, and SEIRV compartmental epidemic models over 365 days. Sliders set the transmission, recovery, progression, mortality, and vaccination rates and the population size. The charts show each compartment, the herd immunity threshold, the overshoot, and cumulative cases and deaths. A Compare button overlays a saved run.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-10-01",
+  "subject": [
+    "public health",
+    "epidemiology",
+    "infectious disease modeling",
+    "SIR model",
+    "SEIR model",
+    "basic reproduction number",
+    "herd immunity",
+    "epidemic overshoot"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "sir-seir-simulator",
+  "sim_id": "sir-seir-simulator",
+  "library": "p5.js",
+  "bloomLevel": "Apply",
+  "bloomVerb": "apply",
+  "learning_objective": "Apply the SIR and SEIR family of models by changing their parameters to predict how R0, the epidemic peak, the total infected, and the overshoot past the herd immunity threshold respond.",
+  "completion_status": "implemented",
+  "chapter_number": 15,
+  "chapter_title": "Systems Thinking: Modeling and Policy",
+  "chapter_dir": "15-systems-thinking-modeling",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate"
+    ],
+    "subjectArea": "Public Health",
+    "topic": "Compartmental epidemic models",
+    "learningObjectives": [
+      "Compute R0 and the herd immunity threshold from beta and gamma",
+      "Predict how the epidemic peak and total infected change when a parameter changes",
+      "Explain epidemic overshoot",
+      "Compare the SIR, SEIR, SEIRD, and SEIRV models"
+    ],
+    "bloomsTaxonomy": "Apply",
+    "duration": "20 minutes",
+    "prerequisites": [
+      "R0 and herd immunity threshold",
+      "SIR and SEIR equations"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.9.4",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 625
+    },
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.9.4 (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "userInterface": {
+    "controls": [
+      { "type": "select", "label": "Model", "options": ["SIR", "SEIR", "SEIRD", "SEIRV"], "default": "SIR" },
+      { "type": "slider", "label": "Transmission β", "min": 0.1, "max": 1.0, "step": 0.01, "default": 0.25 },
+      { "type": "slider", "label": "Recovery γ", "min": 0.05, "max": 0.5, "step": 0.01, "default": 0.10 },
+      { "type": "slider", "label": "Progression σ", "min": 0.1, "max": 0.5, "step": 0.01, "default": 0.20, "usedBy": "SEIR, SEIRD, SEIRV" },
+      { "type": "slider", "label": "Mortality μ", "min": 0, "max": 0.05, "step": 0.001, "default": 0.005, "usedBy": "SEIRD" },
+      { "type": "slider", "label": "Vaccination ν", "min": 0, "max": 0.1, "step": 0.001, "default": 0.010, "usedBy": "SEIRV" },
+      { "type": "slider", "label": "Population N", "min": 1000, "max": 100000, "step": 1000, "default": 10000 },
+      { "type": "button", "label": "Save Run to Compare / Clear Saved Run", "description": "Keeps the current run on the charts as dashed lines." },
+      { "type": "button", "label": "Reset", "description": "Restores the default model and parameters." }
+    ]
+  },
+  "simulation": {
+    "modelType": "Deterministic compartmental model (ordinary differential equations)",
+    "variables": ["S", "E", "I", "R", "D", "cumulative cases"],
+    "equations": [
+      "dS/dt = -beta*S*I/N  (SEIRV: - nu*S)",
+      "dE/dt = beta*S*I/N - sigma*E",
+      "dI/dt = sigma*E - gamma*I  (SIR: beta*S*I/N - gamma*I; SEIRD: - (gamma + mu)*I)",
+      "dR/dt = gamma*I  (SEIRV: + nu*S)",
+      "dD/dt = mu*I",
+      "R0 = beta/gamma  (SEIRD: beta/(gamma + mu))",
+      "herd immunity threshold = 1 - 1/R0"
+    ],
+    "numericalMethod": "4th-order Runge-Kutta, time step 0.1 day, 365 days",
+    "assumptions": [
+      "Closed population with homogeneous mixing",
+      "Permanent immunity after recovery or vaccination",
+      "Constant parameters for the whole run",
+      "0.1% of the population is infectious on day 0"
+    ],
+    "limitations": [
+      "No births, natural deaths, or waning immunity",
+      "No age structure, contact networks, or behavior change",
+      "Parameters cannot change in the middle of a run"
+    ]
+  },
+  "pedagogical": {
+    "teachingStrategy": "Predict, adjust, and compare",
+    "interactionPattern": "Parameter sliders with immediate recalculation",
+    "keyQuestions": [
+      "Why does the epidemic infect more people than the herd immunity threshold?",
+      "Why does lowering beta reduce total infections and not only the peak?",
+      "Which outputs change when a latent period is added?"
+    ],
+    "commonMisconceptions": [
+      "The epidemic stops as soon as the herd immunity threshold is reached",
+      "Flattening the curve only delays cases and does not prevent them",
+      "A longer latent period changes R0"
+    ],
+    "assessmentOpportunities": [
+      "Compute R0 and the herd immunity threshold from beta and gamma",
+      "Explain epidemic overshoot from the chart"
+    ]
+  },
+  "chapter": "15-systems-thinking-modeling"
+}

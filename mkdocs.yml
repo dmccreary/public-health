@@ -136,6 +136,7 @@ nav:
       - Incidence vs. Prevalence Explorer: sims/incidence-prevalence-explorer/index.md
       - Inoculation Theory Visualizer: sims/inoculation-theory-sim/index.md
       - Interactive Forest Plot: sims/forest-plot-interactive/index.md
+      - Interactive SIR/SEIR Epidemic Simulator: sims/sir-seir-simulator/index.md
       - Interrupted Time-Series Workflow: sims/its-analysis-workflow/index.md
       - Kaplan-Meier Survival Curve Explorer: sims/kaplan-meier-explorer/index.md
       - Key Milestones in Public Health History: sims/public-health-history-timeline/index.md
@@ -154,20 +155,25 @@ nav:
       - Pharmaceutical vs. Supplement Requirements: sims/dshea-regulatory-gap/index.md
       - Prevention Levels and Natural History: sims/prevention-natural-history/index.md
       - R₀ and Herd Immunity Explorer: sims/r0-herd-immunity-explorer/index.md
+      - Random Forest Decision Tree Visualizer: sims/random-forest-visualizer/index.md
       - Record Linkage Process: sims/record-linkage-process/index.md
+      - Redlining and Health Timeline: sims/redlining-health-timeline/index.md
       - Reinforcing vs. Balancing Feedback Loops: sims/feedback-loops-compare/index.md
       - Reproducible Research Workflow: sims/reproducible-research-workflow/index.md
+      - Research Ethics Timeline: sims/research-ethics-timeline/index.md
       - SIFT Applied to a Supplement Claim: sims/sift-supplement/index.md
       - SIFT Method Decision Flowchart: sims/sift-flowchart/index.md
       - Screening Test Performance Calculator: sims/screening-test-calculator/index.md
       - SIR Model Compartment Flow: sims/sir-compartments/index.md
       - Social-Ecological Model: sims/social-ecological-model/index.md
       - Spatial Analysis Workflow: sims/spatial-analysis-workflow/index.md
+      - Stages of Change Visualizer: sims/stages-of-change/index.md
       - Stock-and-Flow Bathtub Model: sims/bathtub-model/index.md
       - Study Design Evidence Hierarchy: sims/study-design-hierarchy/index.md
       - The 10 Essential Public Health Services: sims/essential-public-health-services/index.md
       - Type I/II Error and Power Visualizer: sims/hypothesis-error-power/index.md
       - Universal Health Coverage Cube: sims/uhc-coverage-cube/index.md
+      - Upstream vs. Downstream Intervention Visualizer: sims/upstream-downstream-river/index.md
       - US Health System Structure: sims/us-health-system-structure/index.md
       - Wastewater Epidemiology Pipeline: sims/wastewater-epi-pipeline/index.md
 

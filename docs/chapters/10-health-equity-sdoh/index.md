@@ -226,7 +226,7 @@ The **Moving to Opportunity (MTO) study** provides one of the strongest natural 
 
 #### MicroSim: Upstream vs. Downstream Intervention Visualizer
 
-<iframe src="../../sims/upstream-downstream-river/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/upstream-downstream-river/main.html" width="100%" height="527px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Upstream-Downstream River MicroSim Specification</summary>
@@ -240,7 +240,7 @@ Animated river flowing from top-left to bottom-right. People (small circles) flo
 
 #### Timeline: Redlining to Present — Key Events and Health Consequences
 
-<iframe src="../../sims/redlining-health-timeline/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/redlining-health-timeline/main.html" width="100%" height="582px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Redlining Health Timeline Specification</summary>

@@ -1,0 +1,107 @@
+{
+  "title": "Research Ethics Timeline",
+  "description": "Interactive timeline of research abuses (Tuskegee, Willowbrook, Jewish Chronic Disease Hospital, Jesse Gelsinger, SFBC International) and the codes and regulations written in response (Nuremberg Code, Declaration of Helsinki, National Research Act, Belmont Report, Common Rule, revised Common Rule). Each event has a three-sentence description, the ethical principle involved, and the regulatory response.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-10-01",
+  "subject": [
+    "public health",
+    "research ethics",
+    "Belmont Report",
+    "informed consent",
+    "Institutional Review Board",
+    "Common Rule",
+    "Tuskegee study"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "research-ethics-timeline",
+  "sim_id": "research-ethics-timeline",
+  "library": "p5.js",
+  "bloomLevel": "Understand",
+  "bloomVerb": "explain",
+  "learning_objective": "Explain how specific research abuses led to the codes and regulations that protect human subjects today, and identify which Belmont principle each abuse violated.",
+  "completion_status": "implemented",
+  "chapter_number": 11,
+  "chapter_title": "Public Health Ethics",
+  "chapter_dir": "11-public-health-ethics",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate"
+    ],
+    "subjectArea": "Public Health",
+    "topic": "History of research ethics and human subjects protection",
+    "learningObjectives": [
+      "Place major research abuses and regulations in date order",
+      "Identify the Belmont principle violated by each abuse",
+      "Explain how the exposure of the Tuskegee study led to the National Research Act and the Belmont Report"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "15-20 minutes",
+    "prerequisites": [
+      "Belmont principles",
+      "Purpose of an Institutional Review Board"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.9.4",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 590
+    },
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.9.4 (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": true
+    }
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "button",
+        "label": "← Previous",
+        "description": "Selects the previous event in date order."
+      },
+      {
+        "type": "button",
+        "label": "Next →",
+        "description": "Selects the next event in date order."
+      },
+      {
+        "type": "button",
+        "label": "Reset",
+        "description": "Clears the selection and shows the opening panel."
+      },
+      {
+        "type": "canvas click",
+        "label": "Year markers",
+        "description": "Click a year marker to select that event. Hover to see its name."
+      }
+    ]
+  },
+  "pedagogical": {
+    "teachingStrategy": "Step-through reading with a match-the-rule-to-the-abuse activity",
+    "interactionPattern": "Step-through timeline with concrete event detail",
+    "keyQuestions": [
+      "Which abuse came before each rule?",
+      "Why did abuses still happen after the Common Rule was in force?"
+    ],
+    "commonMisconceptions": [
+      "Research ethics rules were written in advance, not in response to abuses",
+      "IRB review is only paperwork",
+      "Serious research abuses ended in the 1970s"
+    ],
+    "assessmentOpportunities": [
+      "Name the Belmont principle violated in a described study",
+      "Explain the path from the 1972 Tuskegee exposure to the Belmont Report"
+    ]
+  },
+  "chapter": "11-public-health-ethics"
+}

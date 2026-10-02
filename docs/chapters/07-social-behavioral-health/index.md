@@ -106,7 +106,7 @@ The TTM also incorporates processes of change (cognitive and behavioral strategi
 
 #### MicroSim: Stages of Change Visualizer
 
-<iframe src="../../sims/stages-of-change/main.html" width="100%" height="500px" scrolling="no"></iframe>
+<iframe src="../../sims/stages-of-change/main.html" width="100%" height="562px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Stages of Change Visualizer — MicroSim Specification</summary>

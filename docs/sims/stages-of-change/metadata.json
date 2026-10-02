@@ -1,0 +1,106 @@
+{
+  "title": "Stages of Change Visualizer",
+  "description": "Step five people through the Transtheoretical Model's five Stages of Change (Precontemplation, Contemplation, Preparation, Action, Maintenance). An info panel gives the definition, motivational state, stage-matched intervention, and a smoking-cessation example for the selected person's stage. Relapse arrows from Action and Maintenance show relapse as an expected part of change.",
+  "creator": "Introduction to Public Health Project",
+  "date": "2026-10-01",
+  "subject": [
+    "public health",
+    "health behavior",
+    "Transtheoretical Model",
+    "Stages of Change",
+    "smoking cessation",
+    "relapse"
+  ],
+  "type": "Interactive Simulation",
+  "format": "text/html",
+  "language": "en-US",
+  "rights": "CC BY-NC-SA 4.0",
+  "identifier": "stages-of-change",
+  "sim_id": "stages-of-change",
+  "library": "p5.js",
+  "bloomLevel": "Understand",
+  "bloomVerb": "explain",
+  "learning_objective": "Explain how the recommended intervention changes across the five Stages of Change and why relapse is treated as an expected part of the change process.",
+  "completion_status": "implemented",
+  "chapter_number": 7,
+  "chapter_title": "Social and Behavioral Health",
+  "chapter_dir": "07-social-behavioral-health",
+  "educational": {
+    "gradeLevel": [
+      "Undergraduate",
+      "Graduate"
+    ],
+    "subjectArea": "Public Health",
+    "topic": "Transtheoretical Model and Stages of Change",
+    "learningObjectives": [
+      "Name the five Stages of Change in order",
+      "Explain how the stage-matched intervention differs at each stage",
+      "Explain why relapse is expected and is not a sign of failure"
+    ],
+    "bloomsTaxonomy": "Understand",
+    "duration": "10-15 minutes",
+    "prerequisites": [
+      "Health Belief Model",
+      "Basic idea of health behavior change"
+    ],
+    "standards": []
+  },
+  "technical": {
+    "framework": "p5.js",
+    "version": "1.9.4",
+    "canvasDimensions": {
+      "width": "responsive",
+      "height": 560
+    },
+    "responsive": true,
+    "dependencies": [
+      "p5.js 1.9.4 (CDN)"
+    ],
+    "accessibility": {
+      "hasAltText": true,
+      "keyboardNavigable": false
+    }
+  },
+  "userInterface": {
+    "controls": [
+      {
+        "type": "button",
+        "label": "← Back / ← Relapse",
+        "description": "Moves the selected person back one stage. From Action or Maintenance it is a relapse and returns the person to Contemplation."
+      },
+      {
+        "type": "button",
+        "label": "Forward →",
+        "description": "Moves the selected person to the next stage."
+      },
+      {
+        "type": "button",
+        "label": "Reset",
+        "description": "Returns all five people to Precontemplation."
+      },
+      {
+        "type": "canvas click",
+        "label": "Person icons",
+        "description": "Click a person icon to select it."
+      }
+    ]
+  },
+  "pedagogical": {
+    "teachingStrategy": "Step-through exploration with predict-then-check",
+    "interactionPattern": "Step-through with concrete stage content visible at every step",
+    "keyQuestions": [
+      "What should a practitioner do differently for a person in Precontemplation than for a person in Preparation?",
+      "Why does the model draw relapse as a normal path?"
+    ],
+    "commonMisconceptions": [
+      "Relapse means the person or the intervention failed",
+      "One action-oriented program fits people at every stage",
+      "People move through the stages once, in a straight line"
+    ],
+    "assessmentOpportunities": [
+      "Match a described person to a stage and an intervention",
+      "Explain why an action-oriented class is a poor match for a precontemplator"
+    ]
+  },
+  "chapter": "07-social-behavioral-health"
+}

@@ -212,7 +212,7 @@ The choice of threshold — and therefore the balance between sensitivity and sp
 
 #### MicroSim: Random Forest Decision Tree Visualizer
 
-<iframe src="../../sims/random-forest-visualizer/main.html" width="100%" height="480px" scrolling="no"></iframe>
+<iframe src="../../sims/random-forest-visualizer/main.html" width="100%" height="602px" scrolling="no"></iframe>
 
 <details markdown="1">
 <summary>Random Forest Decision Tree Visualizer — MicroSim Specification</summary>

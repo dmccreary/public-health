@@ -26,5 +26,8 @@
   "completion_status": "implemented",
   "chapter_number": 19,
   "chapter_title": "COVID-19 Case Study",
-  "chapter_dir": "19-covid-case-study"
+  "chapter_dir": "19-covid-case-study",
+  "search": {
+    "showcase": true
+  }
 }
